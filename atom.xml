@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-06-15T11:04:36.222Z</updated>
+    <updated>2019-06-15T11:19:56.243Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -15,8 +15,25 @@
         <id>https://wmszhe.github.io//post/hello-everyone</id>
         <link href="https://wmszhe.github.io//post/hello-everyone">
         </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>👏  欢迎来到 <strong>zhe's home</strong> ！</p>
+        <updated>2019-06-15T11:18:56.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="hello-everyone"><strong>Hello EveryOne!</strong></h3>
+<hr>
+<p>👏 欢迎来到 <strong>zhe's home!</strong> 👏</p>
+<blockquote>
+<p>Time: 2019年6月15日19:10，周六。</p>
+</blockquote>
+<ol>
+<li>本网站通过Github Pages创建。创建过程参考<a href="https://sspai.com/post/54608">GitHub Pages 搭建教程</a></li>
+<li>使用Gridea管理本网站 <a href="https://gridea.dev/">Gridea官网</a></li>
+<li>本网站主要记录
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5939030"><label class="task-list-item-label" for="task-item-5939030"> 工作笔记</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5363963"><label class="task-list-item-label" for="task-item-5363963"> 日常</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5049652"><label class="task-list-item-label" for="task-item-5049652"> 备忘</label></li>
+</ul>
+</li>
+<li>随缘更新</li>
+</ol>
 <p>😘 Enjoy~</p>
 ]]></content>
     </entry>
