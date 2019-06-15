@@ -1,22 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://wmszhe.github.io/</id>
-    <title>zhe&apos;s home</title>
-    <updated>2019-06-15T12:21:39.549Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://wmszhe.github.io/"/>
-    <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
-    <subtitle>温故而知新</subtitle>
-    <logo>https://wmszhe.github.io//images/avatar.png</logo>
-    <icon>https://wmszhe.github.io//favicon.ico</icon>
-    <rights>All rights reserved 2019, zhe&apos;s home</rights>
-    <entry>
-        <title type="html"><![CDATA[Git]]></title>
-        <id>https://wmszhe.github.io//post/git</id>
-        <link href="https://wmszhe.github.io//post/git">
-        </link>
-        <updated>2019-06-15T12:19:24.000Z</updated>
-        <content type="html"><![CDATA[<p>[TOC]</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Git | zhe&#39;s home</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1560601297213">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://wmszhe.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://wmszhe.github.io/">
+        <img src="https://wmszhe.github.io//images/avatar.png?v=1560601297213" class="site-logo">
+        <h1 class="site-title">zhe&#39;s home</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/tools" class="site-nav">
+            工具
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://wmszhe.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Git</h2>
+            <div class="post-date">2019-06-15</div>
+            
+              <div class="feature-container" style="background-image: url('https://wmszhe.github.io//post-images/git.png')">
+              </div>
+            
+            <div class="post-content">
+              <p>[TOC]</p>
 <h3 id="ssh">SSH</h3>
 <pre><code>1. 生成SSH秘钥，秘钥名字最好便于识别，例如用自己的名字,[keyname]=name
     ssh-keygen -f ~/.ssh/[keyname]
@@ -250,31 +345,84 @@ git push origin HEAD:refs/for/sdpost_dev
 <h3 id="取消本次rebase">取消本次rebase</h3>
 <pre><code>git rebase --abort
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello EveryOne]]></title>
-        <id>https://wmszhe.github.io//post/hello-everyone</id>
-        <link href="https://wmszhe.github.io//post/hello-everyone">
-        </link>
-        <updated>2019-06-15T11:18:56.000Z</updated>
-        <content type="html"><![CDATA[<p>👏 欢迎来到 <strong>zhe's home!</strong> 👏</p>
-<blockquote>
-<p>Time: 2019年6月15日，周六。</p>
-</blockquote>
-<ol>
-<li>本网站通过Github Pages创建。创建过程参考<a href="https://sspai.com/post/54608">GitHub Pages 搭建教程</a></li>
-<li>使用Gridea管理本网站 <a href="https://gridea.dev/">Gridea官网</a></li>
-<li>本网站主要记录
-<ul>
-<li>工作笔记</li>
-<li>日常</li>
-<li>备忘</li>
-</ul>
-</li>
-<li>随缘更新</li>
-</ol>
-<p>😘 Enjoy~</p>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://wmszhe.github.io//tag/Ryx7PH5n2" class="tag">
+                    Git
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://wmszhe.github.io//post/hello-everyone">
+                  <h3 class="post-title">
+                    Hello EveryOne
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'f8fe9375d0b8d01d2e55',
+        clientSecret: 'fd4f2870b6c30d18a4af888480e80836b6732624',
+        repo: 'wmszhe.github.io',
+        owner: 'wmszhe',
+        admin: ['wmszhe'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
