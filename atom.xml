@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-06-15T11:20:43.751Z</updated>
+    <updated>2019-06-15T11:22:24.069Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -16,9 +16,7 @@
         <link href="https://wmszhe.github.io//post/hello-everyone">
         </link>
         <updated>2019-06-15T11:18:56.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="hello-everyone"><strong>Hello EveryOne!</strong></h3>
-<hr>
-<p>👏 欢迎来到 <strong>zhe's home!</strong> 👏</p>
+        <content type="html"><![CDATA[<p>👏 欢迎来到 <strong>zhe's home!</strong> 👏</p>
 <blockquote>
 <p>Time: 2019年6月15日19:10，周六。</p>
 </blockquote>
@@ -27,9 +25,9 @@
 <li>使用Gridea管理本网站 <a href="https://gridea.dev/">Gridea官网</a></li>
 <li>本网站主要记录
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1975832"><label class="task-list-item-label" for="task-item-1975832"> 工作笔记</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3413437"><label class="task-list-item-label" for="task-item-3413437"> 日常</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1296857"><label class="task-list-item-label" for="task-item-1296857"> 备忘</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-341506"><label class="task-list-item-label" for="task-item-341506"> 工作笔记</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6859916"><label class="task-list-item-label" for="task-item-6859916"> 日常</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1170355"><label class="task-list-item-label" for="task-item-1170355"> 备忘</label></li>
 </ul>
 </li>
 <li>随缘更新</li>
