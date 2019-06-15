@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-06-15T10:44:59.269Z</updated>
+    <updated>2019-06-15T10:46:36.554Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2019, zhe&apos;s home</rights>
     <entry>
         <title type="html"><![CDATA[Hello EveryOne]]></title>
-        <id>https://wmszhe.github.io//post/hello-gridea</id>
-        <link href="https://wmszhe.github.io//post/hello-gridea">
+        <id>https://wmszhe.github.io//post/hello-everyone</id>
+        <link href="https://wmszhe.github.io//post/hello-everyone">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>zhe's home</strong> ！</p>
