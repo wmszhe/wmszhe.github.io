@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1560649888629">
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1560829943977">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wmszhe.github.io//styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://wmszhe.github.io/">
-        <img src="https://wmszhe.github.io//images/avatar.png?v=1560649888629" class="site-logo">
+        <img src="https://wmszhe.github.io//images/avatar.png?v=1560829943977" class="site-logo">
         <h1 class="site-title">zhe&#39;s home</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -152,6 +152,15 @@ ssh -T git@192.168.1.2
 git rm -r --cached .
 git add .
 git commit -m 'update .gitignore'
+</code></pre>
+<h3 id="init">init</h3>
+<pre><code>git init
+git add .
+git commit -m &quot;init&quot;
+</code></pre>
+<h3 id="init后传至git仓库">init后传至git仓库</h3>
+<pre><code>git remote add origin git@github.com:wmszhe/PythonTools.git
+git push -u origin master
 </code></pre>
 <h3 id="日志">日志</h3>
 <h5 id="1查询日志">1.查询日志</h5>
