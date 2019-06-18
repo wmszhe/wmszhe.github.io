@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1560850736036">
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1560851257718">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wmszhe.github.io//styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://wmszhe.github.io/">
-        <img src="https://wmszhe.github.io//images/avatar.png?v=1560850736036" class="site-logo">
+        <img src="https://wmszhe.github.io//images/avatar.png?v=1560851257718" class="site-logo">
         <h1 class="site-title">zhe&#39;s home</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -112,7 +112,9 @@
               </div>
             
             <div class="post-content">
-              <ul>
+              <p>使用<a href="https://github.com/google/flutter-desktop-embedding">flutter-desktop-embedding</a>编译适用于macos、windows、linux桌面端的app</p>
+<!-- more --> 
+<ul>
 <li>
 <ol>
 <li>配置flutter环境，必须在master分支</li>
@@ -147,7 +149,7 @@ flutter upgrade
 <li><strong>永久</strong><pre><code>.zshrc中添加 export ENABLE_FLUTTER_DESKTOP=true
 </code></pre>
 </li>
-<li><strong>如果使用的时vscode</strong><pre><code>打开设置(json)，添加
+<li><strong>如果使用的是vscode</strong><pre><code>打开设置(json)，添加
 &quot;dart.env&quot;: {
     &quot;ENABLE_FLUTTER_DESKTOP&quot;: true,
 }
@@ -164,12 +166,9 @@ flutter upgrade
 </li>
 <li>
 <ol start="6">
-<li>run,即可看到demo项目</li>
+<li>flutter run,即可看到demo项目
+<img src="https://wmszhe.github.io//post-images/1560851011036.png" alt=""></li>
 </ol>
-<pre><code>flutter run
-</code></pre>
-<pre><code>  ![](https://wmszhe.github.io//post-images/1560850619935.png)
-</code></pre>
 </li>
 <li>
 <ol start="7">
