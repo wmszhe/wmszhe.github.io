@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Hello EveryOne | zhe&#39;s home</title>
+<title>FLutter编译桌面端app | zhe&#39;s home</title>
 <meta name="description" content="温故而知新">
 <meta http-equiv=”Content-Security-Policy” content=”upgrade-insecure-requests”/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -105,42 +105,104 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Hello EveryOne</h2>
-            <div class="post-date">2019-06-15</div>
+            <h2 class="post-title">FLutter编译桌面端app</h2>
+            <div class="post-date">2019-06-18</div>
             
-              <div class="feature-container" style="background-image: url('https://wmszhe.github.io//post-images/hello-everyone.png')">
+              <div class="feature-container" style="background-image: url('https://wmszhe.github.io//post-images/flutter-bian-yi-zhuo-mian-duan-app.png')">
               </div>
             
             <div class="post-content">
-              <p>👏 欢迎来到 <strong>zhe's home!</strong> 👏</p>
-<!-- more --> 
-<blockquote>
-<p>Time: 2019年6月15日，周六。</p>
-</blockquote>
+              <ul>
+<li>
 <ol>
-<li>本网站通过Github Pages创建。创建过程参考<a href="https://sspai.com/post/54608">GitHub Pages 搭建教程</a></li>
-<li>使用Gridea管理本网站 <a href="https://gridea.dev/">Gridea官网</a></li>
-<li>本网站主要记录
+<li>配置flutter环境，必须在master分支</li>
+</ol>
+<pre><code>flutter channel master
+flutter upgrade
+</code></pre>
+</li>
+<li>
+<ol start="2">
+<li>clone flutter-desktop-embedding</li>
+</ol>
+<pre><code>git clone git@github.com:google/flutter-desktop-embedding.git
+</code></pre>
+</li>
+<li>
+<ol start="3">
+<li>复制flutter-desktop-embedding/example到自己的开发目录下,重命名为flutter_desktop</li>
+</ol>
+<blockquote>
+<p>目前不支持flutter create直接创建desktop项目，只能复制出example项目修改</p>
+</blockquote>
+</li>
+<li>
+<ol start="4">
+<li>开启ENABLE_FLUTTER_DESKTOP</li>
+</ol>
 <ul>
-<li>工作笔记</li>
-<li>日常</li>
-<li>备忘</li>
+<li><strong>一次性，每次打开项目都要执行</strong><pre><code>命令行中 export ENABLE_FLUTTER_DESKTOP=true
+</code></pre>
+</li>
+<li><strong>永久</strong><pre><code>.zshrc中添加 export ENABLE_FLUTTER_DESKTOP=true
+</code></pre>
+</li>
+<li><strong>如果使用的时vscode</strong><pre><code>打开设置(json)，添加
+&quot;dart.env&quot;: {
+    &quot;ENABLE_FLUTTER_DESKTOP&quot;: true,
+}
+</code></pre>
+</li>
 </ul>
 </li>
-<li>随缘更新</li>
+<li>
+<ol start="5">
+<li>更新依赖</li>
 </ol>
-<p>😘 Enjoy~</p>
+<pre><code>flutter packages get
+</code></pre>
+</li>
+<li>
+<ol start="6">
+<li>run,即可看到demo项目</li>
+</ol>
+<pre><code>flutter run
+</code></pre>
+<pre><code>  ![](https://wmszhe.github.io//post-images/1560850619935.png)
+</code></pre>
+</li>
+<li>
+<ol start="7">
+<li>使用文本编辑器打开flutter_desktop项目，在lib目录下编写自己的代码
+<img src="https://wmszhe.github.io//post-images/1560850644118.png" alt=""></li>
+</ol>
+</li>
+<li>
+<ol start="8">
+<li>over!</li>
+</ol>
+</li>
+</ul>
 
             </div>
             
               <div class="tag-container">
                 
-                  <a href="https://wmszhe.github.io//tag/XTholpotp" class="tag">
-                    碎碎念
+                  <a href="https://wmszhe.github.io//tag/TKukAm1js" class="tag">
+                    flutter
                   </a>
                 
               </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://wmszhe.github.io//post/git">
+                  <h3 class="post-title">
+                    Git
+                  </h3>
+                </a>
+              </div>
             
 
             
