@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>FlutterUI相关 | zhe&#39;s home</title>
+<meta name="description" content="温故而知新">
+<meta http-equiv=”Content-Security-Policy” content=”upgrade-insecure-requests”/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1560934277222">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://wmszhe.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://wmszhe.github.io/">
+        <img src="https://wmszhe.github.io//images/avatar.png?v=1560934277222" class="site-logo">
+        <h1 class="site-title">zhe&#39;s home</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/tools" class="site-nav">
+            工具
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> 
+      <!-- | <a class="rss" href="https://wmszhe.github.io//atom.xml" target="_blank">RSS</a> -->
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">FlutterUI相关</h2>
+            <div class="post-date">2019-06-19</div>
+            
+              <div class="feature-container" style="background-image: url('https://wmszhe.github.io//post-images/flutterui-xiang-guan.png')">
+              </div>
+            
+            <div class="post-content">
+              <p>获取屏幕尺寸，widget尺寸和位置</p>
+<!-- more --> 
+<h3 id="屏幕尺寸通过window相关方法获取">屏幕尺寸通过window相关方法获取</h3>
+<h5 id="屏幕尺寸物理像素-px">屏幕尺寸（物理像素 px）</h5>
+<pre><code>window.physicalSize -&gt; Size(960.0, 720.0)
+</code></pre>
+<h5 id="屏幕密度">屏幕密度</h5>
+<pre><code>window.devicePixelRatio -&gt; 2.0
+</code></pre>
+<h3 id="屏幕尺寸通过mediaquery相关方法获取">屏幕尺寸通过MediaQuery相关方法获取</h3>
+<blockquote>
+<p>MediaQuery最终还是调用的window方法</p>
+</blockquote>
+<h5 id="屏幕尺寸逻辑像素-dp">屏幕尺寸（逻辑像素 dp）</h5>
+<blockquote>
+<p>MediaQuery.of(context).size获取的是逻辑像素，物理像素/屏幕密度</p>
+</blockquote>
+<p><img src="https://wmszhe.github.io//post-images/1560934244332.png" alt=""></p>
+<pre><code>MediaQuery.of(context).size -&gt; Size(480.0, 360.0)
+</code></pre>
+<h5 id="屏幕密度-2">屏幕密度</h5>
+<pre><code>MediaQuery.of(context).devicePixelRatio -&gt; 2.0
+</code></pre>
+<h5 id="横竖屏">横竖屏</h5>
+<blockquote>
+<p>横竖屏是根据宽高判断的</p>
+</blockquote>
+<p><img src="https://wmszhe.github.io//post-images/1560934253781.png" alt=""></p>
+<p><img src="https://wmszhe.github.io//post-images/1560934262800.png" alt=""></p>
+<pre><code>MediaQuery.of(context).orientation -&gt; Orientation.landscape
+</code></pre>
+<h3 id="widget大小和位置">Widget大小和位置</h3>
+<h4 id="可以通过globalkey获取">可以通过GlobalKey获取</h4>
+<blockquote>
+<p>参考：<a href="https://medium.com/@diegoveloper/flutter-widget-size-and-position-b0a9ffed9407">Flutter : Widget Size and Position</a></p>
+</blockquote>
+<blockquote>
+<p>需要对每个widget创建一个GlobalKey</p>
+</blockquote>
+<pre><code>GlobalKey _keyRed = GlobalKey();
+</code></pre>
+<pre><code>key: _keyRed,
+</code></pre>
+<pre><code>RenderBox findRenderObject = _keyRed.currentContext.findRenderObject();
+var offset = findRenderObject.localToGlobal(Offset.zero);
+print(&quot;---icon offset : $offset&quot;);
+
+var size = _keyRed.currentContext.size;
+print(&quot;---icon size : $size&quot;);
+</code></pre>
+<h4 id="从context对象中获取">从context对象中获取</h4>
+<h5 id="自定义widget时可以从build方法中的context中获取">自定义Widget时，可以从build方法中的context中获取</h5>
+<pre><code>class CustomIcon extends Icon {
+  CustomIcon(IconData icon) : super(icon);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: Icon(icon),
+      onTap: () {
+        RenderBox findRenderObject = context.findRenderObject();
+        var offset = findRenderObject.localToGlobal(Offset.zero);
+        print(&quot;icon offset : $offset&quot;);
+
+        var size = context.size;
+        print(&quot;icon size : $size&quot;);
+      },
+    );
+  }
+}
+</code></pre>
+<h5 id="直接使用系统widget时使用layoutbuilderlayoutbuilder提供了build方法中含有context对象">直接使用系统widget时，使用LayoutBuilder，LayoutBuilder提供了build方法中含有context对象</h5>
+<pre><code>class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Row(
+        children: &lt;Widget&gt;[
+          LayoutBuilder(
+            builder: (context, constraints) {
+              return GestureDetector(
+                child: MyIcon(Icons.dashboard),
+                onTap: (){
+                  RenderBox findRenderObject = context.findRenderObject();
+                  var offset = findRenderObject.localToGlobal(Offset.zero);
+                  print(&quot;---icon offset : $offset&quot;);
+
+                  var size = context.size;
+                  print(&quot;---icon size : $size&quot;);
+                },
+              );
+            },
+          ),
+          MyIcon(Icons.ac_unit),
+        ],
+      ),
+    );
+  }
+}
+</code></pre>
+<h4 id="在widget-build完成之后执行操作">在widget build完成之后，执行操作</h4>
+<blockquote>
+<p>在return一个widget之前，context为null，如果想要在build之后，立即获取一些属性，可以使用WidgetsBinding.instance.addPostFrameCallback((_) =&gt; afterBuild(context));</p>
+</blockquote>
+<pre><code>class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Row(
+        children: &lt;Widget&gt;[
+          LayoutBuilder(
+            builder: (context, constraints) {
+              WidgetsBinding.instance.addPostFrameCallback((_) =&gt; afterBuild(context));
+              return Container(
+                child: MyIcon(Icons.dashboard),
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  afterBuild(BuildContext context) {
+    RenderBox findRenderObject = context.findRenderObject();
+    var offset = findRenderObject.localToGlobal(Offset.zero);
+    print(&quot;---icon offset : $offset&quot;);
+
+    var size = context.size;
+    print(&quot;---icon size : $size&quot;);
+  }
+}
+</code></pre>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://wmszhe.github.io//tag/TKukAm1js" class="tag">
+                    flutter
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://wmszhe.github.io//post/flutter-bian-yi-zhuo-mian-duan-app">
+                  <h3 class="post-title">
+                    FLutter编译桌面端app
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'f8fe9375d0b8d01d2e55',
+        clientSecret: 'fd4f2870b6c30d18a4af888480e80836b6732624',
+        repo: 'wmszhe.github.io',
+        owner: 'wmszhe',
+        admin: ['wmszhe'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

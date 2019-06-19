@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-06-18T09:55:08.480Z</updated>
+    <updated>2019-06-19T09:10:08.296Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -10,6 +10,149 @@
     <logo>https://wmszhe.github.io//images/avatar.png</logo>
     <icon>https://wmszhe.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, zhe&apos;s home</rights>
+    <entry>
+        <title type="html"><![CDATA[FlutterUI相关]]></title>
+        <id>https://wmszhe.github.io//post/flutterui-xiang-guan</id>
+        <link href="https://wmszhe.github.io//post/flutterui-xiang-guan">
+        </link>
+        <updated>2019-06-19T08:48:52.000Z</updated>
+        <summary type="html"><![CDATA[<p>获取屏幕尺寸，widget尺寸和位置</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>获取屏幕尺寸，widget尺寸和位置</p>
+<!-- more --> 
+<h3 id="屏幕尺寸通过window相关方法获取">屏幕尺寸通过window相关方法获取</h3>
+<h5 id="屏幕尺寸物理像素-px">屏幕尺寸（物理像素 px）</h5>
+<pre><code>window.physicalSize -&gt; Size(960.0, 720.0)
+</code></pre>
+<h5 id="屏幕密度">屏幕密度</h5>
+<pre><code>window.devicePixelRatio -&gt; 2.0
+</code></pre>
+<h3 id="屏幕尺寸通过mediaquery相关方法获取">屏幕尺寸通过MediaQuery相关方法获取</h3>
+<blockquote>
+<p>MediaQuery最终还是调用的window方法</p>
+</blockquote>
+<h5 id="屏幕尺寸逻辑像素-dp">屏幕尺寸（逻辑像素 dp）</h5>
+<blockquote>
+<p>MediaQuery.of(context).size获取的是逻辑像素，物理像素/屏幕密度</p>
+</blockquote>
+<p><img src="https://wmszhe.github.io//post-images/1560934244332.png" alt=""></p>
+<pre><code>MediaQuery.of(context).size -&gt; Size(480.0, 360.0)
+</code></pre>
+<h5 id="屏幕密度-2">屏幕密度</h5>
+<pre><code>MediaQuery.of(context).devicePixelRatio -&gt; 2.0
+</code></pre>
+<h5 id="横竖屏">横竖屏</h5>
+<blockquote>
+<p>横竖屏是根据宽高判断的</p>
+</blockquote>
+<p><img src="https://wmszhe.github.io//post-images/1560934253781.png" alt=""></p>
+<p><img src="https://wmszhe.github.io//post-images/1560934262800.png" alt=""></p>
+<pre><code>MediaQuery.of(context).orientation -&gt; Orientation.landscape
+</code></pre>
+<h3 id="widget大小和位置">Widget大小和位置</h3>
+<h4 id="可以通过globalkey获取">可以通过GlobalKey获取</h4>
+<blockquote>
+<p>参考：<a href="https://medium.com/@diegoveloper/flutter-widget-size-and-position-b0a9ffed9407">Flutter : Widget Size and Position</a></p>
+</blockquote>
+<blockquote>
+<p>需要对每个widget创建一个GlobalKey</p>
+</blockquote>
+<pre><code>GlobalKey _keyRed = GlobalKey();
+</code></pre>
+<pre><code>key: _keyRed,
+</code></pre>
+<pre><code>RenderBox findRenderObject = _keyRed.currentContext.findRenderObject();
+var offset = findRenderObject.localToGlobal(Offset.zero);
+print(&quot;---icon offset : $offset&quot;);
+
+var size = _keyRed.currentContext.size;
+print(&quot;---icon size : $size&quot;);
+</code></pre>
+<h4 id="从context对象中获取">从context对象中获取</h4>
+<h5 id="自定义widget时可以从build方法中的context中获取">自定义Widget时，可以从build方法中的context中获取</h5>
+<pre><code>class CustomIcon extends Icon {
+  CustomIcon(IconData icon) : super(icon);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: Icon(icon),
+      onTap: () {
+        RenderBox findRenderObject = context.findRenderObject();
+        var offset = findRenderObject.localToGlobal(Offset.zero);
+        print(&quot;icon offset : $offset&quot;);
+
+        var size = context.size;
+        print(&quot;icon size : $size&quot;);
+      },
+    );
+  }
+}
+</code></pre>
+<h5 id="直接使用系统widget时使用layoutbuilderlayoutbuilder提供了build方法中含有context对象">直接使用系统widget时，使用LayoutBuilder，LayoutBuilder提供了build方法中含有context对象</h5>
+<pre><code>class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Row(
+        children: &lt;Widget&gt;[
+          LayoutBuilder(
+            builder: (context, constraints) {
+              return GestureDetector(
+                child: MyIcon(Icons.dashboard),
+                onTap: (){
+                  RenderBox findRenderObject = context.findRenderObject();
+                  var offset = findRenderObject.localToGlobal(Offset.zero);
+                  print(&quot;---icon offset : $offset&quot;);
+
+                  var size = context.size;
+                  print(&quot;---icon size : $size&quot;);
+                },
+              );
+            },
+          ),
+          MyIcon(Icons.ac_unit),
+        ],
+      ),
+    );
+  }
+}
+</code></pre>
+<h4 id="在widget-build完成之后执行操作">在widget build完成之后，执行操作</h4>
+<blockquote>
+<p>在return一个widget之前，context为null，如果想要在build之后，立即获取一些属性，可以使用WidgetsBinding.instance.addPostFrameCallback((_) =&gt; afterBuild(context));</p>
+</blockquote>
+<pre><code>class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Row(
+        children: &lt;Widget&gt;[
+          LayoutBuilder(
+            builder: (context, constraints) {
+              WidgetsBinding.instance.addPostFrameCallback((_) =&gt; afterBuild(context));
+              return Container(
+                child: MyIcon(Icons.dashboard),
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  afterBuild(BuildContext context) {
+    RenderBox findRenderObject = context.findRenderObject();
+    var offset = findRenderObject.localToGlobal(Offset.zero);
+    print(&quot;---icon offset : $offset&quot;);
+
+    var size = context.size;
+    print(&quot;---icon size : $size&quot;);
+  }
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[FLutter编译桌面端app]]></title>
         <id>https://wmszhe.github.io//post/flutter-bian-yi-zhuo-mian-duan-app</id>
