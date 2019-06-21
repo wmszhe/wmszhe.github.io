@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-06-19T09:11:02.332Z</updated>
+    <updated>2019-06-21T02:23:22.689Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -10,6 +10,60 @@
     <logo>https://wmszhe.github.io//images/avatar.png</logo>
     <icon>https://wmszhe.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, zhe&apos;s home</rights>
+    <entry>
+        <title type="html"><![CDATA[Dart一些特殊的特性]]></title>
+        <id>https://wmszhe.github.io//post/dart-yi-xie-te-shu-de-te-xing</id>
+        <link href="https://wmszhe.github.io//post/dart-yi-xie-te-shu-de-te-xing">
+        </link>
+        <updated>2019-06-21T02:21:04.000Z</updated>
+        <summary type="html"><![CDATA[<p>Dart一些特殊的特性，比较容易忘记和混淆的</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Dart一些特殊的特性，比较容易忘记和混淆的</p>
+<!-- more -->
+<h5 id="">??=</h5>
+<blockquote>
+<p>仅在变量为null时赋值，使用??=运算符</p>
+</blockquote>
+<pre><code>// 如果b为空，则将值分配给b；否则，b保持不变
+b ??= value;
+</code></pre>
+<h5 id="-2">?.</h5>
+<blockquote>
+<p>eg : foo?.bar</p>
+</blockquote>
+<blockquote>
+<p>foo可以为空,foo为空时返回空，否则返回bar</p>
+</blockquote>
+<pre><code>foo?.bar
+
+====等同于====
+
+if(foo != null) {
+    return bar;
+} else {
+    return null;
+}
+</code></pre>
+<h5 id="和-~">/ 和 ~/</h5>
+<blockquote>
+<p>/ 除</p>
+</blockquote>
+<blockquote>
+<p>~/ 返回一个整数值的除法</p>
+</blockquote>
+<pre><code>assert(5 / 2 == 2.5); // 结果是double类型
+assert(5 ~/ 2 == 2); // 结果是一个整数
+</code></pre>
+<h5 id="print">print</h5>
+<blockquote>
+<p>如果要打印d.e，外层添加{}</p>
+</blockquote>
+<pre><code>print(&quot;abc&quot;);
+print(&quot;abc $d&quot;);
+print(&quot;abc ${d.e}&quot;);
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[FlutterUI相关]]></title>
         <id>https://wmszhe.github.io//post/flutterui-xiang-guan</id>
