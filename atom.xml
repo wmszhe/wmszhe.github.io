@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-06-21T02:23:22.689Z</updated>
+    <updated>2019-06-23T01:41:03.501Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -56,11 +56,15 @@ assert(5 ~/ 2 == 2); // 结果是一个整数
 </code></pre>
 <h5 id="print">print</h5>
 <blockquote>
+<p>打印重复内容，可以使用*</p>
+</blockquote>
+<blockquote>
 <p>如果要打印d.e，外层添加{}</p>
 </blockquote>
 <pre><code>print(&quot;abc&quot;);
 print(&quot;abc $d&quot;);
 print(&quot;abc ${d.e}&quot;);
+print(&quot;abc&quot; * 10); // 打印10次abc
 </code></pre>
 ]]></content>
     </entry>
