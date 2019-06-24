@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>碎碎念 | zhe&#39;s home</title>
+<title>Android性能优化 | zhe&#39;s home</title>
 <meta name="description" content="温故而知新">
 <meta http-equiv=”Content-Security-Policy” content=”upgrade-insecure-requests”/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,6 +13,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wmszhe.github.io//styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -98,34 +104,84 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: 碎碎念</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://wmszhe.github.io//post/hello-everyone">
-                  <h2 class="post-title">Hello EveryOne</h2>
-                </a>
-                <div class="post-date">
-                  2019-06-15
-                </div>
-                <div class="post-abstract">
-                  <p>👏 欢迎来到 <strong>zhe's home!</strong> 👏</p>
-
-                </div>
+          <div class="post-detail">
+            <h2 class="post-title">Android性能优化</h2>
+            <div class="post-date">2019-06-24</div>
+            
+              <div class="feature-container" style="background-image: url('https://wmszhe.github.io//post-images/android-xing-neng-you-hua.jpg')">
               </div>
-              
-                <a class="right" href="https://wmszhe.github.io//post/hello-everyone">
-                  <div class="feature-container" style="background-image: url('https://wmszhe.github.io//post-images/hello-everyone.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
+            
+            <div class="post-content">
+              <p>Android性能优化，一些性能优化方式。
+持续更新</p>
+<!-- more -->
+<h2 id="删除多余依赖项">删除多余依赖项</h2>
+<ul>
+<li>
+<ol>
+<li>查找多余依赖</li>
+</ol>
+<blockquote>
+<p>菜单栏 -&gt; Analyze -&gt; Run Inspection Name -&gt; 输入unused library -&gt; 回车 -&gt; 查看分析结果</p>
+</blockquote>
+<p><img src="https://wmszhe.github.io//post-images/1561368074075.png" alt=""></p>
+</li>
+<li>
+<ol start="2">
+<li>查看module依赖</li>
+</ol>
+<blockquote>
+<p>使用gradle，依次确认各个module实际依赖情况</p>
+</blockquote>
+<p><img src="https://wmszhe.github.io//post-images/1561368167403.png" alt=""></p>
+<p><img src="https://wmszhe.github.io//post-images/1561368142795.png" alt=""></p>
+</li>
+<li>
+<ol start="3">
+<li>排除多余依赖</li>
+</ol>
+<blockquote>
+<p>根据InspectionResult结果和dependencies结果，排除多余依赖项</p>
+</blockquote>
+<p><img src="https://wmszhe.github.io//post-images/1561368152549.png" alt=""></p>
+<p><img src="https://wmszhe.github.io//post-images/1561368160003.png" alt=""></p>
+</li>
+</ul>
 
-          <div class="pagination-container">
-  
-  
-</div>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://wmszhe.github.io//tag/_sgzPJegK" class="tag">
+                    android
+                  </a>
+                
+                  <a href="https://wmszhe.github.io//tag/51CmSDdaI" class="tag">
+                    性能优化
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://wmszhe.github.io//post/dart-yi-xie-te-shu-de-te-xing">
+                  <h3 class="post-title">
+                    Dart一些特殊的特性
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
 
         </div>
       </div>
@@ -147,6 +203,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'f8fe9375d0b8d01d2e55',
+        clientSecret: 'fd4f2870b6c30d18a4af888480e80836b6732624',
+        repo: 'wmszhe.github.io',
+        owner: 'wmszhe',
+        admin: ['wmszhe'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
