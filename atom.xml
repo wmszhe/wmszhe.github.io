@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-06-24T09:39:50.931Z</updated>
+    <updated>2019-06-26T05:04:29.563Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -28,7 +28,7 @@
 <!-- more -->
 <br>
 <br>
-## 删除多余依赖项
+<h2 id="删除多余依赖项">删除多余依赖项</h2>
 <ul>
 <li>
 <ol>
