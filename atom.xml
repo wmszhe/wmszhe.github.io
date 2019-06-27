@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-06-27T01:39:57.900Z</updated>
+    <updated>2019-06-27T10:02:23.132Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -60,6 +60,11 @@
 <p><img src="https://wmszhe.github.io//post-images/1561599326748.png" alt=""></p>
 </li>
 </ul>
+<h2 id="删除多余的资源文件">删除多余的资源文件</h2>
+<blockquote>
+<p>菜单栏 -&gt; Analyze -&gt; Run Inspection Name -&gt; 输入unused Resources -&gt; 回车 -&gt; 查看分析结果 -&gt; 删除</p>
+</blockquote>
+<p><img src="https://wmszhe.github.io//post-images/1561629719716.png" alt=""></p>
 ]]></content>
     </entry>
     <entry>
