@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>标签列表 | zhe&#39;s home</title>
+<title>数据结构和算法 | zhe&#39;s home</title>
 <meta name="description" content="温故而知新">
 <meta http-equiv=”Content-Security-Policy” content=”upgrade-insecure-requests”/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,6 +13,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wmszhe.github.io//styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -98,26 +104,74 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
+          <div class="post-detail">
+            <h2 class="post-title">数据结构和算法</h2>
+            <div class="post-date">2019-07-04</div>
             
-              <a class="tag" href="https://wmszhe.github.io//tag/FOj_E3Dob">算法</a>
+              <div class="feature-container" style="background-image: url('https://wmszhe.github.io//post-images/shu-ju-jie-gou-he-suan-fa.jpeg')">
+              </div>
             
-              <a class="tag" href="https://wmszhe.github.io//tag/gywcJZvfb">数据结构</a>
+            <div class="post-content">
+              <p>数据结构和算法</p>
+<!-- more -->
+<p><img src="https://wmszhe.github.io//post-images/913e0ababe43a2d57267df5c5f0832a7.jpg" alt=""></p>
+<h3 id="线性表和非线性表">线性表和非线性表</h3>
+<ul>
+<li>
+<ol>
+<li>线性表（Linear List）。顾名思义，线性表就是数据排成像一条线一样的结构。每个线性表上的数据最多只有前和后两个方向。其实除了数组，链表、队列、栈等也是线性表结构
+<img src="https://wmszhe.github.io//post-images/b6b71ec46935130dff5c4b62cf273477.jpg" alt=""></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>非线性表，比如二叉树、堆、图等。之所以叫非线性，是因为，在非线性表中，数据之间并不是简单的前后关系。
+<img src="https://wmszhe.github.io//post-images/6ebf42641b5f98f912d36f6bf86f6569.jpg" alt=""></li>
+</ol>
+</li>
+</ul>
+<h3 id="常见的策略">常见的策略</h3>
+<ul>
+<li>先进先出策略 FIFO（First In，First Out）</li>
+<li>最少使用策略 LFU（Least Frequently Used）</li>
+<li>最近最少使用策略 LRU（Least Recently Used）</li>
+</ul>
+
+            </div>
             
-              <a class="tag" href="https://wmszhe.github.io//tag/70DSvO8Bc">Android</a>
+              <div class="tag-container">
+                
+                  <a href="https://wmszhe.github.io//tag/FOj_E3Dob" class="tag">
+                    算法
+                  </a>
+                
+                  <a href="https://wmszhe.github.io//tag/gywcJZvfb" class="tag">
+                    数据结构
+                  </a>
+                
+              </div>
             
-              <a class="tag" href="https://wmszhe.github.io//tag/51CmSDdaI">性能优化</a>
             
-              <a class="tag" href="https://wmszhe.github.io//tag/c2s1YvlQy">dart</a>
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://wmszhe.github.io//post/android-xing-neng-you-hua">
+                  <h3 class="post-title">
+                    Android性能优化
+                  </h3>
+                </a>
+              </div>
             
-              <a class="tag" href="https://wmszhe.github.io//tag/TKukAm1js">flutter</a>
+
             
-              <a class="tag" href="https://wmszhe.github.io//tag/Ryx7PH5n2">Git</a>
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
             
-              <a class="tag" href="https://wmszhe.github.io//tag/XTholpotp">碎碎念</a>
-            
+
           </div>
+
         </div>
       </div>
     </div>
@@ -138,6 +192,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'f8fe9375d0b8d01d2e55',
+        clientSecret: 'fd4f2870b6c30d18a4af888480e80836b6732624',
+        repo: 'wmszhe.github.io',
+        owner: 'wmszhe',
+        admin: ['wmszhe'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 

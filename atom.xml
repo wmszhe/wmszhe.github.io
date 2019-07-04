@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-07-04T02:38:17.591Z</updated>
+    <updated>2019-07-04T03:34:21.993Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -10,6 +10,40 @@
     <logo>https://wmszhe.github.io//images/avatar.png</logo>
     <icon>https://wmszhe.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, zhe&apos;s home</rights>
+    <entry>
+        <title type="html"><![CDATA[数据结构和算法]]></title>
+        <id>https://wmszhe.github.io//post/shu-ju-jie-gou-he-suan-fa</id>
+        <link href="https://wmszhe.github.io//post/shu-ju-jie-gou-he-suan-fa">
+        </link>
+        <updated>2019-07-04T03:20:13.000Z</updated>
+        <summary type="html"><![CDATA[<p>数据结构和算法</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>数据结构和算法</p>
+<!-- more -->
+<p><img src="https://wmszhe.github.io//post-images/913e0ababe43a2d57267df5c5f0832a7.jpg" alt=""></p>
+<h3 id="线性表和非线性表">线性表和非线性表</h3>
+<ul>
+<li>
+<ol>
+<li>线性表（Linear List）。顾名思义，线性表就是数据排成像一条线一样的结构。每个线性表上的数据最多只有前和后两个方向。其实除了数组，链表、队列、栈等也是线性表结构
+<img src="https://wmszhe.github.io//post-images/b6b71ec46935130dff5c4b62cf273477.jpg" alt=""></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>非线性表，比如二叉树、堆、图等。之所以叫非线性，是因为，在非线性表中，数据之间并不是简单的前后关系。
+<img src="https://wmszhe.github.io//post-images/6ebf42641b5f98f912d36f6bf86f6569.jpg" alt=""></li>
+</ol>
+</li>
+</ul>
+<h3 id="常见的策略">常见的策略</h3>
+<ul>
+<li>先进先出策略 FIFO（First In，First Out）</li>
+<li>最少使用策略 LFU（Least Frequently Used）</li>
+<li>最近最少使用策略 LRU（Least Recently Used）</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Android性能优化]]></title>
         <id>https://wmszhe.github.io//post/android-xing-neng-you-hua</id>
