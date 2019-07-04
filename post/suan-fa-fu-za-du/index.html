@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1562222877623">
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1562230237789">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wmszhe.github.io//styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://wmszhe.github.io/">
-        <img src="https://wmszhe.github.io//images/avatar.png?v=1562222877623" class="site-logo">
+        <img src="https://wmszhe.github.io//images/avatar.png?v=1562230237789" class="site-logo">
         <h1 class="site-title">zhe&#39;s home</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -108,7 +108,7 @@
             <h2 class="post-title">算法复杂度</h2>
             <div class="post-date">2019-07-04</div>
             
-              <div class="feature-container" style="background-image: url('https://wmszhe.github.io//post-images/suan-fa-fu-za-du.jpeg')">
+              <div class="feature-container" style="background-image: url('https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/shu-ju-jie-gou-he-suan-fa.jpeg')">
               </div>
             
             <div class="post-content">
@@ -169,7 +169,7 @@
 <p><strong>所有代码的执行时间 T(n) 与每行代码的执行次数 n 成正比</strong></p>
 </blockquote>
 <p><strong>总结为：</strong></p>
-<p><img src="https://wmszhe.github.io//post-images/22900968aa2b190072c985a08b0e92ef.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/22900968aa2b190072c985a08b0e92ef.png" alt=""></p>
 <p>T(n)表示代码执行的时间；n 表示数据规模的大小；f(n) 表示每行代码执行的次数总和。因为这是一个公式，所以用 f(n) 来表示。公式中的 O，表示代码的执行时间 T(n) 与 f(n) 表达式成正比。</p>
 <p>所以，第一个例子中的 T(n) = O(2n+2)，第二个例子中的 T(n) = O(2n^2+2n+3)。这就是<strong>大 O 时间复杂度表示法</strong>。大 O 时间复杂度实际上并不具体表示代码真正的执行时间，而是表示<strong>代码执行时间随数据规模增长的变化趋势</strong>，所以，也叫作<strong>渐进时间复杂度</strong>（asymptotic time complexity），简称<strong>时间复杂度</strong></p>
 <p>当 n 很大时，你可以把它想象成 10000、100000。而<strong>公式中的低阶、常量、系数三部分并不左右增长趋势，所以都可以忽略</strong>。我们只需要记录一个最大量级就可以了，如果用大 O 表示法表示刚讲的那两段代码的时间复杂度，就可以记为：T(n) = O(n)； T(n) = O(n^2)。</p>
@@ -251,7 +251,7 @@ int f(int n) {
 </li>
 </ul>
 <h3 id="几种常见的时间复杂度">几种常见的时间复杂度</h3>
-<p><img src="https://wmszhe.github.io//post-images/3723793cc5c810e9d5b06bc95325bf0a.jpg" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/3723793cc5c810e9d5b06bc95325bf0a.jpg" alt=""></p>
 <p>对于上述罗列的复杂度量级，我们可以粗略地分为两类，<strong>多项式量级</strong>和<strong>非多项式量级</strong>。其中，非多项式量级只有两个：O(2^n) 和 O(n!)。</p>
 <ul>
 <li>
@@ -386,7 +386,7 @@ int find(int[] array, int n, int x) {
 <p>n+1 种情况，出现的概率并不是一样的</p>
 <p>要查找的变量 x，要么在数组里，要么就不在数组里。在数组中与不在数组中的概率都为 1/2。另外，要查找的数据出现在 0～n-1 这 n 个位置的概率也是一样的，为 1/n。所以，根据概率乘法法则，要查找的数据出现在 0～n-1 中任意位置的概率就是 1/(2n)</p>
 <p>所以，时间复杂度为:</p>
-<p><img src="https://wmszhe.github.io//post-images/36c0aabdac69032f8a43368f5e90c67f.jpg" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/36c0aabdac69032f8a43368f5e90c67f.jpg" alt=""></p>
 <p>==<strong>即，时间复杂度为O(n)</strong>==</p>
 <h4 id="均摊时间复杂度">均摊时间复杂度</h4>
 <pre><code>// array 表示一个长度为 n 的数组
@@ -410,7 +410,7 @@ void insert(int val) {
 <p>这段代码实现了一个往数组中插入数据的功能。当数组满了之后，也就是代码中的 count == array.length 时，我们用 for 循环遍历数组求和，将求和之后的 sum 值放到数组的第一个位置，然后再将新的数据插入。但如果数组一开始就有空闲空间，则直接将数据插入数组。</p>
 <p>最理想的情况下，数组中有空闲空间，我们只需要将数据插入到数组下标为 count 的位置就可以了，所以最好情况时间复杂度为 O(1)。最坏的情况下，数组中没有空闲空间了，我们需要先做一次数组的遍历求和，然后再将数据插入，所以最坏情况时间复杂度为 O(n)。</p>
 <p>假设数组的长度是 n，根据数据插入的位置的不同，我们可以分为 n 种情况，每种情况的时间复杂度是 O(1)。除此之外，还有一种“额外”的情况，就是在数组没有空闲空间时插入一个数据，这个时候的时间复杂度是 O(n)。而且，这 n+1 种情况发生的概率一样，都是 1/(n+1)。所以，根据加权平均的计算方法，我们求得的平均时间复杂度就是：</p>
-<p><img src="https://wmszhe.github.io//post-images/6df62366a60336d9de3bc34f488d8bed.jpg" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/6df62366a60336d9de3bc34f488d8bed.jpg" alt=""></p>
 <p>至此为止，前面的最好、最坏、平均时间复杂度的计算，理解起来应该都没有问题。但是这个例子里的平均复杂度分析其实并不需要这么复杂，不需要引入概率论的知识。这是为什么呢？我们先来对比一下这个 insert() 的例子和前面那个 find() 的例子，你就会发现这两者有很大差别。</p>
 <p>首先，find() 函数在极端情况下，复杂度才为 O(1)。但 insert() 在大部分情况下，时间复杂度都为 O(1)。只有个别情况下，复杂度才比较高，为 O(n)。这是 insert()<strong>第一个</strong>区别于 find() 的地方。</p>
 <p>所以，针对这样一种特殊场景的复杂度分析，我们并不需要像之前讲平均复杂度分析方法那样，找出所有的输入情况及相应的发生概率，然后再计算加权平均值。</p>
@@ -455,7 +455,7 @@ void insert(int val) {
 </ul>
 <h2 id="总结">总结</h2>
 <p>复杂度也叫渐进复杂度，包括时间复杂度和空间复杂度，用来分析算法执行效率与数据规模之间的增长关系，可以粗略地表示，越高阶复杂度的算法，执行效率越低。常见的复杂度并不多，从低阶到高阶有：O(1)、O(logn)、O(n)、O(nlogn)、O(n<sup>2</sup> )。</p>
-<p><img src="https://wmszhe.github.io//post-images/497a3f120b7debee07dc0d03984faf04.jpg" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/497a3f120b7debee07dc0d03984faf04.jpg" alt=""></p>
 <h2 id="demo">Demo</h2>
 <pre><code>// 全局变量，大小为 10 的数组 array，长度 len，下标 i。
 int array[] = new int[10]; 
