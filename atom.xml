@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-07-04T06:46:21.330Z</updated>
+    <updated>2019-07-04T06:47:59.495Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -96,16 +96,16 @@ fun binarySearchForRecursion(aar: IntArray, key: Int, low: Int, high: Int): Int 
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[链表Linked list]]></title>
+        <title type="html"><![CDATA[链表LinkedList]]></title>
         <id>https://wmszhe.github.io//post/lian-biao-linked-list</id>
         <link href="https://wmszhe.github.io//post/lian-biao-linked-list">
         </link>
         <updated>2019-07-04T06:40:09.000Z</updated>
-        <summary type="html"><![CDATA[<p>链表Linked list</p>
+        <summary type="html"><![CDATA[<p>链表LinkedList</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>链表Linked list</p>
+        <content type="html"><![CDATA[<p>链表LinkedList</p>
 <!-- more -->
-<h2 id="链表-linked-list">链表 Linked list</h2>
+<h2 id="链表-linkedlist">链表 LinkedList</h2>
 <h3 id="定义">定义</h3>
 <p>链表不需要一块连续的内存空间，它通过“指针”将一组<strong>零散的内存块</strong>串联起来使用</p>
 <p><img src="https://wmszhe.github.io//post-images/d5d5bee4be28326ba3c28373808a62cd.jpg" alt=""></p>
