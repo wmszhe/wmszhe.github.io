@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-07-04T06:43:15.259Z</updated>
+    <updated>2019-07-04T06:45:41.503Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -10,6 +10,91 @@
     <logo>https://wmszhe.github.io//images/avatar.png</logo>
     <icon>https://wmszhe.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, zhe&apos;s home</rights>
+    <entry>
+        <title type="html"><![CDATA[查找算法]]></title>
+        <id>https://wmszhe.github.io//post/cha-zhao-suan-fa</id>
+        <link href="https://wmszhe.github.io//post/cha-zhao-suan-fa">
+        </link>
+        <updated>2019-07-04T06:44:03.000Z</updated>
+        <summary type="html"><![CDATA[<p>查找算法</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>查找算法</p>
+<!-- more -->
+<h2 id="二分查找">二分查找</h2>
+<p>==<strong>二分查找必须是有序对</strong>==</p>
+<blockquote>
+<p>有序的序列，每次都是以序列的中间位置的数来与待查找的关键字进行比较，每次缩小一半的查找范围，直到匹配成功。</p>
+</blockquote>
+<p>优点是比较次数少，查找速度快，平均性能好；</p>
+<p>其缺点是要求待查表为有序表，且插入删除困难。</p>
+<p>因此，折半查找方法适用于不经常变动而查找频繁的有序列表。</p>
+<p><img src="https://wmszhe.github.io//post-images/20171009001641524.jpeg" alt=""></p>
+<h4 id="while循环实现">while循环实现</h4>
+<blockquote>
+<p>最好时间复杂度：O(1)</p>
+</blockquote>
+<blockquote>
+<p>最差时间复杂度：O(logn)</p>
+</blockquote>
+<blockquote>
+<p>空间复杂度：O(1)</p>
+</blockquote>
+<pre><code>/**
+ * 二分查找 while实现
+ * @param aar 数组
+ * @param key 需要查找的元素
+ * @return 所查询元素的下标
+ */
+fun binarySearch(aar: IntArray, key: Int): Int {
+    var low: Int = 0
+    var high: Int = aar.size - 1
+    if (aar[low] &gt; key || aar[high] &lt; key || low &gt; high) {
+        return -1
+    }
+    var mid: Int = 0
+    while (low &lt;= high) {
+        mid = (low + high) / 2
+        when {
+            aar[mid] &lt; key -&gt; low = mid + 1
+            aar[mid] &gt; key -&gt; high = mid - 1
+            else -&gt; return mid
+        }
+    }
+    return -1
+}
+</code></pre>
+<h4 id="递归实现">递归实现</h4>
+<blockquote>
+<p>最好时间复杂度：O(1)</p>
+</blockquote>
+<blockquote>
+<p>最差时间复杂度：O(logn)</p>
+</blockquote>
+<blockquote>
+<p>空间复杂度：O(logn)</p>
+</blockquote>
+<pre><code>/**
+ * 二分查找 递归实现
+ * @param aar 数组
+ * @param key 需要查找的元素
+ * @param low 较小的下标
+ * @param high 较大的下标
+ * @return 所查询元素的下标
+ */
+fun binarySearchForRecursion(aar: IntArray, key: Int, low: Int, high: Int): Int {
+    if (aar[low] &gt; key || aar[high] &lt; key || low &gt; high) {
+        return -1
+    }
+    val mid: Int = (low + high) / 2
+    return when {
+        aar[mid] &lt; key -&gt; binarySearchForRecursion(aar, key, mid + 1, high)
+        aar[mid] &gt; key -&gt; binarySearchForRecursion(aar, key, low, mid - 1)
+        else -&gt; mid
+    }
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[链表Linked list]]></title>
         <id>https://wmszhe.github.io//post/lian-biao-linked-list</id>
@@ -1267,34 +1352,6 @@ git push origin HEAD:refs/for/sdpost_dev
 <h3 id="取消本次rebase">取消本次rebase</h3>
 <pre><code>git rebase --abort
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello EveryOne]]></title>
-        <id>https://wmszhe.github.io//post/hello-everyone</id>
-        <link href="https://wmszhe.github.io//post/hello-everyone">
-        </link>
-        <updated>2019-06-15T11:18:56.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏 欢迎来到 <strong>zhe's home!</strong> 👏</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏 欢迎来到 <strong>zhe's home!</strong> 👏</p>
-<!-- more --> 
-<blockquote>
-<p>Time: 2019年6月15日，周六。</p>
-</blockquote>
-<ol>
-<li>本网站通过Github Pages创建。创建过程参考<a href="https://sspai.com/post/54608">GitHub Pages 搭建教程</a></li>
-<li>使用Gridea管理本网站 <a href="https://gridea.dev/">Gridea官网</a></li>
-<li>本网站主要记录
-<ul>
-<li>工作笔记</li>
-<li>日常</li>
-<li>备忘</li>
-</ul>
-</li>
-<li>随缘更新</li>
-</ol>
-<p>😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>
