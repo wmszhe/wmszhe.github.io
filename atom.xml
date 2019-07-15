@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-07-15T09:56:26.379Z</updated>
+    <updated>2019-07-15T10:01:00.590Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -1395,6 +1395,34 @@ git push origin HEAD:refs/for/sdpost_dev
 <h3 id="取消本次rebase">取消本次rebase</h3>
 <pre><code>git rebase --abort
 </code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello EveryOne]]></title>
+        <id>https://wmszhe.github.io//post/hello-everyone</id>
+        <link href="https://wmszhe.github.io//post/hello-everyone">
+        </link>
+        <updated>2019-06-15T11:18:56.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏 欢迎来到 <strong>zhe's home!</strong> 👏</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏 欢迎来到 <strong>zhe's home!</strong> 👏</p>
+<!-- more --> 
+<blockquote>
+<p>Time: 2019年6月15日，周六。</p>
+</blockquote>
+<ol>
+<li>本网站通过Github Pages创建。创建过程参考<a href="https://sspai.com/post/54608">GitHub Pages 搭建教程</a></li>
+<li>使用Gridea管理本网站 <a href="https://gridea.dev/">Gridea官网</a></li>
+<li>本网站主要记录
+<ul>
+<li>工作笔记</li>
+<li>日常</li>
+<li>备忘</li>
+</ul>
+</li>
+<li>随缘更新</li>
+</ol>
+<p>😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>
