@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1562899172826">
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1563183730257">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wmszhe.github.io//styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://wmszhe.github.io/">
-        <img src="https://wmszhe.github.io//images/avatar.png?v=1562899172826" class="site-logo">
+        <img src="https://wmszhe.github.io//images/avatar.png?v=1563183730257" class="site-logo">
         <h1 class="site-title">zhe&#39;s home</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -216,7 +216,7 @@
 }
 </code></pre>
 <blockquote>
-<p>上述代码3部分后2部分时间复杂度分别为O(n), O(n^2)，我们取其中最大的量级,即O(n^2).</p>
+<p>上述代码3部分后2部分时间复杂度分别为O(n), O(n<sup>2)，我们取其中最大的量级,即O(n</sup>2).</p>
 </blockquote>
 <p>抽象成公式,为：</p>
 <blockquote>
@@ -387,7 +387,7 @@ int find(int[] array, int n, int x) {
 <p>要查找的变量 x，要么在数组里，要么就不在数组里。在数组中与不在数组中的概率都为 1/2。另外，要查找的数据出现在 0～n-1 这 n 个位置的概率也是一样的，为 1/n。所以，根据概率乘法法则，要查找的数据出现在 0～n-1 中任意位置的概率就是 1/(2n)</p>
 <p>所以，时间复杂度为:</p>
 <p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/36c0aabdac69032f8a43368f5e90c67f.jpg" alt=""></p>
-<p>==<strong>即，时间复杂度为O(n)</strong>==</p>
+<p><mark><strong>即，时间复杂度为O(n)</strong></mark></p>
 <h4 id="均摊时间复杂度">均摊时间复杂度</h4>
 <pre><code>// array 表示一个长度为 n 的数组
 // 代码中的 array.length 就等于 n

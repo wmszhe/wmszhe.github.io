@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-07-12T02:40:00.818Z</updated>
+    <updated>2019-07-15T09:42:12.221Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -21,7 +21,7 @@
         <content type="html"><![CDATA[<p>查找算法</p>
 <!-- more -->
 <h2 id="二分查找">二分查找</h2>
-<p>==<strong>二分查找必须是有序对</strong>==</p>
+<p><mark><strong>二分查找必须是有序对</strong></mark></p>
 <blockquote>
 <p>有序的序列，每次都是以序列的中间位置的数来与待查找的关键字进行比较，每次缩小一半的查找范围，直到匹配成功。</p>
 </blockquote>
@@ -284,7 +284,7 @@ fun printNode(data: SinglyLinkedNote?) {
 <p>对于 m * n 的数组，a [i][ j ] (i &lt; m,j &lt; n)的地址为：</p>
 <pre><code>address = base_address + ( i * n + j) * type_size
 </code></pre>
-<p>==<strong>数组是适合查找操作，但是查找的时间复杂度并不为 O(1)。即便是排好序的数组，用二分查找，时间复杂度也是 O(logn)。所以，正确的表述应该是，数组支持随机访问，根据下标随机访问的时间复杂度为 O(1)。</strong>==</p>
+<p><mark><strong>数组是适合查找操作，但是查找的时间复杂度并不为 O(1)。即便是排好序的数组，用二分查找，时间复杂度也是 O(logn)。所以，正确的表述应该是，数组支持随机访问，根据下标随机访问的时间复杂度为 O(1)。</strong></mark></p>
 <h4 id="插入删除低效原因">插入删除低效原因</h4>
 <p>假设数组的长度为 n，现在，如果我们需要将一个数据插入到数组中的第 k 个位置。为了把第 k 个位置腾出来，给新来的数据，我们需要将第 k～n 这部分的元素都顺序地往后挪一位。</p>
 <p>如果在数组的末尾插入元素，那就不需要移动数据了，这时的时间复杂度为 O(1)。但如果在数组的开头插入元素，那所有的数据都需要依次往后移动一位，所以最坏时间复杂度是 O(n)。 因为我们在每个位置插入元素的概率是一样的，所以平均情况时间复杂度为 (1+2+…n)/n=O(n)。</p>
@@ -316,7 +316,7 @@ fun printNode(data: SinglyLinkedNote?) {
 </li>
 <li>
 <ol start="2">
-<li>支持动态扩容 ==<strong>不过，需要注意，因为扩容操作涉及内存申请和数据搬移，是比较耗时的。所以，如果事先能确定需要存储的数据大小，最好在创建 ArrayList 的时候事先指定数据大小</strong>==</li>
+<li>支持动态扩容 <mark><strong>不过，需要注意，因为扩容操作涉及内存申请和数据搬移，是比较耗时的。所以，如果事先能确定需要存储的数据大小，最好在创建 ArrayList 的时候事先指定数据大小</strong></mark></li>
 </ol>
 </li>
 </ul>
@@ -451,7 +451,7 @@ fun printNode(data: SinglyLinkedNote?) {
 }
 </code></pre>
 <blockquote>
-<p>上述代码3部分后2部分时间复杂度分别为O(n), O(n^2)，我们取其中最大的量级,即O(n^2).</p>
+<p>上述代码3部分后2部分时间复杂度分别为O(n), O(n<sup>2)，我们取其中最大的量级,即O(n</sup>2).</p>
 </blockquote>
 <p>抽象成公式,为：</p>
 <blockquote>
@@ -622,7 +622,7 @@ int find(int[] array, int n, int x) {
 <p>要查找的变量 x，要么在数组里，要么就不在数组里。在数组中与不在数组中的概率都为 1/2。另外，要查找的数据出现在 0～n-1 这 n 个位置的概率也是一样的，为 1/n。所以，根据概率乘法法则，要查找的数据出现在 0～n-1 中任意位置的概率就是 1/(2n)</p>
 <p>所以，时间复杂度为:</p>
 <p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/36c0aabdac69032f8a43368f5e90c67f.jpg" alt=""></p>
-<p>==<strong>即，时间复杂度为O(n)</strong>==</p>
+<p><mark><strong>即，时间复杂度为O(n)</strong></mark></p>
 <h4 id="均摊时间复杂度">均摊时间复杂度</h4>
 <pre><code>// array 表示一个长度为 n 的数组
 // 代码中的 array.length 就等于 n
@@ -741,13 +741,13 @@ void add(int element) {
 <ul>
 <li>
 <ol>
-<li>线性表（Linear List）。顾名思义，线性表就是数据排成像一条线一样的结构。每个线性表上的数据最多只有前和后两个方向。其实除了数组，链表、队列、栈等也是线性表结构
+<li>线性表（Linear List）。顾名思义，线性表就是数据排成像一条线一样的结构。每个线性表上的数据最多只有前和后两个方向。其实除了数组，链表、队列、栈等也是线性表结构<br>
 <img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/b6b71ec46935130dff5c4b62cf273477.jpg" alt=""></li>
 </ol>
 </li>
 <li>
 <ol start="2">
-<li>非线性表，比如二叉树、堆、图等。之所以叫非线性，是因为，在非线性表中，数据之间并不是简单的前后关系。
+<li>非线性表，比如二叉树、堆、图等。之所以叫非线性，是因为，在非线性表中，数据之间并不是简单的前后关系。<br>
 <img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/6ebf42641b5f98f912d36f6bf86f6569.jpg" alt=""></li>
 </ol>
 </li>
@@ -767,14 +767,14 @@ void add(int element) {
         </link>
         <updated>2019-06-24T09:17:17.000Z</updated>
         <summary type="html"><![CDATA[<p>Android性能优化，一些性能优化方式。<br>
-<br>
+<br><br>
 <br></p>
-<h2 id="持续更新">===持续更新===</h2>
+<h2 id="持续更新">=<mark>持续更新</mark>=</h2>
 ]]></summary>
         <content type="html"><![CDATA[<p>Android性能优化，一些性能优化方式。<br>
-<br>
+<br><br>
 <br></p>
-<h2 id="持续更新">===持续更新===</h2>
+<h2 id="持续更新">=<mark>持续更新</mark>=</h2>
 <!-- more -->
 <br>
 <br>
@@ -1123,13 +1123,13 @@ flutter upgrade
 </li>
 <li>
 <ol start="6">
-<li>flutter run,即可看到demo项目
+<li>flutter run,即可看到demo项目<br>
 <img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560851493604.png" alt=""></li>
 </ol>
 </li>
 <li>
 <ol start="7">
-<li>使用文本编辑器打开flutter_desktop项目，在lib目录下编写自己的代码
+<li>使用文本编辑器打开flutter_desktop项目，在lib目录下编写自己的代码<br>
 <img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560850644118.png" alt=""></li>
 </ol>
 </li>
