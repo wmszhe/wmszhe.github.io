@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-07-15T10:13:57.456Z</updated>
+    <updated>2019-07-15T10:19:03.804Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -21,7 +21,9 @@
         <content type="html"><![CDATA[<p>查找算法</p>
 <!-- more -->
 <h2 id="二分查找">二分查找</h2>
+<blockquote>
 <p><mark><strong>二分查找必须是有序对</strong></mark></p>
+</blockquote>
 <blockquote>
 <p>有序的序列，每次都是以序列的中间位置的数来与待查找的关键字进行比较，每次缩小一半的查找范围，直到匹配成功。</p>
 </blockquote>
@@ -123,10 +125,10 @@ fun binarySearchForRecursion(aar: IntArray, key: Int, low: Int, high: Int): Int 
 <p>查找时间复杂度O(n)</p>
 </blockquote>
 <p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/452e943788bdeea462d364389bd08a17.jpg" alt=""></p>
-<h5 id="2-循环链表multiply-linked-list">2. 循环链表	Multiply linked list</h5>
+<h4 id="2-循环链表multiply-linked-list">2. 循环链表	Multiply linked list</h4>
 <p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/86cb7dc331ea958b0a108b911f38d155.jpg" alt=""></p>
 <p><strong>循环链表是一种特殊的单链表</strong>。它跟单链表唯一的区别就在尾结点。单链表的尾结点指针指向空地址，表示这就是最后的结点了。而循环链表的尾结点指针是指向链表的头结点。</p>
-<h5 id="3-双向链表doubly-linked-list">3. 双向链表	Doubly linked list</h5>
+<h4 id="3-双向链表doubly-linked-list">3. 双向链表	Doubly linked list</h4>
 <p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/cbc8ab20276e2f9312030c313a9ef70b.jpg" alt=""></p>
 <p>单向链表只有一个方向，结点只有一个后继指针 next 指向后面的结点。而双向链表，顾名思义，它支持两个方向，每个结点不止有一个后继指针 next 指向后面的结点，还有一个前驱指针 prev 指向前面的结点。</p>
 <p>双向链表需要额外的两个空间来存储后继结点和前驱结点的地址。所以，如果存储同样多的数据，双向链表要比单链表占用更多的内存空间。虽然两个指针比较浪费存储空间，但可以支持双向遍历，这样也带来了双向链表操作的灵活性。</p>
@@ -1071,6 +1073,7 @@ print(&quot;---icon size : $size&quot;);
 ]]></summary>
         <content type="html"><![CDATA[<p>使用<a href="https://github.com/google/flutter-desktop-embedding">flutter-desktop-embedding</a>编译适用于macos、windows、linux桌面端的app</p>
 <!-- more --> 
+<h4 id="流程">流程</h4>
 <ul>
 <li>
 <ol>
