@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-07-15T10:19:24.046Z</updated>
+    <updated>2019-07-16T03:46:50.863Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -10,6 +10,77 @@
     <logo>https://wmszhe.github.io//images/avatar.png</logo>
     <icon>https://wmszhe.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, zhe&apos;s home</rights>
+    <entry>
+        <title type="html"><![CDATA[洗牌算法]]></title>
+        <id>https://wmszhe.github.io//post/xi-pai-suan-fa</id>
+        <link href="https://wmszhe.github.io//post/xi-pai-suan-fa">
+        </link>
+        <updated>2019-07-16T03:43:56.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="最近在知乎看到了一个关于洗牌算法学习一下记录下">最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</h4>
+<p><a href="https://www.zhihu.com/question/26934313/answer/743798587">有哪些算法惊艳到了你？<br>
+</a></p>
+<h4 id="问题设计一个公平的洗牌算法">问题：设计一个公平的洗牌算法</h4>
+<p>给定一个长度n个数组，最终排列的可能性一共有 n!个，公平的洗牌算法，<strong>应该能等概率地给出这 n! 个结果中的任意一个</strong>。</p>
+<p>我们再换一个角度思考“公平”这个话题。其实也就是，对于生成的排列，<strong>每一个元素都能独立等概率地出现在每一个位置</strong>。或者反过来，<strong>每一个位置都能独立等概率地放置每个元素</strong>。</p>
+<h4 id="java实现">Java实现</h4>
+<pre><code>private static Random rand = new Random();
+private static List&lt;Integer&gt; mList = Arrays.asList(1, 2, 3, 4, 5);
+
+public static void main(String[] args) {
+    List&lt;Integer&gt; shuffle = shuffle(mList);
+    System.out.print(shuffle.toString());
+}
+
+private static List&lt;Integer&gt; shuffle(List&lt;Integer&gt; list) {
+    for (int i = list.size() - 1; i &gt;= 0; i--) {
+        // 取0-i之间的随机数
+        int j = rand.nextInt(i + 1);
+        // 交换最后一位和随机得到的数
+        swap(list, i, j);
+    }
+    return list;
+}
+
+private static void swap(List&lt;Integer&gt; list, int i, int j) {
+    Integer temp = list.get(i);
+    list.set(i, list.get(j));
+    list.set(j, temp);
+}
+
+</code></pre>
+<h4 id="java自带api">Java自带API</h4>
+<p>在Java提供的Collections包中，提供了shuffle方法</p>
+<pre><code>Collections.shuffle(mList);
+</code></pre>
+<p>看下源码:</p>
+<p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/shuffle_java_2019_7_16_11_21_29.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/shuffle_java_2019_7_16_11_21_56.png" alt=""></p>
+<p>可以看出，和上面的思路一样</p>
+<h4 id="思路解析参考上面的链接知乎的原答案">思路解析，参考上面的链接，知乎的原答案</h4>
+<p>比如数组1，2，3，4，5</p>
+<p>我们从后往前</p>
+<p>先取任意1个元素和最后一个交换位置，那么任意一个元素出现在数组最后面的概率为1/5</p>
+<p>我们继续，取任意一个元素和倒数第二个交换位置，概率为4/5*1/4=1/5</p>
+<p>依次类推，每一个元素出现在每一个位置的概率，都是 1/5</p>
+<h4 id="遍历时为什么采用从后到前的方式而不采用从前到后">遍历时，为什么采用从后到前的方式，而不采用从前到后？</h4>
+<p><mark><strong>因为生成 [0, i] 范围的随机数比生成 [i, n) 范围的随机数简单</strong></mark></p>
+<ul>
+<li>生成[0, i]范围的随机数</li>
+</ul>
+<pre><code>Random rand = new Random();
+int randNum = ran.nextInt(i + 1);
+</code></pre>
+<ul>
+<li>生成[i, n)范围的随机数</li>
+</ul>
+<pre><code>Random rand = new Random();
+int randNum = rand.nextInt(n - i) + i;
+</code></pre>
+<h4 id="参考">参考：</h4>
+<p><a href="https://justdo2008.iteye.com/blog/1927222">随机打乱数组List洗牌算法shuffle</a></p>
+<p><a href="https://github.com/giantray/stackoverflow-java-top-qa/blob/master/contents/generating-random-integers-in-a-range-with-Java.md">java 产生指定范围的随机数</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[查找算法]]></title>
         <id>https://wmszhe.github.io//post/cha-zhao-suan-fa</id>

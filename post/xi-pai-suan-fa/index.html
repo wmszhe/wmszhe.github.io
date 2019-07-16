@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    Dart一些特殊的特性 | zhe&#39;s home
+    洗牌算法 | zhe&#39;s home
 </title>
 <link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1563248801944">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -114,117 +114,82 @@
                 <div id="content" class="main-container-left">
                     <article class="post i-card">
                         <h2 class="post-title">
-                            Dart一些特殊的特性
+                            洗牌算法
                         </h2>
                         <div class="post-info">
-                            <time class="post-time">2019-06-21</time>
+                            <time class="post-time">2019-07-16</time>
                             
-                                <a href="https://wmszhe.github.io//tag/c2s1YvlQy" class="post-tag i-tag
-                            i-tag-success">
-                            #dart
-                        </a>
-                                
-                                <a href="https://wmszhe.github.io//tag/TKukAm1js" class="post-tag i-tag
-                            i-tag-success">
-                            #flutter
+                                <a href="https://wmszhe.github.io//tag/FOj_E3Dob" class="post-tag i-tag
+                            i-tag-other_3">
+                            #算法
                         </a>
                                 
                         </div>
                         
-                            <div class="post-feature-image" style="background-image: url('https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/dart-yi-xie-te-shu-de-te-xing.png')"></div>
-                            
                                 <div class="post-content">
-                                    <p>Dart一些特殊的特性，比较容易忘记和混淆的</p>
-<!-- more -->
-<h3 id="参数加">参数加{}</h3>
-<blockquote>
-<p>在调用函数传递参数时，指定参数名</p>
-</blockquote>
-<pre><code>void sayHello({String name, String msg}){
-    
-}
-sayHello(name: &quot;abc&quot;, msg: &quot;hello&quot;);
-</code></pre>
-<h3 id="可选参数">可选参数</h3>
-<blockquote>
-<p>可选的参数，在调用时可以不传</p>
-</blockquote>
-<blockquote>
-<p>通过位置来确定实参和形参的对应关系的</p>
-</blockquote>
-<blockquote>
-<p>参考： https://blog.csdn.net/xlh1191860939/article/details/87895616</p>
-</blockquote>
-<pre><code>String say(String from, String msg, [String device, String time]) {
- 
-    var result = &quot;$from says $msg&quot;;
- 
-    if (device != null) {
-      result = &quot;$result with a $device&quot;;
-    }
- 
-    if (time != null) {
-      result = &quot;$result at $time&quot;;
-    }
- 
-    return result;
-}
- 
-void main(){
-    print(say(&quot;david&quot;, &quot;hello&quot;, &quot;mobile&quot;, &quot;2019.2.29.20:08:08&quot;));
-    // david says hello with a mobile at 2019.2.29.20:08:08
-    print(say(&quot;david&quot;, &quot;hello&quot;, &quot;2019.2.29.20:08:08&quot;, &quot;mobile&quot;));
-    // david says hello with a 2019.2.29.20:08:08 at mobile
-    print(say(&quot;david&quot;, &quot;hello&quot;));
-    // david says hello
-}
-</code></pre>
-<h3 id="">??=</h3>
-<blockquote>
-<p>仅在变量为null时赋值，使用??=运算符</p>
-</blockquote>
-<pre><code>// 如果b为空，则将值分配给b；否则，b保持不变
-b ??= value;
-</code></pre>
-<h3 id="-2">?.</h3>
-<blockquote>
-<p>eg : foo?.bar</p>
-</blockquote>
-<blockquote>
-<p>foo可以为空,foo为空时返回空，否则返回bar</p>
-</blockquote>
-<pre><code>foo?.bar
+                                    <h4 id="最近在知乎看到了一个关于洗牌算法学习一下记录下">最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</h4>
+<p><a href="https://www.zhihu.com/question/26934313/answer/743798587">有哪些算法惊艳到了你？<br>
+</a></p>
+<h4 id="问题设计一个公平的洗牌算法">问题：设计一个公平的洗牌算法</h4>
+<p>给定一个长度n个数组，最终排列的可能性一共有 n!个，公平的洗牌算法，<strong>应该能等概率地给出这 n! 个结果中的任意一个</strong>。</p>
+<p>我们再换一个角度思考“公平”这个话题。其实也就是，对于生成的排列，<strong>每一个元素都能独立等概率地出现在每一个位置</strong>。或者反过来，<strong>每一个位置都能独立等概率地放置每个元素</strong>。</p>
+<h4 id="java实现">Java实现</h4>
+<pre><code>private static Random rand = new Random();
+private static List&lt;Integer&gt; mList = Arrays.asList(1, 2, 3, 4, 5);
 
-====等同于====
-
-if(foo != null) {
-    return bar;
-} else {
-    return null;
+public static void main(String[] args) {
+    List&lt;Integer&gt; shuffle = shuffle(mList);
+    System.out.print(shuffle.toString());
 }
+
+private static List&lt;Integer&gt; shuffle(List&lt;Integer&gt; list) {
+    for (int i = list.size() - 1; i &gt;= 0; i--) {
+        // 取0-i之间的随机数
+        int j = rand.nextInt(i + 1);
+        // 交换最后一位和随机得到的数
+        swap(list, i, j);
+    }
+    return list;
+}
+
+private static void swap(List&lt;Integer&gt; list, int i, int j) {
+    Integer temp = list.get(i);
+    list.set(i, list.get(j));
+    list.set(j, temp);
+}
+
 </code></pre>
-<h3 id="和-~">/ 和 ~/</h3>
-<blockquote>
-<p>/ 除</p>
-</blockquote>
-<blockquote>
-<p>~/ 返回一个整数值的除法</p>
-</blockquote>
-<pre><code>assert(5 / 2 == 2.5); // 结果是double类型
-assert(5 ~/ 2 == 2); // 结果是一个整数
+<h4 id="java自带api">Java自带API</h4>
+<p>在Java提供的Collections包中，提供了shuffle方法</p>
+<pre><code>Collections.shuffle(mList);
 </code></pre>
-<h3 id="print">print</h3>
-<blockquote>
-<p>打印重复内容，可以使用*</p>
-</blockquote>
-<blockquote>
-<p>如果要打印d.e，外层添加{}</p>
-</blockquote>
-<pre><code>print(&quot;abc&quot;);
-print(&quot;abc $d&quot;);
-print(&quot;abc ${d.e}&quot;);
-print(&quot;abc&quot; * 10); // 打印10次abc
+<p>看下源码:</p>
+<p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/shuffle_java_2019_7_16_11_21_29.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/shuffle_java_2019_7_16_11_21_56.png" alt=""></p>
+<p>可以看出，和上面的思路一样</p>
+<h4 id="思路解析参考上面的链接知乎的原答案">思路解析，参考上面的链接，知乎的原答案</h4>
+<p>比如数组1，2，3，4，5</p>
+<p>我们从后往前</p>
+<p>先取任意1个元素和最后一个交换位置，那么任意一个元素出现在数组最后面的概率为1/5</p>
+<p>我们继续，取任意一个元素和倒数第二个交换位置，概率为4/5*1/4=1/5</p>
+<p>依次类推，每一个元素出现在每一个位置的概率，都是 1/5</p>
+<h4 id="遍历时为什么采用从后到前的方式而不采用从前到后">遍历时，为什么采用从后到前的方式，而不采用从前到后？</h4>
+<p><mark><strong>因为生成 [0, i] 范围的随机数比生成 [i, n) 范围的随机数简单</strong></mark></p>
+<ul>
+<li>生成[0, i]范围的随机数</li>
+</ul>
+<pre><code>Random rand = new Random();
+int randNum = ran.nextInt(i + 1);
 </code></pre>
+<ul>
+<li>生成[i, n)范围的随机数</li>
+</ul>
+<pre><code>Random rand = new Random();
+int randNum = rand.nextInt(n - i) + i;
+</code></pre>
+<h4 id="参考">参考：</h4>
+<p><a href="https://justdo2008.iteye.com/blog/1927222">随机打乱数组List洗牌算法shuffle</a></p>
+<p><a href="https://github.com/giantray/stackoverflow-java-top-qa/blob/master/contents/generating-random-integers-in-a-range-with-Java.md">java 产生指定范围的随机数</a></p>
 
                                 </div>
                     </article>
@@ -232,9 +197,9 @@ print(&quot;abc&quot; * 10); // 打印10次abc
                     
                         <div class="next-post">
                             <div class="next">下一篇</div>
-                            <a href="https://wmszhe.github.io//post/flutterui-xiang-guan">
+                            <a href="https://wmszhe.github.io//post/cha-zhao-suan-fa">
                                 <h3 class="post-title">
-                                    FlutterUI相关
+                                    查找算法
                                 </h3>
                             </a>
                         </div>
@@ -257,12 +222,17 @@ print(&quot;abc&quot; * 10); // 打印10次abc
 <ul>
 <li>
 <ul>
-<li><a href="#%E5%8F%82%E6%95%B0%E5%8A%A0">参数加{}</a></li>
-<li><a href="#%E5%8F%AF%E9%80%89%E5%8F%82%E6%95%B0">可选参数</a></li>
-<li><a href="#">??=</a></li>
-<li><a href="#-2">?.</a></li>
-<li><a href="#%E5%92%8C-~">/ 和 ~/</a></li>
-<li><a href="#print">print</a></li>
+<li>
+<ul>
+<li><a href="#%E6%9C%80%E8%BF%91%E5%9C%A8%E7%9F%A5%E4%B9%8E%E7%9C%8B%E5%88%B0%E4%BA%86%E4%B8%80%E4%B8%AA%E5%85%B3%E4%BA%8E%E6%B4%97%E7%89%8C%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%80%E4%B8%8B%E8%AE%B0%E5%BD%95%E4%B8%8B">最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</a></li>
+<li><a href="#%E9%97%AE%E9%A2%98%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E5%85%AC%E5%B9%B3%E7%9A%84%E6%B4%97%E7%89%8C%E7%AE%97%E6%B3%95">问题：设计一个公平的洗牌算法</a></li>
+<li><a href="#java%E5%AE%9E%E7%8E%B0">Java实现</a></li>
+<li><a href="#java%E8%87%AA%E5%B8%A6api">Java自带API</a></li>
+<li><a href="#%E6%80%9D%E8%B7%AF%E8%A7%A3%E6%9E%90%E5%8F%82%E8%80%83%E4%B8%8A%E9%9D%A2%E7%9A%84%E9%93%BE%E6%8E%A5%E7%9F%A5%E4%B9%8E%E7%9A%84%E5%8E%9F%E7%AD%94%E6%A1%88">思路解析，参考上面的链接，知乎的原答案</a></li>
+<li><a href="#%E9%81%8D%E5%8E%86%E6%97%B6%E4%B8%BA%E4%BB%80%E4%B9%88%E9%87%87%E7%94%A8%E4%BB%8E%E5%90%8E%E5%88%B0%E5%89%8D%E7%9A%84%E6%96%B9%E5%BC%8F%E8%80%8C%E4%B8%8D%E9%87%87%E7%94%A8%E4%BB%8E%E5%89%8D%E5%88%B0%E5%90%8E">遍历时，为什么采用从后到前的方式，而不采用从前到后？</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">参考：</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
