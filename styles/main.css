@@ -570,6 +570,7 @@ body {
   }
   .header .nav .menu-container ul {
     flex-direction: column;
+    list-style: none;
   }
   .header .nav .menu-container ul li {
     border-bottom: 1px solid #ddd;
@@ -735,11 +736,9 @@ body {
   justify-content: center;
 }
 .tags-container .tags-group {
-  display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 30px;
-  max-width: 600px;
 }
 .tags-container .tags-group .tags-tag {
   margin: 20px;
@@ -853,7 +852,7 @@ body {
 .post-detail .post .post-content ul,
 .post-detail .post .post-content ol {
   margin-bottom: 16px;
-  padding-left: 0px;
+  padding-left: 24px;
   line-height: 1.725;
 }
 .post-detail .post .post-content h1,
