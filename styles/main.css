@@ -227,7 +227,7 @@ body {
   font-family: "Myriad Pro", "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 a {
-  color: #2e9fff;
+  color: #515a6e;
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -788,6 +788,8 @@ body {
   overflow: hidden;
 }
 .post-detail .post .post-content a {
+  color: #2e9fff;
+  text-decoration: #2e9fff;
   transition: all 0.3s;
 }
 .post-detail .post .post-content img {
