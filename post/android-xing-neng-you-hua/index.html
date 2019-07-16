@@ -7,7 +7,7 @@
 <title>
     Android性能优化 | zhe&#39;s home
 </title>
-<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1563282916967">
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1563286442803">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -36,7 +36,7 @@
         <span class="menu-btn fa fa-align-justify"></span>
         <div class="logo">
             <a href="https://wmszhe.github.io/">
-                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1563282916967" alt="">
+                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1563286442803" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -125,7 +125,7 @@
                         </a>
                                 
                                 <a href="https://wmszhe.github.io//tag/51CmSDdaI" class="post-tag i-tag
-                            i-tag-">
+                            i-tag-banana">
                             #性能优化
                         </a>
                                 
@@ -142,20 +142,16 @@
 <br>
 <br>
 <h2 id="删除多余依赖项">删除多余依赖项</h2>
-<ul>
-<li>
 <ol>
-<li>查找多余依赖</li>
-</ol>
+<li>
+<p>查找多余依赖</p>
 <blockquote>
 <p>菜单栏 -&gt; Analyze -&gt; Run Inspection Name -&gt; 输入unused library -&gt; 回车 -&gt; 查看分析结果</p>
 </blockquote>
 <p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561599539057.png" alt=""></p>
 </li>
 <li>
-<ol start="2">
-<li>查看module依赖</li>
-</ol>
+<p>查看module依赖</p>
 <blockquote>
 <p>使用gradle，依次确认各个module实际依赖情况</p>
 </blockquote>
@@ -163,16 +159,14 @@
 <p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561368142795.png" alt=""></p>
 </li>
 <li>
-<ol start="3">
-<li>排除多余依赖</li>
-</ol>
+<p>排除多余依赖</p>
 <blockquote>
 <p>根据InspectionResult结果和dependencies结果，排除多余依赖项</p>
 </blockquote>
 <p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561368152549.png" alt=""></p>
 <p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561599326748.png" alt=""></p>
 </li>
-</ul>
+</ol>
 <h2 id="删除多余的资源文件">删除多余的资源文件</h2>
 <blockquote>
 <p>菜单栏 -&gt; Analyze -&gt; Run Inspection Name -&gt; 输入unused Resources -&gt; 回车 -&gt; 查看分析结果 -&gt; 删除</p>

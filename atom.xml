@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-07-16T14:09:15.165Z</updated>
+    <updated>2019-07-16T14:14:05.165Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -836,20 +836,16 @@ void add(int element) {
 <br>
 <br>
 <h2 id="删除多余依赖项">删除多余依赖项</h2>
-<ul>
-<li>
 <ol>
-<li>查找多余依赖</li>
-</ol>
+<li>
+<p>查找多余依赖</p>
 <blockquote>
 <p>菜单栏 -&gt; Analyze -&gt; Run Inspection Name -&gt; 输入unused library -&gt; 回车 -&gt; 查看分析结果</p>
 </blockquote>
 <p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561599539057.png" alt=""></p>
 </li>
 <li>
-<ol start="2">
-<li>查看module依赖</li>
-</ol>
+<p>查看module依赖</p>
 <blockquote>
 <p>使用gradle，依次确认各个module实际依赖情况</p>
 </blockquote>
@@ -857,16 +853,14 @@ void add(int element) {
 <p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561368142795.png" alt=""></p>
 </li>
 <li>
-<ol start="3">
-<li>排除多余依赖</li>
-</ol>
+<p>排除多余依赖</p>
 <blockquote>
 <p>根据InspectionResult结果和dependencies结果，排除多余依赖项</p>
 </blockquote>
 <p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561368152549.png" alt=""></p>
 <p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561599326748.png" alt=""></p>
 </li>
-</ul>
+</ol>
 <h2 id="删除多余的资源文件">删除多余的资源文件</h2>
 <blockquote>
 <p>菜单栏 -&gt; Analyze -&gt; Run Inspection Name -&gt; 输入unused Resources -&gt; 回车 -&gt; 查看分析结果 -&gt; 删除</p>
@@ -1129,34 +1123,20 @@ print(&quot;---icon size : $size&quot;);
         <content type="html"><![CDATA[<p>使用<a href="https://github.com/google/flutter-desktop-embedding">flutter-desktop-embedding</a>编译适用于macos、windows、linux桌面端的app</p>
 <!-- more --> 
 <h4 id="流程">流程</h4>
-<ul>
-<li>
 <ol>
-<li>配置flutter环境，必须在master分支</li>
-</ol>
-<pre><code>flutter channel master
+<li>配置flutter环境，必须在master分支<pre><code>flutter channel master
 flutter upgrade
 </code></pre>
 </li>
-<li>
-<ol start="2">
-<li>clone flutter-desktop-embedding</li>
-</ol>
-<pre><code>git clone git@github.com:google/flutter-desktop-embedding.git
+<li>clone flutter-desktop-embedding<pre><code>git clone git@github.com:google/flutter-desktop-embedding.git
 </code></pre>
 </li>
-<li>
-<ol start="3">
-<li>复制flutter-desktop-embedding/example到自己的开发目录下,重命名为flutter_desktop</li>
-</ol>
+<li>复制flutter-desktop-embedding/example到自己的开发目录下,重命名为flutter_desktop
 <blockquote>
 <p>目前不支持flutter create直接创建desktop项目，只能复制出example项目修改</p>
 </blockquote>
 </li>
-<li>
-<ol start="4">
-<li>开启ENABLE_FLUTTER_DESKTOP</li>
-</ol>
+<li>开启ENABLE_FLUTTER_DESKTOP
 <ul>
 <li><strong>一次性，每次打开项目都要执行</strong><pre><code>命令行中 export ENABLE_FLUTTER_DESKTOP=true
 </code></pre>
@@ -1172,31 +1152,16 @@ flutter upgrade
 </li>
 </ul>
 </li>
-<li>
-<ol start="5">
-<li>更新依赖</li>
-</ol>
-<pre><code>flutter packages get
+<li>更新依赖<pre><code>flutter packages get
 </code></pre>
 </li>
-<li>
-<ol start="6">
-<li>flutter run,即可看到demo项目<br>
+<li>,即可看到demo项目<br>
+<code>flutter run</code><br>
 <img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560851493604.png" alt=""></li>
-</ol>
-</li>
-<li>
-<ol start="7">
 <li>使用文本编辑器打开flutter_desktop项目，在lib目录下编写自己的代码<br>
 <img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560850644118.png" alt=""></li>
-</ol>
-</li>
-<li>
-<ol start="8">
 <li>over!</li>
 </ol>
-</li>
-</ul>
 ]]></content>
     </entry>
 </feed>

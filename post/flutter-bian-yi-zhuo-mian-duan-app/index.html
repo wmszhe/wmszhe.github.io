@@ -7,7 +7,7 @@
 <title>
     FLutter编译桌面端app | zhe&#39;s home
 </title>
-<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1563282916967">
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1563286442803">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -36,7 +36,7 @@
         <span class="menu-btn fa fa-align-justify"></span>
         <div class="logo">
             <a href="https://wmszhe.github.io/">
-                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1563282916967" alt="">
+                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1563286442803" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -120,7 +120,7 @@
                             <time class="post-time">2019-06-18</time>
                             
                                 <a href="https://wmszhe.github.io//tag/TKukAm1js" class="post-tag i-tag
-                            i-tag-success">
+                            i-tag-error">
                             #flutter
                         </a>
                                 
@@ -132,34 +132,20 @@
                                     <p>使用<a href="https://github.com/google/flutter-desktop-embedding">flutter-desktop-embedding</a>编译适用于macos、windows、linux桌面端的app</p>
 <!-- more --> 
 <h4 id="流程">流程</h4>
-<ul>
-<li>
 <ol>
-<li>配置flutter环境，必须在master分支</li>
-</ol>
-<pre><code>flutter channel master
+<li>配置flutter环境，必须在master分支<pre><code>flutter channel master
 flutter upgrade
 </code></pre>
 </li>
-<li>
-<ol start="2">
-<li>clone flutter-desktop-embedding</li>
-</ol>
-<pre><code>git clone git@github.com:google/flutter-desktop-embedding.git
+<li>clone flutter-desktop-embedding<pre><code>git clone git@github.com:google/flutter-desktop-embedding.git
 </code></pre>
 </li>
-<li>
-<ol start="3">
-<li>复制flutter-desktop-embedding/example到自己的开发目录下,重命名为flutter_desktop</li>
-</ol>
+<li>复制flutter-desktop-embedding/example到自己的开发目录下,重命名为flutter_desktop
 <blockquote>
 <p>目前不支持flutter create直接创建desktop项目，只能复制出example项目修改</p>
 </blockquote>
 </li>
-<li>
-<ol start="4">
-<li>开启ENABLE_FLUTTER_DESKTOP</li>
-</ol>
+<li>开启ENABLE_FLUTTER_DESKTOP
 <ul>
 <li><strong>一次性，每次打开项目都要执行</strong><pre><code>命令行中 export ENABLE_FLUTTER_DESKTOP=true
 </code></pre>
@@ -175,31 +161,16 @@ flutter upgrade
 </li>
 </ul>
 </li>
-<li>
-<ol start="5">
-<li>更新依赖</li>
-</ol>
-<pre><code>flutter packages get
+<li>更新依赖<pre><code>flutter packages get
 </code></pre>
 </li>
-<li>
-<ol start="6">
-<li>flutter run,即可看到demo项目<br>
+<li>,即可看到demo项目<br>
+<code>flutter run</code><br>
 <img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560851493604.png" alt=""></li>
-</ol>
-</li>
-<li>
-<ol start="7">
 <li>使用文本编辑器打开flutter_desktop项目，在lib目录下编写自己的代码<br>
 <img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560850644118.png" alt=""></li>
-</ol>
-</li>
-<li>
-<ol start="8">
 <li>over!</li>
 </ol>
-</li>
-</ul>
 
                                 </div>
                     </article>
