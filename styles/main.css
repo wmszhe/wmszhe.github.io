@@ -830,6 +830,8 @@ body {
   padding: 16px;
   border-left: 2px solid #006cff;
   background: #f3f5f7;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 .post-detail .post .post-content blockquote p {
   margin-bottom: 0;
