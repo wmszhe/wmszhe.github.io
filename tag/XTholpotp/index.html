@@ -1,205 +1,279 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" >
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    碎碎念 | zhe&#39;s home
-</title>
-<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1563249399961">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<title>碎碎念 | zhe&#39;s home</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1563253642022">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wmszhe.github.io//styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://wmszhe.github.io//media/js/jquery.sticky-sidebar.min.js"></script>
+
+
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
-</head>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="https://wmszhe.github.io/">
-                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1563249399961" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    zhe&#39;s home
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tools" class="menu">
-                                    工具
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
-    </div>
-</div>
 
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
-
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-container main-container">
-                <div id="content" class="main-container-left">
-                    
-    <div class="i-card">
-        <b>标签：#
-        碎碎念</b>
-    </div>
-    
+  </head>
+  <body>
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://wmszhe.github.io/">zhe&#39;s home</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
         
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io//post/hello-everyone">
-                        Hello EveryOne
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-06-15</time>
-                    
-                        <a href="https://wmszhe.github.io//tag/XTholpotp" class="post-tag i-tag
-                            i-tag-other_4">
-            #碎碎念
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                        <a href="https://wmszhe.github.io//post/hello-everyone" class="post-feature-image" style="background-image:url(https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/hello-everyone.png) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>👏 欢迎来到 <strong>zhe's home!</strong> 👏</p>
-
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io//post/hello-everyone">Read More ~</a>
-                            </div>
-                </div>
-            </article>
+          <li>
             
-                <!-- 翻页 -->
-                
-                </div>
-                <!--  -->
-                <div class="main-container-middle"></div>
-                <!--  -->
-                <div id="sidebar" class="main-container-right">
-
-                    <!-- 个人信息 -->
-                    
-    <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://wmszhe.github.io//images/avatar.png?v=1563249399961)">
-        </div>
-        <h1 class="id_card-title">
-            zhe&#39;s home
-        </h1>
-        <h2 class="id_card-description">
-            温故而知新
-        </h2>
-        <!--  -->
-        <div class="id_card-sns">
-            <!-- github -->
+              <a href="/" class="menu">
+                首页
+              </a>
             
-                    <!-- twitter -->
-                    
-                            <!-- weibo -->
-                            
-                                    <!-- facebook -->
-                                    
-
-        </div>
+          </li>
+        
+          <li>
+            
+              <a href="/tools" class="menu">
+                工具
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+      </ul>
     </div>
-    
+  </div>
+</nav>
 
-                        <!-- 公告栏 -->
-                        
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <h2 class="current-tag">标签: 碎碎念</h2>
+          
+  <article class="article">
+    <h2 class="article-title">
+      <a href="https://wmszhe.github.io//post/hello-everyone">Hello EveryOne</a>
+    </h2>
+    <p class="article-meta">
+      2019-06-15
+      
+        <a href="https://wmszhe.github.io//tag/XTholpotp" class="badge warning">
+          碎碎念
+        </a>
+      
+    </p>
+    <p class="text-lead">
+      <p>👏 欢迎来到 <strong>zhe's home!</strong> 👏</p>
 
-                </div>
-            </div>
+    </p>
+    <div class="row">
+      <a href="https://wmszhe.github.io//post/hello-everyone" class="readmore-link">
+        <button>
+          Read More
+        </button>
+      </a>
+    </div>
+  </article>
 
 
-
-            <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
-  <a class="rss" href="https://wmszhe.github.io//atom.xml" target="_blank">RSS</a>
+        </div>
+        <div class="row flex-edges">
+  
+  
 </div>
 
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
+      </div>
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://wmszhe.github.io//images/avatar.png?v=1563253642022" class="no-responsive avatar">
+    <div class="text-muted">温故而知新</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/xi-pai-suan-fa">洗牌算法</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/cha-zhao-suan-fa">查找算法</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/lian-biao-linked-list">链表LinkedList</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/shu-zu-array">数组Array</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/suan-fa-fu-za-du">算法复杂度</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/shu-ju-jie-gou-he-suan-fa">数据结构和算法</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/android-xing-neng-you-hua">Android性能优化</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/dart-yi-xie-te-shu-de-te-xing">Dart一些特殊的特性</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/flutterui-xiang-guan">FlutterUI相关</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/flutter-bian-yi-zhuo-mian-duan-app">FLutter编译桌面端app</a>
+            </li>
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://wmszhe.github.io//tag/FOj_E3Dob" class="badge warning">
+          算法
+        </a>
+      
+        <a href="https://wmszhe.github.io//tag/gywcJZvfb" class="badge secondary">
+          数据结构
+        </a>
+      
+        <a href="https://wmszhe.github.io//tag/70DSvO8Bc" class="badge ">
+          Android
+        </a>
+      
+        <a href="https://wmszhe.github.io//tag/51CmSDdaI" class="badge secondary">
+          性能优化
+        </a>
+      
+        <a href="https://wmszhe.github.io//tag/c2s1YvlQy" class="badge success">
+          dart
+        </a>
+      
+        <a href="https://wmszhe.github.io//tag/TKukAm1js" class="badge secondary">
+          flutter
+        </a>
+      
+        <a href="https://wmszhe.github.io//tag/Ryx7PH5n2" class="badge success">
+          Git
+        </a>
+      
+        <a href="https://wmszhe.github.io//tag/XTholpotp" class="badge ">
+          碎碎念
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> 
+    <!-- | <a class="rss" href="https://wmszhe.github.io//atom.xml" target="_blank">RSS</a> -->
+  </div>
+</div>
 
     </div>
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
-    </script>
-</body>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+
+  </body>
 </html>

@@ -1,135 +1,114 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" >
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    FLutter编译桌面端app | zhe&#39;s home
-</title>
-<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1563249399961">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<title>FLutter编译桌面端app | zhe&#39;s home</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1563253642022">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wmszhe.github.io//styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://wmszhe.github.io//media/js/jquery.sticky-sidebar.min.js"></script>
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://wmszhe.github.io/">zhe&#39;s home</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
         
+          <li>
             
-                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-                
-
-                    
-                            
-</head>
-
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="https://wmszhe.github.io/">
-                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1563249399961" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    zhe&#39;s home
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tools" class="menu">
-                                    工具
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tools" class="menu">
+                工具
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+      </ul>
     </div>
-</div>
+  </div>
+</nav>
 
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
-
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-detail main-container">
-                <!-- left -->
-                <div id="content" class="main-container-left">
-                    <article class="post i-card">
-                        <h2 class="post-title">
-                            FLutter编译桌面端app
-                        </h2>
-                        <div class="post-info">
-                            <time class="post-time">2019-06-18</time>
-                            
-                                <a href="https://wmszhe.github.io//tag/TKukAm1js" class="post-tag i-tag
-                            i-tag-warning">
-                            #flutter
-                        </a>
-                                
-                        </div>
-                        
-                            <div class="post-feature-image" style="background-image: url('https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/flutter-bian-yi-zhuo-mian-duan-app.png')"></div>
-                            
-                                <div class="post-content">
-                                    <p>使用<a href="https://github.com/google/flutter-desktop-embedding">flutter-desktop-embedding</a>编译适用于macos、windows、linux桌面端的app</p>
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>FLutter编译桌面端app</h1>
+            <p class="article-meta">
+              2019-06-18
+              
+                <a href="https://wmszhe.github.io//tag/TKukAm1js" class="badge warning">
+                  flutter
+                </a>
+              
+            </p>
+            
+              <img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/flutter-bian-yi-zhuo-mian-duan-app.png" alt="FLutter编译桌面端app">
+            
+            <div class="post-content">
+              <p>使用<a href="https://github.com/google/flutter-desktop-embedding">flutter-desktop-embedding</a>编译适用于macos、windows、linux桌面端的app</p>
 <!-- more --> 
 <h4 id="流程">流程</h4>
 <ul>
@@ -201,122 +180,210 @@ flutter upgrade
 </li>
 </ul>
 
-                                </div>
-                    </article>
-                    <!--  -->
-                    
-                        <div class="next-post">
-                            <div class="next">下一篇</div>
-                            <a href="https://wmszhe.github.io//post/git">
-                                <h3 class="post-title">
-                                    Git
-                                </h3>
-                            </a>
-                        </div>
-                        
-                            <div id="disqus_thread"></div>
-                            <div id="gitalk-container"></div>
-                </div>
-                <!-- middle -->
-                <div class="main-container-middle"></div>
-                <!-- right -->
-                <div id="sidebar" class="main-container-right">
-                    
-                        <!-- toc -->
-                        
-    <div class="toc-card i-card ">
-        <div class="toc-title i-card-title">目录</div>
-        <div class="toc-content">
-            <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#%E6%B5%81%E7%A8%8B">流程</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-        </div>
-        <script>
-            function locateCatelogList() {
-                /*获取文章目录集合,可通过:header过滤器*/
-                var alis = $('.post-content :header');
-                /*获取侧边栏目录列表集合**/
-                var sidebar_alis = $('.markdownIt-TOC a');
-                /*获取滚动条到顶部的距离*/
-                var scroll_height = $(window).scrollTop();
-                for (var i = 0; i < alis.length; i++) {
-                    /*获取锚点集合中的元素分别到顶点的距离*/
-                    var a_height = $(alis[i]).offset().top;
-                    if (a_height < scroll_height) {
-                        /*高亮显示*/
-                        sidebar_alis.removeClass('on');
-                        $(sidebar_alis[i]).addClass('on');
-                    }
-                }
-            }
-            $(function() {
-                /*绑定滚动事件 */
-                $(window).bind('scroll', locateCatelogList);
-            });
-        </script>
-    </div>
-    
-                            
-
-                </div>
-
-
-
-
             </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://wmszhe.github.io//post/git">
+                <h3 class="post-title">
+                  Git
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
 
+          
+        
+      </div>
 
-            <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
-  <a class="rss" href="https://wmszhe.github.io//atom.xml" target="_blank">RSS</a>
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://wmszhe.github.io//images/avatar.png?v=1563253642022" class="no-responsive avatar">
+    <div class="text-muted">温故而知新</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/xi-pai-suan-fa">洗牌算法</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/cha-zhao-suan-fa">查找算法</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/lian-biao-linked-list">链表LinkedList</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/shu-zu-array">数组Array</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/suan-fa-fu-za-du">算法复杂度</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/shu-ju-jie-gou-he-suan-fa">数据结构和算法</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/android-xing-neng-you-hua">Android性能优化</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/dart-yi-xie-te-shu-de-te-xing">Dart一些特殊的特性</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/flutterui-xiang-guan">FlutterUI相关</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://wmszhe.github.io//post/flutter-bian-yi-zhuo-mian-duan-app">FLutter编译桌面端app</a>
+            </li>
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://wmszhe.github.io//tag/FOj_E3Dob" class="badge success">
+          算法
+        </a>
+      
+        <a href="https://wmszhe.github.io//tag/gywcJZvfb" class="badge secondary">
+          数据结构
+        </a>
+      
+        <a href="https://wmszhe.github.io//tag/70DSvO8Bc" class="badge warning">
+          Android
+        </a>
+      
+        <a href="https://wmszhe.github.io//tag/51CmSDdaI" class="badge ">
+          性能优化
+        </a>
+      
+        <a href="https://wmszhe.github.io//tag/c2s1YvlQy" class="badge success">
+          dart
+        </a>
+      
+        <a href="https://wmszhe.github.io//tag/TKukAm1js" class="badge warning">
+          flutter
+        </a>
+      
+        <a href="https://wmszhe.github.io//tag/Ryx7PH5n2" class="badge ">
+          Git
+        </a>
+      
+        <a href="https://wmszhe.github.io//tag/XTholpotp" class="badge secondary">
+          碎碎念
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> 
+    <!-- | <a class="rss" href="https://wmszhe.github.io//atom.xml" target="_blank">RSS</a> -->
+  </div>
 </div>
 
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
-
 
     </div>
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
-    </script>
-    
-        
-            <script>
-    window.onload = function() {
-        var gitalk = new Gitalk({
-            clientID: 'f8fe9375d0b8d01d2e55',
-            clientSecret: 'fd4f2870b6c30d18a4af888480e80836b6732624',
-            repo: 'wmszhe.github.io',
-            owner: 'wmszhe',
-            admin: ['wmszhe'],
-            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
-            distractionFreeMode: false // Facebook-like distraction free mode
-        })
 
-        gitalk.render('gitalk-container')
-    }
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
 </script>
-                
 
-                    
-                                
-</body>
 
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'f8fe9375d0b8d01d2e55',
+        clientSecret: 'fd4f2870b6c30d18a4af888480e80836b6732624',
+        repo: 'wmszhe.github.io',
+        owner: 'wmszhe',
+        admin: ['wmszhe'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
 </html>
