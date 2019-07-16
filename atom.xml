@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-07-16T12:40:14.422Z</updated>
+    <updated>2019-07-16T12:54:40.345Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -218,13 +218,9 @@ fun binarySearchForRecursion(aar: IntArray, key: Int, low: Int, high: Int): Int 
 </li>
 </ol>
 <h3 id="三-常见的链表算法">三. 常见的链表算法</h3>
-<ul>
-<li>
 <ol>
 <li>单链表反转</li>
 </ol>
-</li>
-</ul>
 <pre><code>fun main() {
     val note1 = SinglyLinkedNote(1)
     val note2 = SinglyLinkedNote(2)
@@ -276,40 +272,24 @@ fun printNode(data: SinglyLinkedNote?) {
     println(str.toString())
 }
 </code></pre>
-<ul>
-<li>
 <ol start="2">
 <li>链表中环的检测</li>
 </ol>
-</li>
-</ul>
 <pre><code>
 </code></pre>
-<ul>
-<li>
 <ol start="3">
 <li>两个有序的链表合并</li>
 </ol>
-</li>
-</ul>
 <pre><code>
 </code></pre>
-<ul>
-<li>
 <ol start="4">
 <li>删除链表倒数第 n 个结点</li>
 </ol>
-</li>
-</ul>
 <pre><code>
 </code></pre>
-<ul>
-<li>
 <ol start="5">
 <li>求链表的中间结点</li>
 </ol>
-</li>
-</ul>
 <pre><code>
 </code></pre>
 ]]></content>

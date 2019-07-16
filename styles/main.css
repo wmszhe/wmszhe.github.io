@@ -853,7 +853,7 @@ body {
 .post-detail .post .post-content ul,
 .post-detail .post .post-content ol {
   margin-bottom: 16px;
-  padding-left: 24px;
+  padding-left: 0px;
   line-height: 1.725;
 }
 .post-detail .post .post-content h1,
