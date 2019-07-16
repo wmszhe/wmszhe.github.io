@@ -821,7 +821,6 @@ body {
   margin-bottom: 24px;
 }
 .post-detail .post .post-content pre code {
-  padding: 1em;
   border-radius: 5px;
   font-size: 16px;
   font-family: 'Source Code Pro', Consolas, Menlo, Monaco, 'Courier New', monospace;
