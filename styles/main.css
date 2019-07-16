@@ -554,6 +554,9 @@ body {
     padding: 0 20px;
     width: 100%;
   }
+  .header .nav .logo {
+    margin: auto;
+  }
   .header .nav .menu-btn {
     display: block;
     cursor: pointer;
