@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-07-16T14:14:05.165Z</updated>
+    <updated>2019-07-16T14:17:59.863Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -823,18 +823,12 @@ void add(int element) {
         <link href="https://wmszhe.github.io//post/android-xing-neng-you-hua">
         </link>
         <updated>2019-06-24T09:17:17.000Z</updated>
-        <summary type="html"><![CDATA[<p>Android性能优化，一些性能优化方式。<br>
-<br><br>
-<br></p>
+        <summary type="html"><![CDATA[<p>Android性能优化，一些性能优化方式。</p>
 <h2 id="持续更新"><mark>持续更新</mark></h2>
 ]]></summary>
-        <content type="html"><![CDATA[<p>Android性能优化，一些性能优化方式。<br>
-<br><br>
-<br></p>
+        <content type="html"><![CDATA[<p>Android性能优化，一些性能优化方式。</p>
 <h2 id="持续更新"><mark>持续更新</mark></h2>
 <!-- more -->
-<br>
-<br>
 <h2 id="删除多余依赖项">删除多余依赖项</h2>
 <ol>
 <li>
@@ -1155,7 +1149,7 @@ flutter upgrade
 <li>更新依赖<pre><code>flutter packages get
 </code></pre>
 </li>
-<li>,即可看到demo项目<br>
+<li>flutter run,即可看到demo项目		<br>
 <code>flutter run</code><br>
 <img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560851493604.png" alt=""></li>
 <li>使用文本编辑器打开flutter_desktop项目，在lib目录下编写自己的代码<br>
