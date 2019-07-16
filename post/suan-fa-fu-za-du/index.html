@@ -1,138 +1,115 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" >
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    算法复杂度 | zhe&#39;s home
-</title>
-<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1563256542417">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<title>算法复杂度 | zhe&#39;s home</title>
+<meta name="description" content="温故而知新">
+<meta http-equiv=”Content-Security-Policy” content=”upgrade-insecure-requests”/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1563256685947">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wmszhe.github.io//styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://wmszhe.github.io//media/js/jquery.sticky-sidebar.min.js"></script>
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
-        
-            
-                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-                
 
-                    
-                            
-</head>
+  </head>
+  <body>
+    <div id="app" class="main">
 
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="https://wmszhe.github.io/">
-                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1563256542417" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    zhe&#39;s home
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tools" class="menu">
-                                    工具
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://wmszhe.github.io/">
+        <img src="https://wmszhe.github.io//images/avatar.png?v=1563256685947" class="site-logo">
+        <h1 class="site-title">zhe&#39;s home</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
     </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/tools" class="site-nav">
+            工具
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> 
+      <!-- | <a class="rss" href="https://wmszhe.github.io//atom.xml" target="_blank">RSS</a> -->
+    </div>
+  </div>
 </div>
 
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
 
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-detail main-container">
-                <!-- left -->
-                <div id="content" class="main-container-left">
-                    <article class="post i-card">
-                        <h2 class="post-title">
-                            算法复杂度
-                        </h2>
-                        <div class="post-info">
-                            <time class="post-time">2019-07-04</time>
-                            
-                                <a href="https://wmszhe.github.io//tag/FOj_E3Dob" class="post-tag i-tag
-                            i-tag-">
-                            #算法
-                        </a>
-                                
-                                <a href="https://wmszhe.github.io//tag/gywcJZvfb" class="post-tag i-tag
-                            i-tag-other_4">
-                            #数据结构
-                        </a>
-                                
-                        </div>
-                        
-                                <div class="post-content">
-                                    <p>算法复杂度</p>
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">算法复杂度</h2>
+            <div class="post-date">2019-07-04</div>
+            
+            <div class="post-content">
+              <p>算法复杂度</p>
 <!-- more -->
 <h1 id="算法的复杂度">算法的复杂度</h1>
 <blockquote>
@@ -510,136 +487,87 @@ void add(int element) {
 <p>第二种计算方式(加权平均法，又称期望): 1*(1/n+1)+1*(1/n+1)+...+1*(1/n+1)+n*(1/(n+1))=1，所以加权平均时间复杂度为O(1);</p>
 <p>第三种计算方式(均摊时间复杂度): 前n个操作复杂度都是O(1)，第n+1次操作的复杂度是O(n)，所以把最后一次的复杂度分摊到前n次上，那么均摊下来每次操作的复杂度为O(1)</p>
 
-                                </div>
-                    </article>
-                    <!--  -->
-                    
-                        <div class="next-post">
-                            <div class="next">下一篇</div>
-                            <a href="https://wmszhe.github.io//post/shu-ju-jie-gou-he-suan-fa">
-                                <h3 class="post-title">
-                                    数据结构和算法
-                                </h3>
-                            </a>
-                        </div>
-                        
-                            <div id="disqus_thread"></div>
-                            <div id="gitalk-container"></div>
-                </div>
-                <!-- middle -->
-                <div class="main-container-middle"></div>
-                <!-- right -->
-                <div id="sidebar" class="main-container-right">
-                    
-                        <!-- toc -->
-                        
-    <div class="toc-card i-card ">
-        <div class="toc-title i-card-title">目录</div>
-        <div class="toc-content">
-            <ul class="markdownIt-TOC">
-<li><a href="#%E7%AE%97%E6%B3%95%E7%9A%84%E5%A4%8D%E6%9D%82%E5%BA%A6">算法的复杂度</a>
-<ul>
-<li><a href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6">时间复杂度</a>
-<ul>
-<li><a href="#%E5%A4%A7-o-%E5%A4%8D%E6%9D%82%E5%BA%A6%E8%A1%A8%E7%A4%BA%E6%B3%95">大 O 复杂度表示法</a></li>
-<li><a href="#%E5%A6%82%E4%BD%95%E5%88%86%E6%9E%90%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6">如何分析时间复杂度</a></li>
-<li><a href="#%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6">几种常见的时间复杂度</a></li>
-<li><a href="#%E7%A8%8D%E5%BE%AE%E5%A4%8D%E6%9D%82%E4%B8%80%E7%82%B9%E7%9A%84%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90">稍微复杂一点的复杂度分析</a>
-<ul>
-<li><a href="#%E6%9C%80%E5%A5%BD-%E6%9C%80%E5%9D%8F%E6%83%85%E5%86%B5%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6">最好、最坏情况时间复杂度</a></li>
-<li><a href="#%E5%B9%B3%E5%9D%87%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6">平均时间复杂度</a></li>
-<li><a href="#%E5%9D%87%E6%91%8A%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6">均摊时间复杂度</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6">空间复杂度</a>
-<ul>
-<li><a href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90">空间复杂度分析</a></li>
-<li><a href="#%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6">几种常见的空间复杂度</a></li>
-</ul>
-</li>
-<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
-<li><a href="#demo">Demo</a></li>
-</ul>
-</li>
-</ul>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://wmszhe.github.io//tag/FOj_E3Dob" class="tag">
+                    算法
+                  </a>
+                
+                  <a href="https://wmszhe.github.io//tag/gywcJZvfb" class="tag">
+                    数据结构
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://wmszhe.github.io//post/shu-ju-jie-gou-he-suan-fa">
+                  <h3 class="post-title">
+                    数据结构和算法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
 
         </div>
-        <script>
-            function locateCatelogList() {
-                /*获取文章目录集合,可通过:header过滤器*/
-                var alis = $('.post-content :header');
-                /*获取侧边栏目录列表集合**/
-                var sidebar_alis = $('.markdownIt-TOC a');
-                /*获取滚动条到顶部的距离*/
-                var scroll_height = $(window).scrollTop();
-                for (var i = 0; i < alis.length; i++) {
-                    /*获取锚点集合中的元素分别到顶点的距离*/
-                    var a_height = $(alis[i]).offset().top;
-                    if (a_height < scroll_height) {
-                        /*高亮显示*/
-                        sidebar_alis.removeClass('on');
-                        $(sidebar_alis[i]).addClass('on');
-                    }
-                }
-            }
-            $(function() {
-                /*绑定滚动事件 */
-                $(window).bind('scroll', locateCatelogList);
-            });
-        </script>
+      </div>
     </div>
-    
-                            
 
-                </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
+<script type="application/javascript">
 
+AOS.init();
 
+hljs.initHighlightingOnLoad()
 
-            </div>
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-
-            <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-   <!-- | 
-  <a class="rss" href="https://wmszhe.github.io//atom.xml" target="_blank">RSS</a> -->
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
 </script>
 
 
-    </div>
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
     <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
+
+      var gitalk = new Gitalk({
+        clientID: 'f8fe9375d0b8d01d2e55',
+        clientSecret: 'fd4f2870b6c30d18a4af888480e80836b6732624',
+        repo: 'wmszhe.github.io',
+        owner: 'wmszhe',
+        admin: ['wmszhe'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
     </script>
-    
-        
-            <script>
-    window.onload = function() {
-        var gitalk = new Gitalk({
-            clientID: 'f8fe9375d0b8d01d2e55',
-            clientSecret: 'fd4f2870b6c30d18a4af888480e80836b6732624',
-            repo: 'wmszhe.github.io',
-            owner: 'wmszhe',
-            admin: ['wmszhe'],
-            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
-            distractionFreeMode: false // Facebook-like distraction free mode
-        })
+  
 
-        gitalk.render('gitalk-container')
-    }
-</script>
-                
+  
 
-                    
-                                
-</body>
 
+
+
+  </body>
 </html>

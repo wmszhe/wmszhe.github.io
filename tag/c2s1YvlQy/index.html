@@ -1,211 +1,155 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" >
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    dart | zhe&#39;s home
-</title>
-<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1563256542417">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<title>dart | zhe&#39;s home</title>
+<meta name="description" content="温故而知新">
+<meta http-equiv=”Content-Security-Policy” content=”upgrade-insecure-requests”/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1563256685947">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://wmszhe.github.io//styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://wmszhe.github.io//media/js/jquery.sticky-sidebar.min.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
-</head>
 
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="https://wmszhe.github.io/">
-                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1563256542417" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    zhe&#39;s home
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tools" class="menu">
-                                    工具
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://wmszhe.github.io/">
+        <img src="https://wmszhe.github.io//images/avatar.png?v=1563256685947" class="site-logo">
+        <h1 class="site-title">zhe&#39;s home</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
     </div>
-</div>
-
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
-
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-container main-container">
-                <div id="content" class="main-container-left">
-                    
-    <div class="i-card">
-        <b>标签：#
-        dart</b>
-    </div>
-    
+    <div>
+      
         
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io//post/dart-yi-xie-te-shu-de-te-xing">
-                        Dart一些特殊的特性
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-06-21</time>
-                    
-                        <a href="https://wmszhe.github.io//tag/c2s1YvlQy" class="post-tag i-tag
-                            i-tag-banana">
-            #dart
-        </a>
-                        
-                        <a href="https://wmszhe.github.io//tag/TKukAm1js" class="post-tag i-tag
-                            i-tag-primary">
-            #flutter
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                        <a href="https://wmszhe.github.io//post/dart-yi-xie-te-shu-de-te-xing" class="post-feature-image" style="background-image:url(https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/dart-yi-xie-te-shu-de-te-xing.png) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>Dart一些特殊的特性，比较容易忘记和混淆的</p>
-
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io//post/dart-yi-xie-te-shu-de-te-xing">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-                <!-- 翻页 -->
-                
-                </div>
-                <!--  -->
-                <div class="main-container-middle"></div>
-                <!--  -->
-                <div id="sidebar" class="main-container-right">
-
-                    <!-- 个人信息 -->
-                    
-    <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://wmszhe.github.io//images/avatar.png?v=1563256542417)">
-        </div>
-        <h1 class="id_card-title">
-            zhe&#39;s home
-        </h1>
-        <h2 class="id_card-description">
-            温故而知新
-        </h2>
-        <!--  -->
-        <div class="id_card-sns">
-            <!-- github -->
-            
-                    <!-- twitter -->
-                    
-                            <!-- weibo -->
-                            
-                                    <!-- facebook -->
-                                    
-
-        </div>
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/tools" class="site-nav">
+            工具
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
     </div>
-    
-
-                        <!-- 公告栏 -->
-                        
-
-                </div>
-            </div>
-
-
-
-            <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-   <!-- | 
-  <a class="rss" href="https://wmszhe.github.io//atom.xml" target="_blank">RSS</a> -->
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> 
+      <!-- | <a class="rss" href="https://wmszhe.github.io//atom.xml" target="_blank">RSS</a> -->
+    </div>
+  </div>
 </div>
 
-<script>
-  hljs.initHighlightingOnLoad()
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <h2 class="current-tag">标签: dart</h2>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://wmszhe.github.io//post/dart-yi-xie-te-shu-de-te-xing">
+                  <h2 class="post-title">Dart一些特殊的特性</h2>
+                </a>
+                <div class="post-date">
+                  2019-06-21
+                </div>
+                <div class="post-abstract">
+                  <p>Dart一些特殊的特性，比较容易忘记和混淆的</p>
+
+                </div>
+              </div>
+              
+                <a class="right" href="https://wmszhe.github.io//post/dart-yi-xie-te-shu-de-te-xing">
+                  <div class="feature-container" style="background-image: url('https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/dart-yi-xie-te-shu-de-te-xing.png')">
+                  </div>
+                </a>
+              
+            </article>
+          
+
+          <div class="pagination-container">
+  
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
 </script>
 
-    </div>
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
-    </script>
-</body>
 
+
+
+  </body>
 </html>
