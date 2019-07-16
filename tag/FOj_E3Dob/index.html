@@ -7,7 +7,7 @@
 <title>
     算法 | zhe&#39;s home
 </title>
-<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1563248801944">
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1563248909164">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -27,7 +27,7 @@
     <div class="nav">
         <div class="logo">
             <a href="https://wmszhe.github.io/">
-                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1563248801944" alt="">
+                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1563248909164" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -120,7 +120,7 @@
                     <time class="post-time">2019-07-16</time>
                     
                         <a href="https://wmszhe.github.io//tag/FOj_E3Dob" class="post-tag i-tag
-                            i-tag-other_2">
+                            i-tag-banana">
             #算法
         </a>
                         
@@ -129,73 +129,13 @@
                     
                             <div class="post-content">
                                 
-                                        <div class="post-content-content">
-                                            最近在知乎看到了一个关于洗牌算法，学习一下，记录下。
-有哪些算法惊艳到了你？
+                                    <div class="post-content-abstract">
+                                        <h4 id="最近在知乎看到了一个关于洗牌算法学习一下记录下">最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</h4>
+<p><a href="https://www.zhihu.com/question/26934313/answer/743798587">有哪些算法惊艳到了你？<br>
+</a></p>
 
-问题：设计一个公平的洗牌算法
-给定一个长度n个数组，最终排列的可能性一共有 n!个，公平的洗牌算法，应该能等概率地给出这 n! 个结果中的任意一个。
-我们再换一个角度思考“公平”这个话题。其实也就是，对于生成的排列，每一个元素都能独立等概率地出现在每一个位置。或者反过来，每一个位置都能独立等概率地放置每个元素。
-Java实现
-private static Random rand = new Random();
-private static List&amp;lt;Integer&amp;gt; mList = Arrays.asList(1, 2, 3, 4, 5);
-
-public static void main(String[] args) {
-    List&amp;lt;Integer&amp;gt; shuffle = shuffle(mList);
-    System.out.print(shuffle.toString());
-}
-
-private static List&amp;lt;Integer&amp;gt; shuffle(List&amp;lt;Integer&amp;gt; list) {
-    for (int i = list.size() - 1; i &amp;gt;= 0; i--) {
-        // 取0-i之间的随机数
-        int j = rand.nextInt(i + 1);
-        // 交换最后一位和随机得到的数
-        swap(list, i, j);
-    }
-    return list;
-}
-
-private static void swap(List&amp;lt;Integer&amp;gt; list, int i, int j) {
-    Integer temp = list.get(i);
-    list.set(i, list.get(j));
-    list.set(j, temp);
-}
-
-
-Java自带API
-在Java提供的Collections包中，提供了shuffle方法
-Collections.shuffle(mList);
-
-看下源码:
-
-
-可以看出，和上面的思路一样
-思路解析，参考上面的链接，知乎的原答案
-比如数组1，2，3，4，5
-我们从后往前
-先取任意1个元素和最后一个交换位置，那么任意一个元素出现在数组最后面的概率为1/5
-我们继续，取任意一个元素和倒数第二个交换位置，概率为4/5*1/4=1/5
-依次类推，每一个元素出现在每一个位置的概率，都是 1/5
-遍历时，为什么采用从后到前的方式，而不采用从前到后？
-因为生成 [0, i] 范围的随机数比生成 [i, n) 范围的随机数简单
-
-生成[0, i]范围的随机数
-
-Random rand = new Random();
-int randNum = ran.nextInt(i + 1);
-
-
-生成[i, n)范围的随机数
-
-Random rand = new Random();
-int randNum = rand.nextInt(n - i) + i;
-
-参考：
-随机打乱数组List洗牌算法shuffle
-java 产生指定范围的随机数
-
-                                        </div>
-                                        
+                                    </div>
+                                    
                                             <a class="btn btn-text" href="https://wmszhe.github.io//post/xi-pai-suan-fa">Read More ~</a>
                             </div>
                 </div>
@@ -211,7 +151,7 @@ java 产生指定范围的随机数
                     <time class="post-time">2019-07-04</time>
                     
                         <a href="https://wmszhe.github.io//tag/FOj_E3Dob" class="post-tag i-tag
-                            i-tag-banana">
+                            i-tag-other_3">
             #算法
         </a>
                         
@@ -243,12 +183,12 @@ java 产生指定范围的随机数
                     <time class="post-time">2019-07-04</time>
                     
                         <a href="https://wmszhe.github.io//tag/FOj_E3Dob" class="post-tag i-tag
-                            i-tag-">
+                            i-tag-success">
             #算法
         </a>
                         
                         <a href="https://wmszhe.github.io//tag/gywcJZvfb" class="post-tag i-tag
-                            i-tag-primary">
+                            i-tag-banana">
             #数据结构
         </a>
                         
@@ -280,12 +220,12 @@ java 产生指定范围的随机数
                     <time class="post-time">2019-07-04</time>
                     
                         <a href="https://wmszhe.github.io//tag/FOj_E3Dob" class="post-tag i-tag
-                            i-tag-other_2">
+                            i-tag-other_3">
             #算法
         </a>
                         
                         <a href="https://wmszhe.github.io//tag/gywcJZvfb" class="post-tag i-tag
-                            i-tag-banana">
+                            i-tag-other_2">
             #数据结构
         </a>
                         
@@ -317,12 +257,12 @@ java 产生指定范围的随机数
                     <time class="post-time">2019-07-04</time>
                     
                         <a href="https://wmszhe.github.io//tag/FOj_E3Dob" class="post-tag i-tag
-                            i-tag-">
+                            i-tag-other_3">
             #算法
         </a>
                         
                         <a href="https://wmszhe.github.io//tag/gywcJZvfb" class="post-tag i-tag
-                            i-tag-other_2">
+                            i-tag-other_1">
             #数据结构
         </a>
                         
@@ -355,7 +295,7 @@ java 产生指定范围的随机数
                     <!-- 个人信息 -->
                     
     <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://wmszhe.github.io//images/avatar.png?v=1563248801944)">
+        <div class="id_card-avatar" style="background-image: url(https://wmszhe.github.io//images/avatar.png?v=1563248909164)">
         </div>
         <h1 class="id_card-title">
             zhe&#39;s home
