@@ -788,13 +788,8 @@ body {
   overflow: hidden;
 }
 .post-detail .post .post-content a {
-  color: #515a6e;
-  text-decoration: none;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
+  text-decoration: #2e9fff;
 }
 .post-detail .post .post-content img {
   display: block;
