@@ -7,7 +7,7 @@
 <title>
     洗牌算法 | zhe&#39;s home
 </title>
-<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1563256438878">
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1563256542417">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -35,7 +35,7 @@
     <div class="nav">
         <div class="logo">
             <a href="https://wmszhe.github.io/">
-                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1563256438878" alt="">
+                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1563256542417" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -120,7 +120,7 @@
                             <time class="post-time">2019-07-16</time>
                             
                                 <a href="https://wmszhe.github.io//tag/FOj_E3Dob" class="post-tag i-tag
-                            i-tag-other_4">
+                            i-tag-">
                             #算法
                         </a>
                                 
@@ -135,7 +135,8 @@
 <p>给定一个长度n个数组，最终排列的可能性一共有 n!个，公平的洗牌算法，<strong>应该能等概率地给出这 n! 个结果中的任意一个</strong>。</p>
 <p>我们再换一个角度思考“公平”这个话题。其实也就是，对于生成的排列，<strong>每一个元素都能独立等概率地出现在每一个位置</strong>。或者反过来，<strong>每一个位置都能独立等概率地放置每个元素</strong>。</p>
 <h4 id="java实现">Java实现</h4>
-<pre><code>private static Random rand = new Random();
+<pre><code>
+private static Random rand = new Random();
 private static List&lt;Integer&gt; mList = Arrays.asList(1, 2, 3, 4, 5);
 
 public static void main(String[] args) {
@@ -162,7 +163,9 @@ private static void swap(List&lt;Integer&gt; list, int i, int j) {
 </code></pre>
 <h4 id="java自带api">Java自带API</h4>
 <p>在Java提供的Collections包中，提供了shuffle方法</p>
-<pre><code>Collections.shuffle(mList);
+<pre><code>
+Collections.shuffle(mList);
+
 </code></pre>
 <p>看下源码:</p>
 <p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/shuffle_java_2019_7_16_11_21_29.png" alt=""></p>
@@ -179,14 +182,18 @@ private static void swap(List&lt;Integer&gt; list, int i, int j) {
 <ul>
 <li>生成[0, i]范围的随机数</li>
 </ul>
-<pre><code>Random rand = new Random();
+<pre><code>
+Random rand = new Random();
 int randNum = ran.nextInt(i + 1);
+
 </code></pre>
 <ul>
 <li>生成[i, n)范围的随机数</li>
 </ul>
-<pre><code>Random rand = new Random();
+<pre><code>
+Random rand = new Random();
 int randNum = rand.nextInt(n - i) + i;
+
 </code></pre>
 <h4 id="参考">参考：</h4>
 <p><a href="https://justdo2008.iteye.com/blog/1927222">链接：随机打乱数组List洗牌算法shuffle</a></p>
