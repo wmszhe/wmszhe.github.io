@@ -536,6 +536,7 @@ body {
 }
 .header .nav .menu-container ul {
   display: flex;
+  list-style: none;
 }
 .header .nav .menu-container ul li + li {
   margin-left: 50px;
