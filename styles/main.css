@@ -620,8 +620,8 @@ body {
 .post-container .post .post-article .post-feature-image {
   display: block;
   margin-left: 20px;
-  width: 250px;
-  height: 150px;
+  width: 180px;
+  height: 100px;
   border-radius: 10px;
   background-position: center center;
   background-size: cover;
