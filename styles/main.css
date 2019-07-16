@@ -787,9 +787,6 @@ body {
 .post-detail .post .post-content {
   overflow: hidden;
 }
-.post-detail .post .post-content a {
-  transition: all 0.3s;
-}
 .post-detail .post .post-content img {
   display: block;
   margin: 24px auto;
