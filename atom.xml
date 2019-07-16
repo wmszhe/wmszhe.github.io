@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-07-16T12:54:40.345Z</updated>
+    <updated>2019-07-16T13:00:19.426Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -17,10 +17,11 @@
         </link>
         <updated>2019-07-16T03:43:56.000Z</updated>
         <summary type="html"><![CDATA[<h4 id="最近在知乎看到了一个关于洗牌算法学习一下记录下">最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</h4>
-<p><a href="https://www.zhihu.com/question/26934313/answer/743798587">知乎：有哪些算法惊艳到了你?</a></p>
-]]></summary>
+<br>
+源地址：[知乎：有哪些算法惊艳到了你?](https://www.zhihu.com/question/26934313/answer/743798587)]]></summary>
         <content type="html"><![CDATA[<h4 id="最近在知乎看到了一个关于洗牌算法学习一下记录下">最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</h4>
-<p><a href="https://www.zhihu.com/question/26934313/answer/743798587">知乎：有哪些算法惊艳到了你?</a></p>
+<br>
+源地址：[知乎：有哪些算法惊艳到了你?](https://www.zhihu.com/question/26934313/answer/743798587)
 <!-- more -->
 <h4 id="问题设计一个公平的洗牌算法">问题：设计一个公平的洗牌算法</h4>
 <p>给定一个长度n个数组，最终排列的可能性一共有 n!个，公平的洗牌算法，<strong>应该能等概率地给出这 n! 个结果中的任意一个</strong>。</p>
@@ -89,11 +90,11 @@ int randNum = rand.nextInt(n - i) + i;
         <link href="https://wmszhe.github.io//post/cha-zhao-suan-fa">
         </link>
         <updated>2019-07-04T06:44:03.000Z</updated>
-        <summary type="html"><![CDATA[<p>查找算法</p>
+        <summary type="html"><![CDATA[<h2 id="查找算法">查找算法</h2>
 ]]></summary>
-        <content type="html"><![CDATA[<p>查找算法</p>
+        <content type="html"><![CDATA[<h2 id="查找算法">查找算法</h2>
 <!-- more -->
-<h2 id="二分查找">二分查找</h2>
+<h3 id="二分查找">二分查找</h3>
 <blockquote>
 <p><mark><strong>二分查找必须是有序对</strong></mark></p>
 </blockquote>
@@ -300,14 +301,16 @@ fun printNode(data: SinglyLinkedNote?) {
         <link href="https://wmszhe.github.io//post/shu-zu-array">
         </link>
         <updated>2019-07-04T06:32:33.000Z</updated>
-        <summary type="html"><![CDATA[<p>数组相关</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>数组相关</p>
-<!-- more -->
-<h3 id="数组-array">数组 Array</h3>
+        <summary type="html"><![CDATA[<h3 id="数组-array">数组 Array</h3>
 <blockquote>
 <p>数组（Array）是一种线性表数据结构。它用一组连续的内存空间，来存储一组具有相同类型的数据。</p>
 </blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="数组-array">数组 Array</h3>
+<blockquote>
+<p>数组（Array）是一种线性表数据结构。它用一组连续的内存空间，来存储一组具有相同类型的数据。</p>
+</blockquote>
+<!-- more -->
 <ul>
 <li>
 <ol>
@@ -399,11 +402,10 @@ fun printNode(data: SinglyLinkedNote?) {
         <link href="https://wmszhe.github.io//post/suan-fa-fu-za-du">
         </link>
         <updated>2019-07-04T03:45:52.000Z</updated>
-        <summary type="html"><![CDATA[<p>算法复杂度</p>
+        <summary type="html"><![CDATA[<h1 id="算法的复杂度">算法的复杂度</h1>
 ]]></summary>
-        <content type="html"><![CDATA[<p>算法复杂度</p>
+        <content type="html"><![CDATA[<h1 id="算法的复杂度">算法的复杂度</h1>
 <!-- more -->
-<h1 id="算法的复杂度">算法的复杂度</h1>
 <blockquote>
 <p>解决的是“快”和“省”的问题</p>
 </blockquote>
@@ -786,9 +788,9 @@ void add(int element) {
         <link href="https://wmszhe.github.io//post/shu-ju-jie-gou-he-suan-fa">
         </link>
         <updated>2019-07-04T03:20:13.000Z</updated>
-        <summary type="html"><![CDATA[<p>数据结构和算法</p>
+        <summary type="html"><![CDATA[<h2 id="数据结构和算法">数据结构和算法</h2>
 ]]></summary>
-        <content type="html"><![CDATA[<p>数据结构和算法</p>
+        <content type="html"><![CDATA[<h2 id="数据结构和算法">数据结构和算法</h2>
 <!-- more -->
 <p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/913e0ababe43a2d57267df5c5f0832a7.jpg" alt=""></p>
 <h3 id="线性表和非线性表">线性表和非线性表</h3>
