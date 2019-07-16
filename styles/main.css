@@ -789,7 +789,7 @@ body {
 }
 .post-detail .post .post-content a {
   color: #2e9fff;
-  text-decoration: #2e9fff;
+  text-decoration: underline;
   transition: all 0.3s;
 }
 .post-detail .post .post-content img {

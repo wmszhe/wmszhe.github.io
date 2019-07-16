@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-07-16T12:19:30.213Z</updated>
+    <updated>2019-07-16T12:22:29.432Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -17,12 +17,10 @@
         </link>
         <updated>2019-07-16T03:43:56.000Z</updated>
         <summary type="html"><![CDATA[<h4 id="最近在知乎看到了一个关于洗牌算法学习一下记录下">最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</h4>
-<p><a href="https://www.zhihu.com/question/26934313/answer/743798587">链接：有哪些算法惊艳到了你？<br>
-</a></p>
+<p><a href="https://www.zhihu.com/question/26934313/answer/743798587">有哪些算法惊艳到了你?</a></p>
 ]]></summary>
         <content type="html"><![CDATA[<h4 id="最近在知乎看到了一个关于洗牌算法学习一下记录下">最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</h4>
-<p><a href="https://www.zhihu.com/question/26934313/answer/743798587">链接：有哪些算法惊艳到了你？<br>
-</a></p>
+<p><a href="https://www.zhihu.com/question/26934313/answer/743798587">有哪些算法惊艳到了你?</a></p>
 <!-- more -->
 <h4 id="问题设计一个公平的洗牌算法">问题：设计一个公平的洗牌算法</h4>
 <p>给定一个长度n个数组，最终排列的可能性一共有 n!个，公平的洗牌算法，<strong>应该能等概率地给出这 n! 个结果中的任意一个</strong>。</p>
@@ -81,8 +79,8 @@ int randNum = ran.nextInt(i + 1);
 int randNum = rand.nextInt(n - i) + i;
 </code></pre>
 <h4 id="参考">参考：</h4>
-<p><a href="https://justdo2008.iteye.com/blog/1927222">链接：随机打乱数组List洗牌算法shuffle</a></p>
-<p><a href="https://github.com/giantray/stackoverflow-java-top-qa/blob/master/contents/generating-random-integers-in-a-range-with-Java.md">链接：java 产生指定范围的随机数</a></p>
+<p><a href="https://justdo2008.iteye.com/blog/1927222">随机打乱数组List洗牌算法shuffle</a></p>
+<p><a href="https://github.com/giantray/stackoverflow-java-top-qa/blob/master/contents/generating-random-integers-in-a-range-with-Java.md">java 产生指定范围的随机数</a></p>
 ]]></content>
     </entry>
     <entry>
