@@ -214,20 +214,17 @@
         })
 
         gitalk.render('gitalk-container')
+
+        // 文章中的a标签，在新标签页打开
+        $(".post-content a").each(function(){
+            $(this).attr('target', '_blank');
+        });
     }
 </script>
                 
 
                     
                                 
-
-    <script>
-        window.onload = function() {
-            $(".post-content a").each(function(){
-                $(this).attr('target', '_blank');
-            });
-        }
-    </script>
 </body>
 
 </html>

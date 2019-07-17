@@ -120,12 +120,12 @@
                             <time class="post-time">2019-06-24</time>
                             
                                 <a href="https://wmszhe.github.io//tag/70DSvO8Bc" class="post-tag i-tag
-                            i-tag-other_4">
+                            i-tag-primary">
                             #Android
                         </a>
                                 
                                 <a href="https://wmszhe.github.io//tag/51CmSDdaI" class="post-tag i-tag
-                            i-tag-other_3">
+                            i-tag-warning">
                             #性能优化
                         </a>
                                 
@@ -275,20 +275,17 @@
         })
 
         gitalk.render('gitalk-container')
+
+        // 文章中的a标签，在新标签页打开
+        $(".post-content a").each(function(){
+            $(this).attr('target', '_blank');
+        });
     }
 </script>
                 
 
                     
                                 
-
-    <script>
-        window.onload = function() {
-            $(".post-content a").each(function(){
-                $(this).attr('target', '_blank');
-            });
-        }
-    </script>
 </body>
 
 </html>

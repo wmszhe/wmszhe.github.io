@@ -120,12 +120,12 @@
                             <time class="post-time">2019-06-21</time>
                             
                                 <a href="https://wmszhe.github.io//tag/c2s1YvlQy" class="post-tag i-tag
-                            i-tag-">
+                            i-tag-error">
                             #dart
                         </a>
                                 
                                 <a href="https://wmszhe.github.io//tag/TKukAm1js" class="post-tag i-tag
-                            i-tag-info">
+                            i-tag-other_3">
                             #flutter
                         </a>
                                 
@@ -338,20 +338,17 @@ print(&quot;abc&quot; * 10); // 打印10次abc
         })
 
         gitalk.render('gitalk-container')
+
+        // 文章中的a标签，在新标签页打开
+        $(".post-content a").each(function(){
+            $(this).attr('target', '_blank');
+        });
     }
 </script>
                 
 
                     
                                 
-
-    <script>
-        window.onload = function() {
-            $(".post-content a").each(function(){
-                $(this).attr('target', '_blank');
-            });
-        }
-    </script>
 </body>
 
 </html>

@@ -120,7 +120,7 @@
                             <time class="post-time">2019-06-19</time>
                             
                                 <a href="https://wmszhe.github.io//tag/TKukAm1js" class="post-tag i-tag
-                            i-tag-banana">
+                            i-tag-other_2">
                             #flutter
                         </a>
                                 
@@ -396,20 +396,17 @@ print(&quot;---icon size : $size&quot;);
         })
 
         gitalk.render('gitalk-container')
+
+        // 文章中的a标签，在新标签页打开
+        $(".post-content a").each(function(){
+            $(this).attr('target', '_blank');
+        });
     }
 </script>
                 
 
                     
                                 
-
-    <script>
-        window.onload = function() {
-            $(".post-content a").each(function(){
-                $(this).attr('target', '_blank');
-            });
-        }
-    </script>
 </body>
 
 </html>
