@@ -793,7 +793,7 @@ body {
   transition: all 0.3s;
 }
 .post-detail .post .post-content a :active {
-  text: expression(target="_blank");
+  test: expression(target="_blank");
 }
 .post-detail .post .post-content img {
   display: block;
