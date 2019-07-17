@@ -792,9 +792,6 @@ body {
   text-decoration: underline;
   transition: all 0.3s;
 }
-.post-detail .post .post-content a :active {
-  test: expression(target="_blank");
-}
 .post-detail .post .post-content img {
   display: block;
   margin: 24px auto;
