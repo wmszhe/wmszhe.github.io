@@ -7,7 +7,7 @@
 <title>
     FlutterUI相关 | zhe&#39;s home
 </title>
-<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1564026640853">
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1566369100416">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -36,7 +36,7 @@
         <span class="menu-btn fa fa-align-justify"></span>
         <div class="logo">
             <a href="https://wmszhe.github.io/">
-                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1564026640853" alt="">
+                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1566369100416" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -120,7 +120,7 @@
                             <time class="post-time">2019-06-19</time>
                             
                                 <a href="https://wmszhe.github.io//tag/TKukAm1js" class="post-tag i-tag
-                            i-tag-">
+                            i-tag-other_2">
                             #flutter
                         </a>
                                 
@@ -262,6 +262,24 @@ print(&quot;---icon size : $size&quot;);
   }
 }
 </code></pre>
+<h3 id="软键盘相关">软键盘相关</h3>
+<h4 id="显示隐藏软键盘">显示隐藏软键盘</h4>
+<ol>
+<li>通过焦点方式</li>
+</ol>
+<pre><code>// 隐藏
+FocusScope.of(context).requestFocus(FocusNode())
+// 显示
+FocusScope.of(context).autofocus(_focusNode)
+</code></pre>
+<ol start="2">
+<li>通过channel方式</li>
+</ol>
+<pre><code>// 显示
+SystemChannels.textInput.invokeMethod('TextInput.show');
+// 隐藏
+SystemChannels.textInput.invokeMethod('TextInput.hide');
+</code></pre>
 
                                 </div>
                     </article>
@@ -319,6 +337,11 @@ print(&quot;---icon size : $size&quot;);
 </ul>
 </li>
 <li><a href="#%E5%9C%A8widget-build%E5%AE%8C%E6%88%90%E4%B9%8B%E5%90%8E%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C">在widget build完成之后，执行操作</a></li>
+</ul>
+</li>
+<li><a href="#%E8%BD%AF%E9%94%AE%E7%9B%98%E7%9B%B8%E5%85%B3">软键盘相关</a>
+<ul>
+<li><a href="#%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E8%BD%AF%E9%94%AE%E7%9B%98">显示隐藏软键盘</a></li>
 </ul>
 </li>
 </ul>
