@@ -7,7 +7,7 @@
 <title>
     Flutter遇到的问题 | zhe&#39;s home
 </title>
-<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1566461193355">
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1566463989554">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -36,7 +36,7 @@
         <span class="menu-btn fa fa-align-justify"></span>
         <div class="logo">
             <a href="https://wmszhe.github.io/">
-                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1566461193355" alt="">
+                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1566463989554" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -120,12 +120,12 @@
                             <time class="post-time">2019-08-22</time>
                             
                                 <a href="https://wmszhe.github.io//tag/70DSvO8Bc" class="post-tag i-tag
-                            i-tag-warning">
+                            i-tag-">
                             #Android
                         </a>
                                 
                                 <a href="https://wmszhe.github.io//tag/TKukAm1js" class="post-tag i-tag
-                            i-tag-error">
+                            i-tag-">
                             #flutter
                         </a>
                                 
@@ -151,9 +151,8 @@
 </code></pre>
 <p><strong>图片拉伸解决方法</strong></p>
 <p><mark><strong>图片要放在mipmap中，不能放在drawable中</strong></mark></p>
-<p>mipmap分多个分辨率的文件夹。放在mipmap-mdpi下，图片会偏大，放在mipmap-xxxhdpi文件夹下，图片会偏小。</p>
+<p>mipmap分多个分辨率的文件夹。<mark>如果只使用一张图片的话</mark>，放在mipmap-mdpi下，图片会偏大，放在mipmap-xxxhdpi文件夹下，图片会偏小。经测试，放在mipmap-xhdpi文件夹下合适。</p>
 <p><mark><strong>原因参考 <a href="https://blog.csdn.net/guolin_blog/article/details/50727753">Android drawable微技巧，你所不知道的drawable的那些细节</a></strong></mark></p>
-<p>经测试，放在mipmap-xhdpi文件夹下合适。</p>
 
                                 </div>
                     </article>
