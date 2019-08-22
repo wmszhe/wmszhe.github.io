@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-08-21T06:32:33.391Z</updated>
+    <updated>2019-08-22T08:06:36.614Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -10,6 +10,39 @@
     <logo>https://wmszhe.github.io//images/avatar.png</logo>
     <icon>https://wmszhe.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, zhe&apos;s home</rights>
+    <entry>
+        <title type="html"><![CDATA[Flutter遇到的问题]]></title>
+        <id>https://wmszhe.github.io//post/flutter-yu-dao-de-wen-ti</id>
+        <link href="https://wmszhe.github.io//post/flutter-yu-dao-de-wen-ti">
+        </link>
+        <updated>2019-08-22T08:05:24.000Z</updated>
+        <summary type="html"><![CDATA[<p>Flutter开发过程中遇到的一些问题。<br>
+<mark>持续更新</mark></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Flutter开发过程中遇到的一些问题。<br>
+<mark>持续更新</mark></p>
+<!-- more -->
+<h3 id="1-android设置splash时图片拉伸解决方法">1. Android设置Splash时图片拉伸解决方法</h3>
+<p><strong>设置splash：</strong></p>
+<p>res/drawable/launch_backgroud.xml中，item-bitmap设置splash图片</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;layer-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+    &lt;item android:drawable=&quot;@android:color/white&quot; /&gt;
+
+    &lt;item&gt;
+        &lt;bitmap
+            android:gravity=&quot;center|bottom&quot;
+            android:src=&quot;@mipmap/tk_splash&quot; /&gt;
+    &lt;/item&gt;
+&lt;/layer-list&gt;
+</code></pre>
+<p><strong>图片拉伸解决方法</strong></p>
+<p><mark><strong>图片要放在mipmap中，不能放在drawable中</strong></mark></p>
+<p>mipmap分多个分辨率的文件夹。放在mipmap-mdpi下，图片会偏大，放在mipmap-xxxhdpi文件夹下，图片会偏小。</p>
+<p><mark><strong>原因参考 <a href="https://blog.csdn.net/guolin_blog/article/details/50727753">Android drawable微技巧，你所不知道的drawable的那些细节</a></strong></mark></p>
+<p>经测试，放在mipmap-xhdpi文件夹下合适。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[洗牌算法]]></title>
         <id>https://wmszhe.github.io//post/xi-pai-suan-fa</id>
@@ -1124,58 +1157,6 @@ SystemChannels.textInput.invokeMethod('TextInput.show');
 // 隐藏
 SystemChannels.textInput.invokeMethod('TextInput.hide');
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[FLutter编译桌面端app]]></title>
-        <id>https://wmszhe.github.io//post/flutter-bian-yi-zhuo-mian-duan-app</id>
-        <link href="https://wmszhe.github.io//post/flutter-bian-yi-zhuo-mian-duan-app">
-        </link>
-        <updated>2019-06-18T09:35:45.000Z</updated>
-        <summary type="html"><![CDATA[<p>使用<a href="https://github.com/google/flutter-desktop-embedding">flutter-desktop-embedding</a>编译适用于macos、windows、linux桌面端的app</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>使用<a href="https://github.com/google/flutter-desktop-embedding">flutter-desktop-embedding</a>编译适用于macos、windows、linux桌面端的app</p>
-<!-- more --> 
-<h4 id="流程">流程</h4>
-<ol>
-<li>配置flutter环境，必须在master分支<pre><code>flutter channel master
-flutter upgrade
-</code></pre>
-</li>
-<li>clone flutter-desktop-embedding<pre><code>git clone git@github.com:google/flutter-desktop-embedding.git
-</code></pre>
-</li>
-<li>复制flutter-desktop-embedding/example到自己的开发目录下,重命名为flutter_desktop
-<blockquote>
-<p>目前不支持flutter create直接创建desktop项目，只能复制出example项目修改</p>
-</blockquote>
-</li>
-<li>开启ENABLE_FLUTTER_DESKTOP
-<ul>
-<li><strong>一次性，每次打开项目都要执行</strong><pre><code>命令行中 export ENABLE_FLUTTER_DESKTOP=true
-</code></pre>
-</li>
-<li><strong>永久</strong><pre><code>.zshrc中添加 export ENABLE_FLUTTER_DESKTOP=true
-</code></pre>
-</li>
-<li><strong>如果使用的是vscode</strong><pre><code>打开设置(json)，添加
-&quot;dart.env&quot;: {
-    &quot;ENABLE_FLUTTER_DESKTOP&quot;: true,
-}
-</code></pre>
-</li>
-</ul>
-</li>
-<li>更新依赖<pre><code>flutter packages get
-</code></pre>
-</li>
-<li>flutter run,即可看到demo项目		<br>
-<code>flutter run</code><br>
-<img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560851493604.png" alt=""></li>
-<li>使用文本编辑器打开flutter_desktop项目，在lib目录下编写自己的代码<br>
-<img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560850644118.png" alt=""></li>
-<li>over!</li>
-</ol>
 ]]></content>
     </entry>
 </feed>
