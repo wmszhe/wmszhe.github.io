@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    查找算法 | zhe&#39;s home
+    Android生成jks时遇到的 | zhe&#39;s home
 </title>
 <link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1572577179379">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -114,95 +114,37 @@
                 <div id="content" class="main-container-left">
                     <article class="post i-card">
                         <h2 class="post-title">
-                            查找算法
+                            Android生成jks时遇到的
                         </h2>
                         <div class="post-info">
-                            <time class="post-time">2019-07-04</time>
+                            <time class="post-time">2019-11-01</time>
                             
-                                <a href="https://wmszhe.github.io//tag/FOj_E3Dob" class="post-tag i-tag
-                            i-tag-other_3">
-                            #算法
+                                <a href="https://wmszhe.github.io//tag/70DSvO8Bc" class="post-tag i-tag
+                            i-tag-primary">
+                            #Android
                         </a>
                                 
                         </div>
                         
                                 <div class="post-content">
-                                    <h2 id="查找算法">查找算法</h2>
-<!-- more -->
-<h3 id="二分查找">二分查找</h3>
+                                    <h3 id="生成jks">生成jks</h3>
+<ol>
+<li>通过AndroidStudio生成</li>
+<li>通过命令生成</li>
+</ol>
+<h4 id="生成jks文件后会有个warning">生成jks文件后，会有个Warning</h4>
 <blockquote>
-<p><mark><strong>二分查找必须是有序对</strong></mark></p>
+<p>jks密钥库使用专用格式建议使用keytool my release key keystore my release key keystore pkcs12迁移到行业标准格式pkcs12</p>
 </blockquote>
-<blockquote>
-<p>有序的序列，每次都是以序列的中间位置的数来与待查找的关键字进行比较，每次缩小一半的查找范围，直到匹配成功。</p>
-</blockquote>
-<p>优点是比较次数少，查找速度快，平均性能好；</p>
-<p>其缺点是要求待查表为有序表，且插入删除困难。</p>
-<p>因此，折半查找方法适用于不经常变动而查找频繁的有序列表。</p>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/20171009001641524.jpeg" alt=""></figure>
-<h4 id="while循环实现">while循环实现</h4>
-<blockquote>
-<p>最好时间复杂度：O(1)</p>
-</blockquote>
-<blockquote>
-<p>最差时间复杂度：O(logn)</p>
-</blockquote>
-<blockquote>
-<p>空间复杂度：O(1)</p>
-</blockquote>
-<pre><code>/**
- * 二分查找 while实现
- * @param aar 数组
- * @param key 需要查找的元素
- * @return 所查询元素的下标
- */
-fun binarySearch(aar: IntArray, key: Int): Int {
-    var low: Int = 0
-    var high: Int = aar.size - 1
-    if (aar[low] &gt; key || aar[high] &lt; key || low &gt; high) {
-        return -1
-    }
-    var mid: Int = 0
-    while (low &lt;= high) {
-        mid = (low + high) / 2
-        when {
-            aar[mid] &lt; key -&gt; low = mid + 1
-            aar[mid] &gt; key -&gt; high = mid - 1
-            else -&gt; return mid
-        }
-    }
-    return -1
-}
+<figure data-type="image" tabindex="1"><img src="https://hub.weandri.com/imgs/QQ20191101-104757@2x.png" alt=""></figure>
+<h4 id="解决方案">解决方案：</h4>
+<pre><code>keytool -importkeystore -srckeystore srckey -destkeystore targetkey -deststoretype pkcs12
 </code></pre>
-<h4 id="递归实现">递归实现</h4>
-<blockquote>
-<p>最好时间复杂度：O(1)</p>
-</blockquote>
-<blockquote>
-<p>最差时间复杂度：O(logn)</p>
-</blockquote>
-<blockquote>
-<p>空间复杂度：O(logn)</p>
-</blockquote>
-<pre><code>/**
- * 二分查找 递归实现
- * @param aar 数组
- * @param key 需要查找的元素
- * @param low 较小的下标
- * @param high 较大的下标
- * @return 所查询元素的下标
- */
-fun binarySearchForRecursion(aar: IntArray, key: Int, low: Int, high: Int): Int {
-    if (aar[low] &gt; key || aar[high] &lt; key || low &gt; high) {
-        return -1
-    }
-    val mid: Int = (low + high) / 2
-    return when {
-        aar[mid] &lt; key -&gt; binarySearchForRecursion(aar, key, mid + 1, high)
-        aar[mid] &gt; key -&gt; binarySearchForRecursion(aar, key, low, mid - 1)
-        else -&gt; mid
-    }
-}
+<p><mark>注意srckey和targetkey不能相同,否则会报如下错误</mark></p>
+<pre><code>keytool 错误: java.io.IOException: DerInputStream.getLength(): lengthTag=109, too big.
+</code></pre>
+<h4 id="eg">eg:</h4>
+<pre><code>keytool -importkeystore -srckeystore /Users/zhe/Desktop/Test.jks -destkeystore /Users/zhe/Desktop/Test_sign.jks -deststoretype PKCS12
 </code></pre>
 
                                 </div>
@@ -211,9 +153,9 @@ fun binarySearchForRecursion(aar: IntArray, key: Int, low: Int, high: Int): Int 
                     
                         <div class="next-post">
                             <div class="next">下一篇</div>
-                            <a href="https://wmszhe.github.io//post/lian-biao-linked-list">
+                            <a href="https://wmszhe.github.io//post/flutter-yu-dao-de-wen-ti">
                                 <h3 class="post-title">
-                                    链表LinkedList
+                                    Flutter遇到的问题
                                 </h3>
                             </a>
                         </div>
@@ -234,12 +176,13 @@ fun binarySearchForRecursion(aar: IntArray, key: Int, low: Int, high: Int): Int 
             <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95">查找算法</a>
+<li>
 <ul>
-<li><a href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE">二分查找</a>
+<li><a href="#%E7%94%9F%E6%88%90jks">生成jks</a>
 <ul>
-<li><a href="#while%E5%BE%AA%E7%8E%AF%E5%AE%9E%E7%8E%B0">while循环实现</a></li>
-<li><a href="#%E9%80%92%E5%BD%92%E5%AE%9E%E7%8E%B0">递归实现</a></li>
+<li><a href="#%E7%94%9F%E6%88%90jks%E6%96%87%E4%BB%B6%E5%90%8E%E4%BC%9A%E6%9C%89%E4%B8%AAwarning">生成jks文件后，会有个Warning</a></li>
+<li><a href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">解决方案：</a></li>
+<li><a href="#eg">eg:</a></li>
 </ul>
 </li>
 </ul>

@@ -7,7 +7,7 @@
 <title>
     数组Array | zhe&#39;s home
 </title>
-<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1566529121825">
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1572577179379">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -36,7 +36,7 @@
         <span class="menu-btn fa fa-align-justify"></span>
         <div class="logo">
             <a href="https://wmszhe.github.io/">
-                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1566529121825" alt="">
+                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1572577179379" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -120,7 +120,7 @@
                             <time class="post-time">2019-07-04</time>
                             
                                 <a href="https://wmszhe.github.io//tag/gywcJZvfb" class="post-tag i-tag
-                            i-tag-success">
+                            i-tag-other_3">
                             #数据结构
                         </a>
                                 
@@ -149,7 +149,7 @@
 </ul>
 <h4 id="根据下标随机访问数组元素的方式">根据下标随机访问数组元素的方式</h4>
 <p>一个长度为 10 的 int 类型的数组 int[] a = new int[10] , 计算机给数组 a[10]，分配了一块连续内存空间 1000～1039，其中，内存块的首地址为 base_address = 1000。</p>
-<p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/98df8e702b14096e7ee4a5141260cdc4.jpg" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/98df8e702b14096e7ee4a5141260cdc4.jpg" alt=""></figure>
 <p>通过下面的寻址公式，计算出该元素存储的内存地址：</p>
 <blockquote>
 <p>一维数组内存寻址：</p>
@@ -172,14 +172,14 @@
 <p>eg:</p>
 <p>假设数组 a[10] 中存储了如下 5 个元素：a，b，c，d，e。</p>
 <p>我们现在需要将元素 x 插入到第 3 个位置。我们只需要将 c 放入到 a[5]，将 a[2] 赋值为 x 即可。最后，数组中的元素如下： a，b，x，d，e，c。</p>
-<p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/3f70b4ad9069ec568a2caaddc231b7dc.jpg" alt=""></p>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/3f70b4ad9069ec568a2caaddc231b7dc.jpg" alt=""></figure>
 <blockquote>
 <p>删除时，在某些特殊场景下，我们并不一定非得追求数组中数据的连续性。我们可以多次删除操作集中在一起执行</p>
 </blockquote>
 <p>eg:</p>
 <p>数组 a[10] 中存储了 8 个元素：a，b，c，d，e，f，g，h。现在，我们要依次删除 a，b，c 三个元素</p>
 <p>为了避免 d，e，f，g，h 这几个数据会被搬移三次，我们可以先记录下已经删除的数据。每次的删除操作并不是真正地搬移数据，只是记录数据已经被删除。当数组没有更多空间存储数据时，我们再触发执行一次真正的删除操作，这样就大大减少了删除操作导致的数据搬移。</p>
-<p><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/b69b8c5dbf6248649ddab7d3e7cfd7e5.jpg" alt=""></p>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/b69b8c5dbf6248649ddab7d3e7cfd7e5.jpg" alt=""></figure>
 <h4 id="容器-arraylist">容器 ArrayList</h4>
 <blockquote>
 <p>针对数组类型，很多语言都提供了容器类，比如 Java 中的 ArrayList</p>

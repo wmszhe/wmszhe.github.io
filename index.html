@@ -7,7 +7,7 @@
 <title>
     zhe&#39;s home
 </title>
-<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1566529121825">
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1572577179379">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -28,7 +28,7 @@
         <span class="menu-btn fa fa-align-justify"></span>
         <div class="logo">
             <a href="https://wmszhe.github.io/">
-                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1566529121825" alt="">
+                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1572577179379" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -107,6 +107,53 @@
         
             <article class="post i-card">
                 <h2 class="post-title">
+                    <a href="https://wmszhe.github.io//post/android-sheng-cheng-jks-shi-yu-dao-de">
+                        Android生成jks时遇到的
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-11-01</time>
+                    
+                        <a href="https://wmszhe.github.io//tag/70DSvO8Bc" class="post-tag i-tag
+                            i-tag-other_3">
+            #Android
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            生成jks
+
+通过AndroidStudio生成
+通过命令生成
+
+生成jks文件后，会有个Warning
+
+jks密钥库使用专用格式建议使用keytool my release key keystore my release key keystore pkcs12迁移到行业标准格式pkcs12
+
+
+解决方案：
+keytool -importkeystore -srckeystore srckey -destkeystore targetkey -deststoretype pkcs12
+
+注意srckey和targetkey不能相同,否则会报如下错误
+keytool 错误: java.io.IOException: DerInputStream.getLength(): lengthTag=109, too big.
+
+eg:
+keytool -importkeystore -srckeystore /Users/zhe/Desktop/Test.jks -destkeystore /Users/zhe/Desktop/Test_sign.jks -deststoretype PKCS12
+
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://wmszhe.github.io//post/android-sheng-cheng-jks-shi-yu-dao-de">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
                     <a href="https://wmszhe.github.io//post/flutter-yu-dao-de-wen-ti">
                         Flutter遇到的问题
                     </a>
@@ -115,12 +162,12 @@
                     <time class="post-time">2019-08-22</time>
                     
                         <a href="https://wmszhe.github.io//tag/70DSvO8Bc" class="post-tag i-tag
-                            i-tag-error">
+                            i-tag-primary">
             #Android
         </a>
                         
                         <a href="https://wmszhe.github.io//tag/TKukAm1js" class="post-tag i-tag
-                            i-tag-other_1">
+                            i-tag-other_2">
             #flutter
         </a>
                         
@@ -150,7 +197,7 @@
                     <time class="post-time">2019-07-16</time>
                     
                         <a href="https://wmszhe.github.io//tag/FOj_E3Dob" class="post-tag i-tag
-                            i-tag-other_3">
+                            i-tag-primary">
             #算法
         </a>
                         
@@ -181,7 +228,7 @@
                     <time class="post-time">2019-07-04</time>
                     
                         <a href="https://wmszhe.github.io//tag/FOj_E3Dob" class="post-tag i-tag
-                            i-tag-info">
+                            i-tag-other_3">
             #算法
         </a>
                         
@@ -210,12 +257,12 @@
                     <time class="post-time">2019-07-04</time>
                     
                         <a href="https://wmszhe.github.io//tag/FOj_E3Dob" class="post-tag i-tag
-                            i-tag-other_3">
+                            i-tag-banana">
             #算法
         </a>
                         
                         <a href="https://wmszhe.github.io//tag/gywcJZvfb" class="post-tag i-tag
-                            i-tag-other_2">
+                            i-tag-error">
             #数据结构
         </a>
                         
@@ -244,7 +291,7 @@
                     <time class="post-time">2019-07-04</time>
                     
                         <a href="https://wmszhe.github.io//tag/gywcJZvfb" class="post-tag i-tag
-                            i-tag-other_4">
+                            i-tag-success">
             #数据结构
         </a>
                         
@@ -276,12 +323,12 @@
                     <time class="post-time">2019-07-04</time>
                     
                         <a href="https://wmszhe.github.io//tag/FOj_E3Dob" class="post-tag i-tag
-                            i-tag-banana">
+                            i-tag-">
             #算法
         </a>
                         
                         <a href="https://wmszhe.github.io//tag/gywcJZvfb" class="post-tag i-tag
-                            i-tag-other_1">
+                            i-tag-error">
             #数据结构
         </a>
                         
@@ -310,12 +357,12 @@
                     <time class="post-time">2019-07-04</time>
                     
                         <a href="https://wmszhe.github.io//tag/FOj_E3Dob" class="post-tag i-tag
-                            i-tag-other_4">
+                            i-tag-other_1">
             #算法
         </a>
                         
                         <a href="https://wmszhe.github.io//tag/gywcJZvfb" class="post-tag i-tag
-                            i-tag-other_3">
+                            i-tag-">
             #数据结构
         </a>
                         
@@ -344,7 +391,7 @@
                     <time class="post-time">2019-06-24</time>
                     
                         <a href="https://wmszhe.github.io//tag/70DSvO8Bc" class="post-tag i-tag
-                            i-tag-success">
+                            i-tag-primary">
             #Android
         </a>
                         
@@ -383,12 +430,12 @@
                     <time class="post-time">2019-06-21</time>
                     
                         <a href="https://wmszhe.github.io//tag/c2s1YvlQy" class="post-tag i-tag
-                            i-tag-other_2">
+                            i-tag-warning">
             #dart
         </a>
                         
                         <a href="https://wmszhe.github.io//tag/TKukAm1js" class="post-tag i-tag
-                            i-tag-banana">
+                            i-tag-other_3">
             #flutter
         </a>
                         
@@ -406,38 +453,6 @@
                                     </div>
                                     
                                             <a class="btn btn-text" href="https://wmszhe.github.io//post/dart-yi-xie-te-shu-de-te-xing">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io//post/flutterui-xiang-guan">
-                        FlutterUI相关
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-06-19</time>
-                    
-                        <a href="https://wmszhe.github.io//tag/TKukAm1js" class="post-tag i-tag
-                            i-tag-info">
-            #flutter
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                        <a href="https://wmszhe.github.io//post/flutterui-xiang-guan" class="post-feature-image" style="background-image:url(https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/flutterui-xiang-guan.png) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>获取屏幕尺寸，widget尺寸和位置</p>
-
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io//post/flutterui-xiang-guan">Read More ~</a>
                             </div>
                 </div>
             </article>
@@ -460,7 +475,7 @@
                     <!-- 个人信息 -->
                     
     <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://wmszhe.github.io//images/avatar.png?v=1566529121825)">
+        <div class="id_card-avatar" style="background-image: url(https://wmszhe.github.io//images/avatar.png?v=1572577179379)">
         </div>
         <h1 class="id_card-title">
             zhe&#39;s home
