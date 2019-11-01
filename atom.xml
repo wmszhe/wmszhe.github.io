@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-11-01T02:59:51.800Z</updated>
+    <updated>2019-11-01T03:02:38.539Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
@@ -16,7 +16,11 @@
         <link href="https://wmszhe.github.io//post/android-sheng-cheng-jks-shi-yu-dao-de">
         </link>
         <updated>2019-11-01T02:57:53.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="生成jks">生成jks</h3>
+        <summary type="html"><![CDATA[<p>keytool -importkeystore -srckeystore /Users/zhe/Desktop/Test.jks -destkeystore /Users/zhe/Desktop/Test_sign.jks -deststoretype PKCS12</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>keytool -importkeystore -srckeystore /Users/zhe/Desktop/Test.jks -destkeystore /Users/zhe/Desktop/Test_sign.jks -deststoretype PKCS12</p>
+<!-- more -->
+<h3 id="生成jks">生成jks</h3>
 <ol>
 <li>通过AndroidStudio生成</li>
 <li>通过命令生成</li>
