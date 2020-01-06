@@ -1,0 +1,354 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    Dart一些特殊的特性 | zhe&#39;s home
+</title>
+<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1578286584646">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://wmszhe.github.io//styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://wmszhe.github.io//media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                
+
+                    
+                            
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="logo">
+            <a href="https://wmszhe.github.io/">
+                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1578286584646" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    zhe&#39;s home
+                </h1>
+            </div>
+        </div>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tools" class="menu">
+                                    工具
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            Dart一些特殊的特性
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-06-21</time>
+                            
+                                <a href="https://wmszhe.github.io/c2s1YvlQy" class="post-tag i-tag
+                            i-tag-banana">
+                            #dart
+                        </a>
+                                
+                                <a href="https://wmszhe.github.io/TKukAm1js" class="post-tag i-tag
+                            i-tag-other_4">
+                            #flutter
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/dart-yi-xie-te-shu-de-te-xing.png')"></div>
+                            
+                                <div class="post-content">
+                                    <p>Dart一些特殊的特性，比较容易忘记和混淆的</p>
+<!-- more -->
+<h3 id="参数加">参数加{}</h3>
+<blockquote>
+<p>在调用函数传递参数时，指定参数名</p>
+</blockquote>
+<pre><code>void sayHello({String name, String msg}){
+    
+}
+sayHello(name: &quot;abc&quot;, msg: &quot;hello&quot;);
+</code></pre>
+<h3 id="可选参数">可选参数</h3>
+<blockquote>
+<p>可选的参数，在调用时可以不传</p>
+</blockquote>
+<blockquote>
+<p>通过位置来确定实参和形参的对应关系的</p>
+</blockquote>
+<blockquote>
+<p>参考： https://blog.csdn.net/xlh1191860939/article/details/87895616</p>
+</blockquote>
+<pre><code>String say(String from, String msg, [String device, String time]) {
+ 
+    var result = &quot;$from says $msg&quot;;
+ 
+    if (device != null) {
+      result = &quot;$result with a $device&quot;;
+    }
+ 
+    if (time != null) {
+      result = &quot;$result at $time&quot;;
+    }
+ 
+    return result;
+}
+ 
+void main(){
+    print(say(&quot;david&quot;, &quot;hello&quot;, &quot;mobile&quot;, &quot;2019.2.29.20:08:08&quot;));
+    // david says hello with a mobile at 2019.2.29.20:08:08
+    print(say(&quot;david&quot;, &quot;hello&quot;, &quot;2019.2.29.20:08:08&quot;, &quot;mobile&quot;));
+    // david says hello with a 2019.2.29.20:08:08 at mobile
+    print(say(&quot;david&quot;, &quot;hello&quot;));
+    // david says hello
+}
+</code></pre>
+<h3 id="">??=</h3>
+<blockquote>
+<p>仅在变量为null时赋值，使用??=运算符</p>
+</blockquote>
+<pre><code>// 如果b为空，则将值分配给b；否则，b保持不变
+b ??= value;
+</code></pre>
+<h3 id="-2">?.</h3>
+<blockquote>
+<p>eg : foo?.bar</p>
+</blockquote>
+<blockquote>
+<p>foo可以为空,foo为空时返回空，否则返回bar</p>
+</blockquote>
+<pre><code>foo?.bar
+
+====等同于====
+
+if(foo != null) {
+    return bar;
+} else {
+    return null;
+}
+</code></pre>
+<h3 id="和-~">/ 和 ~/</h3>
+<blockquote>
+<p>/ 除</p>
+</blockquote>
+<blockquote>
+<p>~/ 返回一个整数值的除法</p>
+</blockquote>
+<pre><code>assert(5 / 2 == 2.5); // 结果是double类型
+assert(5 ~/ 2 == 2); // 结果是一个整数
+</code></pre>
+<h3 id="print">print</h3>
+<blockquote>
+<p>打印重复内容，可以使用*</p>
+</blockquote>
+<blockquote>
+<p>如果要打印d.e，外层添加{}</p>
+</blockquote>
+<pre><code>print(&quot;abc&quot;);
+print(&quot;abc $d&quot;);
+print(&quot;abc ${d.e}&quot;);
+print(&quot;abc&quot; * 10); // 打印10次abc
+</code></pre>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://wmszhe.github.io/flutterui-xiang-guan">
+                                <h3 class="post-title">
+                                    FlutterUI相关
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E5%8F%82%E6%95%B0%E5%8A%A0">参数加{}</a></li>
+<li><a href="#%E5%8F%AF%E9%80%89%E5%8F%82%E6%95%B0">可选参数</a></li>
+<li><a href="#">??=</a></li>
+<li><a href="#-2">?.</a></li>
+<li><a href="#%E5%92%8C-~">/ 和 ~/</a></li>
+<li><a href="#print">print</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+   <!-- | 
+  <a class="rss" href="https://wmszhe.github.io//atom.xml" target="_blank">RSS</a> -->
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+        
+            <script>
+    window.onload = function() {
+        var gitalk = new Gitalk({
+            clientID: 'f8fe9375d0b8d01d2e55',
+            clientSecret: 'fd4f2870b6c30d18a4af888480e80836b6732624',
+            repo: 'wmszhe.github.io',
+            owner: 'wmszhe',
+            admin: ['wmszhe'],
+            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+            distractionFreeMode: false // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+
+        // 文章中的a标签，在新标签页打开
+        $(".post-content a").each(function(){
+            $(this).attr('target', '_blank');
+        });
+    }
+</script>
+                
+
+                    
+                                
+</body>
+
+</html>

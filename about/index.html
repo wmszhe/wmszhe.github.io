@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    zhe&#39;s home
+    关于 | zhe&#39;s home
 </title>
 <link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1578286584646">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -19,6 +19,14 @@
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                
+
+                    
+                            
 </head>
 
 <body>
@@ -101,51 +109,77 @@
     });
 </script>
 
-            <div class="tags-container main-container">
-                <div class="tags-group">
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            关于
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-01-25</time>
+                            
+                        </div>
+                        
+                                <div class="post-content">
+                                    <figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560601422022.png" alt="" loading="lazy"></figure>
+<p>本网站创建于2019年6月15日</p>
+<p>这是我的个人网站，用了记录个人生活，工作经验，自用工具</p>
+<ol>
+<li>本网站通过Github Pages创建。创建过程参考<a href="https://sspai.com/post/54608">GitHub Pages 搭建教程</a></li>
+<li>使用<a href="https://gridea.dev/">Gridea</a>管理本网站</li>
+<li>本站使用<a href="https://github.com/Mrcxt/gridea-theme-lemon">Lemon主题</a>，经过<a href="https://github.com/wmszhe/gridea-theme-lemon">适量修改</a>。</li>
+</ol>
+
+                                </div>
+                    </article>
+                    <!--  -->
                     
-                        <a class="tags-tag i-tag
-                            i-tag-warning" href="https://wmszhe.github.io/70DSvO8Bc">
-                            Android
-                        </a>
-                        
-                        <a class="tags-tag i-tag
-                            i-tag-other_2" href="https://wmszhe.github.io/TKukAm1js">
-                            flutter
-                        </a>
-                        
-                        <a class="tags-tag i-tag
-                            i-tag-other_3" href="https://wmszhe.github.io/FOj_E3Dob">
-                            算法
-                        </a>
-                        
-                        <a class="tags-tag i-tag
-                            i-tag-other_3" href="https://wmszhe.github.io/gywcJZvfb">
-                            数据结构
-                        </a>
-                        
-                        <a class="tags-tag i-tag
-                            i-tag-primary" href="https://wmszhe.github.io/51CmSDdaI">
-                            性能优化
-                        </a>
-                        
-                        <a class="tags-tag i-tag
-                            i-tag-info" href="https://wmszhe.github.io/c2s1YvlQy">
-                            dart
-                        </a>
-                        
-                        <a class="tags-tag i-tag
-                            i-tag-other_3" href="https://wmszhe.github.io/Ryx7PH5n2">
-                            Git
-                        </a>
-                        
-                        <a class="tags-tag i-tag
-                            i-tag-info" href="https://wmszhe.github.io/XTholpotp">
-                            碎碎念
-                        </a>
-                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
                 </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                                <!-- id-card -->
+                                
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://wmszhe.github.io//images/avatar.png?v=1578286584646)">
+        </div>
+        <h1 class="id_card-title">
+            zhe&#39;s home
+        </h1>
+        <h2 class="id_card-description">
+            温故而知新
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                <a href="https://github.com/wmszhe" target="_blank" rel="noopener noreferrer"><i
+                class="fa fa-github"></i></a>
+                
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+                                    
+
+                </div>
+
+
+
+
             </div>
+
 
             <div class="site-footer">
   Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
@@ -157,7 +191,40 @@
   hljs.initHighlightingOnLoad()
 </script>
 
+
     </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+        
+            <script>
+    window.onload = function() {
+        var gitalk = new Gitalk({
+            clientID: 'f8fe9375d0b8d01d2e55',
+            clientSecret: 'fd4f2870b6c30d18a4af888480e80836b6732624',
+            repo: 'wmszhe.github.io',
+            owner: 'wmszhe',
+            admin: ['wmszhe'],
+            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+            distractionFreeMode: false // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+
+        // 文章中的a标签，在新标签页打开
+        $(".post-content a").each(function(){
+            $(this).attr('target', '_blank');
+        });
+    }
+</script>
+                
+
+                    
+                                
 </body>
 
 </html>

@@ -2,18 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2019-11-01T03:02:38.539Z</updated>
+    <updated>2020-01-06T04:56:29.229Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
-    <link rel="self" href="https://wmszhe.github.io//atom.xml"/>
+    <link rel="self" href="https://wmszhe.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://wmszhe.github.io//images/avatar.png</logo>
-    <icon>https://wmszhe.github.io//favicon.ico</icon>
-    <rights>All rights reserved 2019, zhe&apos;s home</rights>
+    <logo>https://wmszhe.github.io/images/avatar.png</logo>
+    <icon>https://wmszhe.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, zhe&apos;s home</rights>
     <entry>
         <title type="html"><![CDATA[Android生成jks时遇到的]]></title>
-        <id>https://wmszhe.github.io//post/android-sheng-cheng-jks-shi-yu-dao-de</id>
-        <link href="https://wmszhe.github.io//post/android-sheng-cheng-jks-shi-yu-dao-de">
+        <id>https://wmszhe.github.io/android-sheng-cheng-jks-shi-yu-dao-de</id>
+        <link href="https://wmszhe.github.io/android-sheng-cheng-jks-shi-yu-dao-de">
         </link>
         <updated>2019-11-01T02:57:53.000Z</updated>
         <summary type="html"><![CDATA[<p>keytool -importkeystore -srckeystore /Users/zhe/Desktop/Test.jks -destkeystore /Users/zhe/Desktop/Test_sign.jks -deststoretype PKCS12</p>
@@ -29,7 +29,7 @@
 <blockquote>
 <p>jks密钥库使用专用格式建议使用keytool my release key keystore my release key keystore pkcs12迁移到行业标准格式pkcs12</p>
 </blockquote>
-<figure data-type="image" tabindex="1"><img src="https://hub.weandri.com/imgs/QQ20191101-104757@2x.png" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="https://hub.weandri.com/imgs/QQ20191101-104757@2x.png" alt="" loading="lazy"></figure>
 <h4 id="解决方案">解决方案：</h4>
 <pre><code>keytool -importkeystore -srckeystore srckey -destkeystore targetkey -deststoretype pkcs12
 </code></pre>
@@ -43,8 +43,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Flutter遇到的问题]]></title>
-        <id>https://wmszhe.github.io//post/flutter-yu-dao-de-wen-ti</id>
-        <link href="https://wmszhe.github.io//post/flutter-yu-dao-de-wen-ti">
+        <id>https://wmszhe.github.io/flutter-yu-dao-de-wen-ti</id>
+        <link href="https://wmszhe.github.io/flutter-yu-dao-de-wen-ti">
         </link>
         <updated>2019-08-22T08:05:24.000Z</updated>
         <summary type="html"><![CDATA[<p>Flutter开发过程中遇到的一些问题。<br>
@@ -77,8 +77,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[洗牌算法]]></title>
-        <id>https://wmszhe.github.io//post/xi-pai-suan-fa</id>
-        <link href="https://wmszhe.github.io//post/xi-pai-suan-fa">
+        <id>https://wmszhe.github.io/xi-pai-suan-fa</id>
+        <link href="https://wmszhe.github.io/xi-pai-suan-fa">
         </link>
         <updated>2019-07-16T03:43:56.000Z</updated>
         <summary type="html"><![CDATA[<h4 id="最近在知乎看到了一个关于洗牌算法学习一下记录下">最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</h4>
@@ -122,8 +122,8 @@ private static void swap(List&lt;Integer&gt; list, int i, int j) {
 <pre><code>Collections.shuffle(mList);
 </code></pre>
 <p>看下源码:</p>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/shuffle_java_2019_7_16_11_21_29.png" alt=""></figure>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/shuffle_java_2019_7_16_11_21_56.png" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/shuffle_java_2019_7_16_11_21_29.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/shuffle_java_2019_7_16_11_21_56.png" alt="" loading="lazy"></figure>
 <p>可以看出，和上面的思路一样</p>
 <h4 id="思路解析参考上面的链接知乎的原答案">思路解析，参考上面的链接，知乎的原答案</h4>
 <p>比如数组1，2，3，4，5</p>
@@ -152,8 +152,8 @@ int randNum = rand.nextInt(n - i) + i;
     </entry>
     <entry>
         <title type="html"><![CDATA[查找算法]]></title>
-        <id>https://wmszhe.github.io//post/cha-zhao-suan-fa</id>
-        <link href="https://wmszhe.github.io//post/cha-zhao-suan-fa">
+        <id>https://wmszhe.github.io/cha-zhao-suan-fa</id>
+        <link href="https://wmszhe.github.io/cha-zhao-suan-fa">
         </link>
         <updated>2019-07-04T06:44:03.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="查找算法">查找算法</h2>
@@ -170,7 +170,7 @@ int randNum = rand.nextInt(n - i) + i;
 <p>优点是比较次数少，查找速度快，平均性能好；</p>
 <p>其缺点是要求待查表为有序表，且插入删除困难。</p>
 <p>因此，折半查找方法适用于不经常变动而查找频繁的有序列表。</p>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/20171009001641524.jpeg" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/20171009001641524.jpeg" alt="" loading="lazy"></figure>
 <h4 id="while循环实现">while循环实现</h4>
 <blockquote>
 <p>最好时间复杂度：O(1)</p>
@@ -239,8 +239,8 @@ fun binarySearchForRecursion(aar: IntArray, key: Int, low: Int, high: Int): Int 
     </entry>
     <entry>
         <title type="html"><![CDATA[链表LinkedList]]></title>
-        <id>https://wmszhe.github.io//post/lian-biao-linked-list</id>
-        <link href="https://wmszhe.github.io//post/lian-biao-linked-list">
+        <id>https://wmszhe.github.io/lian-biao-linked-list</id>
+        <link href="https://wmszhe.github.io/lian-biao-linked-list">
         </link>
         <updated>2019-07-04T06:40:09.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="链表-linkedlist">链表 LinkedList</h2>
@@ -249,11 +249,11 @@ fun binarySearchForRecursion(aar: IntArray, key: Int, low: Int, high: Int): Int 
 <!-- more -->
 <h3 id="定义">定义</h3>
 <p>链表不需要一块连续的内存空间，它通过“指针”将一组<strong>零散的内存块</strong>串联起来使用</p>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/d5d5bee4be28326ba3c28373808a62cd.jpg" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/d5d5bee4be28326ba3c28373808a62cd.jpg" alt="" loading="lazy"></figure>
 <p>其中，我们把内存块称为链表的“<strong>结点</strong>”。为了将所有的结点串起来，每个链表的结点除了存储数据之外，还需要记录链上的下一个结点的地址。我们把这个记录下个结点地址的指针叫作<strong>后继指针 next</strong></p>
 <h3 id="一-常见的链表结构">一. 常见的链表结构</h3>
 <h4 id="1-单链表singly-linked-list">1. 单链表	Singly linked list</h4>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/b93e7ade9bb927baad1348d9a806ddeb.jpg" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/b93e7ade9bb927baad1348d9a806ddeb.jpg" alt="" loading="lazy"></figure>
 <p>有两个结点是比较特殊的，它们分别是第一个结点和最后一个结点。我们习惯性地把第一个结点叫作<strong>头结点</strong>，把最后一个结点叫作<strong>尾结点</strong>。其中，头结点用来记录链表的基地址。有了它，就可以遍历得到整条链表。而尾结点特殊的地方是：指针不是指向下一个结点，而是指向一个<strong>空地址 NULL</strong>，表示这是链表上最后一个结点</p>
 <h5 id="11插入-删除-查找">1.1插入、删除、查找</h5>
 <p>数组的插入、删除操作时，为了保持内存数据的连续性，需要做大量的数据搬移，所以时间复杂度是 O(n)。而在链表中插入或者删除一个数据，并不需要为了保持内存的连续性而搬移结点，因为链表的存储空间本身就不是连续的。所以，在链表中插入和删除一个数据是非常快速的,时间复杂度是 O(1)。但是，链表要想随机访问第 k 个元素，就没有数组那么高效了。因为链表中的数据并非连续存储的，所以无法像数组那样，根据首地址和下标，通过寻址公式就能直接计算出对应的内存地址，而是需要根据指针一个结点一个结点地依次遍历，直到找到相应的结点。时间复杂度是 O(n)</p>
@@ -263,12 +263,12 @@ fun binarySearchForRecursion(aar: IntArray, key: Int, low: Int, high: Int): Int 
 <blockquote>
 <p>查找时间复杂度O(n)</p>
 </blockquote>
-<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/452e943788bdeea462d364389bd08a17.jpg" alt=""></figure>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/452e943788bdeea462d364389bd08a17.jpg" alt="" loading="lazy"></figure>
 <h4 id="2-循环链表multiply-linked-list">2. 循环链表	Multiply linked list</h4>
-<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/86cb7dc331ea958b0a108b911f38d155.jpg" alt=""></figure>
+<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/86cb7dc331ea958b0a108b911f38d155.jpg" alt="" loading="lazy"></figure>
 <p><strong>循环链表是一种特殊的单链表</strong>。它跟单链表唯一的区别就在尾结点。单链表的尾结点指针指向空地址，表示这就是最后的结点了。而循环链表的尾结点指针是指向链表的头结点。</p>
 <h4 id="3-双向链表doubly-linked-list">3. 双向链表	Doubly linked list</h4>
-<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/cbc8ab20276e2f9312030c313a9ef70b.jpg" alt=""></figure>
+<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/cbc8ab20276e2f9312030c313a9ef70b.jpg" alt="" loading="lazy"></figure>
 <p>单向链表只有一个方向，结点只有一个后继指针 next 指向后面的结点。而双向链表，顾名思义，它支持两个方向，每个结点不止有一个后继指针 next 指向后面的结点，还有一个前驱指针 prev 指向前面的结点。</p>
 <p>双向链表需要额外的两个空间来存储后继结点和前驱结点的地址。所以，如果存储同样多的数据，双向链表要比单链表占用更多的内存空间。虽然两个指针比较浪费存储空间，但可以支持双向遍历，这样也带来了双向链表操作的灵活性。</p>
 <h3 id="二-经典的链表应用场景">二. 经典的链表应用场景</h3>
@@ -363,8 +363,8 @@ fun printNode(data: SinglyLinkedNote?) {
     </entry>
     <entry>
         <title type="html"><![CDATA[数组Array]]></title>
-        <id>https://wmszhe.github.io//post/shu-zu-array</id>
-        <link href="https://wmszhe.github.io//post/shu-zu-array">
+        <id>https://wmszhe.github.io/shu-zu-array</id>
+        <link href="https://wmszhe.github.io/shu-zu-array">
         </link>
         <updated>2019-07-04T06:32:33.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="数组-array">数组 Array</h3>
@@ -394,7 +394,7 @@ fun printNode(data: SinglyLinkedNote?) {
 </ul>
 <h4 id="根据下标随机访问数组元素的方式">根据下标随机访问数组元素的方式</h4>
 <p>一个长度为 10 的 int 类型的数组 int[] a = new int[10] , 计算机给数组 a[10]，分配了一块连续内存空间 1000～1039，其中，内存块的首地址为 base_address = 1000。</p>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/98df8e702b14096e7ee4a5141260cdc4.jpg" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/98df8e702b14096e7ee4a5141260cdc4.jpg" alt="" loading="lazy"></figure>
 <p>通过下面的寻址公式，计算出该元素存储的内存地址：</p>
 <blockquote>
 <p>一维数组内存寻址：</p>
@@ -417,14 +417,14 @@ fun printNode(data: SinglyLinkedNote?) {
 <p>eg:</p>
 <p>假设数组 a[10] 中存储了如下 5 个元素：a，b，c，d，e。</p>
 <p>我们现在需要将元素 x 插入到第 3 个位置。我们只需要将 c 放入到 a[5]，将 a[2] 赋值为 x 即可。最后，数组中的元素如下： a，b，x，d，e，c。</p>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/3f70b4ad9069ec568a2caaddc231b7dc.jpg" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/3f70b4ad9069ec568a2caaddc231b7dc.jpg" alt="" loading="lazy"></figure>
 <blockquote>
 <p>删除时，在某些特殊场景下，我们并不一定非得追求数组中数据的连续性。我们可以多次删除操作集中在一起执行</p>
 </blockquote>
 <p>eg:</p>
 <p>数组 a[10] 中存储了 8 个元素：a，b，c，d，e，f，g，h。现在，我们要依次删除 a，b，c 三个元素</p>
 <p>为了避免 d，e，f，g，h 这几个数据会被搬移三次，我们可以先记录下已经删除的数据。每次的删除操作并不是真正地搬移数据，只是记录数据已经被删除。当数组没有更多空间存储数据时，我们再触发执行一次真正的删除操作，这样就大大减少了删除操作导致的数据搬移。</p>
-<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/b69b8c5dbf6248649ddab7d3e7cfd7e5.jpg" alt=""></figure>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/b69b8c5dbf6248649ddab7d3e7cfd7e5.jpg" alt="" loading="lazy"></figure>
 <h4 id="容器-arraylist">容器 ArrayList</h4>
 <blockquote>
 <p>针对数组类型，很多语言都提供了容器类，比如 Java 中的 ArrayList</p>
@@ -464,8 +464,8 @@ fun printNode(data: SinglyLinkedNote?) {
     </entry>
     <entry>
         <title type="html"><![CDATA[算法复杂度]]></title>
-        <id>https://wmszhe.github.io//post/suan-fa-fu-za-du</id>
-        <link href="https://wmszhe.github.io//post/suan-fa-fu-za-du">
+        <id>https://wmszhe.github.io/suan-fa-fu-za-du</id>
+        <link href="https://wmszhe.github.io/suan-fa-fu-za-du">
         </link>
         <updated>2019-07-04T03:45:52.000Z</updated>
         <summary type="html"><![CDATA[<h1 id="算法的复杂度">算法的复杂度</h1>
@@ -526,7 +526,7 @@ fun printNode(data: SinglyLinkedNote?) {
 <p><strong>所有代码的执行时间 T(n) 与每行代码的执行次数 n 成正比</strong></p>
 </blockquote>
 <p><strong>总结为：</strong></p>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/22900968aa2b190072c985a08b0e92ef.png" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/22900968aa2b190072c985a08b0e92ef.png" alt="" loading="lazy"></figure>
 <p>T(n)表示代码执行的时间；n 表示数据规模的大小；f(n) 表示每行代码执行的次数总和。因为这是一个公式，所以用 f(n) 来表示。公式中的 O，表示代码的执行时间 T(n) 与 f(n) 表达式成正比。</p>
 <p>所以，第一个例子中的 T(n) = O(2n+2)，第二个例子中的 T(n) = O(2n^2+2n+3)。这就是<strong>大 O 时间复杂度表示法</strong>。大 O 时间复杂度实际上并不具体表示代码真正的执行时间，而是表示<strong>代码执行时间随数据规模增长的变化趋势</strong>，所以，也叫作<strong>渐进时间复杂度</strong>（asymptotic time complexity），简称<strong>时间复杂度</strong></p>
 <p>当 n 很大时，你可以把它想象成 10000、100000。而<strong>公式中的低阶、常量、系数三部分并不左右增长趋势，所以都可以忽略</strong>。我们只需要记录一个最大量级就可以了，如果用大 O 表示法表示刚讲的那两段代码的时间复杂度，就可以记为：T(n) = O(n)； T(n) = O(n^2)。</p>
@@ -608,7 +608,7 @@ int f(int n) {
 </li>
 </ul>
 <h3 id="几种常见的时间复杂度">几种常见的时间复杂度</h3>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/3723793cc5c810e9d5b06bc95325bf0a.jpg" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/3723793cc5c810e9d5b06bc95325bf0a.jpg" alt="" loading="lazy"></figure>
 <p>对于上述罗列的复杂度量级，我们可以粗略地分为两类，<strong>多项式量级</strong>和<strong>非多项式量级</strong>。其中，非多项式量级只有两个：O(2^n) 和 O(n!)。</p>
 <ul>
 <li>
@@ -743,7 +743,7 @@ int find(int[] array, int n, int x) {
 <p>n+1 种情况，出现的概率并不是一样的</p>
 <p>要查找的变量 x，要么在数组里，要么就不在数组里。在数组中与不在数组中的概率都为 1/2。另外，要查找的数据出现在 0～n-1 这 n 个位置的概率也是一样的，为 1/n。所以，根据概率乘法法则，要查找的数据出现在 0～n-1 中任意位置的概率就是 1/(2n)</p>
 <p>所以，时间复杂度为:</p>
-<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/36c0aabdac69032f8a43368f5e90c67f.jpg" alt=""></figure>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/36c0aabdac69032f8a43368f5e90c67f.jpg" alt="" loading="lazy"></figure>
 <p><mark><strong>即，时间复杂度为O(n)</strong></mark></p>
 <h4 id="均摊时间复杂度">均摊时间复杂度</h4>
 <pre><code>// array 表示一个长度为 n 的数组
@@ -767,7 +767,7 @@ void insert(int val) {
 <p>这段代码实现了一个往数组中插入数据的功能。当数组满了之后，也就是代码中的 count == array.length 时，我们用 for 循环遍历数组求和，将求和之后的 sum 值放到数组的第一个位置，然后再将新的数据插入。但如果数组一开始就有空闲空间，则直接将数据插入数组。</p>
 <p>最理想的情况下，数组中有空闲空间，我们只需要将数据插入到数组下标为 count 的位置就可以了，所以最好情况时间复杂度为 O(1)。最坏的情况下，数组中没有空闲空间了，我们需要先做一次数组的遍历求和，然后再将数据插入，所以最坏情况时间复杂度为 O(n)。</p>
 <p>假设数组的长度是 n，根据数据插入的位置的不同，我们可以分为 n 种情况，每种情况的时间复杂度是 O(1)。除此之外，还有一种“额外”的情况，就是在数组没有空闲空间时插入一个数据，这个时候的时间复杂度是 O(n)。而且，这 n+1 种情况发生的概率一样，都是 1/(n+1)。所以，根据加权平均的计算方法，我们求得的平均时间复杂度就是：</p>
-<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/6df62366a60336d9de3bc34f488d8bed.jpg" alt=""></figure>
+<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/6df62366a60336d9de3bc34f488d8bed.jpg" alt="" loading="lazy"></figure>
 <p>至此为止，前面的最好、最坏、平均时间复杂度的计算，理解起来应该都没有问题。但是这个例子里的平均复杂度分析其实并不需要这么复杂，不需要引入概率论的知识。这是为什么呢？我们先来对比一下这个 insert() 的例子和前面那个 find() 的例子，你就会发现这两者有很大差别。</p>
 <p>首先，find() 函数在极端情况下，复杂度才为 O(1)。但 insert() 在大部分情况下，时间复杂度都为 O(1)。只有个别情况下，复杂度才比较高，为 O(n)。这是 insert()<strong>第一个</strong>区别于 find() 的地方。</p>
 <p>所以，针对这样一种特殊场景的复杂度分析，我们并不需要像之前讲平均复杂度分析方法那样，找出所有的输入情况及相应的发生概率，然后再计算加权平均值。</p>
@@ -812,7 +812,7 @@ void insert(int val) {
 </ul>
 <h2 id="总结">总结</h2>
 <p>复杂度也叫渐进复杂度，包括时间复杂度和空间复杂度，用来分析算法执行效率与数据规模之间的增长关系，可以粗略地表示，越高阶复杂度的算法，执行效率越低。常见的复杂度并不多，从低阶到高阶有：O(1)、O(logn)、O(n)、O(nlogn)、O(n<sup>2</sup> )。</p>
-<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/497a3f120b7debee07dc0d03984faf04.jpg" alt=""></figure>
+<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/497a3f120b7debee07dc0d03984faf04.jpg" alt="" loading="lazy"></figure>
 <h2 id="demo">Demo</h2>
 <pre><code>// 全局变量，大小为 10 的数组 array，长度 len，下标 i。
 int array[] = new int[10]; 
@@ -850,27 +850,27 @@ void add(int element) {
     </entry>
     <entry>
         <title type="html"><![CDATA[数据结构和算法]]></title>
-        <id>https://wmszhe.github.io//post/shu-ju-jie-gou-he-suan-fa</id>
-        <link href="https://wmszhe.github.io//post/shu-ju-jie-gou-he-suan-fa">
+        <id>https://wmszhe.github.io/shu-ju-jie-gou-he-suan-fa</id>
+        <link href="https://wmszhe.github.io/shu-ju-jie-gou-he-suan-fa">
         </link>
         <updated>2019-07-04T03:20:13.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="数据结构和算法">数据结构和算法</h2>
 ]]></summary>
         <content type="html"><![CDATA[<h2 id="数据结构和算法">数据结构和算法</h2>
 <!-- more -->
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/913e0ababe43a2d57267df5c5f0832a7.jpg" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/913e0ababe43a2d57267df5c5f0832a7.jpg" alt="" loading="lazy"></figure>
 <h3 id="线性表和非线性表">线性表和非线性表</h3>
 <ul>
 <li>
 <ol>
 <li>线性表（Linear List）。顾名思义，线性表就是数据排成像一条线一样的结构。每个线性表上的数据最多只有前和后两个方向。其实除了数组，链表、队列、栈等也是线性表结构<br>
-<img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/b6b71ec46935130dff5c4b62cf273477.jpg" alt=""></li>
+<img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/b6b71ec46935130dff5c4b62cf273477.jpg" alt="" loading="lazy"></li>
 </ol>
 </li>
 <li>
 <ol start="2">
 <li>非线性表，比如二叉树、堆、图等。之所以叫非线性，是因为，在非线性表中，数据之间并不是简单的前后关系。<br>
-<img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/6ebf42641b5f98f912d36f6bf86f6569.jpg" alt=""></li>
+<img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/6ebf42641b5f98f912d36f6bf86f6569.jpg" alt="" loading="lazy"></li>
 </ol>
 </li>
 </ul>
@@ -884,8 +884,8 @@ void add(int element) {
     </entry>
     <entry>
         <title type="html"><![CDATA[Android性能优化]]></title>
-        <id>https://wmszhe.github.io//post/android-xing-neng-you-hua</id>
-        <link href="https://wmszhe.github.io//post/android-xing-neng-you-hua">
+        <id>https://wmszhe.github.io/android-xing-neng-you-hua</id>
+        <link href="https://wmszhe.github.io/android-xing-neng-you-hua">
         </link>
         <updated>2019-06-24T09:17:17.000Z</updated>
         <summary type="html"><![CDATA[<p>Android性能优化，一些性能优化方式。<br>
@@ -903,36 +903,36 @@ void add(int element) {
 <blockquote>
 <p>菜单栏 -&gt; Analyze -&gt; Run Inspection Name -&gt; 输入unused library -&gt; 回车 -&gt; 查看分析结果</p>
 </blockquote>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561599539057.png" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561599539057.png" alt="" loading="lazy"></figure>
 </li>
 <li>
 <p>查看module依赖</p>
 <blockquote>
 <p>使用gradle，依次确认各个module实际依赖情况</p>
 </blockquote>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561599225931.png" alt=""></figure>
-<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561368142795.png" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561599225931.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561368142795.png" alt="" loading="lazy"></figure>
 </li>
 <li>
 <p>排除多余依赖</p>
 <blockquote>
 <p>根据InspectionResult结果和dependencies结果，排除多余依赖项</p>
 </blockquote>
-<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561368152549.png" alt=""></figure>
-<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561599326748.png" alt=""></figure>
+<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561368152549.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561599326748.png" alt="" loading="lazy"></figure>
 </li>
 </ol>
 <h2 id="删除多余的资源文件">删除多余的资源文件</h2>
 <blockquote>
 <p>菜单栏 -&gt; Analyze -&gt; Run Inspection Name -&gt; 输入unused Resources -&gt; 回车 -&gt; 查看分析结果 -&gt; 删除</p>
 </blockquote>
-<figure data-type="image" tabindex="6"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561629719716.png" alt=""></figure>
+<figure data-type="image" tabindex="6"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561629719716.png" alt="" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Dart一些特殊的特性]]></title>
-        <id>https://wmszhe.github.io//post/dart-yi-xie-te-shu-de-te-xing</id>
-        <link href="https://wmszhe.github.io//post/dart-yi-xie-te-shu-de-te-xing">
+        <id>https://wmszhe.github.io/dart-yi-xie-te-shu-de-te-xing</id>
+        <link href="https://wmszhe.github.io/dart-yi-xie-te-shu-de-te-xing">
         </link>
         <updated>2019-06-21T02:21:04.000Z</updated>
         <summary type="html"><![CDATA[<p>Dart一些特殊的特性，比较容易忘记和混淆的</p>
