@@ -2,20 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>wzhuiJ</title>
-    <updated>2020-02-27T07:16:50.953Z</updated>
+    <updated>2020-02-27T07:18:50.094Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io/atom.xml"/>
     <logo>https://wmszhe.github.io/images/avatar.png</logo>
     <icon>https://wmszhe.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, wzhuiJ</rights>
-    <entry>
-        <title type="html"><![CDATA[颜色对照表]]></title>
-        <id>https://wmszhe.github.io/color/</id>
-        <link href="https://wmszhe.github.io/color/">
-        </link>
-        <updated>2020-02-27T06:30:16.000Z</updated>
-    </entry>
     <entry>
         <title type="html"><![CDATA[IDEA相关]]></title>
         <id>https://wmszhe.github.io/d0YP6pusT/</id>
