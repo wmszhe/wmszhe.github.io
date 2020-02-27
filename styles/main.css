@@ -904,7 +904,7 @@ body {
 }
 .id_card .id_card-avatar {
   display: block;
-  padding: 15px;
+  padding: 5px;
   width: 100px;
   height: 100px;
   border: 1px solid #ddd;
@@ -912,7 +912,7 @@ body {
   background-position: center center;
   background-origin: content-box;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   box-shadow: 0 0 30px rgba(200, 200, 200, 0.25);
 }
 .id_card .id_card-title {
