@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2020-01-06T04:56:29.229Z</updated>
+    <updated>2020-02-27T02:55:57.130Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io/atom.xml"/>
@@ -11,9 +11,31 @@
     <icon>https://wmszhe.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, zhe&apos;s home</rights>
     <entry>
+        <title type="html"><![CDATA[IDEA相关]]></title>
+        <id>https://wmszhe.github.io/d0YP6pusT/</id>
+        <link href="https://wmszhe.github.io/d0YP6pusT/">
+        </link>
+        <updated>2020-02-27T02:53:20.000Z</updated>
+        <summary type="html"><![CDATA[<p>IDEA相关 ，持续更新</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>IDEA相关 ，持续更新</p>
+<!-- more -->
+<h3 id="分类显示类方法">分类显示类方法</h3>
+<blockquote>
+<p>参考 <a href="https://www.v2ex.com/t/647696">为什么 idea 不做一个分类显示类方法的功能？</a></p>
+</blockquote>
+<pre><code>// region foo
+// endregion foo
+</code></pre>
+<p>eg:</p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/hXmEX6.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/zGWown.jpg" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Android生成jks时遇到的]]></title>
-        <id>https://wmszhe.github.io/android-sheng-cheng-jks-shi-yu-dao-de</id>
-        <link href="https://wmszhe.github.io/android-sheng-cheng-jks-shi-yu-dao-de">
+        <id>https://wmszhe.github.io/android-sheng-cheng-jks-shi-yu-dao-de/</id>
+        <link href="https://wmszhe.github.io/android-sheng-cheng-jks-shi-yu-dao-de/">
         </link>
         <updated>2019-11-01T02:57:53.000Z</updated>
         <summary type="html"><![CDATA[<p>keytool -importkeystore -srckeystore /Users/zhe/Desktop/Test.jks -destkeystore /Users/zhe/Desktop/Test_sign.jks -deststoretype PKCS12</p>
@@ -43,8 +65,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Flutter遇到的问题]]></title>
-        <id>https://wmszhe.github.io/flutter-yu-dao-de-wen-ti</id>
-        <link href="https://wmszhe.github.io/flutter-yu-dao-de-wen-ti">
+        <id>https://wmszhe.github.io/flutter-yu-dao-de-wen-ti/</id>
+        <link href="https://wmszhe.github.io/flutter-yu-dao-de-wen-ti/">
         </link>
         <updated>2019-08-22T08:05:24.000Z</updated>
         <summary type="html"><![CDATA[<p>Flutter开发过程中遇到的一些问题。<br>
@@ -77,8 +99,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[洗牌算法]]></title>
-        <id>https://wmszhe.github.io/xi-pai-suan-fa</id>
-        <link href="https://wmszhe.github.io/xi-pai-suan-fa">
+        <id>https://wmszhe.github.io/xi-pai-suan-fa/</id>
+        <link href="https://wmszhe.github.io/xi-pai-suan-fa/">
         </link>
         <updated>2019-07-16T03:43:56.000Z</updated>
         <summary type="html"><![CDATA[<h4 id="最近在知乎看到了一个关于洗牌算法学习一下记录下">最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</h4>
@@ -152,8 +174,8 @@ int randNum = rand.nextInt(n - i) + i;
     </entry>
     <entry>
         <title type="html"><![CDATA[查找算法]]></title>
-        <id>https://wmszhe.github.io/cha-zhao-suan-fa</id>
-        <link href="https://wmszhe.github.io/cha-zhao-suan-fa">
+        <id>https://wmszhe.github.io/cha-zhao-suan-fa/</id>
+        <link href="https://wmszhe.github.io/cha-zhao-suan-fa/">
         </link>
         <updated>2019-07-04T06:44:03.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="查找算法">查找算法</h2>
@@ -239,8 +261,8 @@ fun binarySearchForRecursion(aar: IntArray, key: Int, low: Int, high: Int): Int 
     </entry>
     <entry>
         <title type="html"><![CDATA[链表LinkedList]]></title>
-        <id>https://wmszhe.github.io/lian-biao-linked-list</id>
-        <link href="https://wmszhe.github.io/lian-biao-linked-list">
+        <id>https://wmszhe.github.io/lian-biao-linked-list/</id>
+        <link href="https://wmszhe.github.io/lian-biao-linked-list/">
         </link>
         <updated>2019-07-04T06:40:09.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="链表-linkedlist">链表 LinkedList</h2>
@@ -363,8 +385,8 @@ fun printNode(data: SinglyLinkedNote?) {
     </entry>
     <entry>
         <title type="html"><![CDATA[数组Array]]></title>
-        <id>https://wmszhe.github.io/shu-zu-array</id>
-        <link href="https://wmszhe.github.io/shu-zu-array">
+        <id>https://wmszhe.github.io/shu-zu-array/</id>
+        <link href="https://wmszhe.github.io/shu-zu-array/">
         </link>
         <updated>2019-07-04T06:32:33.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="数组-array">数组 Array</h3>
@@ -464,8 +486,8 @@ fun printNode(data: SinglyLinkedNote?) {
     </entry>
     <entry>
         <title type="html"><![CDATA[算法复杂度]]></title>
-        <id>https://wmszhe.github.io/suan-fa-fu-za-du</id>
-        <link href="https://wmszhe.github.io/suan-fa-fu-za-du">
+        <id>https://wmszhe.github.io/suan-fa-fu-za-du/</id>
+        <link href="https://wmszhe.github.io/suan-fa-fu-za-du/">
         </link>
         <updated>2019-07-04T03:45:52.000Z</updated>
         <summary type="html"><![CDATA[<h1 id="算法的复杂度">算法的复杂度</h1>
@@ -850,8 +872,8 @@ void add(int element) {
     </entry>
     <entry>
         <title type="html"><![CDATA[数据结构和算法]]></title>
-        <id>https://wmszhe.github.io/shu-ju-jie-gou-he-suan-fa</id>
-        <link href="https://wmszhe.github.io/shu-ju-jie-gou-he-suan-fa">
+        <id>https://wmszhe.github.io/shu-ju-jie-gou-he-suan-fa/</id>
+        <link href="https://wmszhe.github.io/shu-ju-jie-gou-he-suan-fa/">
         </link>
         <updated>2019-07-04T03:20:13.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="数据结构和算法">数据结构和算法</h2>
@@ -884,8 +906,8 @@ void add(int element) {
     </entry>
     <entry>
         <title type="html"><![CDATA[Android性能优化]]></title>
-        <id>https://wmszhe.github.io/android-xing-neng-you-hua</id>
-        <link href="https://wmszhe.github.io/android-xing-neng-you-hua">
+        <id>https://wmszhe.github.io/android-xing-neng-you-hua/</id>
+        <link href="https://wmszhe.github.io/android-xing-neng-you-hua/">
         </link>
         <updated>2019-06-24T09:17:17.000Z</updated>
         <summary type="html"><![CDATA[<p>Android性能优化，一些性能优化方式。<br>
@@ -927,107 +949,6 @@ void add(int element) {
 <p>菜单栏 -&gt; Analyze -&gt; Run Inspection Name -&gt; 输入unused Resources -&gt; 回车 -&gt; 查看分析结果 -&gt; 删除</p>
 </blockquote>
 <figure data-type="image" tabindex="6"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561629719716.png" alt="" loading="lazy"></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Dart一些特殊的特性]]></title>
-        <id>https://wmszhe.github.io/dart-yi-xie-te-shu-de-te-xing</id>
-        <link href="https://wmszhe.github.io/dart-yi-xie-te-shu-de-te-xing">
-        </link>
-        <updated>2019-06-21T02:21:04.000Z</updated>
-        <summary type="html"><![CDATA[<p>Dart一些特殊的特性，比较容易忘记和混淆的</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>Dart一些特殊的特性，比较容易忘记和混淆的</p>
-<!-- more -->
-<h3 id="参数加">参数加{}</h3>
-<blockquote>
-<p>在调用函数传递参数时，指定参数名</p>
-</blockquote>
-<pre><code>void sayHello({String name, String msg}){
-    
-}
-sayHello(name: &quot;abc&quot;, msg: &quot;hello&quot;);
-</code></pre>
-<h3 id="可选参数">可选参数</h3>
-<blockquote>
-<p>可选的参数，在调用时可以不传</p>
-</blockquote>
-<blockquote>
-<p>通过位置来确定实参和形参的对应关系的</p>
-</blockquote>
-<blockquote>
-<p>参考： https://blog.csdn.net/xlh1191860939/article/details/87895616</p>
-</blockquote>
-<pre><code>String say(String from, String msg, [String device, String time]) {
- 
-    var result = &quot;$from says $msg&quot;;
- 
-    if (device != null) {
-      result = &quot;$result with a $device&quot;;
-    }
- 
-    if (time != null) {
-      result = &quot;$result at $time&quot;;
-    }
- 
-    return result;
-}
- 
-void main(){
-    print(say(&quot;david&quot;, &quot;hello&quot;, &quot;mobile&quot;, &quot;2019.2.29.20:08:08&quot;));
-    // david says hello with a mobile at 2019.2.29.20:08:08
-    print(say(&quot;david&quot;, &quot;hello&quot;, &quot;2019.2.29.20:08:08&quot;, &quot;mobile&quot;));
-    // david says hello with a 2019.2.29.20:08:08 at mobile
-    print(say(&quot;david&quot;, &quot;hello&quot;));
-    // david says hello
-}
-</code></pre>
-<h3 id="">??=</h3>
-<blockquote>
-<p>仅在变量为null时赋值，使用??=运算符</p>
-</blockquote>
-<pre><code>// 如果b为空，则将值分配给b；否则，b保持不变
-b ??= value;
-</code></pre>
-<h3 id="-2">?.</h3>
-<blockquote>
-<p>eg : foo?.bar</p>
-</blockquote>
-<blockquote>
-<p>foo可以为空,foo为空时返回空，否则返回bar</p>
-</blockquote>
-<pre><code>foo?.bar
-
-====等同于====
-
-if(foo != null) {
-    return bar;
-} else {
-    return null;
-}
-</code></pre>
-<h3 id="和-~">/ 和 ~/</h3>
-<blockquote>
-<p>/ 除</p>
-</blockquote>
-<blockquote>
-<p>~/ 返回一个整数值的除法</p>
-</blockquote>
-<pre><code>assert(5 / 2 == 2.5); // 结果是double类型
-assert(5 ~/ 2 == 2); // 结果是一个整数
-</code></pre>
-<h3 id="print">print</h3>
-<blockquote>
-<p>打印重复内容，可以使用*</p>
-</blockquote>
-<blockquote>
-<p>如果要打印d.e，外层添加{}</p>
-</blockquote>
-<pre><code>print(&quot;abc&quot;);
-print(&quot;abc $d&quot;);
-print(&quot;abc ${d.e}&quot;);
-print(&quot;abc&quot; * 10); // 打印10次abc
-</code></pre>
 ]]></content>
     </entry>
 </feed>

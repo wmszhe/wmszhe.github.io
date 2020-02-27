@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    Dart一些特殊的特性 | zhe&#39;s home
+    IDEA相关 | zhe&#39;s home
 </title>
 <link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1582772113412">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -114,117 +114,31 @@
                 <div id="content" class="main-container-left">
                     <article class="post i-card">
                         <h2 class="post-title">
-                            Dart一些特殊的特性
+                            IDEA相关
                         </h2>
                         <div class="post-info">
-                            <time class="post-time">2019-06-21</time>
+                            <time class="post-time">2020-02-27</time>
                             
-                                <a href="https://wmszhe.github.io/c2s1YvlQy/" class="post-tag i-tag
-                            i-tag-primary">
-                            #dart
-                        </a>
-                                
-                                <a href="https://wmszhe.github.io/TKukAm1js/" class="post-tag i-tag
+                                <a href="https://wmszhe.github.io/fNKWK8S2b/" class="post-tag i-tag
                             i-tag-info">
-                            #flutter
+                            #idea
                         </a>
                                 
                         </div>
                         
-                            <div class="post-feature-image" style="background-image: url('https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/dart-yi-xie-te-shu-de-te-xing.png')"></div>
-                            
                                 <div class="post-content">
-                                    <p>Dart一些特殊的特性，比较容易忘记和混淆的</p>
+                                    <p>IDEA相关 ，持续更新</p>
 <!-- more -->
-<h3 id="参数加">参数加{}</h3>
+<h3 id="分类显示类方法">分类显示类方法</h3>
 <blockquote>
-<p>在调用函数传递参数时，指定参数名</p>
+<p>参考 <a href="https://www.v2ex.com/t/647696">为什么 idea 不做一个分类显示类方法的功能？</a></p>
 </blockquote>
-<pre><code>void sayHello({String name, String msg}){
-    
-}
-sayHello(name: &quot;abc&quot;, msg: &quot;hello&quot;);
+<pre><code>// region foo
+// endregion foo
 </code></pre>
-<h3 id="可选参数">可选参数</h3>
-<blockquote>
-<p>可选的参数，在调用时可以不传</p>
-</blockquote>
-<blockquote>
-<p>通过位置来确定实参和形参的对应关系的</p>
-</blockquote>
-<blockquote>
-<p>参考： https://blog.csdn.net/xlh1191860939/article/details/87895616</p>
-</blockquote>
-<pre><code>String say(String from, String msg, [String device, String time]) {
- 
-    var result = &quot;$from says $msg&quot;;
- 
-    if (device != null) {
-      result = &quot;$result with a $device&quot;;
-    }
- 
-    if (time != null) {
-      result = &quot;$result at $time&quot;;
-    }
- 
-    return result;
-}
- 
-void main(){
-    print(say(&quot;david&quot;, &quot;hello&quot;, &quot;mobile&quot;, &quot;2019.2.29.20:08:08&quot;));
-    // david says hello with a mobile at 2019.2.29.20:08:08
-    print(say(&quot;david&quot;, &quot;hello&quot;, &quot;2019.2.29.20:08:08&quot;, &quot;mobile&quot;));
-    // david says hello with a 2019.2.29.20:08:08 at mobile
-    print(say(&quot;david&quot;, &quot;hello&quot;));
-    // david says hello
-}
-</code></pre>
-<h3 id="">??=</h3>
-<blockquote>
-<p>仅在变量为null时赋值，使用??=运算符</p>
-</blockquote>
-<pre><code>// 如果b为空，则将值分配给b；否则，b保持不变
-b ??= value;
-</code></pre>
-<h3 id="-2">?.</h3>
-<blockquote>
-<p>eg : foo?.bar</p>
-</blockquote>
-<blockquote>
-<p>foo可以为空,foo为空时返回空，否则返回bar</p>
-</blockquote>
-<pre><code>foo?.bar
-
-====等同于====
-
-if(foo != null) {
-    return bar;
-} else {
-    return null;
-}
-</code></pre>
-<h3 id="和-~">/ 和 ~/</h3>
-<blockquote>
-<p>/ 除</p>
-</blockquote>
-<blockquote>
-<p>~/ 返回一个整数值的除法</p>
-</blockquote>
-<pre><code>assert(5 / 2 == 2.5); // 结果是double类型
-assert(5 ~/ 2 == 2); // 结果是一个整数
-</code></pre>
-<h3 id="print">print</h3>
-<blockquote>
-<p>打印重复内容，可以使用*</p>
-</blockquote>
-<blockquote>
-<p>如果要打印d.e，外层添加{}</p>
-</blockquote>
-<pre><code>print(&quot;abc&quot;);
-print(&quot;abc $d&quot;);
-print(&quot;abc ${d.e}&quot;);
-print(&quot;abc&quot; * 10); // 打印10次abc
-</code></pre>
+<p>eg:</p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/hXmEX6.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/zGWown.jpg" alt="" loading="lazy"></figure>
 
                                 </div>
                     </article>
@@ -232,9 +146,9 @@ print(&quot;abc&quot; * 10); // 打印10次abc
                     
                         <div class="next-post">
                             <div class="next">下一篇</div>
-                            <a href="https://wmszhe.github.io/flutterui-xiang-guan/">
+                            <a href="https://wmszhe.github.io/android-sheng-cheng-jks-shi-yu-dao-de/">
                                 <h3 class="post-title">
-                                    FlutterUI相关
+                                    Android生成jks时遇到的
                                 </h3>
                             </a>
                         </div>
@@ -257,12 +171,7 @@ print(&quot;abc&quot; * 10); // 打印10次abc
 <ul>
 <li>
 <ul>
-<li><a href="#%E5%8F%82%E6%95%B0%E5%8A%A0">参数加{}</a></li>
-<li><a href="#%E5%8F%AF%E9%80%89%E5%8F%82%E6%95%B0">可选参数</a></li>
-<li><a href="#">??=</a></li>
-<li><a href="#-2">?.</a></li>
-<li><a href="#%E5%92%8C-~">/ 和 ~/</a></li>
-<li><a href="#print">print</a></li>
+<li><a href="#%E5%88%86%E7%B1%BB%E6%98%BE%E7%A4%BA%E7%B1%BB%E6%96%B9%E6%B3%95">分类显示类方法</a></li>
 </ul>
 </li>
 </ul>
