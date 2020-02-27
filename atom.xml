@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2020-02-27T03:00:49.188Z</updated>
+    <updated>2020-02-27T03:03:48.098Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io/atom.xml"/>
@@ -949,6 +949,621 @@ void add(int element) {
 <p>菜单栏 -&gt; Analyze -&gt; Run Inspection Name -&gt; 输入unused Resources -&gt; 回车 -&gt; 查看分析结果 -&gt; 删除</p>
 </blockquote>
 <figure data-type="image" tabindex="6"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1561629719716.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Dart一些特殊的特性]]></title>
+        <id>https://wmszhe.github.io/dart-yi-xie-te-shu-de-te-xing/</id>
+        <link href="https://wmszhe.github.io/dart-yi-xie-te-shu-de-te-xing/">
+        </link>
+        <updated>2019-06-21T02:21:04.000Z</updated>
+        <summary type="html"><![CDATA[<p>Dart一些特殊的特性，比较容易忘记和混淆的</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Dart一些特殊的特性，比较容易忘记和混淆的</p>
+<!-- more -->
+<h3 id="参数加">参数加{}</h3>
+<blockquote>
+<p>在调用函数传递参数时，指定参数名</p>
+</blockquote>
+<pre><code>void sayHello({String name, String msg}){
+    
+}
+sayHello(name: &quot;abc&quot;, msg: &quot;hello&quot;);
+</code></pre>
+<h3 id="可选参数">可选参数</h3>
+<blockquote>
+<p>可选的参数，在调用时可以不传</p>
+</blockquote>
+<blockquote>
+<p>通过位置来确定实参和形参的对应关系的</p>
+</blockquote>
+<blockquote>
+<p>参考： https://blog.csdn.net/xlh1191860939/article/details/87895616</p>
+</blockquote>
+<pre><code>String say(String from, String msg, [String device, String time]) {
+ 
+    var result = &quot;$from says $msg&quot;;
+ 
+    if (device != null) {
+      result = &quot;$result with a $device&quot;;
+    }
+ 
+    if (time != null) {
+      result = &quot;$result at $time&quot;;
+    }
+ 
+    return result;
+}
+ 
+void main(){
+    print(say(&quot;david&quot;, &quot;hello&quot;, &quot;mobile&quot;, &quot;2019.2.29.20:08:08&quot;));
+    // david says hello with a mobile at 2019.2.29.20:08:08
+    print(say(&quot;david&quot;, &quot;hello&quot;, &quot;2019.2.29.20:08:08&quot;, &quot;mobile&quot;));
+    // david says hello with a 2019.2.29.20:08:08 at mobile
+    print(say(&quot;david&quot;, &quot;hello&quot;));
+    // david says hello
+}
+</code></pre>
+<h3 id="">??=</h3>
+<blockquote>
+<p>仅在变量为null时赋值，使用??=运算符</p>
+</blockquote>
+<pre><code>// 如果b为空，则将值分配给b；否则，b保持不变
+b ??= value;
+</code></pre>
+<h3 id="-2">?.</h3>
+<blockquote>
+<p>eg : foo?.bar</p>
+</blockquote>
+<blockquote>
+<p>foo可以为空,foo为空时返回空，否则返回bar</p>
+</blockquote>
+<pre><code>foo?.bar
+
+====等同于====
+
+if(foo != null) {
+    return bar;
+} else {
+    return null;
+}
+</code></pre>
+<h3 id="和-~">/ 和 ~/</h3>
+<blockquote>
+<p>/ 除</p>
+</blockquote>
+<blockquote>
+<p>~/ 返回一个整数值的除法</p>
+</blockquote>
+<pre><code>assert(5 / 2 == 2.5); // 结果是double类型
+assert(5 ~/ 2 == 2); // 结果是一个整数
+</code></pre>
+<h3 id="print">print</h3>
+<blockquote>
+<p>打印重复内容，可以使用*</p>
+</blockquote>
+<blockquote>
+<p>如果要打印d.e，外层添加{}</p>
+</blockquote>
+<pre><code>print(&quot;abc&quot;);
+print(&quot;abc $d&quot;);
+print(&quot;abc ${d.e}&quot;);
+print(&quot;abc&quot; * 10); // 打印10次abc
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FlutterUI相关]]></title>
+        <id>https://wmszhe.github.io/flutterui-xiang-guan/</id>
+        <link href="https://wmszhe.github.io/flutterui-xiang-guan/">
+        </link>
+        <updated>2019-06-19T08:48:52.000Z</updated>
+        <summary type="html"><![CDATA[<p>获取屏幕尺寸，widget尺寸和位置</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>获取屏幕尺寸，widget尺寸和位置</p>
+<!-- more --> 
+<h3 id="屏幕尺寸通过window相关方法获取">屏幕尺寸通过window相关方法获取</h3>
+<h5 id="屏幕尺寸物理像素-px">屏幕尺寸（物理像素 px）</h5>
+<pre><code>window.physicalSize -&gt; Size(960.0, 720.0)
+</code></pre>
+<h5 id="屏幕密度">屏幕密度</h5>
+<pre><code>window.devicePixelRatio -&gt; 2.0
+</code></pre>
+<h3 id="屏幕尺寸通过mediaquery相关方法获取">屏幕尺寸通过MediaQuery相关方法获取</h3>
+<blockquote>
+<p>MediaQuery最终还是调用的window方法</p>
+</blockquote>
+<h5 id="屏幕尺寸逻辑像素-dp">屏幕尺寸（逻辑像素 dp）</h5>
+<blockquote>
+<p>MediaQuery.of(context).size获取的是逻辑像素，物理像素/屏幕密度</p>
+</blockquote>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560934244332.png" alt="" loading="lazy"></figure>
+<pre><code>MediaQuery.of(context).size -&gt; Size(480.0, 360.0)
+</code></pre>
+<h5 id="屏幕密度-2">屏幕密度</h5>
+<pre><code>MediaQuery.of(context).devicePixelRatio -&gt; 2.0
+</code></pre>
+<h5 id="横竖屏">横竖屏</h5>
+<blockquote>
+<p>横竖屏是根据宽高判断的</p>
+</blockquote>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560934253781.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560934262800.png" alt="" loading="lazy"></figure>
+<pre><code>MediaQuery.of(context).orientation -&gt; Orientation.landscape
+</code></pre>
+<h3 id="widget大小和位置">Widget大小和位置</h3>
+<h4 id="可以通过globalkey获取">可以通过GlobalKey获取</h4>
+<blockquote>
+<p>参考：<a href="https://medium.com/@diegoveloper/flutter-widget-size-and-position-b0a9ffed9407">Flutter : Widget Size and Position</a></p>
+</blockquote>
+<blockquote>
+<p>需要对每个widget创建一个GlobalKey</p>
+</blockquote>
+<pre><code>GlobalKey _keyRed = GlobalKey();
+</code></pre>
+<pre><code>key: _keyRed,
+</code></pre>
+<pre><code>RenderBox findRenderObject = _keyRed.currentContext.findRenderObject();
+var offset = findRenderObject.localToGlobal(Offset.zero);
+print(&quot;---icon offset : $offset&quot;);
+
+var size = _keyRed.currentContext.size;
+print(&quot;---icon size : $size&quot;);
+</code></pre>
+<h4 id="从context对象中获取">从context对象中获取</h4>
+<h5 id="自定义widget时可以从build方法中的context中获取">自定义Widget时，可以从build方法中的context中获取</h5>
+<pre><code>class CustomIcon extends Icon {
+  CustomIcon(IconData icon) : super(icon);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: Icon(icon),
+      onTap: () {
+        RenderBox findRenderObject = context.findRenderObject();
+        var offset = findRenderObject.localToGlobal(Offset.zero);
+        print(&quot;icon offset : $offset&quot;);
+
+        var size = context.size;
+        print(&quot;icon size : $size&quot;);
+      },
+    );
+  }
+}
+</code></pre>
+<h5 id="直接使用系统widget时使用layoutbuilderlayoutbuilder提供了build方法中含有context对象">直接使用系统widget时，使用LayoutBuilder，LayoutBuilder提供了build方法中含有context对象</h5>
+<pre><code>class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Row(
+        children: &lt;Widget&gt;[
+          LayoutBuilder(
+            builder: (context, constraints) {
+              return GestureDetector(
+                child: MyIcon(Icons.dashboard),
+                onTap: (){
+                  RenderBox findRenderObject = context.findRenderObject();
+                  var offset = findRenderObject.localToGlobal(Offset.zero);
+                  print(&quot;---icon offset : $offset&quot;);
+
+                  var size = context.size;
+                  print(&quot;---icon size : $size&quot;);
+                },
+              );
+            },
+          ),
+          MyIcon(Icons.ac_unit),
+        ],
+      ),
+    );
+  }
+}
+</code></pre>
+<h4 id="在widget-build完成之后执行操作">在widget build完成之后，执行操作</h4>
+<blockquote>
+<p>在return一个widget之前，context为null，如果想要在build之后，立即获取一些属性，可以使用WidgetsBinding.instance.addPostFrameCallback((_) =&gt; afterBuild(context));</p>
+</blockquote>
+<pre><code>class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Row(
+        children: &lt;Widget&gt;[
+          LayoutBuilder(
+            builder: (context, constraints) {
+              WidgetsBinding.instance.addPostFrameCallback((_) =&gt; afterBuild(context));
+              return Container(
+                child: MyIcon(Icons.dashboard),
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  afterBuild(BuildContext context) {
+    RenderBox findRenderObject = context.findRenderObject();
+    var offset = findRenderObject.localToGlobal(Offset.zero);
+    print(&quot;---icon offset : $offset&quot;);
+
+    var size = context.size;
+    print(&quot;---icon size : $size&quot;);
+  }
+}
+</code></pre>
+<h3 id="软键盘相关">软键盘相关</h3>
+<h4 id="显示隐藏软键盘">显示隐藏软键盘</h4>
+<ol>
+<li>通过焦点方式</li>
+</ol>
+<pre><code>// 隐藏
+FocusScope.of(context).requestFocus(FocusNode())
+// 显示
+FocusScope.of(context).autofocus(_focusNode)
+</code></pre>
+<ol start="2">
+<li>通过channel方式</li>
+</ol>
+<pre><code>// 显示
+SystemChannels.textInput.invokeMethod('TextInput.show');
+// 隐藏
+SystemChannels.textInput.invokeMethod('TextInput.hide');
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FLutter编译桌面端app]]></title>
+        <id>https://wmszhe.github.io/flutter-bian-yi-zhuo-mian-duan-app/</id>
+        <link href="https://wmszhe.github.io/flutter-bian-yi-zhuo-mian-duan-app/">
+        </link>
+        <updated>2019-06-18T09:35:45.000Z</updated>
+        <summary type="html"><![CDATA[<p>使用<a href="https://github.com/google/flutter-desktop-embedding">flutter-desktop-embedding</a>编译适用于macos、windows、linux桌面端的app</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>使用<a href="https://github.com/google/flutter-desktop-embedding">flutter-desktop-embedding</a>编译适用于macos、windows、linux桌面端的app</p>
+<!-- more --> 
+<h4 id="流程">流程</h4>
+<ol>
+<li>配置flutter环境，必须在master分支<pre><code>flutter channel master
+flutter upgrade
+</code></pre>
+</li>
+<li>clone flutter-desktop-embedding<pre><code>git clone git@github.com:google/flutter-desktop-embedding.git
+</code></pre>
+</li>
+<li>复制flutter-desktop-embedding/example到自己的开发目录下,重命名为flutter_desktop
+<blockquote>
+<p>目前不支持flutter create直接创建desktop项目，只能复制出example项目修改</p>
+</blockquote>
+</li>
+<li>开启ENABLE_FLUTTER_DESKTOP
+<ul>
+<li><strong>一次性，每次打开项目都要执行</strong><pre><code>命令行中 export ENABLE_FLUTTER_DESKTOP=true
+</code></pre>
+</li>
+<li><strong>永久</strong><pre><code>.zshrc中添加 export ENABLE_FLUTTER_DESKTOP=true
+</code></pre>
+</li>
+<li><strong>如果使用的是vscode</strong><pre><code>打开设置(json)，添加
+&quot;dart.env&quot;: {
+    &quot;ENABLE_FLUTTER_DESKTOP&quot;: true,
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li>更新依赖<pre><code>flutter packages get
+</code></pre>
+</li>
+<li>flutter run,即可看到demo项目		<br>
+<code>flutter run</code><br>
+<img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560851493604.png" alt="" loading="lazy"></li>
+<li>使用文本编辑器打开flutter_desktop项目，在lib目录下编写自己的代码<br>
+<img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560850644118.png" alt="" loading="lazy"></li>
+<li>over!</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Git]]></title>
+        <id>https://wmszhe.github.io/git/</id>
+        <link href="https://wmszhe.github.io/git/">
+        </link>
+        <updated>2019-06-15T12:19:24.000Z</updated>
+        <summary type="html"><![CDATA[<p>Git相关,常用Git命令...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Git相关,常用Git命令...</p>
+<!-- more --> 
+<h3 id="ssh">SSH</h3>
+<pre><code>1. 生成SSH秘钥，秘钥名字最好便于识别，例如用自己的名字,[keyname]=name
+    ssh-keygen -f ~/.ssh/[keyname]
+2. 查看公钥信息
+    cat ~/.ssh/[keyname].pub
+3. 将公钥信息粘贴到gerrit上，打开gerrit点击右上角的登录，使用员工账号与密码登录，登录后点击gerrit右上角用户名，点击弹出框左下的Settings,选择左侧的SSH Public Keys，将公钥信息粘贴进去点击Add。
+4. 将私钥加到ssh-agent
+    ssh-agent bash
+    ssh-add ~/.ssh/[keyname]
+5. 配置git
+    git config --global user.name [fullname] 这个名字建议写全名
+    git config --global user.email [email]  这个email填写你的邮箱
+    git config --global color.ui true
+    git config --global gui.encoding utf-8
+
+</code></pre>
+<h3 id="设置git全局设置">设置git全局设置：</h3>
+<pre><code>git config --global user.name &quot;your_name&quot; 
+git config --global user.email  &quot;your_email&quot;
+</code></pre>
+<h3 id="需要取消git的全局设置">需要取消git的全局设置:</h3>
+<pre><code>git config --global --unset user.name
+git config --global --unset user.email
+</code></pre>
+<h3 id="针对每个项目单独设置用户名和邮箱设置方法如下">针对每个项目，单独设置用户名和邮箱，设置方法如下：</h3>
+<pre><code>git config user.name &quot;your_name&quot; 
+git config user.email &quot;your_email&quot;
+</code></pre>
+<h3 id="测试连接">测试连接</h3>
+<pre><code>ssh -T git@github.com
+ssh -T git@192.168.1.2
+</code></pre>
+<h3 id="gitignore无效的解决方法">.gitignore无效的解决方法</h3>
+<p>在项目文件夹下打开git bash，执行</p>
+<pre><code>// git rm -r --cached .DS_Store 这句代码的意思就是解除跟踪DS_Store，清缓存
+git rm -r --cached .
+git add .
+git commit -m 'update .gitignore'
+</code></pre>
+<h3 id="init">init</h3>
+<pre><code>git init
+git add .
+git commit -m &quot;init&quot;
+</code></pre>
+<h3 id="init后传至git仓库">init后传至git仓库</h3>
+<pre><code>git remote add origin git@github.com:wmszhe/PythonTools.git
+git push -u origin master
+</code></pre>
+<h3 id="日志">日志</h3>
+<h5 id="1查询日志">1.查询日志</h5>
+<pre><code>git log
+</code></pre>
+<h5 id="2查指定文件的提交日志">2.查指定文件的提交日志</h5>
+<pre><code>1. 查看日志记录
+git log --pretty=oneline .gitignore
+
+2. 使用git show查看具体日志 --&gt; git show &lt;git提交版本号&gt; &lt;文件名&gt;
+git show 03bb009eb06b16c62155206b0e5724b532820efd .gitignore
+</code></pre>
+<h5 id="3查询某个人的提交日志">3.查询某个人的提交日志</h5>
+<pre><code>git log --author=&quot;author&quot;
+</code></pre>
+<h3 id="clone">clone</h3>
+<pre><code>git clone https://github.com/CharonChui/AndroidNote.git __AndroidNote(自定义的文件夹名)
+git clone ssh://zhe.wang@192.168.0.119:29418/adclient -b gte
+</code></pre>
+<h3 id="安装hook目的是在提交信息中自动创建-change-id-标签">安装hook,目的是在提交信息中自动创建 'Change-Id:' 标签</h3>
+<pre><code>cd adclient
+scp -p -P 29418 zhe.wang@192.168.0.119:hooks/commit-msg .git/hooks/
+</code></pre>
+<h3 id="查看分支">查看分支</h3>
+<pre><code>git branch 
+git branch -a
+</code></pre>
+<h3 id="切换分支">切换分支</h3>
+<pre><code>//本地无分支，加 -b ,相当于 git branch sdpost_dev ，git checkout sdpost_dev
+git checkout -b sdpost_dev
+//本地已有分支，直接切换
+git checkout sdpost_dev
+//checkout远端分支
+git checkout -b develop origin/develop
+</code></pre>
+<h3 id="从某个版本代码拉取新的分支">从某个版本代码拉取新的分支</h3>
+<pre><code>git checkout -b newbranchname xxxxx(commit id)
+</code></pre>
+<h3 id="修改分支名称">修改分支名称</h3>
+<p>本地分支</p>
+<pre><code>git branch -m oldbranchname newbranchname
+</code></pre>
+<p>远程分支</p>
+<pre><code>将本地分支重命名为新分支名称，然后删除远程分支，再把本地分支上传
+</code></pre>
+<h3 id="把新建的本地分支push到远程服务器远程分支与本地分支同名当然可以随意起名">把新建的本地分支push到远程服务器，远程分支与本地分支同名（当然可以随意起名）</h3>
+<pre><code>git push origin wz-jr:wz-jr
+</code></pre>
+<pre><code>// 创建远端分支的另一种方式
+git checkout -b my-test  //在当前分支下创建my-test的本地分支分支
+git push origin my-test  //将my-test分支推送到远程
+git branch --set-upstream-to=origin/my-test //将本地分支my-test关联到远程分支my-test上   
+git branch -a //查看远程分支 
+</code></pre>
+<h3 id="删除分支">删除分支</h3>
+<pre><code>git branch -d gte
+git branch -D gte(强制删除)
+</code></pre>
+<h3 id="恢复删除的分支">恢复删除的分支</h3>
+<pre><code>git reflog(找到想要恢复的分支的散列值)
+git branch local-test HEAD@{2}
+</code></pre>
+<h3 id="查看tag">查看tag</h3>
+<pre><code>git tag
+</code></pre>
+<h3 id="查看tag详细信息">查看tag详细信息</h3>
+<pre><code>git show v1.0
+</code></pre>
+<h3 id="添加tag">添加tag</h3>
+<pre><code>git tag v1.0
+</code></pre>
+<h3 id="添加带备注的tag">添加带备注的tag</h3>
+<pre><code>git tag -a v1.0 -m &quot;v1.0&quot;
+</code></pre>
+<h3 id="给指定的某个commit号加tag">给指定的某个commit号加tag</h3>
+<pre><code>git tag -a v1.0 9fceb02 -m &quot;v1.0&quot;
+</code></pre>
+<h3 id="将tag同步到远程服务器">将tag同步到远程服务器</h3>
+<pre><code>git push origin v1.0
+git push origin --tags //推送所有tag
+</code></pre>
+<h3 id="切换tag">切换tag</h3>
+<pre><code>git checkout v1.0
+</code></pre>
+<h3 id="获取远程版本">获取远程版本</h3>
+<pre><code>git fetch origin tag V1.0
+</code></pre>
+<h3 id="删除本地tag">删除本地tag</h3>
+<pre><code>git tag -d v1.0
+</code></pre>
+<h3 id="删除远端tag">删除远端tag</h3>
+<blockquote>
+<p>推送的空的同名版本到线下,达到删除线上版本的目标</p>
+</blockquote>
+<pre><code>git tag push origin :refs/tags/v1.0
+</code></pre>
+<h3 id="查看状态">查看状态</h3>
+<pre><code>git status
+</code></pre>
+<h3 id="commit">commit</h3>
+<pre><code>//直接填写提交日志
+git commit -m 'commit log'
+</code></pre>
+<h3 id="修改commit">修改commit</h3>
+<pre><code>git commit --amend
+</code></pre>
+<h3 id="pull">pull</h3>
+<pre><code>git pull origin master
+</code></pre>
+<h5 id="pull-错误-you-asked-to-pull-from-the-remote-origin-but-did-not-specify-a-branch-because-this-is-not-the-default-configured-remote-for-your-current-branch-you-must-specify-a-branch-on-the-command-line">pull 错误 “You asked to pull from the remote 'origin', but did not specify a branch. Because this is not the default configured remote for your current branch, you must specify a branch on the command line.”</h5>
+<blockquote>
+<p>参考：<a href="https://blog.csdn.net/forever_wind/article/details/37506389">Git远程分支和refs文件详解</a></p>
+</blockquote>
+<blockquote>
+<p>问题在于没有给当前分支配置merge的路径，git不知道去merge哪个分支。</p>
+</blockquote>
+<p>我们修改配置文件(.git/config)加入</p>
+<pre><code>[branch &quot;wz-jr2&quot;]
+	remote = origin
+	merge = refs/heads/wz-jr2
+</code></pre>
+<p>这意味着每次fetch origin的时候更新所有remotes/origin的头指针到refs/heads/下面</p>
+<h3 id="push">push</h3>
+<pre><code>git push origin master
+git push origin HEAD:refs/for/gte
+//可提交到指定位置
+git push //192.168.0.119/LocalShare/pengbo/adclient develop-post:develop-post
+</code></pre>
+<h3 id="回退git">回退git</h3>
+<pre><code>// !!! Windows下CMD中^是特殊字符，要使用时必须用双引号包括 (git reset &lt;--soft||--mixed||--hard&gt; HEAD&quot;^&quot;)
+// !!! 或者 git reset &lt;--soft||--mixed||--hard&gt; HEAD~1
+git reset &lt;--soft||--mixed||--hard&gt; HEAD^ (回退到上一个版本) (HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100)
+git reset &lt;--soft||--mixed||--hard&gt; xxxxxxxx (回退到指定版本)
+</code></pre>
+<h3 id="远程版本回退">远程版本回退</h3>
+<pre><code>git push origin HEAD --force #远程提交回退
+</code></pre>
+<h3 id="git回退到某一历史版本后再恢复到之前版本">git回退到某一历史版本后再恢复到之前版本</h3>
+<pre><code>git reset --hard xxx
+git reflog (git log -g)
+git reset --hard xxx
+</code></pre>
+<h3 id="your-branch-is-behind-originwz-jr-by-1-commit-and-can-be-fast-forwarded">Your branch is behind 'origin/wz-jr' by 1 commit, and can be fast-forwarded.</h3>
+<pre><code>is behind表示落后远程版本了，并且可以fast forwarded快速合并
+使用git push origin wz-jr --force强制将代码推到服务器，--force使服务器不会拒绝这个更低版本的commit
+</code></pre>
+<h3 id="撤销修改">撤销修改</h3>
+<pre><code>git checkout -- file (命令git checkout -- file意思就是，把文件在工作区的修改全部撤销，这里有两种情况：一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。总之，就是让这个文件回到最近一次git commit或git add时的状态。)
+git reset HEAD file (把暂存区的修改撤销掉（unstage），重新放回工作区)
+</code></pre>
+<h3 id="回退指定文件到指定版本">回退指定文件到指定版本</h3>
+<pre><code>git log /e/dev/adclient/app/src/main/AndroidManifest.xml
+git reset a28887c24ed89938de7f769eb18b2555de790668 /e/dev/adclient/app/src/main/AndroidManifest.xml
+git checkout -- /e/dev/adclient/app/src/main/AndroidManifest.xml
+</code></pre>
+<h3 id="重新提交-amend">重新提交 amend</h3>
+<pre><code>git add .
+git commit --amend( --no-edit)
+// git push origin gte
+// git push origin HEAD:refs/for/gte
+// 如果已经push到git仓库,amend后直接push会生成新的记录，需要--force-with-lease
+git push --force-with-lease origin master(安全的强制推送)
+</code></pre>
+<h3 id="暂存恢复-stash">暂存/恢复 stash</h3>
+<pre><code>git stash(暂存)
+git stash save &quot;&quot; (暂存)
+git stash pop(apply last stash and remove it from the list)
+git stash list()
+git stash pop stash@{1}(取出指定的暂存,取出后会将对应的stash id 从stash list里删除)
+git stash apply stash@{1}(取出指定的暂存，取出后会继续保存stash id)
+git stash drop stash@{1}(删除指定的暂存)
+git stash clear(将栈清空)
+</code></pre>
+<h3 id="cherry-pick">cherry-pick</h3>
+<pre><code>// 将另一个分支上的一个提交合并到本分支
+git cherry-pick xxxx(commit id)
+</code></pre>
+<h3 id="revert">revert</h3>
+<pre><code>git revert xxx
+git commit
+// git push origin gte
+git push origin HEAD:refs/for/sdpost_dev
+</code></pre>
+<h3 id="fetchrebase">fetch/rebase</h3>
+<pre><code>首先用git fetch返回服务器上的代码
+用git rebase合并
+    &gt; 合并冲突
+    &gt; git add .
+    &gt; 用git rebase --continue继续没完成的合并
+    &gt; 重新提交git commit --amend
+最后就可以用git push更新到服务器上去。
+</code></pre>
+<pre><code>git pull --rebase origin develop-post(git pull --rebase = git fetch + git rebase)
+</code></pre>
+<h3 id="取消本次rebase">取消本次rebase</h3>
+<pre><code>git rebase --abort
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello EveryOne]]></title>
+        <id>https://wmszhe.github.io/hello-everyone/</id>
+        <link href="https://wmszhe.github.io/hello-everyone/">
+        </link>
+        <updated>2019-06-15T11:18:56.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏 欢迎来到 <strong>zhe's home!</strong> 👏</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏 欢迎来到 <strong>zhe's home!</strong> 👏</p>
+<!-- more --> 
+<blockquote>
+<p>Time: 2019年6月15日，周六。</p>
+</blockquote>
+<ol>
+<li>本网站通过Github Pages创建。创建过程参考<a href="https://sspai.com/post/54608">GitHub Pages 搭建教程</a></li>
+<li>使用<a href="https://gridea.dev/">Gridea</a>管理本网站</li>
+<li>本站使用<a href="https://github.com/Mrcxt/gridea-theme-lemon">Lemon主题</a>，经过<a href="https://github.com/wmszhe/gridea-theme-lemon">适量修改</a>。</li>
+<li>本网站主要记录
+<ul>
+<li>工作笔记</li>
+<li>日常</li>
+<li>备忘</li>
+</ul>
+</li>
+<li>随缘更新</li>
+</ol>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于]]></title>
+        <id>https://wmszhe.github.io/about/</id>
+        <link href="https://wmszhe.github.io/about/">
+        </link>
+        <updated>2019-01-25T11:09:48.000Z</updated>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560601422022.png" alt="" loading="lazy"></figure>
+<p>本网站创建于2019年6月15日</p>
+<p>这是我的个人网站，用了记录个人生活，工作经验，自用工具</p>
+<ol>
+<li>本网站通过Github Pages创建。创建过程参考<a href="https://sspai.com/post/54608">GitHub Pages 搭建教程</a></li>
+<li>使用<a href="https://gridea.dev/">Gridea</a>管理本网站</li>
+<li>本站使用<a href="https://github.com/Mrcxt/gridea-theme-lemon">Lemon主题</a>，经过<a href="https://github.com/wmszhe/gridea-theme-lemon">适量修改</a>。</li>
+</ol>
 ]]></content>
     </entry>
 </feed>
