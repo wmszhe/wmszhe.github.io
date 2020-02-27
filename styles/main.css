@@ -21,8 +21,8 @@ h6 {
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans SC', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', sans-serif;
 }
 a {
-  color: #212529;
-  transition: all 0.2s;
+  color: #2e9fff;
+  transition: all 0.3s;
 }
 a:focus,
 a:hover {
