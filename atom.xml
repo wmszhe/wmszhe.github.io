@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>zhe&apos;s home</title>
-    <updated>2020-02-27T03:03:48.098Z</updated>
+    <updated>2020-02-27T03:05:04.010Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io/atom.xml"/>
@@ -1548,22 +1548,6 @@ git push origin HEAD:refs/for/sdpost_dev
 <li>随缘更新</li>
 </ol>
 <p>😘 Enjoy~</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于]]></title>
-        <id>https://wmszhe.github.io/about/</id>
-        <link href="https://wmszhe.github.io/about/">
-        </link>
-        <updated>2019-01-25T11:09:48.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560601422022.png" alt="" loading="lazy"></figure>
-<p>本网站创建于2019年6月15日</p>
-<p>这是我的个人网站，用了记录个人生活，工作经验，自用工具</p>
-<ol>
-<li>本网站通过Github Pages创建。创建过程参考<a href="https://sspai.com/post/54608">GitHub Pages 搭建教程</a></li>
-<li>使用<a href="https://gridea.dev/">Gridea</a>管理本网站</li>
-<li>本站使用<a href="https://github.com/Mrcxt/gridea-theme-lemon">Lemon主题</a>，经过<a href="https://github.com/wmszhe/gridea-theme-lemon">适量修改</a>。</li>
-</ol>
 ]]></content>
     </entry>
 </feed>
