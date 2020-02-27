@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>wzhuiJ</title>
-    <updated>2020-02-27T07:27:57.582Z</updated>
+    <updated>2020-02-27T07:29:27.267Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io/atom.xml"/>
@@ -476,10 +476,8 @@ fun printNode(data: SinglyLinkedNote?) {
         <link href="https://wmszhe.github.io/suan-fa-fu-za-du/">
         </link>
         <updated>2019-07-04T03:45:52.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="算法的复杂度">算法的复杂度</h1>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="算法的复杂度">算法的复杂度</h1>
-<!-- more -->
+        <content type="html"><![CDATA[<!-- more -->
+<h1 id="算法的复杂度">算法的复杂度</h1>
 <blockquote>
 <p>解决的是“快”和“省”的问题</p>
 </blockquote>
