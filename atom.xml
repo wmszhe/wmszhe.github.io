@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>wzhuiJ</title>
-    <updated>2020-02-27T07:18:50.094Z</updated>
+    <updated>2020-02-27T07:27:57.582Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io/atom.xml"/>
@@ -68,11 +68,9 @@
         <link href="https://wmszhe.github.io/flutter-yu-dao-de-wen-ti/">
         </link>
         <updated>2019-08-22T08:05:24.000Z</updated>
-        <summary type="html"><![CDATA[<p>Flutter开发过程中遇到的一些问题。<br>
-<mark>持续更新</mark></p>
+        <summary type="html"><![CDATA[<p>Flutter开发过程中遇到的一些问题。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>Flutter开发过程中遇到的一些问题。<br>
-<mark>持续更新</mark></p>
+        <content type="html"><![CDATA[<p>Flutter开发过程中遇到的一些问题。</p>
 <!-- more -->
 <h3 id="1-android设置splash时图片拉伸解决方法">1. Android设置Splash时图片拉伸解决方法</h3>
 <p><strong>设置splash：</strong></p>
@@ -103,14 +101,12 @@
         </link>
         <updated>2019-07-16T03:43:56.000Z</updated>
         <summary type="html"><![CDATA[<p>最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</p>
-<br>
 <p>源地址：<a href="https://www.zhihu.com/question/26934313/answer/743798587">知乎：有哪些算法惊艳到了你?</a></p>
 ]]></summary>
         <content type="html"><![CDATA[<p>最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</p>
-<br>
 <p>源地址：<a href="https://www.zhihu.com/question/26934313/answer/743798587">知乎：有哪些算法惊艳到了你?</a></p>
 <!-- more -->
-<h4 id="问题设计一个公平的洗牌算法">问题：设计一个公平的洗牌算法</h4>
+<h3 id="问题设计一个公平的洗牌算法">问题：设计一个公平的洗牌算法</h3>
 <p>给定一个长度n个数组，最终排列的可能性一共有 n!个，公平的洗牌算法，<strong>应该能等概率地给出这 n! 个结果中的任意一个</strong>。</p>
 <p>我们再换一个角度思考“公平”这个话题。其实也就是，对于生成的排列，<strong>每一个元素都能独立等概率地出现在每一个位置</strong>。或者反过来，<strong>每一个位置都能独立等概率地放置每个元素</strong>。</p>
 <h4 id="java实现">Java实现</h4>
@@ -177,10 +173,8 @@ int randNum = rand.nextInt(n - i) + i;
         <link href="https://wmszhe.github.io/cha-zhao-suan-fa/">
         </link>
         <updated>2019-07-04T06:44:03.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="查找算法">查找算法</h2>
-]]></summary>
-        <content type="html"><![CDATA[<h2 id="查找算法">查找算法</h2>
-<!-- more -->
+        <content type="html"><![CDATA[<!-- more -->
+<h2 id="查找算法">查找算法</h2>
 <h3 id="二分查找">二分查找</h3>
 <blockquote>
 <p><mark><strong>二分查找必须是有序对</strong></mark></p>
@@ -264,10 +258,8 @@ fun binarySearchForRecursion(aar: IntArray, key: Int, low: Int, high: Int): Int 
         <link href="https://wmszhe.github.io/lian-biao-linked-list/">
         </link>
         <updated>2019-07-04T06:40:09.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="链表-linkedlist">链表 LinkedList</h2>
-]]></summary>
-        <content type="html"><![CDATA[<h2 id="链表-linkedlist">链表 LinkedList</h2>
-<!-- more -->
+        <content type="html"><![CDATA[<!-- more -->
+<h2 id="链表-linkedlist">链表 LinkedList</h2>
 <h3 id="定义">定义</h3>
 <p>链表不需要一块连续的内存空间，它通过“指针”将一组<strong>零散的内存块</strong>串联起来使用</p>
 <figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/d5d5bee4be28326ba3c28373808a62cd.jpg" alt="" loading="lazy"></figure>
@@ -388,16 +380,11 @@ fun printNode(data: SinglyLinkedNote?) {
         <link href="https://wmszhe.github.io/shu-zu-array/">
         </link>
         <updated>2019-07-04T06:32:33.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="数组-array">数组 Array</h3>
+        <content type="html"><![CDATA[<!-- more -->
+<h3 id="数组-array">数组 Array</h3>
 <blockquote>
 <p>数组（Array）是一种线性表数据结构。它用一组连续的内存空间，来存储一组具有相同类型的数据。</p>
 </blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="数组-array">数组 Array</h3>
-<blockquote>
-<p>数组（Array）是一种线性表数据结构。它用一组连续的内存空间，来存储一组具有相同类型的数据。</p>
-</blockquote>
-<!-- more -->
 <ul>
 <li>
 <ol>
@@ -875,10 +862,8 @@ void add(int element) {
         <link href="https://wmszhe.github.io/shu-ju-jie-gou-he-suan-fa/">
         </link>
         <updated>2019-07-04T03:20:13.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="数据结构和算法">数据结构和算法</h2>
-]]></summary>
-        <content type="html"><![CDATA[<h2 id="数据结构和算法">数据结构和算法</h2>
-<!-- more -->
+        <content type="html"><![CDATA[<!-- more -->
+<h2 id="数据结构和算法">数据结构和算法</h2>
 <figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/913e0ababe43a2d57267df5c5f0832a7.jpg" alt="" loading="lazy"></figure>
 <h3 id="线性表和非线性表">线性表和非线性表</h3>
 <ul>
@@ -909,13 +894,9 @@ void add(int element) {
         <link href="https://wmszhe.github.io/android-xing-neng-you-hua/">
         </link>
         <updated>2019-06-24T09:17:17.000Z</updated>
-        <summary type="html"><![CDATA[<p>Android性能优化，一些性能优化方式。<br>
-<br></p>
-<h2 id="持续更新"><mark>持续更新</mark></h2>
+        <summary type="html"><![CDATA[<p>Android性能优化，一些性能优化方式。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>Android性能优化，一些性能优化方式。<br>
-<br></p>
-<h2 id="持续更新"><mark>持续更新</mark></h2>
+        <content type="html"><![CDATA[<p>Android性能优化，一些性能优化方式。</p>
 <!-- more -->
 <h2 id="删除多余依赖项">删除多余依赖项</h2>
 <ol>
@@ -1308,8 +1289,8 @@ ssh -T git@192.168.1.2
 </code></pre>
 <h3 id="gitignore无效的解决方法">.gitignore无效的解决方法</h3>
 <p>在项目文件夹下打开git bash，执行</p>
-<pre><code>// git rm -r --cached .DS_Store 这句代码的意思就是解除跟踪DS_Store，清缓存
-git rm -r --cached .
+<pre><code>git rm -r --cached .DS_Store 这句代码的意思就是解除跟踪DS_Store，清缓存
+// git rm -r --cached . 解除跟踪所有文件
 git add .
 git commit -m 'update .gitignore'
 </code></pre>
@@ -1359,6 +1340,13 @@ git checkout -b develop origin/develop
 <h3 id="从某个版本代码拉取新的分支">从某个版本代码拉取新的分支</h3>
 <pre><code>git checkout -b newbranchname xxxxx(commit id)
 </code></pre>
+<h3 id="创建一个没有历史记录的新分支">创建一个没有历史记录的新分支</h3>
+<pre><code>git checkout --orphan new_dev
+git add .
+git commit -m &quot;first commit&quot;
+// 发布到远端分支
+git push origin new_dev:new_dev
+</code></pre>
 <h3 id="修改分支名称">修改分支名称</h3>
 <p>本地分支</p>
 <pre><code>git branch -m oldbranchname newbranchname
@@ -1375,9 +1363,15 @@ git push origin my-test  //将my-test分支推送到远程
 git branch --set-upstream-to=origin/my-test //将本地分支my-test关联到远程分支my-test上   
 git branch -a //查看远程分支 
 </code></pre>
+<h3 id="push所有分支">push所有分支</h3>
+<pre><code>git push --all origin
+</code></pre>
 <h3 id="删除分支">删除分支</h3>
 <pre><code>git branch -d gte
 git branch -D gte(强制删除)
+</code></pre>
+<h3 id="删除远程分支">删除远程分支</h3>
+<pre><code>git push origin --delete 分支名
 </code></pre>
 <h3 id="恢复删除的分支">恢复删除的分支</h3>
 <pre><code>git reflog(找到想要恢复的分支的散列值)
@@ -1432,10 +1426,8 @@ git commit -m 'commit log'
 </code></pre>
 <h5 id="pull-错误-you-asked-to-pull-from-the-remote-origin-but-did-not-specify-a-branch-because-this-is-not-the-default-configured-remote-for-your-current-branch-you-must-specify-a-branch-on-the-command-line">pull 错误 “You asked to pull from the remote 'origin', but did not specify a branch. Because this is not the default configured remote for your current branch, you must specify a branch on the command line.”</h5>
 <blockquote>
-<p>参考：<a href="https://blog.csdn.net/forever_wind/article/details/37506389">Git远程分支和refs文件详解</a></p>
-</blockquote>
-<blockquote>
-<p>问题在于没有给当前分支配置merge的路径，git不知道去merge哪个分支。</p>
+<p>参考：https://blog.csdn.net/forever_wind/article/details/37506389<br>
+问题在于没有给当前分支配置merge的路径，git不知道去merge哪个分支。</p>
 </blockquote>
 <p>我们修改配置文件(.git/config)加入</p>
 <pre><code>[branch &quot;wz-jr2&quot;]
