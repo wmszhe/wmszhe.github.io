@@ -1,339 +1,271 @@
+<!DOCTYPE html>
 <html>
+  <head>
+       <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta name="referrer" content="never">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="kveln">
+  <title>算法 | wzhuiJ</title>
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="https://wmszhe.github.io//media/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!--  <link href="https://wmszhe.github.io//media/css/all.min.css" rel="stylesheet" type="text/css"> -->
+  <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" title="算法 | wzhuiJ » Feed" href="https://wmszhe.github.io//atom.xml">
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+  <link href="https://wmszhe.github.io//styles/main.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/highlight.min.js"></script>
+  <!-- <script src="https://wmszhe.github.io//media/scripts/jquery.min.js"></script> -->
+  <script>hljs.initHighlightingOnLoad();</script>
+  
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    算法 | wzhuiJ
-</title>
-<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1582777895518">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link rel="stylesheet" href="https://wmszhe.github.io//styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://wmszhe.github.io//media/js/jquery.sticky-sidebar.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
-
-
-</head>
-
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="logo">
-            <a href="https://wmszhe.github.io/">
-                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1582777895518" alt="">
+  </head>
+  <body>
+  	<!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="https://wmszhe.github.io/">wzhuiJ</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/">首页</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/toolbox">工具</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/archives">归档</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/tags">标签</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/about">关于</a>
+              
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- Page Header -->
+  <header class="masthead" style="background-image: url('https://wmszhe.github.io//media/images/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1 class="tag-tl">#算法</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+    <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+       
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/xi-pai-suan-fa/">
+            <h2 class="post-title">
+              洗牌算法
+            </h2>
             </a>
-            <div class="site-title">
-                <h1>
-                    wzhuiJ
-                </h1>
-            </div>
-        </div>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/toolbox" class="menu">
-                                    工具
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
-
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-container main-container">
-                <div id="content" class="main-container-left">
-                    
-    <div class="i-card">
-        <b>标签：#
-        算法</b>
-    </div>
-    
-        
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/xi-pai-suan-fa/">
-                        洗牌算法
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-07-16</time>
-                    
-                        <a href="https://wmszhe.github.io/FOj_E3Dob/" class="post-tag i-tag
-                            i-tag-other_4">
-            #算法
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <h4 id="最近在知乎看到了一个关于洗牌算法学习一下记录下">最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</h4>
+            <h3 class="post-subtitle">
+              <p>最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</p>
 <br>
 <p>源地址：<a href="https://www.zhihu.com/question/26934313/answer/743798587">知乎：有哪些算法惊艳到了你?</a></p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/xi-pai-suan-fa/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/cha-zhao-suan-fa/">
-                        查找算法
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-07-04</time>
-                    
-                        <a href="https://wmszhe.github.io/FOj_E3Dob/" class="post-tag i-tag
-                            i-tag-error">
-            #算法
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <h2 id="查找算法">查找算法</h2>
-
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/cha-zhao-suan-fa/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/lian-biao-linked-list/">
-                        链表LinkedList
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-07-04</time>
-                    
-                        <a href="https://wmszhe.github.io/FOj_E3Dob/" class="post-tag i-tag
-                            i-tag-other_3">
-            #算法
-        </a>
-                        
-                        <a href="https://wmszhe.github.io/gywcJZvfb/" class="post-tag i-tag
-                            i-tag-other_3">
-            #数据结构
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <h2 id="链表-linkedlist">链表 LinkedList</h2>
-
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/lian-biao-linked-list/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/suan-fa-fu-za-du/">
-                        算法复杂度
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-07-04</time>
-                    
-                        <a href="https://wmszhe.github.io/FOj_E3Dob/" class="post-tag i-tag
-                            i-tag-success">
-            #算法
-        </a>
-                        
-                        <a href="https://wmszhe.github.io/gywcJZvfb/" class="post-tag i-tag
-                            i-tag-">
-            #数据结构
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <h1 id="算法的复杂度">算法的复杂度</h1>
-
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/suan-fa-fu-za-du/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/shu-ju-jie-gou-he-suan-fa/">
-                        数据结构和算法
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-07-04</time>
-                    
-                        <a href="https://wmszhe.github.io/FOj_E3Dob/" class="post-tag i-tag
-                            i-tag-info">
-            #算法
-        </a>
-                        
-                        <a href="https://wmszhe.github.io/gywcJZvfb/" class="post-tag i-tag
-                            i-tag-primary">
-            #数据结构
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <h2 id="数据结构和算法">数据结构和算法</h2>
-
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/shu-ju-jie-gou-he-suan-fa/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-                <!-- 翻页 -->
-                
-                </div>
-                <!--  -->
-                <div class="main-container-middle"></div>
-                <!--  -->
-                <div id="sidebar" class="main-container-right">
-
-                    <!-- 个人信息 -->
-                    
-    <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://wmszhe.github.io//images/avatar.png?v=1582777895518)">
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-07-16</span>
+             <span>,</span>
+             <span class="post-stats">3 min read</span>
+            </p>
         </div>
-        <h1 class="id_card-title">
-            wzhuiJ
-        </h1>
-        <h2 class="id_card-description">
-            温故而知新
-        </h2>
-        <!--  -->
-        <div class="id_card-sns">
-            <!-- github -->
-            
-                <a href="https://github.com/wmszhe" target="_blank" rel="noopener noreferrer"><i
-                class="fa fa-github"></i></a>
-                
-                    <!-- twitter -->
-                    
-                            <!-- weibo -->
-                            
-                                    <!-- facebook -->
-                                    
-
+        <hr>
+        <div class="clearfix">
         </div>
+        
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/cha-zhao-suan-fa/">
+            <h2 class="post-title">
+              查找算法
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <h2 id="查找算法">查找算法</h2>
+
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-07-04</span>
+             <span>,</span>
+             <span class="post-stats">2 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/lian-biao-linked-list/">
+            <h2 class="post-title">
+              链表LinkedList
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <h2 id="链表-linkedlist">链表 LinkedList</h2>
+
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-07-04</span>
+             <span>,</span>
+             <span class="post-stats">5 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/suan-fa-fu-za-du/">
+            <h2 class="post-title">
+              算法复杂度
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <h1 id="算法的复杂度">算法的复杂度</h1>
+
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-07-04</span>
+             <span>,</span>
+             <span class="post-stats">19 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/shu-ju-jie-gou-he-suan-fa/">
+            <h2 class="post-title">
+              数据结构和算法
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <h2 id="数据结构和算法">数据结构和算法</h2>
+
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-07-04</span>
+             <span>,</span>
+             <span class="post-stats">1 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        
+        
+      </div>
     </div>
-    
+  </div>
 
-                        <!-- 公告栏 -->
-                        
-
-                </div>
-            </div>
-
-
-
-            <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-   <!-- | 
-  <a class="rss" href="https://wmszhe.github.io//atom.xml" target="_blank">RSS</a> -->
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
-
+  
+ <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+              <!-- <li class="list-inline-item">
+              <a href="https://wmszhe.github.io//atom.xml" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              </li> -->
+          </ul>
+          <p class="copyright text-muted">Copyright &copy;<span>wzhuiJ</span><br><a href="https://github.com/getgridea/gridea" class="Themeinfo">Powered by Gridea</a></p>
+        </div>
+      </div>
     </div>
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
+   </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://wmszhe.github.io//media/scripts/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
+  <!-- <script src="https://wmszhe.github.io//media/scripts/clean-blog.min.js"></script> -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
+<a id="back_to_top" href="#" class="back_to_top">
+  <span>▲</span></a>
+<script>$(document).ready((function(_this) {
+    return function() {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function() {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block')
+          } else {
+            return bt.css('display', 'none')
+          }
         });
-    </script>
-</body>
-
+        return bt.click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          },
+          800);
+          return false
+        })
+      }
+    }
+  })(this));</script>
+  </body>
 </html>

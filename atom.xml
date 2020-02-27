@@ -2,14 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>wzhuiJ</title>
-    <updated>2020-02-27T04:35:20.940Z</updated>
+    <updated>2020-02-27T07:15:59.372Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
     <logo>https://wmszhe.github.io/images/avatar.png</logo>
     <icon>https://wmszhe.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, wzhuiJ</rights>
+    <entry>
+        <title type="html"><![CDATA[颜色对照表]]></title>
+        <id>https://wmszhe.github.io/color/</id>
+        <link href="https://wmszhe.github.io/color/">
+        </link>
+        <updated>2020-02-27T06:30:16.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[IDEA相关]]></title>
         <id>https://wmszhe.github.io/d0YP6pusT/</id>
@@ -103,11 +109,11 @@
         <link href="https://wmszhe.github.io/xi-pai-suan-fa/">
         </link>
         <updated>2019-07-16T03:43:56.000Z</updated>
-        <summary type="html"><![CDATA[<h4 id="最近在知乎看到了一个关于洗牌算法学习一下记录下">最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</h4>
+        <summary type="html"><![CDATA[<p>最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</p>
 <br>
 <p>源地址：<a href="https://www.zhihu.com/question/26934313/answer/743798587">知乎：有哪些算法惊艳到了你?</a></p>
 ]]></summary>
-        <content type="html"><![CDATA[<h4 id="最近在知乎看到了一个关于洗牌算法学习一下记录下">最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</h4>
+        <content type="html"><![CDATA[<p>最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</p>
 <br>
 <p>源地址：<a href="https://www.zhihu.com/question/26934313/answer/743798587">知乎：有哪些算法惊艳到了你?</a></p>
 <!-- more -->

@@ -1,666 +1,495 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta name="referrer" content="never">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="kveln">
+  <title>wzhuiJ</title>
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="https://wmszhe.github.io//media/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!--  <link href="https://wmszhe.github.io//media/css/all.min.css" rel="stylesheet" type="text/css"> -->
+  <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" title="wzhuiJ » Feed" href="https://wmszhe.github.io//atom.xml">
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+  <link href="https://wmszhe.github.io//styles/main.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/highlight.min.js"></script>
+  <!-- <script src="https://wmszhe.github.io//media/scripts/jquery.min.js"></script> -->
+  <script>hljs.initHighlightingOnLoad();</script>
+  
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    wzhuiJ
-</title>
-<link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico?v=1582777895518">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link rel="stylesheet" href="https://wmszhe.github.io//styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://wmszhe.github.io//media/js/jquery.sticky-sidebar.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
-
-
-</head>
-
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="logo">
-            <a href="https://wmszhe.github.io/">
-                <img class="avatar" src="https://wmszhe.github.io//images/avatar.png?v=1582777895518" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    wzhuiJ
-                </h1>
-            </div>
-        </div>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/toolbox" class="menu">
-                                    工具
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
+  </head>
+  <body>
+     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="https://wmszhe.github.io/">wzhuiJ</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/">首页</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/toolbox">工具</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/archives">归档</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/tags">标签</a>
+              
+          </li>
+          
+          <li class="nav-item">
+              
+              <a class="nav-link" href="/about">关于</a>
+              
+          </li>
+          
+        </ul>
+      </div>
     </div>
-</div>
-
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
-
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-container main-container">
-                <div id="content" class="main-container-left">
-                    
+  </nav>
+  <header class="masthead" style="background-image: url('https://wmszhe.github.io//media/images/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>wzhuiJ</h1>
+            <span class="subheading"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+      <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+       
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/color/">
+            <h2 class="post-title">
+              颜色对照表
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              
+            </h3>
+          <p class="post-meta">
+             <span class="time">2020-02-27</span>
+             <span>,</span>
+             <span class="post-stats">0 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
         
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/d0YP6pusT/">
-                        IDEA相关
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2020-02-27</time>
-                    
-                        <a href="https://wmszhe.github.io/fNKWK8S2b/" class="post-tag i-tag
-                            i-tag-other_3">
-            #idea
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                        <a href="https://wmszhe.github.io/d0YP6pusT/" class="post-feature-image" style="background-image:url(https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/68wplh.png) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>IDEA相关 ，持续更新</p>
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/d0YP6pusT/">
+            <h2 class="post-title">
+              IDEA相关
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <p>IDEA相关 ，持续更新</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/d0YP6pusT/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/android-sheng-cheng-jks-shi-yu-dao-de/">
-                        Android生成jks时遇到的
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-11-01</time>
-                    
-                        <a href="https://wmszhe.github.io/70DSvO8Bc/" class="post-tag i-tag
-                            i-tag-other_3">
-            #Android
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>keytool -importkeystore -srckeystore /Users/zhe/Desktop/Test.jks -destkeystore /Users/zhe/Desktop/Test_sign.jks -deststoretype PKCS12</p>
+            </h3>
+          <p class="post-meta">
+             <span class="time">2020-02-27</span>
+             <span>,</span>
+             <span class="post-stats">1 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/android-sheng-cheng-jks-shi-yu-dao-de/">
+            <h2 class="post-title">
+              Android生成jks时遇到的
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <p>keytool -importkeystore -srckeystore /Users/zhe/Desktop/Test.jks -destkeystore /Users/zhe/Desktop/Test_sign.jks -deststoretype PKCS12</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/android-sheng-cheng-jks-shi-yu-dao-de/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/flutter-yu-dao-de-wen-ti/">
-                        Flutter遇到的问题
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-08-22</time>
-                    
-                        <a href="https://wmszhe.github.io/70DSvO8Bc/" class="post-tag i-tag
-                            i-tag-other_3">
-            #Android
-        </a>
-                        
-                        <a href="https://wmszhe.github.io/TKukAm1js/" class="post-tag i-tag
-                            i-tag-error">
-            #flutter
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>Flutter开发过程中遇到的一些问题。<br>
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-11-01</span>
+             <span>,</span>
+             <span class="post-stats">1 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/flutter-yu-dao-de-wen-ti/">
+            <h2 class="post-title">
+              Flutter遇到的问题
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <p>Flutter开发过程中遇到的一些问题。<br>
 <mark>持续更新</mark></p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/flutter-yu-dao-de-wen-ti/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/xi-pai-suan-fa/">
-                        洗牌算法
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-07-16</time>
-                    
-                        <a href="https://wmszhe.github.io/FOj_E3Dob/" class="post-tag i-tag
-                            i-tag-success">
-            #算法
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <h4 id="最近在知乎看到了一个关于洗牌算法学习一下记录下">最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</h4>
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-08-22</span>
+             <span>,</span>
+             <span class="post-stats">2 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/xi-pai-suan-fa/">
+            <h2 class="post-title">
+              洗牌算法
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <p>最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</p>
 <br>
 <p>源地址：<a href="https://www.zhihu.com/question/26934313/answer/743798587">知乎：有哪些算法惊艳到了你?</a></p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/xi-pai-suan-fa/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/cha-zhao-suan-fa/">
-                        查找算法
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-07-04</time>
-                    
-                        <a href="https://wmszhe.github.io/FOj_E3Dob/" class="post-tag i-tag
-                            i-tag-success">
-            #算法
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <h2 id="查找算法">查找算法</h2>
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-07-16</span>
+             <span>,</span>
+             <span class="post-stats">3 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/cha-zhao-suan-fa/">
+            <h2 class="post-title">
+              查找算法
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <h2 id="查找算法">查找算法</h2>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/cha-zhao-suan-fa/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/lian-biao-linked-list/">
-                        链表LinkedList
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-07-04</time>
-                    
-                        <a href="https://wmszhe.github.io/FOj_E3Dob/" class="post-tag i-tag
-                            i-tag-warning">
-            #算法
-        </a>
-                        
-                        <a href="https://wmszhe.github.io/gywcJZvfb/" class="post-tag i-tag
-                            i-tag-other_3">
-            #数据结构
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <h2 id="链表-linkedlist">链表 LinkedList</h2>
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-07-04</span>
+             <span>,</span>
+             <span class="post-stats">2 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/lian-biao-linked-list/">
+            <h2 class="post-title">
+              链表LinkedList
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <h2 id="链表-linkedlist">链表 LinkedList</h2>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/lian-biao-linked-list/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/shu-zu-array/">
-                        数组Array
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-07-04</time>
-                    
-                        <a href="https://wmszhe.github.io/gywcJZvfb/" class="post-tag i-tag
-                            i-tag-info">
-            #数据结构
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <h3 id="数组-array">数组 Array</h3>
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-07-04</span>
+             <span>,</span>
+             <span class="post-stats">5 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/shu-zu-array/">
+            <h2 class="post-title">
+              数组Array
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <h3 id="数组-array">数组 Array</h3>
 <blockquote>
 <p>数组（Array）是一种线性表数据结构。它用一组连续的内存空间，来存储一组具有相同类型的数据。</p>
 </blockquote>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/shu-zu-array/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/suan-fa-fu-za-du/">
-                        算法复杂度
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-07-04</time>
-                    
-                        <a href="https://wmszhe.github.io/FOj_E3Dob/" class="post-tag i-tag
-                            i-tag-other_3">
-            #算法
-        </a>
-                        
-                        <a href="https://wmszhe.github.io/gywcJZvfb/" class="post-tag i-tag
-                            i-tag-warning">
-            #数据结构
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <h1 id="算法的复杂度">算法的复杂度</h1>
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-07-04</span>
+             <span>,</span>
+             <span class="post-stats">5 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/suan-fa-fu-za-du/">
+            <h2 class="post-title">
+              算法复杂度
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <h1 id="算法的复杂度">算法的复杂度</h1>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/suan-fa-fu-za-du/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/shu-ju-jie-gou-he-suan-fa/">
-                        数据结构和算法
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-07-04</time>
-                    
-                        <a href="https://wmszhe.github.io/FOj_E3Dob/" class="post-tag i-tag
-                            i-tag-warning">
-            #算法
-        </a>
-                        
-                        <a href="https://wmszhe.github.io/gywcJZvfb/" class="post-tag i-tag
-                            i-tag-primary">
-            #数据结构
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <h2 id="数据结构和算法">数据结构和算法</h2>
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-07-04</span>
+             <span>,</span>
+             <span class="post-stats">19 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/shu-ju-jie-gou-he-suan-fa/">
+            <h2 class="post-title">
+              数据结构和算法
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <h2 id="数据结构和算法">数据结构和算法</h2>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/shu-ju-jie-gou-he-suan-fa/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/android-xing-neng-you-hua/">
-                        Android性能优化
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-06-24</time>
-                    
-                        <a href="https://wmszhe.github.io/70DSvO8Bc/" class="post-tag i-tag
-                            i-tag-other_4">
-            #Android
-        </a>
-                        
-                        <a href="https://wmszhe.github.io/51CmSDdaI/" class="post-tag i-tag
-                            i-tag-other_3">
-            #性能优化
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                        <a href="https://wmszhe.github.io/android-xing-neng-you-hua/" class="post-feature-image" style="background-image:url(https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/android-xing-neng-you-hua.jpg) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>Android性能优化，一些性能优化方式。<br>
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-07-04</span>
+             <span>,</span>
+             <span class="post-stats">1 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/android-xing-neng-you-hua/">
+            <h2 class="post-title">
+              Android性能优化
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <p>Android性能优化，一些性能优化方式。<br>
 <br></p>
 <h2 id="持续更新"><mark>持续更新</mark></h2>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/android-xing-neng-you-hua/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/dart-yi-xie-te-shu-de-te-xing/">
-                        Dart一些特殊的特性
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-06-21</time>
-                    
-                        <a href="https://wmszhe.github.io/c2s1YvlQy/" class="post-tag i-tag
-                            i-tag-primary">
-            #dart
-        </a>
-                        
-                        <a href="https://wmszhe.github.io/TKukAm1js/" class="post-tag i-tag
-                            i-tag-banana">
-            #flutter
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                        <a href="https://wmszhe.github.io/dart-yi-xie-te-shu-de-te-xing/" class="post-feature-image" style="background-image:url(https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/dart-yi-xie-te-shu-de-te-xing.png) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>Dart一些特殊的特性，比较容易忘记和混淆的</p>
-
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/dart-yi-xie-te-shu-de-te-xing/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/flutterui-xiang-guan/">
-                        FlutterUI相关
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-06-19</time>
-                    
-                        <a href="https://wmszhe.github.io/TKukAm1js/" class="post-tag i-tag
-                            i-tag-other_1">
-            #flutter
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                        <a href="https://wmszhe.github.io/flutterui-xiang-guan/" class="post-feature-image" style="background-image:url(https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/flutterui-xiang-guan.png) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>获取屏幕尺寸，widget尺寸和位置</p>
-
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/flutterui-xiang-guan/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/flutter-bian-yi-zhuo-mian-duan-app/">
-                        FLutter编译桌面端app
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-06-18</time>
-                    
-                        <a href="https://wmszhe.github.io/TKukAm1js/" class="post-tag i-tag
-                            i-tag-banana">
-            #flutter
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                        <a href="https://wmszhe.github.io/flutter-bian-yi-zhuo-mian-duan-app/" class="post-feature-image" style="background-image:url(https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/flutter-bian-yi-zhuo-mian-duan-app.png) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>使用<a href="https://github.com/google/flutter-desktop-embedding">flutter-desktop-embedding</a>编译适用于macos、windows、linux桌面端的app</p>
-
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/flutter-bian-yi-zhuo-mian-duan-app/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/git/">
-                        Git
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-06-15</time>
-                    
-                        <a href="https://wmszhe.github.io/Ryx7PH5n2/" class="post-tag i-tag
-                            i-tag-success">
-            #Git
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                        <a href="https://wmszhe.github.io/git/" class="post-feature-image" style="background-image:url(https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/git.png) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>Git相关,常用Git命令...</p>
-
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/git/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://wmszhe.github.io/hello-everyone/">
-                        Hello EveryOne
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-06-15</time>
-                    
-                        <a href="https://wmszhe.github.io/XTholpotp/" class="post-tag i-tag
-                            i-tag-banana">
-            #碎碎念
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                        <a href="https://wmszhe.github.io/hello-everyone/" class="post-feature-image" style="background-image:url(https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/hello-everyone.png) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>👏 欢迎来到 <strong>wzhuiJ!</strong> 👏</p>
-
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://wmszhe.github.io/hello-everyone/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-                <!-- 翻页 -->
-                
-                </div>
-                <!--  -->
-                <div class="main-container-middle"></div>
-                <!--  -->
-                <div id="sidebar" class="main-container-right">
-
-                    <!-- 个人信息 -->
-                    
-    <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://wmszhe.github.io//images/avatar.png?v=1582777895518)">
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-06-24</span>
+             <span>,</span>
+             <span class="post-stats">1 min read</span>
+            </p>
         </div>
-        <h1 class="id_card-title">
-            wzhuiJ
-        </h1>
-        <h2 class="id_card-description">
-            温故而知新
-        </h2>
-        <!--  -->
-        <div class="id_card-sns">
-            <!-- github -->
-            
-                <a href="https://github.com/wmszhe" target="_blank" rel="noopener noreferrer"><i
-                class="fa fa-github"></i></a>
-                
-                    <!-- twitter -->
-                    
-                            <!-- weibo -->
-                            
-                                    <!-- facebook -->
-                                    
-
+        <hr>
+        <div class="clearfix">
         </div>
+        
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/dart-yi-xie-te-shu-de-te-xing/">
+            <h2 class="post-title">
+              Dart一些特殊的特性
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <p>Dart一些特殊的特性，比较容易忘记和混淆的</p>
+
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-06-21</span>
+             <span>,</span>
+             <span class="post-stats">2 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/flutterui-xiang-guan/">
+            <h2 class="post-title">
+              FlutterUI相关
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <p>获取屏幕尺寸，widget尺寸和位置</p>
+
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-06-19</span>
+             <span>,</span>
+             <span class="post-stats">3 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/flutter-bian-yi-zhuo-mian-duan-app/">
+            <h2 class="post-title">
+              FLutter编译桌面端app
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <p>使用<a href="https://github.com/google/flutter-desktop-embedding">flutter-desktop-embedding</a>编译适用于macos、windows、linux桌面端的app</p>
+
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-06-18</span>
+             <span>,</span>
+             <span class="post-stats">1 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/git/">
+            <h2 class="post-title">
+              Git
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <p>Git相关,常用Git命令...</p>
+
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-06-15</span>
+             <span>,</span>
+             <span class="post-stats">9 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        <div class="post-preview">
+          <a href="https://wmszhe.github.io/hello-everyone/">
+            <h2 class="post-title">
+              Hello EveryOne
+            </h2>
+            </a>
+            <h3 class="post-subtitle">
+              <p>👏 欢迎来到 <strong>wzhuiJ!</strong> 👏</p>
+
+            </h3>
+          <p class="post-meta">
+             <span class="time">2019-06-15</span>
+             <span>,</span>
+             <span class="post-stats">1 min read</span>
+            </p>
+        </div>
+        <hr>
+        <div class="clearfix">
+        </div>
+        
+        
+        
+      </div>
     </div>
-    
+  </div>
 
-                        <!-- 公告栏 -->
-                        
-
-                </div>
-            </div>
-
-
-
-            <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-   <!-- | 
-  <a class="rss" href="https://wmszhe.github.io//atom.xml" target="_blank">RSS</a> -->
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
-
+  
+    <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+              <!-- <li class="list-inline-item">
+              <a href="https://wmszhe.github.io//atom.xml" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              </li> -->
+          </ul>
+          <p class="copyright text-muted">Copyright &copy;<span>wzhuiJ</span><br><a href="https://github.com/getgridea/gridea" class="Themeinfo">Powered by Gridea</a></p>
+        </div>
+      </div>
     </div>
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
+   </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://wmszhe.github.io//media/scripts/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
+  <!-- <script src="https://wmszhe.github.io//media/scripts/clean-blog.min.js"></script> -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
+<a id="back_to_top" href="#" class="back_to_top">
+  <span>▲</span></a>
+<script>$(document).ready((function(_this) {
+    return function() {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function() {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block')
+          } else {
+            return bt.css('display', 'none')
+          }
         });
-    </script>
-</body>
-
+        return bt.click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          },
+          800);
+          return false
+        })
+      }
+    }
+  })(this));</script>
+  </body>
 </html>
