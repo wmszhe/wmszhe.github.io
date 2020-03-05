@@ -341,6 +341,12 @@ git stash clear(将栈清空)
 <h3 id="cherry-pick">cherry-pick</h3>
 <pre><code>// 将另一个分支上的一个提交合并到本分支
 git cherry-pick xxxx(commit id)
+
+// 合并多条
+git cherry-pick xxx..xxx
+
+// 继续合并 || 取消合并
+git cherry-pick --continue || --abort
 </code></pre>
 <h3 id="revert">revert</h3>
 <pre><code>git revert xxx

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>wzhuiJ</title>
-    <updated>2020-02-27T09:36:46.480Z</updated>
+    <updated>2020-03-05T02:00:51.126Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io/atom.xml"/>
@@ -1487,6 +1487,12 @@ git stash clear(将栈清空)
 <h3 id="cherry-pick">cherry-pick</h3>
 <pre><code>// 将另一个分支上的一个提交合并到本分支
 git cherry-pick xxxx(commit id)
+
+// 合并多条
+git cherry-pick xxx..xxx
+
+// 继续合并 || 取消合并
+git cherry-pick --continue || --abort
 </code></pre>
 <h3 id="revert">revert</h3>
 <pre><code>git revert xxx
