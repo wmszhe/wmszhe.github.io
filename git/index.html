@@ -92,7 +92,7 @@
             <h1>Git</h1>
             <span class="meta">
             	Posted on
-              2019-06-15，9 min read
+              2019-06-15，10 min read
             </span>
           </div>
         </div>
@@ -343,7 +343,10 @@ git stash clear(将栈清空)
 git cherry-pick xxxx(commit id)
 
 // 合并多条
-git cherry-pick xxx..xxx
+// ==注意，不包含xxx1==
+git cherry-pick xxx1..xxx10
+// ==包含xxx1==
+git cherry-pick xxx1^..xxx10
 
 // 继续合并 || 取消合并
 git cherry-pick --continue || --abort
