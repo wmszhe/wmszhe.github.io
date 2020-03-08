@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>wzhuiJ</title>
-    <updated>2020-03-08T12:20:06.233Z</updated>
+    <updated>2020-03-08T12:22:21.407Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io/atom.xml"/>
@@ -79,7 +79,6 @@
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;layer-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
     &lt;item android:drawable=&quot;@android:color/white&quot; /&gt;
-
     &lt;item&gt;
         &lt;bitmap
             android:gravity=&quot;center|bottom&quot;
