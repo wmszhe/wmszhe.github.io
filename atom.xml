@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>wzhuiJ</title>
-    <updated>2020-03-05T06:35:35.445Z</updated>
+    <updated>2020-03-08T12:09:51.253Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io/atom.xml"/>
@@ -1535,7 +1535,7 @@ git push origin HEAD:refs/for/sdpost_dev
 <ol>
 <li>本网站通过Github Pages创建。创建过程参考<a href="https://sspai.com/post/54608">GitHub Pages 搭建教程</a></li>
 <li>使用<a href="https://gridea.dev/">Gridea</a>管理本网站</li>
-<li>本站使用<a href="https://github.com/Mrcxt/gridea-theme-lemon">Lemon主题</a>，经过<a href="https://github.com/wmszhe/gridea-theme-lemon">适量修改</a>。</li>
+<li>本站使用<a href="https://github.com/Alanrk/Gridea-theme-clean">Clean主题</a>，经过<a href="https://github.com/wmszhe/Gridea-theme-clean">适量修改</a>。</li>
 <li>本网站主要记录
 <ul>
 <li>工作笔记</li>
