@@ -223,6 +223,30 @@ git branch -a //查看远程分支
 <h3 id="push所有分支">push所有分支</h3>
 <pre><code>git push --all origin
 </code></pre>
+<h3 id="更新分支信息">更新分支信息</h3>
+<blockquote>
+<p>远程版本库创建了一个分支后,本地创建远程追踪分支</p>
+</blockquote>
+<pre><code>git remote update
+</code></pre>
+<blockquote>
+<p>在远程版本库上删除了某一分支,删除本地版本库上那些失效的远程追踪分支</p>
+</blockquote>
+<p>方法一：</p>
+<pre><code>// -p, --prune    prune remotes after fetching
+git remote update -p
+</code></pre>
+<p>方法二：</p>
+<pre><code>// 查看哪些分支需要清理
+git remote prune origin --dry-run
+// 清理
+git remote prune
+</code></pre>
+<blockquote>
+<p>本地分支作为下游存在的话，还需要手动清理</p>
+</blockquote>
+<pre><code>git branch -d xx
+</code></pre>
 <h3 id="删除分支">删除分支</h3>
 <pre><code>git branch -d gte
 git branch -D gte(强制删除)
