@@ -307,7 +307,8 @@ git commit -m 'commit log'
 </code></pre>
 <h5 id="pull-错误-you-asked-to-pull-from-the-remote-origin-but-did-not-specify-a-branch-because-this-is-not-the-default-configured-remote-for-your-current-branch-you-must-specify-a-branch-on-the-command-line">pull 错误 “You asked to pull from the remote 'origin', but did not specify a branch. Because this is not the default configured remote for your current branch, you must specify a branch on the command line.”</h5>
 <blockquote>
-<p>参考：https://blog.csdn.net/forever_wind/article/details/37506389<br>
+<p>参考：<a href="https://blog.csdn.net/forever_wind/article/details/37506389">Git远程分支和refs文件详解<br>
+</a><br>
 问题在于没有给当前分支配置merge的路径，git不知道去merge哪个分支。</p>
 </blockquote>
 <p>我们修改配置文件(.git/config)加入</p>
