@@ -391,7 +391,7 @@ code,
 tt {
   padding: 1px 3px;
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
-  white-space: pre;
+  white-space: initial;
   border: 1px solid #E3EDF3;
   background: #f7f7f9;
   color: #222;
