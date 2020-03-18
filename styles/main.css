@@ -399,7 +399,7 @@ tt {
   border-radius: 4px;
 }
 code {
-  word-wrap: break-word;
+  word-wrap: normal;
 }
 pre::-webkit-scrollbar {
   height: 10px;
