@@ -10,14 +10,14 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="author" content="kveln">
-  <title>IDEA相关 | wzhuiJ</title>
+  <title>洗牌算法 | wzhuiJ</title>
   <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <!-- <link href="https://wmszhe.github.io//media/css/bootstrap.min.css" rel="stylesheet"> -->
   <!--  <link href="https://wmszhe.github.io//media/css/all.min.css" rel="stylesheet" type="text/css"> -->
   <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-  <link rel="alternate" type="application/rss+xml" title="IDEA相关 | wzhuiJ » Feed" href="https://wmszhe.github.io//atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="洗牌算法 | wzhuiJ » Feed" href="https://wmszhe.github.io//atom.xml">
   <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
   <link href="https://wmszhe.github.io//styles/main.css" rel="stylesheet">
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
@@ -26,8 +26,8 @@
   <script>hljs.initHighlightingOnLoad();</script>
   
 
-  <meta property="og:description" content="IDEA相关" />
-  <meta property="og:url" content="https://wmszhe.github.io/d0YP6pusT/" />
+  <meta property="og:description" content="洗牌算法" />
+  <meta property="og:url" content="https://wmszhe.github.io/shuffle_algorithm/" />
   <meta property="og:locale" content="zh-CN" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="wzhuiJ" />
@@ -82,7 +82,7 @@
     </div>
   </nav>
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/68wplh.png')">
+  <header class="masthead" style="background-image: url('https://wmszhe.github.io//media/images/home-bg.jpg')">
     <div class=" overlay">
     </div>
     <div class="container">
@@ -91,13 +91,13 @@
           <div class="post-heading">
             <span class="tags">
               
-              <a href="https://wmszhe.github.io/sIiLqnB5a/" class="tag">Idea</a>
+              <a href="https://wmszhe.github.io/FOj_E3Dob/" class="tag">算法</a>
               
             </span>
-            <h1>IDEA相关</h1>
+            <h1>洗牌算法</h1>
             <span class="meta">
               Posted on
-              2020-02-27，1 min read
+              2019-07-16，3 min read
             </span>
           </div>
         </div>
@@ -110,24 +110,74 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>IDEA相关 ，持续更新</p>
+          <p>最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</p>
+<p>源地址：<a href="https://www.zhihu.com/question/26934313/answer/743798587">知乎：有哪些算法惊艳到了你?</a></p>
 <!-- more -->
-<h3 id="一-分类显示类方法">一. 分类显示类方法</h3>
-<blockquote>
-<p>参考 <a href="https://www.v2ex.com/t/647696">为什么 idea 不做一个分类显示类方法的功能？</a></p>
-</blockquote>
-<pre><code>// region foo
-// endregion foo
+<h3 id="问题设计一个公平的洗牌算法">问题：设计一个公平的洗牌算法</h3>
+<p>给定一个长度n个数组，最终排列的可能性一共有 n!个，公平的洗牌算法，<strong>应该能等概率地给出这 n! 个结果中的任意一个</strong>。</p>
+<p>我们再换一个角度思考“公平”这个话题。其实也就是，对于生成的排列，<strong>每一个元素都能独立等概率地出现在每一个位置</strong>。或者反过来，<strong>每一个位置都能独立等概率地放置每个元素</strong>。</p>
+<h4 id="java实现">Java实现</h4>
+<pre><code>private static Random rand = new Random();
+private static List&lt;Integer&gt; mList = Arrays.asList(1, 2, 3, 4, 5);
+
+public static void main(String[] args) {
+    List&lt;Integer&gt; shuffle = shuffle(mList);
+    System.out.print(shuffle.toString());
+}
+
+private static List&lt;Integer&gt; shuffle(List&lt;Integer&gt; list) {
+    for (int i = list.size() - 1; i &gt;= 0; i--) {
+        // 取0-i之间的随机数
+        int j = rand.nextInt(i + 1);
+        // 交换最后一位和随机得到的数
+        swap(list, i, j);
+    }
+    return list;
+}
+
+private static void swap(List&lt;Integer&gt; list, int i, int j) {
+    Integer temp = list.get(i);
+    list.set(i, list.get(j));
+    list.set(j, temp);
+}
 </code></pre>
-<p>eg:</p>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/hXmEX6.jpg" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/zGWown.jpg" alt="" loading="lazy"></figure>
+<h4 id="java自带api">Java自带API</h4>
+<p>在Java提供的Collections包中，提供了shuffle方法</p>
+<pre><code>Collections.shuffle(mList);
+</code></pre>
+<p>看下源码:</p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/shuffle_java_2019_7_16_11_21_29.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/shuffle_java_2019_7_16_11_21_56.png" alt="" loading="lazy"></figure>
+<p>可以看出，和上面的思路一样</p>
+<h4 id="思路解析参考上面的链接知乎的原答案">思路解析，参考上面的链接，知乎的原答案</h4>
+<p>比如数组1，2，3，4，5</p>
+<p>我们从后往前</p>
+<p>先取任意1个元素和最后一个交换位置，那么任意一个元素出现在数组最后面的概率为1/5</p>
+<p>我们继续，取任意一个元素和倒数第二个交换位置，概率为4/5*1/4=1/5</p>
+<p>依次类推，每一个元素出现在每一个位置的概率，都是 1/5</p>
+<h4 id="遍历时为什么采用从后到前的方式而不采用从前到后">遍历时，为什么采用从后到前的方式，而不采用从前到后？</h4>
+<p><mark><strong>因为生成 [0, i] 范围的随机数比生成 [i, n) 范围的随机数简单</strong></mark></p>
+<ul>
+<li>生成[0, i]范围的随机数</li>
+</ul>
+<pre><code>Random rand = new Random();
+int randNum = ran.nextInt(i + 1);
+</code></pre>
+<ul>
+<li>生成[i, n)范围的随机数</li>
+</ul>
+<pre><code>Random rand = new Random();
+int randNum = rand.nextInt(n - i) + i;
+</code></pre>
+<h4 id="参考">参考：</h4>
+<p><a href="https://justdo2008.iteye.com/blog/1927222">随机打乱数组List洗牌算法shuffle</a></p>
+<p><a href="https://github.com/giantray/stackoverflow-java-top-qa/blob/master/contents/generating-random-integers-in-a-range-with-Java.md">java 产生指定范围的随机数</a></p>
 
           
           <p class="next-post">下一篇：
-            <a href="https://wmszhe.github.io/android_jks/">
+            <a href="https://wmszhe.github.io/search_algorithm/">
               <span class="post-title">
-                Android生成jks时遇到的&rarr;
+                查找算法&rarr;
               </span>
             </a>
           </p>

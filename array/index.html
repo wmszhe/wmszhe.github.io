@@ -10,14 +10,14 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="author" content="kveln">
-  <title>IDEA相关 | wzhuiJ</title>
+  <title>数组Array | wzhuiJ</title>
   <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <!-- <link href="https://wmszhe.github.io//media/css/bootstrap.min.css" rel="stylesheet"> -->
   <!--  <link href="https://wmszhe.github.io//media/css/all.min.css" rel="stylesheet" type="text/css"> -->
   <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-  <link rel="alternate" type="application/rss+xml" title="IDEA相关 | wzhuiJ » Feed" href="https://wmszhe.github.io//atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="数组Array | wzhuiJ » Feed" href="https://wmszhe.github.io//atom.xml">
   <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
   <link href="https://wmszhe.github.io//styles/main.css" rel="stylesheet">
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
@@ -26,8 +26,8 @@
   <script>hljs.initHighlightingOnLoad();</script>
   
 
-  <meta property="og:description" content="IDEA相关" />
-  <meta property="og:url" content="https://wmszhe.github.io/d0YP6pusT/" />
+  <meta property="og:description" content="数组Array" />
+  <meta property="og:url" content="https://wmszhe.github.io/array/" />
   <meta property="og:locale" content="zh-CN" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="wzhuiJ" />
@@ -82,7 +82,7 @@
     </div>
   </nav>
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/68wplh.png')">
+  <header class="masthead" style="background-image: url('https://wmszhe.github.io//media/images/home-bg.jpg')">
     <div class=" overlay">
     </div>
     <div class="container">
@@ -91,13 +91,13 @@
           <div class="post-heading">
             <span class="tags">
               
-              <a href="https://wmszhe.github.io/sIiLqnB5a/" class="tag">Idea</a>
+              <a href="https://wmszhe.github.io/gywcJZvfb/" class="tag">数据结构</a>
               
             </span>
-            <h1>IDEA相关</h1>
+            <h1>数组Array</h1>
             <span class="meta">
               Posted on
-              2020-02-27，1 min read
+              2019-07-04，5 min read
             </span>
           </div>
         </div>
@@ -110,24 +110,100 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>IDEA相关 ，持续更新</p>
-<!-- more -->
-<h3 id="一-分类显示类方法">一. 分类显示类方法</h3>
+          <!-- more -->
+<h3 id="数组-array">数组 Array</h3>
 <blockquote>
-<p>参考 <a href="https://www.v2ex.com/t/647696">为什么 idea 不做一个分类显示类方法的功能？</a></p>
+<p>数组（Array）是一种线性表数据结构。它用一组连续的内存空间，来存储一组具有相同类型的数据。</p>
 </blockquote>
-<pre><code>// region foo
-// endregion foo
+<ul>
+<li>
+<ol>
+<li>线性表</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>连续的内存空间和相同的数据结构</li>
+</ol>
+<blockquote>
+<p>如果我们申请一个 100MB 大小的数组，当内存中没有连续的、足够大的存储空间时，即便内存的剩余总可用空间大于 100MB，仍然会申请失败。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="根据下标随机访问数组元素的方式">根据下标随机访问数组元素的方式</h4>
+<p>一个长度为 10 的 int 类型的数组 int[] a = new int[10] , 计算机给数组 a[10]，分配了一块连续内存空间 1000～1039，其中，内存块的首地址为 base_address = 1000。</p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/98df8e702b14096e7ee4a5141260cdc4.jpg" alt="" loading="lazy"></figure>
+<p>通过下面的寻址公式，计算出该元素存储的内存地址：</p>
+<blockquote>
+<p>一维数组内存寻址：</p>
+</blockquote>
+<pre><code>a[i]_address = base_address + i * data_type_size
 </code></pre>
+<blockquote>
+<p>二维数组内存寻址：</p>
+</blockquote>
+<p>对于 m * n 的数组，a [i][ j ] (i &lt; m,j &lt; n)的地址为：</p>
+<pre><code>address = base_address + ( i * n + j) * type_size
+</code></pre>
+<p><mark><strong>数组是适合查找操作，但是查找的时间复杂度并不为 O(1)。即便是排好序的数组，用二分查找，时间复杂度也是 O(logn)。所以，正确的表述应该是，数组支持随机访问，根据下标随机访问的时间复杂度为 O(1)。</strong></mark></p>
+<h4 id="插入删除低效原因">插入删除低效原因</h4>
+<p>假设数组的长度为 n，现在，如果我们需要将一个数据插入到数组中的第 k 个位置。为了把第 k 个位置腾出来，给新来的数据，我们需要将第 k～n 这部分的元素都顺序地往后挪一位。</p>
+<p>如果在数组的末尾插入元素，那就不需要移动数据了，这时的时间复杂度为 O(1)。但如果在数组的开头插入元素，那所有的数据都需要依次往后移动一位，所以最坏时间复杂度是 O(n)。 因为我们在每个位置插入元素的概率是一样的，所以平均情况时间复杂度为 (1+2+…n)/n=O(n)。</p>
+<blockquote>
+<p>如果数组中存储的数据并没有任何规律，数组只是被当作一个存储数据的集合。在这种情况下，如果要将某个数组插入到第 k 个位置，为了避免大规模的数据搬移，我们还有一个简单的办法就是，直接将第 k 位的数据搬移到数组元素的最后，把新的元素直接放入第 k 个位置。</p>
+</blockquote>
 <p>eg:</p>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/hXmEX6.jpg" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/zGWown.jpg" alt="" loading="lazy"></figure>
+<p>假设数组 a[10] 中存储了如下 5 个元素：a，b，c，d，e。</p>
+<p>我们现在需要将元素 x 插入到第 3 个位置。我们只需要将 c 放入到 a[5]，将 a[2] 赋值为 x 即可。最后，数组中的元素如下： a，b，x，d，e，c。</p>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/3f70b4ad9069ec568a2caaddc231b7dc.jpg" alt="" loading="lazy"></figure>
+<blockquote>
+<p>删除时，在某些特殊场景下，我们并不一定非得追求数组中数据的连续性。我们可以多次删除操作集中在一起执行</p>
+</blockquote>
+<p>eg:</p>
+<p>数组 a[10] 中存储了 8 个元素：a，b，c，d，e，f，g，h。现在，我们要依次删除 a，b，c 三个元素</p>
+<p>为了避免 d，e，f，g，h 这几个数据会被搬移三次，我们可以先记录下已经删除的数据。每次的删除操作并不是真正地搬移数据，只是记录数据已经被删除。当数组没有更多空间存储数据时，我们再触发执行一次真正的删除操作，这样就大大减少了删除操作导致的数据搬移。</p>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/b69b8c5dbf6248649ddab7d3e7cfd7e5.jpg" alt="" loading="lazy"></figure>
+<h4 id="容器-arraylist">容器 ArrayList</h4>
+<blockquote>
+<p>针对数组类型，很多语言都提供了容器类，比如 Java 中的 ArrayList</p>
+</blockquote>
+<ul>
+<li>优势：
+<ul>
+<li>
+<ol>
+<li>可以将很多数组操作的细节封装起来，比如前面提到的数组插入、删除数据时需要搬移其他数据等</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>支持动态扩容 <mark><strong>不过，需要注意，因为扩容操作涉及内存申请和数据搬移，是比较耗时的。所以，如果事先能确定需要存储的数据大小，最好在创建 ArrayList 的时候事先指定数据大小</strong></mark></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>不足：
+<ul>
+<li>
+<ol>
+<li>Java ArrayList 无法存储基本类型，比如 int、long，需要封装为 Integer、Long 类，而 Autoboxing、Unboxing 则有一定的性能消耗，所以如果特别关注性能，或者希望使用基本类型，就可以选用数组。</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>如果数据大小事先已知，并且对数据的操作非常简单，用不到 ArrayList 提供的大部分方法，也可以直接使用数组</li>
+</ol>
+</li>
+<li>要表示多维数组时，用数组往往会更加直观</li>
+</ul>
+</li>
+</ul>
 
           
           <p class="next-post">下一篇：
-            <a href="https://wmszhe.github.io/android_jks/">
+            <a href="https://wmszhe.github.io/algorithm_complexity/">
               <span class="post-title">
-                Android生成jks时遇到的&rarr;
+                算法复杂度&rarr;
               </span>
             </a>
           </p>

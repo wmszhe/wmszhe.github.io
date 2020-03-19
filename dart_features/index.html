@@ -10,14 +10,14 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="author" content="kveln">
-  <title>IDEA相关 | wzhuiJ</title>
+  <title>Dart一些特殊的特性 | wzhuiJ</title>
   <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <!-- <link href="https://wmszhe.github.io//media/css/bootstrap.min.css" rel="stylesheet"> -->
   <!--  <link href="https://wmszhe.github.io//media/css/all.min.css" rel="stylesheet" type="text/css"> -->
   <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-  <link rel="alternate" type="application/rss+xml" title="IDEA相关 | wzhuiJ » Feed" href="https://wmszhe.github.io//atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="Dart一些特殊的特性 | wzhuiJ » Feed" href="https://wmszhe.github.io//atom.xml">
   <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
   <link href="https://wmszhe.github.io//styles/main.css" rel="stylesheet">
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
@@ -26,8 +26,8 @@
   <script>hljs.initHighlightingOnLoad();</script>
   
 
-  <meta property="og:description" content="IDEA相关" />
-  <meta property="og:url" content="https://wmszhe.github.io/d0YP6pusT/" />
+  <meta property="og:description" content="Dart一些特殊的特性" />
+  <meta property="og:url" content="https://wmszhe.github.io/dart_features/" />
   <meta property="og:locale" content="zh-CN" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="wzhuiJ" />
@@ -82,7 +82,7 @@
     </div>
   </nav>
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/68wplh.png')">
+  <header class="masthead" style="background-image: url('https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/dart-yi-xie-te-shu-de-te-xing.png')">
     <div class=" overlay">
     </div>
     <div class="container">
@@ -91,13 +91,15 @@
           <div class="post-heading">
             <span class="tags">
               
-              <a href="https://wmszhe.github.io/sIiLqnB5a/" class="tag">Idea</a>
+              <a href="https://wmszhe.github.io/X_yojUrIR/" class="tag">Dart</a>
+              
+              <a href="https://wmszhe.github.io/u2rp36wln/" class="tag">Flutter</a>
               
             </span>
-            <h1>IDEA相关</h1>
+            <h1>Dart一些特殊的特性</h1>
             <span class="meta">
               Posted on
-              2020-02-27，1 min read
+              2019-06-21，2 min read
             </span>
           </div>
         </div>
@@ -110,24 +112,103 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>IDEA相关 ，持续更新</p>
+          <p>Dart一些特殊的特性，比较容易忘记和混淆的</p>
 <!-- more -->
-<h3 id="一-分类显示类方法">一. 分类显示类方法</h3>
+<h3 id="参数加">参数加{}</h3>
 <blockquote>
-<p>参考 <a href="https://www.v2ex.com/t/647696">为什么 idea 不做一个分类显示类方法的功能？</a></p>
+<p>在调用函数传递参数时，指定参数名</p>
 </blockquote>
-<pre><code>// region foo
-// endregion foo
+<pre><code>void sayHello({String name, String msg}){
+    
+}
+sayHello(name: &quot;abc&quot;, msg: &quot;hello&quot;);
 </code></pre>
-<p>eg:</p>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/hXmEX6.jpg" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/zGWown.jpg" alt="" loading="lazy"></figure>
+<h3 id="可选参数">可选参数</h3>
+<blockquote>
+<p>可选的参数，在调用时可以不传</p>
+</blockquote>
+<blockquote>
+<p>通过位置来确定实参和形参的对应关系的</p>
+</blockquote>
+<blockquote>
+<p>参考： https://blog.csdn.net/xlh1191860939/article/details/87895616</p>
+</blockquote>
+<pre><code>String say(String from, String msg, [String device, String time]) {
+ 
+    var result = &quot;$from says $msg&quot;;
+ 
+    if (device != null) {
+      result = &quot;$result with a $device&quot;;
+    }
+ 
+    if (time != null) {
+      result = &quot;$result at $time&quot;;
+    }
+ 
+    return result;
+}
+ 
+void main(){
+    print(say(&quot;david&quot;, &quot;hello&quot;, &quot;mobile&quot;, &quot;2019.2.29.20:08:08&quot;));
+    // david says hello with a mobile at 2019.2.29.20:08:08
+    print(say(&quot;david&quot;, &quot;hello&quot;, &quot;2019.2.29.20:08:08&quot;, &quot;mobile&quot;));
+    // david says hello with a 2019.2.29.20:08:08 at mobile
+    print(say(&quot;david&quot;, &quot;hello&quot;));
+    // david says hello
+}
+</code></pre>
+<h3 id="">??=</h3>
+<blockquote>
+<p>仅在变量为null时赋值，使用??=运算符</p>
+</blockquote>
+<pre><code>// 如果b为空，则将值分配给b；否则，b保持不变
+b ??= value;
+</code></pre>
+<h3 id="-2">?.</h3>
+<blockquote>
+<p>eg : foo?.bar</p>
+</blockquote>
+<blockquote>
+<p>foo可以为空,foo为空时返回空，否则返回bar</p>
+</blockquote>
+<pre><code>foo?.bar
+
+====等同于====
+
+if(foo != null) {
+    return bar;
+} else {
+    return null;
+}
+</code></pre>
+<h3 id="和-~">/ 和 ~/</h3>
+<blockquote>
+<p>/ 除</p>
+</blockquote>
+<blockquote>
+<p>~/ 返回一个整数值的除法</p>
+</blockquote>
+<pre><code>assert(5 / 2 == 2.5); // 结果是double类型
+assert(5 ~/ 2 == 2); // 结果是一个整数
+</code></pre>
+<h3 id="print">print</h3>
+<blockquote>
+<p>打印重复内容，可以使用*</p>
+</blockquote>
+<blockquote>
+<p>如果要打印d.e，外层添加{}</p>
+</blockquote>
+<pre><code>print(&quot;abc&quot;);
+print(&quot;abc $d&quot;);
+print(&quot;abc ${d.e}&quot;);
+print(&quot;abc&quot; * 10); // 打印10次abc
+</code></pre>
 
           
           <p class="next-post">下一篇：
-            <a href="https://wmszhe.github.io/android_jks/">
+            <a href="https://wmszhe.github.io/flutter_ui/">
               <span class="post-title">
-                Android生成jks时遇到的&rarr;
+                FlutterUI相关&rarr;
               </span>
             </a>
           </p>
