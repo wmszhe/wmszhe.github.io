@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta name="referrer" content="never">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="kveln">
+  <title>洗牌算法 | wzhuiJ</title>
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="https://wmszhe.github.io//media/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!--  <link href="https://wmszhe.github.io//media/css/all.min.css" rel="stylesheet" type="text/css"> -->
+  <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" title="洗牌算法 | wzhuiJ » Feed" href="https://wmszhe.github.io//atom.xml">
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+  <link href="https://wmszhe.github.io//styles/main.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/highlight.min.js"></script>
+  <!-- <script src="https://wmszhe.github.io//media/scripts/jquery.min.js"></script> -->
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <meta property="og:description" content="洗牌算法" />
+  <meta property="og:url" content="https://wmszhe.github.io/post/shuffle_algorithm/" />
+  <meta property="og:locale" content="zh-CN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="wzhuiJ" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="https://wmszhe.github.io/">wzhuiJ</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          
+          <li class="nav-item">
+            
+            <a class="nav-link" href="/">首页</a>
+            
+          </li>
+          
+          <li class="nav-item">
+            
+            <a class="nav-link" href="/archives">归档</a>
+            
+          </li>
+          
+          <li class="nav-item">
+            
+            <a class="nav-link" href="/tags">标签</a>
+            
+          </li>
+          
+          <li class="nav-item">
+            
+            <a class="nav-link" href="/toolbox">工具</a>
+            
+          </li>
+          
+          <li class="nav-item">
+            
+            <a class="nav-link" href="/about">关于</a>
+            
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('https://wmszhe.github.io//media/images/home-bg.jpg')">
+    <div class=" overlay">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <span class="tags">
+              
+              <a href="https://wmszhe.github.io/tag/FOj_E3Dob/" class="tag">算法</a>
+              
+            </span>
+            <h1>洗牌算法</h1>
+            <span class="meta">
+              Posted on
+              2019-07-16，3 min read
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</p>
+<p>源地址：<a href="https://www.zhihu.com/question/26934313/answer/743798587">知乎：有哪些算法惊艳到了你?</a></p>
+<!-- more -->
+<h3 id="问题设计一个公平的洗牌算法">问题：设计一个公平的洗牌算法</h3>
+<p>给定一个长度n个数组，最终排列的可能性一共有 n!个，公平的洗牌算法，<strong>应该能等概率地给出这 n! 个结果中的任意一个</strong>。</p>
+<p>我们再换一个角度思考“公平”这个话题。其实也就是，对于生成的排列，<strong>每一个元素都能独立等概率地出现在每一个位置</strong>。或者反过来，<strong>每一个位置都能独立等概率地放置每个元素</strong>。</p>
+<h4 id="java实现">Java实现</h4>
+<pre><code>private static Random rand = new Random();
+private static List&lt;Integer&gt; mList = Arrays.asList(1, 2, 3, 4, 5);
+
+public static void main(String[] args) {
+    List&lt;Integer&gt; shuffle = shuffle(mList);
+    System.out.print(shuffle.toString());
+}
+
+private static List&lt;Integer&gt; shuffle(List&lt;Integer&gt; list) {
+    for (int i = list.size() - 1; i &gt;= 0; i--) {
+        // 取0-i之间的随机数
+        int j = rand.nextInt(i + 1);
+        // 交换最后一位和随机得到的数
+        swap(list, i, j);
+    }
+    return list;
+}
+
+private static void swap(List&lt;Integer&gt; list, int i, int j) {
+    Integer temp = list.get(i);
+    list.set(i, list.get(j));
+    list.set(j, temp);
+}
+</code></pre>
+<h4 id="java自带api">Java自带API</h4>
+<p>在Java提供的Collections包中，提供了shuffle方法</p>
+<pre><code>Collections.shuffle(mList);
+</code></pre>
+<p>看下源码:</p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/shuffle_java_2019_7_16_11_21_29.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/shuffle_java_2019_7_16_11_21_56.png" alt="" loading="lazy"></figure>
+<p>可以看出，和上面的思路一样</p>
+<h4 id="思路解析参考上面的链接知乎的原答案">思路解析，参考上面的链接，知乎的原答案</h4>
+<p>比如数组1，2，3，4，5</p>
+<p>我们从后往前</p>
+<p>先取任意1个元素和最后一个交换位置，那么任意一个元素出现在数组最后面的概率为1/5</p>
+<p>我们继续，取任意一个元素和倒数第二个交换位置，概率为4/5*1/4=1/5</p>
+<p>依次类推，每一个元素出现在每一个位置的概率，都是 1/5</p>
+<h4 id="遍历时为什么采用从后到前的方式而不采用从前到后">遍历时，为什么采用从后到前的方式，而不采用从前到后？</h4>
+<p><mark><strong>因为生成 [0, i] 范围的随机数比生成 [i, n) 范围的随机数简单</strong></mark></p>
+<ul>
+<li>生成[0, i]范围的随机数</li>
+</ul>
+<pre><code>Random rand = new Random();
+int randNum = ran.nextInt(i + 1);
+</code></pre>
+<ul>
+<li>生成[i, n)范围的随机数</li>
+</ul>
+<pre><code>Random rand = new Random();
+int randNum = rand.nextInt(n - i) + i;
+</code></pre>
+<h4 id="参考">参考：</h4>
+<p><a href="https://justdo2008.iteye.com/blog/1927222">随机打乱数组List洗牌算法shuffle</a></p>
+<p><a href="https://github.com/giantray/stackoverflow-java-top-qa/blob/master/contents/generating-random-integers-in-a-range-with-Java.md">java 产生指定范围的随机数</a></p>
+
+          
+          <p class="next-post">下一篇：
+            <a href="https://wmszhe.github.io/post/search_algorithm/">
+              <span class="post-title">
+                查找算法&rarr;
+              </span>
+            </a>
+          </p>
+          
+          <div class="comment">
+            
+            
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'f8fe9375d0b8d01d2e55',
+    clientSecret: 'fd4f2870b6c30d18a4af888480e80836b6732624',
+    repo: 'wmszhe.github.io',
+    owner: 'wmszhe',
+    admin: ['wmszhe'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+            
+            
+            
+          </div>
+        </div>
+      </div>
+  </article>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+              <!-- <li class="list-inline-item">
+              <a href="https://wmszhe.github.io//atom.xml" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              </li> -->
+          </ul>
+          <p class="copyright text-muted">Copyright &copy;<span>wzhuiJ</span><br><a href="https://github.com/getgridea/gridea" class="Themeinfo">Powered by Gridea</a></p>
+        </div>
+      </div>
+    </div>
+   </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://wmszhe.github.io//media/scripts/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
+  <!-- <script src="https://wmszhe.github.io//media/scripts/clean-blog.min.js"></script> -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
+<a id="back_to_top" href="#" class="back_to_top">
+  <span>▲</span></a>
+<script>$(document).ready((function(_this) {
+    return function() {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function() {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block')
+          } else {
+            return bt.css('display', 'none')
+          }
+        });
+        return bt.click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          },
+          800);
+          return false
+        })
+      }
+    }
+  })(this));</script>
+</body>
+
+</html>

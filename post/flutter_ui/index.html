@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta name="referrer" content="never">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="kveln">
+  <title>FlutterUI相关 | wzhuiJ</title>
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="https://wmszhe.github.io//media/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!--  <link href="https://wmszhe.github.io//media/css/all.min.css" rel="stylesheet" type="text/css"> -->
+  <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" title="FlutterUI相关 | wzhuiJ » Feed" href="https://wmszhe.github.io//atom.xml">
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+  <link href="https://wmszhe.github.io//styles/main.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/highlight.min.js"></script>
+  <!-- <script src="https://wmszhe.github.io//media/scripts/jquery.min.js"></script> -->
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <meta property="og:description" content="FlutterUI相关" />
+  <meta property="og:url" content="https://wmszhe.github.io/post/flutter_ui/" />
+  <meta property="og:locale" content="zh-CN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="wzhuiJ" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="https://wmszhe.github.io/">wzhuiJ</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          
+          <li class="nav-item">
+            
+            <a class="nav-link" href="/">首页</a>
+            
+          </li>
+          
+          <li class="nav-item">
+            
+            <a class="nav-link" href="/archives">归档</a>
+            
+          </li>
+          
+          <li class="nav-item">
+            
+            <a class="nav-link" href="/tags">标签</a>
+            
+          </li>
+          
+          <li class="nav-item">
+            
+            <a class="nav-link" href="/toolbox">工具</a>
+            
+          </li>
+          
+          <li class="nav-item">
+            
+            <a class="nav-link" href="/about">关于</a>
+            
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/flutterui-xiang-guan.png')">
+    <div class=" overlay">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <span class="tags">
+              
+              <a href="https://wmszhe.github.io/tag/u2rp36wln/" class="tag">Flutter</a>
+              
+            </span>
+            <h1>FlutterUI相关</h1>
+            <span class="meta">
+              Posted on
+              2019-06-19，3 min read
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>获取屏幕尺寸，widget尺寸和位置</p>
+<!-- more --> 
+<h3 id="屏幕尺寸通过window相关方法获取">屏幕尺寸通过window相关方法获取</h3>
+<h5 id="屏幕尺寸物理像素-px">屏幕尺寸（物理像素 px）</h5>
+<pre><code>window.physicalSize -&gt; Size(960.0, 720.0)
+</code></pre>
+<h5 id="屏幕密度">屏幕密度</h5>
+<pre><code>window.devicePixelRatio -&gt; 2.0
+</code></pre>
+<h3 id="屏幕尺寸通过mediaquery相关方法获取">屏幕尺寸通过MediaQuery相关方法获取</h3>
+<blockquote>
+<p>MediaQuery最终还是调用的window方法</p>
+</blockquote>
+<h5 id="屏幕尺寸逻辑像素-dp">屏幕尺寸（逻辑像素 dp）</h5>
+<blockquote>
+<p>MediaQuery.of(context).size获取的是逻辑像素，物理像素/屏幕密度</p>
+</blockquote>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560934244332.png" alt="" loading="lazy"></figure>
+<pre><code>MediaQuery.of(context).size -&gt; Size(480.0, 360.0)
+</code></pre>
+<h5 id="屏幕密度-2">屏幕密度</h5>
+<pre><code>MediaQuery.of(context).devicePixelRatio -&gt; 2.0
+</code></pre>
+<h5 id="横竖屏">横竖屏</h5>
+<blockquote>
+<p>横竖屏是根据宽高判断的</p>
+</blockquote>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560934253781.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560934262800.png" alt="" loading="lazy"></figure>
+<pre><code>MediaQuery.of(context).orientation -&gt; Orientation.landscape
+</code></pre>
+<h3 id="widget大小和位置">Widget大小和位置</h3>
+<h4 id="可以通过globalkey获取">可以通过GlobalKey获取</h4>
+<blockquote>
+<p>参考：<a href="https://medium.com/@diegoveloper/flutter-widget-size-and-position-b0a9ffed9407">Flutter : Widget Size and Position</a></p>
+</blockquote>
+<blockquote>
+<p>需要对每个widget创建一个GlobalKey</p>
+</blockquote>
+<pre><code>GlobalKey _keyRed = GlobalKey();
+</code></pre>
+<pre><code>key: _keyRed,
+</code></pre>
+<pre><code>RenderBox findRenderObject = _keyRed.currentContext.findRenderObject();
+var offset = findRenderObject.localToGlobal(Offset.zero);
+print(&quot;---icon offset : $offset&quot;);
+
+var size = _keyRed.currentContext.size;
+print(&quot;---icon size : $size&quot;);
+</code></pre>
+<h4 id="从context对象中获取">从context对象中获取</h4>
+<h5 id="自定义widget时可以从build方法中的context中获取">自定义Widget时，可以从build方法中的context中获取</h5>
+<pre><code>class CustomIcon extends Icon {
+  CustomIcon(IconData icon) : super(icon);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: Icon(icon),
+      onTap: () {
+        RenderBox findRenderObject = context.findRenderObject();
+        var offset = findRenderObject.localToGlobal(Offset.zero);
+        print(&quot;icon offset : $offset&quot;);
+
+        var size = context.size;
+        print(&quot;icon size : $size&quot;);
+      },
+    );
+  }
+}
+</code></pre>
+<h5 id="直接使用系统widget时使用layoutbuilderlayoutbuilder提供了build方法中含有context对象">直接使用系统widget时，使用LayoutBuilder，LayoutBuilder提供了build方法中含有context对象</h5>
+<pre><code>class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Row(
+        children: &lt;Widget&gt;[
+          LayoutBuilder(
+            builder: (context, constraints) {
+              return GestureDetector(
+                child: MyIcon(Icons.dashboard),
+                onTap: (){
+                  RenderBox findRenderObject = context.findRenderObject();
+                  var offset = findRenderObject.localToGlobal(Offset.zero);
+                  print(&quot;---icon offset : $offset&quot;);
+
+                  var size = context.size;
+                  print(&quot;---icon size : $size&quot;);
+                },
+              );
+            },
+          ),
+          MyIcon(Icons.ac_unit),
+        ],
+      ),
+    );
+  }
+}
+</code></pre>
+<h4 id="在widget-build完成之后执行操作">在widget build完成之后，执行操作</h4>
+<blockquote>
+<p>在return一个widget之前，context为null，如果想要在build之后，立即获取一些属性，可以使用WidgetsBinding.instance.addPostFrameCallback((_) =&gt; afterBuild(context));</p>
+</blockquote>
+<pre><code>class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Row(
+        children: &lt;Widget&gt;[
+          LayoutBuilder(
+            builder: (context, constraints) {
+              WidgetsBinding.instance.addPostFrameCallback((_) =&gt; afterBuild(context));
+              return Container(
+                child: MyIcon(Icons.dashboard),
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  afterBuild(BuildContext context) {
+    RenderBox findRenderObject = context.findRenderObject();
+    var offset = findRenderObject.localToGlobal(Offset.zero);
+    print(&quot;---icon offset : $offset&quot;);
+
+    var size = context.size;
+    print(&quot;---icon size : $size&quot;);
+  }
+}
+</code></pre>
+<h3 id="软键盘相关">软键盘相关</h3>
+<h4 id="显示隐藏软键盘">显示隐藏软键盘</h4>
+<ol>
+<li>通过焦点方式</li>
+</ol>
+<pre><code>// 隐藏
+FocusScope.of(context).requestFocus(FocusNode())
+// 显示
+FocusScope.of(context).autofocus(_focusNode)
+</code></pre>
+<ol start="2">
+<li>通过channel方式</li>
+</ol>
+<pre><code>// 显示
+SystemChannels.textInput.invokeMethod('TextInput.show');
+// 隐藏
+SystemChannels.textInput.invokeMethod('TextInput.hide');
+</code></pre>
+
+          
+          <p class="next-post">下一篇：
+            <a href="https://wmszhe.github.io/post/flutter_desktop/">
+              <span class="post-title">
+                FLutter编译桌面端app&rarr;
+              </span>
+            </a>
+          </p>
+          
+          <div class="comment">
+            
+            
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'f8fe9375d0b8d01d2e55',
+    clientSecret: 'fd4f2870b6c30d18a4af888480e80836b6732624',
+    repo: 'wmszhe.github.io',
+    owner: 'wmszhe',
+    admin: ['wmszhe'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+            
+            
+            
+          </div>
+        </div>
+      </div>
+  </article>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+              <!-- <li class="list-inline-item">
+              <a href="https://wmszhe.github.io//atom.xml" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              </li> -->
+          </ul>
+          <p class="copyright text-muted">Copyright &copy;<span>wzhuiJ</span><br><a href="https://github.com/getgridea/gridea" class="Themeinfo">Powered by Gridea</a></p>
+        </div>
+      </div>
+    </div>
+   </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://wmszhe.github.io//media/scripts/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
+  <!-- <script src="https://wmszhe.github.io//media/scripts/clean-blog.min.js"></script> -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
+<a id="back_to_top" href="#" class="back_to_top">
+  <span>▲</span></a>
+<script>$(document).ready((function(_this) {
+    return function() {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function() {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block')
+          } else {
+            return bt.css('display', 'none')
+          }
+        });
+        return bt.click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          },
+          800);
+          return false
+        })
+      }
+    }
+  })(this));</script>
+</body>
+
+</html>
