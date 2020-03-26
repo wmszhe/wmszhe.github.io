@@ -9,6 +9,11 @@ p {
   text-align: start;
   word-break: break-all;
 }
+p.next-post {
+  border-left: 4px solid #333;
+  padding-left: 16px;
+  margin-top: 2em;
+}
 p a {
   text-decoration: underline;
 }
