@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>https://wmszhe.github.io/</id>
     <title>wzhuiJ</title>
-    <updated>2020-03-27T01:56:06.396Z</updated>
+    <updated>2020-03-27T01:58:56.192Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="https://wmszhe.github.io/"/>
+    <link rel="self" href="https://wmszhe.github.io/atom.xml"/>
     <subtitle>Hello EveryOne 😘</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>https://wmszhe.github.io/images/avatar.png</logo>
+    <icon>https://wmszhe.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, wzhuiJ</rights>
     <entry>
         <title type="html"><![CDATA[IDEA相关]]></title>
-        <id>http://localhost:4000/post/idea_tips/</id>
-        <link href="http://localhost:4000/post/idea_tips/">
+        <id>https://wmszhe.github.io/post/idea_tips/</id>
+        <link href="https://wmszhe.github.io/post/idea_tips/">
         </link>
         <updated>2020-02-27T02:53:20.000Z</updated>
         <summary type="html"><![CDATA[<p>IDEA相关 ，持续更新</p>
@@ -34,8 +34,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Android生成jks时遇到的]]></title>
-        <id>http://localhost:4000/post/android_jks/</id>
-        <link href="http://localhost:4000/post/android_jks/">
+        <id>https://wmszhe.github.io/post/android_jks/</id>
+        <link href="https://wmszhe.github.io/post/android_jks/">
         </link>
         <updated>2019-11-01T02:57:53.000Z</updated>
         <summary type="html"><![CDATA[<p>keytool -importkeystore -srckeystore /Users/zhe/Desktop/Test.jks -destkeystore /Users/zhe/Desktop/Test_sign.jks -deststoretype PKCS12</p>
@@ -65,8 +65,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Flutter遇到的问题]]></title>
-        <id>http://localhost:4000/post/flutter_qa/</id>
-        <link href="http://localhost:4000/post/flutter_qa/">
+        <id>https://wmszhe.github.io/post/flutter_qa/</id>
+        <link href="https://wmszhe.github.io/post/flutter_qa/">
         </link>
         <updated>2019-08-22T08:05:24.000Z</updated>
         <summary type="html"><![CDATA[<p>Flutter开发过程中遇到的一些问题。</p>
@@ -96,8 +96,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[洗牌算法]]></title>
-        <id>http://localhost:4000/post/shuffle_algorithm/</id>
-        <link href="http://localhost:4000/post/shuffle_algorithm/">
+        <id>https://wmszhe.github.io/post/shuffle_algorithm/</id>
+        <link href="https://wmszhe.github.io/post/shuffle_algorithm/">
         </link>
         <updated>2019-07-16T03:43:56.000Z</updated>
         <summary type="html"><![CDATA[<p>最近在知乎看到了一个关于洗牌算法，学习一下，记录下。</p>
@@ -169,8 +169,8 @@ int randNum = rand.nextInt(n - i) + i;
     </entry>
     <entry>
         <title type="html"><![CDATA[查找算法]]></title>
-        <id>http://localhost:4000/post/search_algorithm/</id>
-        <link href="http://localhost:4000/post/search_algorithm/">
+        <id>https://wmszhe.github.io/post/search_algorithm/</id>
+        <link href="https://wmszhe.github.io/post/search_algorithm/">
         </link>
         <updated>2019-07-04T06:44:03.000Z</updated>
         <content type="html"><![CDATA[<!-- more -->
@@ -254,8 +254,8 @@ fun binarySearchForRecursion(aar: IntArray, key: Int, low: Int, high: Int): Int 
     </entry>
     <entry>
         <title type="html"><![CDATA[链表LinkedList]]></title>
-        <id>http://localhost:4000/post/linkedlist/</id>
-        <link href="http://localhost:4000/post/linkedlist/">
+        <id>https://wmszhe.github.io/post/linkedlist/</id>
+        <link href="https://wmszhe.github.io/post/linkedlist/">
         </link>
         <updated>2019-07-04T06:40:09.000Z</updated>
         <content type="html"><![CDATA[<!-- more -->
@@ -376,8 +376,8 @@ fun printNode(data: SinglyLinkedNote?) {
     </entry>
     <entry>
         <title type="html"><![CDATA[数组Array]]></title>
-        <id>http://localhost:4000/post/array/</id>
-        <link href="http://localhost:4000/post/array/">
+        <id>https://wmszhe.github.io/post/array/</id>
+        <link href="https://wmszhe.github.io/post/array/">
         </link>
         <updated>2019-07-04T06:32:33.000Z</updated>
         <content type="html"><![CDATA[<!-- more -->
@@ -472,8 +472,8 @@ fun printNode(data: SinglyLinkedNote?) {
     </entry>
     <entry>
         <title type="html"><![CDATA[算法复杂度]]></title>
-        <id>http://localhost:4000/post/algorithm_complexity/</id>
-        <link href="http://localhost:4000/post/algorithm_complexity/">
+        <id>https://wmszhe.github.io/post/algorithm_complexity/</id>
+        <link href="https://wmszhe.github.io/post/algorithm_complexity/">
         </link>
         <updated>2019-07-04T03:45:52.000Z</updated>
         <content type="html"><![CDATA[<!-- more -->
@@ -856,8 +856,8 @@ void add(int element) {
     </entry>
     <entry>
         <title type="html"><![CDATA[数据结构和算法]]></title>
-        <id>http://localhost:4000/post/data_structures_and_algorithm/</id>
-        <link href="http://localhost:4000/post/data_structures_and_algorithm/">
+        <id>https://wmszhe.github.io/post/data_structures_and_algorithm/</id>
+        <link href="https://wmszhe.github.io/post/data_structures_and_algorithm/">
         </link>
         <updated>2019-07-04T03:20:13.000Z</updated>
         <content type="html"><![CDATA[<!-- more -->
@@ -888,8 +888,8 @@ void add(int element) {
     </entry>
     <entry>
         <title type="html"><![CDATA[Android性能优化]]></title>
-        <id>http://localhost:4000/post/android_optimize/</id>
-        <link href="http://localhost:4000/post/android_optimize/">
+        <id>https://wmszhe.github.io/post/android_optimize/</id>
+        <link href="https://wmszhe.github.io/post/android_optimize/">
         </link>
         <updated>2019-06-24T09:17:17.000Z</updated>
         <summary type="html"><![CDATA[<p>Android性能优化，一些性能优化方式。</p>
@@ -931,8 +931,8 @@ void add(int element) {
     </entry>
     <entry>
         <title type="html"><![CDATA[Dart一些特殊的特性]]></title>
-        <id>http://localhost:4000/post/dart_features/</id>
-        <link href="http://localhost:4000/post/dart_features/">
+        <id>https://wmszhe.github.io/post/dart_features/</id>
+        <link href="https://wmszhe.github.io/post/dart_features/">
         </link>
         <updated>2019-06-21T02:21:04.000Z</updated>
         <summary type="html"><![CDATA[<p>Dart一些特殊的特性，比较容易忘记和混淆的</p>
@@ -1032,8 +1032,8 @@ print(&quot;abc&quot; * 10); // 打印10次abc
     </entry>
     <entry>
         <title type="html"><![CDATA[FlutterUI相关]]></title>
-        <id>http://localhost:4000/post/flutter_ui/</id>
-        <link href="http://localhost:4000/post/flutter_ui/">
+        <id>https://wmszhe.github.io/post/flutter_ui/</id>
+        <link href="https://wmszhe.github.io/post/flutter_ui/">
         </link>
         <updated>2019-06-19T08:48:52.000Z</updated>
         <summary type="html"><![CDATA[<p>获取屏幕尺寸，widget尺寸和位置</p>
@@ -1193,8 +1193,8 @@ SystemChannels.textInput.invokeMethod('TextInput.hide');
     </entry>
     <entry>
         <title type="html"><![CDATA[FLutter编译桌面端app]]></title>
-        <id>http://localhost:4000/post/flutter_desktop/</id>
-        <link href="http://localhost:4000/post/flutter_desktop/">
+        <id>https://wmszhe.github.io/post/flutter_desktop/</id>
+        <link href="https://wmszhe.github.io/post/flutter_desktop/">
         </link>
         <updated>2019-06-18T09:35:45.000Z</updated>
         <summary type="html"><![CDATA[<p>使用<a href="https://github.com/google/flutter-desktop-embedding">flutter-desktop-embedding</a>编译适用于macos、windows、linux桌面端的app</p>
@@ -1245,8 +1245,8 @@ flutter upgrade
     </entry>
     <entry>
         <title type="html"><![CDATA[Git]]></title>
-        <id>http://localhost:4000/post/git/</id>
-        <link href="http://localhost:4000/post/git/">
+        <id>https://wmszhe.github.io/post/git/</id>
+        <link href="https://wmszhe.github.io/post/git/">
         </link>
         <updated>2019-06-15T12:19:24.000Z</updated>
         <summary type="html"><![CDATA[<p>Git相关,常用Git命令...</p>
@@ -1546,8 +1546,8 @@ git push origin HEAD:refs/for/sdpost_dev
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello EveryOne]]></title>
-        <id>http://localhost:4000/post/hello_everyone/</id>
-        <link href="http://localhost:4000/post/hello_everyone/">
+        <id>https://wmszhe.github.io/post/hello_everyone/</id>
+        <link href="https://wmszhe.github.io/post/hello_everyone/">
         </link>
         <updated>2019-06-15T11:18:56.000Z</updated>
         <summary type="html"><![CDATA[<p>👏 欢迎来到 <strong>wzhuiJ!</strong> 👏</p>
