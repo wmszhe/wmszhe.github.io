@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>wzhuiJ</title>
-    <updated>2020-03-27T08:42:05.143Z</updated>
+    <updated>2020-04-03T02:18:20.702Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io/atom.xml"/>
@@ -1203,19 +1203,25 @@ SystemChannels.textInput.invokeMethod('TextInput.hide');
 <!-- more --> 
 <h4 id="流程">流程</h4>
 <ol>
-<li>配置flutter环境，必须在master分支<pre><code>flutter channel master
+<li>
+<p>配置flutter环境，必须在master分支</p>
+<pre><code>flutter channel master
 flutter upgrade
 </code></pre>
 </li>
-<li>clone flutter-desktop-embedding<pre><code>git clone git@github.com:google/flutter-desktop-embedding.git
+<li>
+<p>clone flutter-desktop-embedding</p>
+<pre><code>git clone git@github.com:google/flutter-desktop-embedding.git
 </code></pre>
 </li>
-<li>复制flutter-desktop-embedding/example到自己的开发目录下,重命名为flutter_desktop
+<li>
+<p>复制flutter-desktop-embedding/example到自己的开发目录下,重命名为flutter_desktop</p>
 <blockquote>
 <p>目前不支持flutter create直接创建desktop项目，只能复制出example项目修改</p>
 </blockquote>
 </li>
-<li>开启ENABLE_FLUTTER_DESKTOP
+<li>
+<p>开启ENABLE_FLUTTER_DESKTOP</p>
 <ul>
 <li><strong>一次性，每次打开项目都要执行</strong><pre><code>命令行中 export ENABLE_FLUTTER_DESKTOP=true
 </code></pre>
@@ -1231,15 +1237,25 @@ flutter upgrade
 </li>
 </ul>
 </li>
-<li>更新依赖<pre><code>flutter packages get
+<li>
+<p>更新依赖</p>
+<pre><code>flutter packages get
 </code></pre>
 </li>
-<li>flutter run,即可看到demo项目		<br>
-<code>flutter run</code><br>
-<img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560851493604.png" alt="" loading="lazy"></li>
-<li>使用文本编辑器打开flutter_desktop项目，在lib目录下编写自己的代码<br>
-<img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560850644118.png" alt="" loading="lazy"></li>
-<li>over!</li>
+<li>
+<p>flutter run,即可看到demo项目		<br>
+```<br>
+flutter run</p>
+<pre><code>	![](https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560851493604.png)
+</code></pre>
+</li>
+<li>
+<p>使用文本编辑器打开flutter_desktop项目，在lib目录下编写自己的代码<br>
+<img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560850644118.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>over!</p>
+</li>
 </ol>
 ]]></content>
     </entry>
@@ -1322,6 +1338,27 @@ git clone ssh://zhe.wang@192.168.0.119:29418/adclient -b gte
 <h3 id="安装hook目的是在提交信息中自动创建-change-id-标签">安装hook,目的是在提交信息中自动创建 'Change-Id:' 标签</h3>
 <pre><code>cd adclient
 scp -p -P 29418 zhe.wang@192.168.0.119:hooks/commit-msg .git/hooks/
+</code></pre>
+<h3 id="远程仓库">远程仓库</h3>
+<blockquote>
+<ol>
+<li>通过终端修改</li>
+</ol>
+</blockquote>
+<h4 id="查看远程仓库地址">查看远程仓库地址</h4>
+<pre><code>git remote -v
+</code></pre>
+<h4 id="修改远程仓库地址">修改远程仓库地址</h4>
+<pre><code>git remote set-url origin git@github.com/xxx.git
+</code></pre>
+<blockquote>
+<ol start="2">
+<li>修改项目下.git/config文件</li>
+</ol>
+</blockquote>
+<pre><code>[remote &quot;origin&quot;]
+	# url = git@xxx
+	url = git@github.com:xxx.git
 </code></pre>
 <h3 id="查看分支">查看分支</h3>
 <pre><code>git branch 

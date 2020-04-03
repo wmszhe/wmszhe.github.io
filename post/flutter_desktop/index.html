@@ -114,19 +114,25 @@
 <!-- more --> 
 <h4 id="流程">流程</h4>
 <ol>
-<li>配置flutter环境，必须在master分支<pre><code>flutter channel master
+<li>
+<p>配置flutter环境，必须在master分支</p>
+<pre><code>flutter channel master
 flutter upgrade
 </code></pre>
 </li>
-<li>clone flutter-desktop-embedding<pre><code>git clone git@github.com:google/flutter-desktop-embedding.git
+<li>
+<p>clone flutter-desktop-embedding</p>
+<pre><code>git clone git@github.com:google/flutter-desktop-embedding.git
 </code></pre>
 </li>
-<li>复制flutter-desktop-embedding/example到自己的开发目录下,重命名为flutter_desktop
+<li>
+<p>复制flutter-desktop-embedding/example到自己的开发目录下,重命名为flutter_desktop</p>
 <blockquote>
 <p>目前不支持flutter create直接创建desktop项目，只能复制出example项目修改</p>
 </blockquote>
 </li>
-<li>开启ENABLE_FLUTTER_DESKTOP
+<li>
+<p>开启ENABLE_FLUTTER_DESKTOP</p>
 <ul>
 <li><strong>一次性，每次打开项目都要执行</strong><pre><code>命令行中 export ENABLE_FLUTTER_DESKTOP=true
 </code></pre>
@@ -142,15 +148,25 @@ flutter upgrade
 </li>
 </ul>
 </li>
-<li>更新依赖<pre><code>flutter packages get
+<li>
+<p>更新依赖</p>
+<pre><code>flutter packages get
 </code></pre>
 </li>
-<li>flutter run,即可看到demo项目		<br>
-<code>flutter run</code><br>
-<img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560851493604.png" alt="" loading="lazy"></li>
-<li>使用文本编辑器打开flutter_desktop项目，在lib目录下编写自己的代码<br>
-<img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560850644118.png" alt="" loading="lazy"></li>
-<li>over!</li>
+<li>
+<p>flutter run,即可看到demo项目		<br>
+```<br>
+flutter run</p>
+<pre><code>	![](https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560851493604.png)
+</code></pre>
+</li>
+<li>
+<p>使用文本编辑器打开flutter_desktop项目，在lib目录下编写自己的代码<br>
+<img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560850644118.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>over!</p>
+</li>
 </ol>
 
           
