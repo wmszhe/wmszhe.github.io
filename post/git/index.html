@@ -97,7 +97,7 @@
             <h1>Git</h1>
             <span class="meta">
               Posted on
-              2019-06-15，10 min read
+              2019-06-15，12 min read
             </span>
           </div>
         </div>
@@ -421,6 +421,42 @@ git push origin HEAD:refs/for/sdpost_dev
 </code></pre>
 <h3 id="取消本次rebase">取消本次rebase</h3>
 <pre><code>git rebase --abort
+</code></pre>
+<h3 id="git-bisect-查找哪一次代码提交引入了错误">git bisect 查找哪一次代码提交引入了错误</h3>
+<blockquote>
+<p>参考：<a href="http://www.ruanyifeng.com/blog/2018/12/git-bisect.html">git bisect 命令教程</a></p>
+</blockquote>
+<blockquote>
+<p>它的原理很简单，就是将代码提交的历史，按照两分法不断缩小定位。所谓&quot;两分法&quot;，就是将代码历史一分为二，确定问题出在前半部分，还是后半部分，不断执行这个过程，直到范围缩小到某一次代码提交。</p>
+</blockquote>
+<pre><code>// &quot;终点&quot;是最近的提交，&quot;起点&quot;是更久以前的提交
+git bisect start [终点] [起点]
+
+eg:
+git bisect start 100 1
+
+执行上面的命令以后，代码库就会切换到这段范围正当中的那一次提交，即50
+
+如果没有问题，那么1-50之间是正常的，执行
+git bisect good
+
+那么Git就自动切换到后半段的中点，即50-100，即75
+
+如果出现问题，那么50-75之间有问题，执行
+git bisect bad
+
+Git就自动切换到第50次到第75次的中点（第63次提交）
+
+重复执行上述操作，直到成功找到出问题的那一次提交为止，Git 会给出如下的提示
+
+xxx is the first bad commit
+
+查出问题后，执行
+git bisect reset
+
+退出查错
+
+现在就可以开始修复错误了。
 </code></pre>
 
           
