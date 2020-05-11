@@ -184,6 +184,15 @@ git show 03bb009eb06b16c62155206b0e5724b532820efd .gitignore
 <pre><code>git clone https://github.com/CharonChui/AndroidNote.git __AndroidNote(自定义的文件夹名)
 git clone ssh://zhe.wang@192.168.0.119:29418/adclient -b gte
 </code></pre>
+<h3 id="clone-depth">clone --depth</h3>
+<p>指定克隆深度,为1即表示只克隆最近一次commit.</p>
+<pre><code>git clone xxx --depth 1
+</code></pre>
+<p>如果我们之后要把之前的历史重新再 pull 下来</p>
+<pre><code>// 将浅克隆转换为完整克隆
+git pull --unshallow
+git fetch --unshallow
+</code></pre>
 <h3 id="安装hook目的是在提交信息中自动创建-change-id-标签">安装hook,目的是在提交信息中自动创建 'Change-Id:' 标签</h3>
 <pre><code>cd adclient
 scp -p -P 29418 zhe.wang@192.168.0.119:hooks/commit-msg .git/hooks/

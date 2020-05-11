@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>wzhuiJ</title>
-    <updated>2020-05-04T06:42:07.775Z</updated>
+    <updated>2020-05-11T09:02:14.072Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io/atom.xml"/>
@@ -1334,6 +1334,15 @@ git show 03bb009eb06b16c62155206b0e5724b532820efd .gitignore
 <h3 id="clone">clone</h3>
 <pre><code>git clone https://github.com/CharonChui/AndroidNote.git __AndroidNote(自定义的文件夹名)
 git clone ssh://zhe.wang@192.168.0.119:29418/adclient -b gte
+</code></pre>
+<h3 id="clone-depth">clone --depth</h3>
+<p>指定克隆深度,为1即表示只克隆最近一次commit.</p>
+<pre><code>git clone xxx --depth 1
+</code></pre>
+<p>如果我们之后要把之前的历史重新再 pull 下来</p>
+<pre><code>// 将浅克隆转换为完整克隆
+git pull --unshallow
+git fetch --unshallow
 </code></pre>
 <h3 id="安装hook目的是在提交信息中自动创建-change-id-标签">安装hook,目的是在提交信息中自动创建 'Change-Id:' 标签</h3>
 <pre><code>cd adclient
