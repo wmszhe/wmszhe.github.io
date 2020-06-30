@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head>
-     <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta content="yes" name="apple-mobile-web-app-capable" />
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
@@ -12,7 +13,7 @@
 <link rel="shortcut icon" href="https://wmszhe.github.io//favicon.ico" type="image/x-icon">
 <link rel="icon" href="https://wmszhe.github.io//favicon.ico">
 <link rel="apple-touch-icon" href="https://wmszhe.github.io//favicon.ico">
-<title>Android | wzhuiJ</title>
+<title>AS3.0以后，debug包INSTALL_FAILED_TEST_ONLY问题 | wzhuiJ</title>
 <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 <!-- <link href="https://wmszhe.github.io//media/css/bootstrap.min.css" rel="stylesheet"> -->
 <!--  <link href="https://wmszhe.github.io//media/css/all.min.css" rel="stylesheet" type="text/css"> -->
@@ -21,7 +22,7 @@
 <link
   href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
   rel='stylesheet' type='text/css'>
-<link rel="alternate" type="application/rss+xml" title="Android | wzhuiJ » Feed"
+<link rel="alternate" type="application/rss+xml" title="AS3.0以后，debug包INSTALL_FAILED_TEST_ONLY问题 | wzhuiJ » Feed"
   href="https://wmszhe.github.io//atom.xml">
 <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
@@ -31,13 +32,21 @@
 <!-- <script src="https://wmszhe.github.io//media/scripts/jquery.min.js"></script> -->
 <script>hljs.initHighlightingOnLoad();</script>
 
-  </head>
-  <body>
-  	<!-- Navigation -->
+  <meta property="og:description" content="AS3.0以后，debug包INSTALL_FAILED_TEST_ONLY问题" />
+  <meta property="og:url" content="https://wmszhe.github.io/post/as_testOnly/" />
+  <meta property="og:locale" content="zh-CN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="wzhuiJ" />
+</head>
+
+<body>
+  <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand" href="https://wmszhe.github.io/">wzhuiJ</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
       </button>
@@ -45,146 +54,144 @@
         <ul class="navbar-nav ml-auto">
           
           <li class="nav-item">
-              
-              <a class="nav-link" href="/">首页</a>
-              
+            
+            <a class="nav-link" href="/">首页</a>
+            
           </li>
           
           <li class="nav-item">
-              
-              <a class="nav-link" href="/archives">归档</a>
-              
+            
+            <a class="nav-link" href="/archives">归档</a>
+            
           </li>
           
           <li class="nav-item">
-              
-              <a class="nav-link" href="/tags">标签</a>
-              
+            
+            <a class="nav-link" href="/tags">标签</a>
+            
           </li>
           
           <li class="nav-item">
-              
-              <a class="nav-link" href="/toolbox">工具</a>
-              
+            
+            <a class="nav-link" href="/toolbox">工具</a>
+            
           </li>
           
           <li class="nav-item">
-              
-              <a class="nav-link" href="/post/about">关于</a>
-              
+            
+            <a class="nav-link" href="/post/about">关于</a>
+            
           </li>
           
         </ul>
       </div>
     </div>
   </nav>
-<!-- Page Header -->
+  <!-- Page Header -->
   <header class="masthead" style="background-image: url('https://wmszhe.github.io//media/images/home-bg.jpg')">
-    <div class="overlay"></div>
+    <div class=" overlay">
+    </div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1 class="tag-tl">#Android</h1>
+            <span class="tags">
+              
+              <a href="https://wmszhe.github.io/tag/70DSvO8Bc/" class="tag">Android</a>
+              
+            </span>
+            <h1>AS3.0以后，debug包INSTALL_FAILED_TEST_ONLY问题</h1>
+            <span class="meta">
+              Posted on
+              2020-06-30，2 min read
+            </span>
           </div>
         </div>
       </div>
     </div>
   </header>
+
+  <!-- Post Content -->
+  <article>
     <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-       
-        <div class="post-preview">
-          <a href="https://wmszhe.github.io/post/as_testOnly/">
-            <h2 class="post-title">
-              AS3.0以后，debug包INSTALL_FAILED_TEST_ONLY问题
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              <blockquote>
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <blockquote>
 <p>Android Studio 3.0以后，通过IDE直接run出来的安装包，有些手机无法直接安装，会提示<code>Failed to install app-debug.apk: Failure [INSTALL_FAILED_TEST_ONLY: installPackage]</code></p>
 </blockquote>
+<!-- more -->
+<h3 id="问题">问题</h3>
+<p>Android Studio 3.0以后，通过IDE直接run出来的安装包，无法直接安装，也无法通过<code>adb install xx.apk</code>的方式来安装。会提示<code>Failed to install app-debug.apk: Failure [INSTALL_FAILED_TEST_ONLY: installPackage]</code></p>
+<p>大多数手机上，我们可以通过<code>adb install -t xx.apk</code>的方式来安装，但是某些<code>OPPO</code>手机上，还是无法安装。</p>
+<h3 id="原因">原因</h3>
+<p>IDE 直接 Run 出来的 APK ，会在 AndroidManifest.xml 文件中，增加 <code>android:testOnly=&quot;true&quot;</code> 属性，正是因为这个属性，阻止了我们使用正常方式安装 APK。</p>
+<h3 id="解决方法">解决方法</h3>
+<h5 id="1-方法一修改打包方式">1. 方法一（修改打包方式）</h5>
+<ol>
+<li>当我们需要debug包的时候，不使用IDE直接run跑出的apk，而是通过IDE中gradle中，app-build-build命令来生成</li>
+<li>通过IDE菜单工具栏-Build-Build Bundle(s)/APK(s)来生成apk</li>
+</ol>
+<h5 id="2-方法二会造成其他问题不推荐">2. 方法二（会造成其他问题，不推荐）</h5>
+<p>在项目gradle.properties(或者gradle全局配置目录 ~/.gradle/)文件中添加<code>android.injected.testOnly=false</code></p>
+<p><mark>此方法，会造成IDE run apk的时候，app无法直接打开启动页面，直接返回到桌面</mark></p>
+<h3 id="不同方式打包反编译结果">不同方式打包，反编译结果</h3>
+<ol>
+<li>
+<p>IDE直接run出来的apk</p>
+<p><mark>带有<code>android:testOnly=&quot;true&quot;</code></mark></p>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/uPic/mAUnTd.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/uPic/VvYXPZ.png" alt="" loading="lazy"></figure>
+</li>
+<li>
+<p>gradle-app-build-build编译出的apk</p>
+<p><mark>不带<code>android:testOnly=&quot;true&quot;</code></mark></p>
+<figure data-type="image" tabindex="3"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/uPic/rXpCsw.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/uPic/drCtsQ.png" alt="" loading="lazy"></figure>
+</li>
+<li>
+<p>IDE菜单工具栏-Build-Build Bundle(s)/APK(s)编译出的apk</p>
+<p><mark>不带<code>android:testOnly=&quot;true&quot;</code></mark></p>
+<figure data-type="image" tabindex="5"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/uPic/gjFOvf.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://raw.githubusercontent.com/wmszhe/pichub/master/uPic/AFMm6U.png" alt="" loading="lazy"></figure>
+</li>
+</ol>
 
-            </h3>
-          <p class="post-meta">
-             <span class="time">2020-06-30</span>
-             <span>,</span>
-             <span class="post-stats">2 min read</span>
-            </p>
-        </div>
-        <hr>
-        <div class="clearfix">
-        </div>
-        
-        <div class="post-preview">
-          <a href="https://wmszhe.github.io/post/android_jks/">
-            <h2 class="post-title">
-              Android生成jks时遇到的
-            </h2>
+          
+          <p class="next-post">下一篇：
+            <a href="https://wmszhe.github.io/post/idea_tips/">
+              <span class="post-title">
+                IDEA相关&rarr;
+              </span>
             </a>
-            <h3 class="post-subtitle">
-              <p>keytool -importkeystore -srckeystore /Users/zhe/Desktop/Test.jks -destkeystore /Users/zhe/Desktop/Test_sign.jks -deststoretype PKCS12</p>
+          </p>
+          
+          <div class="comment">
+            
+            
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'f8fe9375d0b8d01d2e55',
+    clientSecret: 'fd4f2870b6c30d18a4af888480e80836b6732624',
+    repo: 'wmszhe.github.io',
+    owner: 'wmszhe',
+    admin: ['wmszhe'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
 
-            </h3>
-          <p class="post-meta">
-             <span class="time">2019-11-01</span>
-             <span>,</span>
-             <span class="post-stats">1 min read</span>
-            </p>
+            
+            
+            
+          </div>
         </div>
-        <hr>
-        <div class="clearfix">
-        </div>
-        
-        <div class="post-preview">
-          <a href="https://wmszhe.github.io/post/flutter_qa/">
-            <h2 class="post-title">
-              Flutter遇到的问题
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              <p>Flutter开发过程中遇到的一些问题。</p>
-
-            </h3>
-          <p class="post-meta">
-             <span class="time">2019-08-22</span>
-             <span>,</span>
-             <span class="post-stats">2 min read</span>
-            </p>
-        </div>
-        <hr>
-        <div class="clearfix">
-        </div>
-        
-        <div class="post-preview">
-          <a href="https://wmszhe.github.io/post/android_optimize/">
-            <h2 class="post-title">
-              Android性能优化
-            </h2>
-            </a>
-            <h3 class="post-subtitle">
-              <p>Android性能优化，一些性能优化方式。</p>
-
-            </h3>
-          <p class="post-meta">
-             <span class="time">2019-06-24</span>
-             <span>,</span>
-             <span class="post-stats">1 min read</span>
-            </p>
-        </div>
-        <hr>
-        <div class="clearfix">
-        </div>
-        
-        
-        
       </div>
-    </div>
-  </div>
-
-  
- <!-- Footer -->
+  </article>
+  <!-- Footer -->
   <footer>
     <div class="container">
       <div class="row">
@@ -253,5 +260,6 @@
       }
     }
   })(this));</script>
-  </body>
+</body>
+
 </html>
