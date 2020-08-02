@@ -172,6 +172,7 @@ header.masthead .post-heading,
 header.masthead .site-heading {
   padding: 150px 0 100px;
   color: #fff;
+  word-break: break-all;
 }
 @media only screen and (min-width: 768px) {
   header.masthead .page-heading,
@@ -396,7 +397,6 @@ code,
 tt {
   padding: 1px 3px;
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
-  white-space: pre;
   border: 1px solid #E3EDF3;
   background: #f7f7f9;
   color: #222;
