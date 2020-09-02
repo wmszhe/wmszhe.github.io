@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wmszhe.github.io/</id>
     <title>wzhuiJ</title>
-    <updated>2020-09-02T09:31:01.695Z</updated>
+    <updated>2020-09-02T09:39:21.143Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wmszhe.github.io/"/>
     <link rel="self" href="https://wmszhe.github.io/atom.xml"/>
@@ -12,93 +12,13 @@
     <rights>All rights reserved 2020, wzhuiJ</rights>
     <entry>
         <title type="html"><![CDATA[Android添加一个view到多个view中]]></title>
-        <id>https://wmszhe.github.io/post/android-tian-jia-yi-ge-view-dao-duo-ge-view-zhong/</id>
-        <link href="https://wmszhe.github.io/post/android-tian-jia-yi-ge-view-dao-duo-ge-view-zhong/">
+        <id>https://wmszhe.github.io/post/android_add_view_multiple_times/</id>
+        <link href="https://wmszhe.github.io/post/android_add_view_multiple_times/">
         </link>
         <updated>2020-09-02T09:16:50.000Z</updated>
         <summary type="html"><![CDATA[<p>Java Class.forName</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>Java Class.forName</p>
-<!-- more -->
-<h3 id="android添加一个view到多个view中">Android添加一个view到多个view中</h3>
-<blockquote>
-<p>假如有一个view: View view = new View();</p>
-<p>有多个FrameLayout: FrameA，FrameB</p>
-<p>如果要将view添加到FrameA，FrameB，调用FrameA.addView(view)，再FrameB.addView(view)时，会提示view已经有一个父View了，不能添加成功。</p>
-</blockquote>
-<p>此时，我们可以通过Class.forName，来实现这个功能</p>
-<pre><code>try {
-    // 根据view加载view的class
-    Class&lt;?&gt; clazz = Class.forName(view.getClass().getName());
-    // 调用带Context的构造函数
-    Constructor&lt;?&gt; constructor = clazz.getConstructor(Context.class);
-    // 生成一个新的view对象
-    View view = (View) constructor.newInstance(mContext);
-    // 添加
-    frame.addView(view);
-} catch (Exception e) {
-    e.printStackTrace();
-}
-</code></pre>
-<h3 id="classforname说明">Class.forName说明</h3>
-<h4 id="一-什么时候用classforname">一. 什么时候用Class.forName()</h4>
-<p>给你一个字符串变量，它代表一个类的包名和类名，你怎么实例化它？你第一想到的肯定是new，但是注意一点：<br>
-A a = (A)Class.forName(“pacage.A”).newInstance();<br>
-A a = new A();</p>
-<p>是一样的效果。</p>
-<h4 id="二-用法">二. 用法</h4>
-<blockquote>
-<p>如果被调用的类的构造函数为默认的构造函数，采用Class.newInstance()</p>
-<p>如果需要调用类的带参构造函数、私有构造函数， 就需要采用Constractor.newInstance()</p>
-</blockquote>
-<ol>
-<li>
-<p>加载无参数的类</p>
-<pre><code>try {
-    Class&lt;?&gt; clazz = Class.forName(&quot;A&quot;);
-    A a = (A) clazz.newInstance();
-} catch (Exception e) {
-    e.printStackTrace();
-}
-</code></pre>
-</li>
-<li>
-<p>加载有参数的类</p>
-<pre><code>// 带context参数
-try {
-    Class&lt;?&gt; clazz = Class.forName(&quot;A&quot;);
-    Constructor&lt;?&gt; constructor = clazz.getConstructor(Context.class);
-    A a = (A) constructor.newInstance(mContext);
-} catch (Exception e) {
-    e.printStackTrace();
-}
-// 其他参数
-try {
-    Class&lt;?&gt; clazz = Class.forName(&quot;A&quot;);
-    Constructor&lt;?&gt; constructor = clazz.getConstructor(new Class[]{int.class, String.class});
-    A a = (A) constructor.newInstance(new Object[]{5, &quot;abc&quot;});
-} catch (Exception e) {
-    e.printStackTrace();
-}
-</code></pre>
-</li>
-</ol>
-<h3 id="参考">参考</h3>
-<ol>
-<li>https://blog.csdn.net/kaiwii/article/details/7405761</li>
-<li>https://www.cnblogs.com/xiaoenduke/p/10854657.html</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Android添加一个view到多个view中]]></title>
-        <id>https://wmszhe.github.io/post/android_add_view_multiple_times/</id>
-        <link href="https://wmszhe.github.io/post/android_add_view_multiple_times/">
-        </link>
-        <updated>2020-09-02T09:16:50.000Z</updated>
-        <summary type="html"><![CDATA[<p>Class.forName相关应用</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>Class.forName相关应用</p>
 <!-- more -->
 <h3 id="android添加一个view到多个view中">Android添加一个view到多个view中</h3>
 <blockquote>
