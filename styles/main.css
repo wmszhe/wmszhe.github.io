@@ -406,6 +406,9 @@ tt {
 code {
   word-wrap: normal;
 }
+li {
+  word-break: break-all;
+}
 pre::-webkit-scrollbar {
   height: 10px;
 }
