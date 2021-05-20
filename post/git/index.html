@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="wmszhe">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://blog.weandri.com//img/home-bg.jpg">
+    <meta property="twitter:image" content="https://blog.weandri.com//img/home-bg.jpg" />
+    
+
+    
+    <meta name="title" content="Git" />
+    <meta property="og:title" content="Git" />
+    <meta property="twitter:title" content="Git" />
+    
+
+    
+    <meta name="description" content="Hello EveryOne 😘">
+    <meta property="og:description" content="Hello EveryOne 😘" />
+    <meta property="twitter:description" content="Hello EveryOne 😘" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Git-Blog</title>
+
+    <link rel="canonical" href="/post/git/">
+
+    <link rel="stylesheet" href="/css/iDisqus.min.css"/>
+
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">wmszhe</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/%E5%BD%92%E6%A1%A3">归档</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/top/books/">BOOKS</a></li>
+                    
+                        <li><a href="/top/about/">ABOUT</a></li>
+                    
+
+                    
+		    <li>
+                        <a href="/search">SEARCH <img src="/img/search.png" height="15" style="cursor: pointer;" alt="Search"></a>
+		    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1>Git</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 
+                        
+                                wmszhe
+                         
+                        on 
+                        Saturday, June 15, 2019
+                        
+                        
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <header>
+                    <h2>TOC</h2>
+                </header>
+                <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ssh">SSH</a></li>
+        <li><a href="#设置git全局设置">设置git全局设置：</a></li>
+        <li><a href="#需要取消git的全局设置">需要取消git的全局设置:</a></li>
+        <li><a href="#针对每个项目单独设置用户名和邮箱设置方法如下">针对每个项目，单独设置用户名和邮箱，设置方法如下：</a></li>
+        <li><a href="#测试连接">测试连接</a></li>
+        <li><a href="#gitignore无效的解决方法">.gitignore无效的解决方法</a></li>
+        <li><a href="#init">init</a></li>
+        <li><a href="#init后传至git仓库">init后传至git仓库</a></li>
+        <li><a href="#日志">日志</a></li>
+        <li><a href="#clone">clone</a></li>
+        <li><a href="#clone---depth">clone &ndash;depth</a></li>
+        <li><a href="#安装hook目的是在提交信息中自动创建-change-id-标签">安装hook,目的是在提交信息中自动创建 &lsquo;Change-Id:&rsquo; 标签</a></li>
+        <li><a href="#远程仓库">远程仓库</a></li>
+        <li><a href="#查看分支">查看分支</a></li>
+        <li><a href="#切换分支">切换分支</a></li>
+        <li><a href="#从某个版本代码拉取新的分支">从某个版本代码拉取新的分支</a></li>
+        <li><a href="#创建一个没有历史记录的新分支">创建一个没有历史记录的新分支</a></li>
+        <li><a href="#修改分支名称">修改分支名称</a></li>
+        <li><a href="#把新建的本地分支push到远程服务器远程分支与本地分支同名当然可以随意起名">把新建的本地分支push到远程服务器，远程分支与本地分支同名（当然可以随意起名）</a></li>
+        <li><a href="#push所有分支">push所有分支</a></li>
+        <li><a href="#更新分支信息">更新分支信息</a></li>
+        <li><a href="#删除分支">删除分支</a></li>
+        <li><a href="#删除远程分支">删除远程分支</a></li>
+        <li><a href="#恢复删除的分支">恢复删除的分支</a></li>
+        <li><a href="#查看tag">查看tag</a></li>
+        <li><a href="#查看tag详细信息">查看tag详细信息</a></li>
+        <li><a href="#添加tag">添加tag</a></li>
+        <li><a href="#添加带备注的tag">添加带备注的tag</a></li>
+        <li><a href="#给指定的某个commit号加tag">给指定的某个commit号加tag</a></li>
+        <li><a href="#将tag同步到远程服务器">将tag同步到远程服务器</a></li>
+        <li><a href="#切换tag">切换tag</a></li>
+        <li><a href="#获取远程版本">获取远程版本</a></li>
+        <li><a href="#删除本地tag">删除本地tag</a></li>
+        <li><a href="#删除远端tag">删除远端tag</a></li>
+        <li><a href="#查看状态">查看状态</a></li>
+        <li><a href="#commit">commit</a></li>
+        <li><a href="#修改commit">修改commit</a></li>
+        <li><a href="#pull">pull</a></li>
+        <li><a href="#push">push</a></li>
+        <li><a href="#回退git">回退git</a></li>
+        <li><a href="#远程版本回退">远程版本回退</a></li>
+        <li><a href="#git回退到某一历史版本后再恢复到之前版本">git回退到某一历史版本后再恢复到之前版本</a></li>
+        <li><a href="#your-branch-is-behind-originwz-jr-by-1-commit-and-can-be-fast-forwarded">Your branch is behind &lsquo;origin/wz-jr&rsquo; by 1 commit, and can be fast-forwarded.</a></li>
+        <li><a href="#撤销修改">撤销修改</a></li>
+        <li><a href="#回退指定文件到指定版本">回退指定文件到指定版本</a></li>
+        <li><a href="#重新提交-amend">重新提交 amend</a></li>
+        <li><a href="#暂存恢复-stash">暂存/恢复 stash</a></li>
+        <li><a href="#cherry-pick">cherry-pick</a></li>
+        <li><a href="#revert">revert</a></li>
+        <li><a href="#fetchrebase">fetch/rebase</a></li>
+        <li><a href="#取消本次rebase">取消本次rebase</a></li>
+        <li><a href="#git-bisect-查找哪一次代码提交引入了错误">git bisect 查找哪一次代码提交引入了错误</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                
+                <p>Git相关,常用Git命令&hellip;</p>
+<h3 id="ssh">SSH</h3>
+<pre><code>1. 生成SSH秘钥，秘钥名字最好便于识别，例如用自己的名字,[keyname]=name
+    ssh-keygen -f ~/.ssh/[keyname]
+2. 查看公钥信息
+    cat ~/.ssh/[keyname].pub
+3. 将公钥信息粘贴到gerrit上，打开gerrit点击右上角的登录，使用员工账号与密码登录，登录后点击gerrit右上角用户名，点击弹出框左下的Settings,选择左侧的SSH Public Keys，将公钥信息粘贴进去点击Add。
+4. 将私钥加到ssh-agent
+    ssh-agent bash
+    ssh-add ~/.ssh/[keyname]
+5. 配置git
+    git config --global user.name [fullname] 这个名字建议写全名
+    git config --global user.email [email]  这个email填写你的邮箱
+    git config --global color.ui true
+    git config --global gui.encoding utf-8
+
+</code></pre><h3 id="设置git全局设置">设置git全局设置：</h3>
+<pre><code>git config --global user.name &quot;your_name&quot; 
+git config --global user.email  &quot;your_email&quot;
+</code></pre><h3 id="需要取消git的全局设置">需要取消git的全局设置:</h3>
+<pre><code>git config --global --unset user.name
+git config --global --unset user.email
+</code></pre><h3 id="针对每个项目单独设置用户名和邮箱设置方法如下">针对每个项目，单独设置用户名和邮箱，设置方法如下：</h3>
+<pre><code>git config user.name &quot;your_name&quot; 
+git config user.email &quot;your_email&quot;
+</code></pre><h3 id="测试连接">测试连接</h3>
+<pre><code>ssh -T git@github.com
+ssh -T git@192.168.1.2
+</code></pre><h3 id="gitignore无效的解决方法">.gitignore无效的解决方法</h3>
+<p>在项目文件夹下打开git bash，执行</p>
+<pre><code>git rm -r --cached .DS_Store 这句代码的意思就是解除跟踪DS_Store，清缓存
+// git rm -r --cached . 解除跟踪所有文件
+git add .
+git commit -m 'update .gitignore'
+</code></pre><h3 id="init">init</h3>
+<pre><code>git init
+git add .
+git commit -m &quot;init&quot;
+</code></pre><h3 id="init后传至git仓库">init后传至git仓库</h3>
+<pre><code>git remote add origin git@github.com:wmszhe/PythonTools.git
+git push -u origin master
+</code></pre><h3 id="日志">日志</h3>
+<h5 id="1查询日志">1.查询日志</h5>
+<pre><code>git log
+</code></pre><h5 id="2查指定文件的提交日志">2.查指定文件的提交日志</h5>
+<pre><code>1. 查看日志记录
+git log --pretty=oneline .gitignore
+
+2. 使用git show查看具体日志 --&gt; git show &lt;git提交版本号&gt; &lt;文件名&gt;
+git show 03bb009eb06b16c62155206b0e5724b532820efd .gitignore
+</code></pre><h5 id="3查询某个人的提交日志">3.查询某个人的提交日志</h5>
+<pre><code>git log --author=&quot;author&quot;
+</code></pre><h3 id="clone">clone</h3>
+<pre><code>git clone https://github.com/CharonChui/AndroidNote.git __AndroidNote(自定义的文件夹名)
+git clone ssh://zhe.wang@192.168.0.119:29418/adclient -b gte
+</code></pre><h3 id="clone---depth">clone &ndash;depth</h3>
+<p>指定克隆深度,为1即表示只克隆最近一次commit.</p>
+<pre><code>git clone xxx --depth 1
+</code></pre><p>如果我们之后要把之前的历史重新再 pull 下来</p>
+<pre><code>// 将浅克隆转换为完整克隆
+git pull --unshallow
+git fetch --unshallow
+</code></pre><h3 id="安装hook目的是在提交信息中自动创建-change-id-标签">安装hook,目的是在提交信息中自动创建 &lsquo;Change-Id:&rsquo; 标签</h3>
+<pre><code>cd adclient
+scp -p -P 29418 zhe.wang@192.168.0.119:hooks/commit-msg .git/hooks/
+</code></pre><h3 id="远程仓库">远程仓库</h3>
+<blockquote>
+<ol>
+<li>通过终端修改</li>
+</ol>
+</blockquote>
+<h4 id="查看远程仓库地址">查看远程仓库地址</h4>
+<pre><code>git remote -v
+</code></pre><h4 id="修改远程仓库地址">修改远程仓库地址</h4>
+<pre><code>git remote set-url origin git@github.com/xxx.git
+</code></pre><blockquote>
+<ol start="2">
+<li>修改项目下.git/config文件</li>
+</ol>
+</blockquote>
+<pre><code>[remote &quot;origin&quot;]
+	# url = git@xxx
+	url = git@github.com:xxx.git
+</code></pre><h3 id="查看分支">查看分支</h3>
+<pre><code>git branch 
+git branch -a
+</code></pre><h3 id="切换分支">切换分支</h3>
+<pre><code>//本地无分支，加 -b ,相当于 git branch sdpost_dev ，git checkout sdpost_dev
+git checkout -b sdpost_dev
+//本地已有分支，直接切换
+git checkout sdpost_dev
+//checkout远端分支
+git checkout -b develop origin/develop
+</code></pre><h3 id="从某个版本代码拉取新的分支">从某个版本代码拉取新的分支</h3>
+<pre><code>git checkout -b newbranchname xxxxx(commit id)
+</code></pre><h3 id="创建一个没有历史记录的新分支">创建一个没有历史记录的新分支</h3>
+<pre><code>git checkout --orphan new_dev
+git add .
+git commit -m &quot;first commit&quot;
+// 发布到远端分支
+git push origin new_dev:new_dev
+</code></pre><h3 id="修改分支名称">修改分支名称</h3>
+<p>本地分支</p>
+<pre><code>git branch -m oldbranchname newbranchname
+</code></pre><p>远程分支</p>
+<pre><code>将本地分支重命名为新分支名称，然后删除远程分支，再把本地分支上传
+</code></pre><h3 id="把新建的本地分支push到远程服务器远程分支与本地分支同名当然可以随意起名">把新建的本地分支push到远程服务器，远程分支与本地分支同名（当然可以随意起名）</h3>
+<pre><code>git push origin wz-jr:wz-jr
+</code></pre><pre><code>// 创建远端分支的另一种方式
+git checkout -b my-test  //在当前分支下创建my-test的本地分支分支
+git push origin my-test  //将my-test分支推送到远程
+git branch --set-upstream-to=origin/my-test //将本地分支my-test关联到远程分支my-test上   
+git branch -a //查看远程分支 
+</code></pre><h3 id="push所有分支">push所有分支</h3>
+<pre><code>git push --all origin
+</code></pre><h3 id="更新分支信息">更新分支信息</h3>
+<blockquote>
+<p>远程版本库创建了一个分支后,本地创建远程追踪分支</p>
+</blockquote>
+<pre><code>git remote update
+</code></pre><blockquote>
+<p>在远程版本库上删除了某一分支,删除本地版本库上那些失效的远程追踪分支</p>
+</blockquote>
+<p>方法一：</p>
+<pre><code>// -p, --prune    prune remotes after fetching
+git remote update -p
+</code></pre><p>方法二：</p>
+<pre><code>// 查看哪些分支需要清理
+git remote prune origin --dry-run
+// 清理
+git remote prune
+</code></pre><blockquote>
+<p>本地分支作为下游存在的话，还需要手动清理</p>
+</blockquote>
+<pre><code>git branch -d xx
+</code></pre><h3 id="删除分支">删除分支</h3>
+<pre><code>git branch -d gte
+git branch -D gte(强制删除)
+</code></pre><h3 id="删除远程分支">删除远程分支</h3>
+<pre><code>git push origin --delete 分支名
+</code></pre><h3 id="恢复删除的分支">恢复删除的分支</h3>
+<pre><code>git reflog(找到想要恢复的分支的散列值)
+git branch local-test HEAD@{2}
+</code></pre><h3 id="查看tag">查看tag</h3>
+<pre><code>git tag
+</code></pre><h3 id="查看tag详细信息">查看tag详细信息</h3>
+<pre><code>git show v1.0
+</code></pre><h3 id="添加tag">添加tag</h3>
+<pre><code>git tag v1.0
+</code></pre><h3 id="添加带备注的tag">添加带备注的tag</h3>
+<pre><code>git tag -a v1.0 -m &quot;v1.0&quot;
+</code></pre><h3 id="给指定的某个commit号加tag">给指定的某个commit号加tag</h3>
+<pre><code>git tag -a v1.0 9fceb02 -m &quot;v1.0&quot;
+</code></pre><h3 id="将tag同步到远程服务器">将tag同步到远程服务器</h3>
+<pre><code>git push origin v1.0
+git push origin --tags //推送所有tag
+</code></pre><h3 id="切换tag">切换tag</h3>
+<pre><code>git checkout v1.0
+</code></pre><h3 id="获取远程版本">获取远程版本</h3>
+<pre><code>git fetch origin tag V1.0
+</code></pre><h3 id="删除本地tag">删除本地tag</h3>
+<pre><code>git tag -d v1.0
+</code></pre><h3 id="删除远端tag">删除远端tag</h3>
+<blockquote>
+<p>推送的空的同名版本到线下,达到删除线上版本的目标</p>
+</blockquote>
+<pre><code>git tag push origin :refs/tags/v1.0
+</code></pre><h3 id="查看状态">查看状态</h3>
+<pre><code>git status
+</code></pre><h3 id="commit">commit</h3>
+<pre><code>//直接填写提交日志
+git commit -m 'commit log'
+</code></pre><h3 id="修改commit">修改commit</h3>
+<pre><code>git commit --amend
+</code></pre><h3 id="pull">pull</h3>
+<pre><code>git pull origin master
+</code></pre><h5 id="pull-错误-you-asked-to-pull-from-the-remote-origin-but-did-not-specify-a-branch-because-this-is-not-the-default-configured-remote-for-your-current-branch-you-must-specify-a-branch-on-the-command-line">pull 错误 “You asked to pull from the remote &lsquo;origin&rsquo;, but did not specify a branch. Because this is not the default configured remote for your current branch, you must specify a branch on the command line.”</h5>
+<blockquote>
+<p>参考：<a href="https://blog.csdn.net/forever_wind/article/details/37506389">Git远程分支和refs文件详解
+</a>
+问题在于没有给当前分支配置merge的路径，git不知道去merge哪个分支。</p>
+</blockquote>
+<p>我们修改配置文件(.git/config)加入</p>
+<pre><code>[branch &quot;wz-jr2&quot;]
+	remote = origin
+	merge = refs/heads/wz-jr2
+</code></pre><p>这意味着每次fetch origin的时候更新所有remotes/origin的头指针到refs/heads/下面</p>
+<h3 id="push">push</h3>
+<pre><code>git push origin master
+git push origin HEAD:refs/for/gte
+//可提交到指定位置
+git push //192.168.0.119/LocalShare/pengbo/adclient develop-post:develop-post
+</code></pre><h3 id="回退git">回退git</h3>
+<pre><code>// !!! Windows下CMD中^是特殊字符，要使用时必须用双引号包括 (git reset &lt;--soft||--mixed||--hard&gt; HEAD&quot;^&quot;)
+// !!! 或者 git reset &lt;--soft||--mixed||--hard&gt; HEAD~1
+git reset &lt;--soft||--mixed||--hard&gt; HEAD^ (回退到上一个版本) (HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100)
+git reset &lt;--soft||--mixed||--hard&gt; xxxxxxxx (回退到指定版本)
+</code></pre><h3 id="远程版本回退">远程版本回退</h3>
+<pre><code>git push origin HEAD --force #远程提交回退
+</code></pre><h3 id="git回退到某一历史版本后再恢复到之前版本">git回退到某一历史版本后再恢复到之前版本</h3>
+<pre><code>git reset --hard xxx
+git reflog (git log -g)
+git reset --hard xxx
+</code></pre><h3 id="your-branch-is-behind-originwz-jr-by-1-commit-and-can-be-fast-forwarded">Your branch is behind &lsquo;origin/wz-jr&rsquo; by 1 commit, and can be fast-forwarded.</h3>
+<pre><code>is behind表示落后远程版本了，并且可以fast forwarded快速合并
+使用git push origin wz-jr --force强制将代码推到服务器，--force使服务器不会拒绝这个更低版本的commit
+</code></pre><h3 id="撤销修改">撤销修改</h3>
+<pre><code>git checkout -- file (命令git checkout -- file意思就是，把文件在工作区的修改全部撤销，这里有两种情况：一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。总之，就是让这个文件回到最近一次git commit或git add时的状态。)
+git reset HEAD file (把暂存区的修改撤销掉（unstage），重新放回工作区)
+</code></pre><h3 id="回退指定文件到指定版本">回退指定文件到指定版本</h3>
+<pre><code>git log /e/dev/adclient/app/src/main/AndroidManifest.xml
+git reset a28887c24ed89938de7f769eb18b2555de790668 /e/dev/adclient/app/src/main/AndroidManifest.xml
+git checkout -- /e/dev/adclient/app/src/main/AndroidManifest.xml
+</code></pre><h3 id="重新提交-amend">重新提交 amend</h3>
+<pre><code>git add .
+git commit --amend( --no-edit)
+// git push origin gte
+// git push origin HEAD:refs/for/gte
+// 如果已经push到git仓库,amend后直接push会生成新的记录，需要--force-with-lease
+git push --force-with-lease origin master(安全的强制推送)
+</code></pre><h3 id="暂存恢复-stash">暂存/恢复 stash</h3>
+<pre><code>git stash(暂存)
+git stash save &quot;&quot; (暂存)
+git stash pop(apply last stash and remove it from the list)
+git stash list()
+git stash pop stash@{1}(取出指定的暂存,取出后会将对应的stash id 从stash list里删除)
+git stash apply stash@{1}(取出指定的暂存，取出后会继续保存stash id)
+git stash drop stash@{1}(删除指定的暂存)
+git stash clear(将栈清空)
+</code></pre><h3 id="cherry-pick">cherry-pick</h3>
+<pre><code>// 将另一个分支上的一个提交合并到本分支
+git cherry-pick xxxx(commit id)
+
+// 合并多条
+// ==注意，不包含xxx1==
+git cherry-pick xxx1..xxx10
+// ==包含xxx1==
+git cherry-pick xxx1^..xxx10
+
+// 继续合并 || 取消合并
+git cherry-pick --continue || --abort
+</code></pre><h3 id="revert">revert</h3>
+<pre><code>git revert xxx
+git commit
+// git push origin gte
+git push origin HEAD:refs/for/sdpost_dev
+</code></pre><h3 id="fetchrebase">fetch/rebase</h3>
+<pre><code>首先用git fetch返回服务器上的代码
+用git rebase合并
+    &gt; 合并冲突
+    &gt; git add .
+    &gt; 用git rebase --continue继续没完成的合并
+    &gt; 重新提交git commit --amend
+最后就可以用git push更新到服务器上去。
+</code></pre><pre><code>git pull --rebase origin develop-post(git pull --rebase = git fetch + git rebase)
+</code></pre><h3 id="取消本次rebase">取消本次rebase</h3>
+<pre><code>git rebase --abort
+</code></pre><h3 id="git-bisect-查找哪一次代码提交引入了错误">git bisect 查找哪一次代码提交引入了错误</h3>
+<blockquote>
+<p>参考：<a href="http://www.ruanyifeng.com/blog/2018/12/git-bisect.html">git bisect 命令教程</a></p>
+</blockquote>
+<blockquote>
+<p>它的原理很简单，就是将代码提交的历史，按照两分法不断缩小定位。所谓&quot;两分法&quot;，就是将代码历史一分为二，确定问题出在前半部分，还是后半部分，不断执行这个过程，直到范围缩小到某一次代码提交。</p>
+</blockquote>
+<pre><code>// &quot;终点&quot;是最近的提交，&quot;起点&quot;是更久以前的提交
+git bisect start [终点] [起点]
+
+eg:
+git bisect start 100 1
+
+执行上面的命令以后，代码库就会切换到这段范围正当中的那一次提交，即50
+
+如果没有问题，那么1-50之间是正常的，执行
+git bisect good
+
+那么Git就自动切换到后半段的中点，即50-100，即75
+
+如果出现问题，那么50-75之间有问题，执行
+git bisect bad
+
+Git就自动切换到第50次到第75次的中点（第63次提交）
+
+重复执行上述操作，直到成功找到出问题的那一次提交为止，Git 会给出如下的提示
+
+xxx is the first bad commit
+
+查出问题后，执行
+git bisect reset
+
+退出查错
+
+现在就可以开始修复错误了。
+</code></pre>
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/hello-everyone/" data-toggle="tooltip" data-placement="top" title="Hello EveryOne">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/post/flutter-desktop/" data-toggle="tooltip" data-placement="top" title="FLutter编译桌面端app">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+<div id="disqus-comment"></div>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84" title="数据结构">
+                            数据结构
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E7%AE%97%E6%B3%95" title="算法">
+                            算法
+                        </a>
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                    
+
+                    
+                    
+                    
+
+                    
+
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; wmszhe 2021
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="wmszhe">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://blog.weandri.com//img/home-bg.jpg">
+    <meta property="twitter:image" content="https://blog.weandri.com//img/home-bg.jpg" />
+    
+
+    
+    <meta name="title" content="FlutterUI相关" />
+    <meta property="og:title" content="FlutterUI相关" />
+    <meta property="twitter:title" content="FlutterUI相关" />
+    
+
+    
+    <meta name="description" content="Hello EveryOne 😘">
+    <meta property="og:description" content="Hello EveryOne 😘" />
+    <meta property="twitter:description" content="Hello EveryOne 😘" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>FlutterUI相关-Blog</title>
+
+    <link rel="canonical" href="/post/flutter-ui/">
+
+    <link rel="stylesheet" href="/css/iDisqus.min.css"/>
+
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">wmszhe</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/%E5%BD%92%E6%A1%A3">归档</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/top/books/">BOOKS</a></li>
+                    
+                        <li><a href="/top/about/">ABOUT</a></li>
+                    
+
+                    
+		    <li>
+                        <a href="/search">SEARCH <img src="/img/search.png" height="15" style="cursor: pointer;" alt="Search"></a>
+		    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1>FlutterUI相关</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 
+                        
+                                wmszhe
+                         
+                        on 
+                        Wednesday, June 19, 2019
+                        
+                        
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <header>
+                    <h2>TOC</h2>
+                </header>
+                <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#屏幕尺寸通过window相关方法获取">屏幕尺寸通过window相关方法获取</a></li>
+        <li><a href="#屏幕尺寸通过mediaquery相关方法获取">屏幕尺寸通过MediaQuery相关方法获取</a></li>
+        <li><a href="#widget大小和位置">Widget大小和位置</a></li>
+        <li><a href="#软键盘相关">软键盘相关</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                
+                <p>获取屏幕尺寸，widget尺寸和位置</p>
+<h3 id="屏幕尺寸通过window相关方法获取">屏幕尺寸通过window相关方法获取</h3>
+<h5 id="屏幕尺寸物理像素-px">屏幕尺寸（物理像素 px）</h5>
+<pre><code>window.physicalSize -&gt; Size(960.0, 720.0)
+</code></pre><h5 id="屏幕密度">屏幕密度</h5>
+<pre><code>window.devicePixelRatio -&gt; 2.0
+</code></pre><h3 id="屏幕尺寸通过mediaquery相关方法获取">屏幕尺寸通过MediaQuery相关方法获取</h3>
+<blockquote>
+<p>MediaQuery最终还是调用的window方法</p>
+</blockquote>
+<h5 id="屏幕尺寸逻辑像素-dp">屏幕尺寸（逻辑像素 dp）</h5>
+<blockquote>
+<p>MediaQuery.of(context).size获取的是逻辑像素，物理像素/屏幕密度</p>
+</blockquote>
+<p>
+  <img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560934244332.png" alt="">
+
+</p>
+<pre><code>MediaQuery.of(context).size -&gt; Size(480.0, 360.0)
+</code></pre><h5 id="屏幕密度-1">屏幕密度</h5>
+<pre><code>MediaQuery.of(context).devicePixelRatio -&gt; 2.0
+</code></pre><h5 id="横竖屏">横竖屏</h5>
+<blockquote>
+<p>横竖屏是根据宽高判断的</p>
+</blockquote>
+<p>
+  <img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560934253781.png" alt="">
+
+</p>
+<p>
+  <img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560934262800.png" alt="">
+
+</p>
+<pre><code>MediaQuery.of(context).orientation -&gt; Orientation.landscape
+</code></pre><h3 id="widget大小和位置">Widget大小和位置</h3>
+<h4 id="可以通过globalkey获取">可以通过GlobalKey获取</h4>
+<blockquote>
+<p>参考：<a href="https://medium.com/@diegoveloper/flutter-widget-size-and-position-b0a9ffed9407">Flutter : Widget Size and Position</a></p>
+</blockquote>
+<blockquote>
+<p>需要对每个widget创建一个GlobalKey</p>
+</blockquote>
+<pre><code>GlobalKey _keyRed = GlobalKey();
+</code></pre><pre><code>key: _keyRed,
+</code></pre><pre><code>RenderBox findRenderObject = _keyRed.currentContext.findRenderObject();
+var offset = findRenderObject.localToGlobal(Offset.zero);
+print(&quot;---icon offset : $offset&quot;);
+
+var size = _keyRed.currentContext.size;
+print(&quot;---icon size : $size&quot;);
+</code></pre><h4 id="从context对象中获取">从context对象中获取</h4>
+<h5 id="自定义widget时可以从build方法中的context中获取">自定义Widget时，可以从build方法中的context中获取</h5>
+<pre><code>class CustomIcon extends Icon {
+  CustomIcon(IconData icon) : super(icon);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: Icon(icon),
+      onTap: () {
+        RenderBox findRenderObject = context.findRenderObject();
+        var offset = findRenderObject.localToGlobal(Offset.zero);
+        print(&quot;icon offset : $offset&quot;);
+
+        var size = context.size;
+        print(&quot;icon size : $size&quot;);
+      },
+    );
+  }
+}
+</code></pre><h5 id="直接使用系统widget时使用layoutbuilderlayoutbuilder提供了build方法中含有context对象">直接使用系统widget时，使用LayoutBuilder，LayoutBuilder提供了build方法中含有context对象</h5>
+<pre><code>class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Row(
+        children: &lt;Widget&gt;[
+          LayoutBuilder(
+            builder: (context, constraints) {
+              return GestureDetector(
+                child: MyIcon(Icons.dashboard),
+                onTap: (){
+                  RenderBox findRenderObject = context.findRenderObject();
+                  var offset = findRenderObject.localToGlobal(Offset.zero);
+                  print(&quot;---icon offset : $offset&quot;);
+
+                  var size = context.size;
+                  print(&quot;---icon size : $size&quot;);
+                },
+              );
+            },
+          ),
+          MyIcon(Icons.ac_unit),
+        ],
+      ),
+    );
+  }
+}
+</code></pre><h4 id="在widget-build完成之后执行操作">在widget build完成之后，执行操作</h4>
+<blockquote>
+<p>在return一个widget之前，context为null，如果想要在build之后，立即获取一些属性，可以使用WidgetsBinding.instance.addPostFrameCallback((_) =&gt; afterBuild(context));</p>
+</blockquote>
+<pre><code>class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Row(
+        children: &lt;Widget&gt;[
+          LayoutBuilder(
+            builder: (context, constraints) {
+              WidgetsBinding.instance.addPostFrameCallback((_) =&gt; afterBuild(context));
+              return Container(
+                child: MyIcon(Icons.dashboard),
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  afterBuild(BuildContext context) {
+    RenderBox findRenderObject = context.findRenderObject();
+    var offset = findRenderObject.localToGlobal(Offset.zero);
+    print(&quot;---icon offset : $offset&quot;);
+
+    var size = context.size;
+    print(&quot;---icon size : $size&quot;);
+  }
+}
+</code></pre><h3 id="软键盘相关">软键盘相关</h3>
+<h4 id="显示隐藏软键盘">显示隐藏软键盘</h4>
+<ol>
+<li>通过焦点方式</li>
+</ol>
+<pre><code>// 隐藏
+FocusScope.of(context).requestFocus(FocusNode())
+// 显示
+FocusScope.of(context).autofocus(_focusNode)
+</code></pre><ol start="2">
+<li>通过channel方式</li>
+</ol>
+<pre><code>// 显示
+SystemChannels.textInput.invokeMethod('TextInput.show');
+// 隐藏
+SystemChannels.textInput.invokeMethod('TextInput.hide');
+</code></pre>
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/flutter-desktop/" data-toggle="tooltip" data-placement="top" title="FLutter编译桌面端app">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/post/dart-features/" data-toggle="tooltip" data-placement="top" title="Dart一些特殊的特性">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+<div id="disqus-comment"></div>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84" title="数据结构">
+                            数据结构
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E7%AE%97%E6%B3%95" title="算法">
+                            算法
+                        </a>
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                    
+
+                    
+                    
+                    
+
+                    
+
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; wmszhe 2021
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+</body>
+</html>
