@@ -2,54 +2,54 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>算法 on wmszhe</title>
-    <link>https://blog.weandri.com/tags/%E7%AE%97%E6%B3%95/</link>
+    <link>https://blog.wmszhe.com/tags/%E7%AE%97%E6%B3%95/</link>
     <description>Recent content in 算法 on wmszhe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 16 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.weandri.com/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wmszhe.com/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>洗牌算法</title>
-      <link>https://blog.weandri.com/post/2019-07-16-shuffle-algorithm/</link>
+      <link>https://blog.wmszhe.com/post/2019-07-16-shuffle-algorithm/</link>
       <pubDate>Tue, 16 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.weandri.com/post/2019-07-16-shuffle-algorithm/</guid>
+      <guid>https://blog.wmszhe.com/post/2019-07-16-shuffle-algorithm/</guid>
       <description>&lt;p&gt;最近在知乎看到了一个关于洗牌算法，学习一下，记录下。&lt;/p&gt;
 &lt;p&gt;源地址：&lt;a href=&#34;https://www.zhihu.com/question/26934313/answer/743798587&#34;&gt;知乎：有哪些算法惊艳到了你?&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>数据结构和算法</title>
-      <link>https://blog.weandri.com/post/2019-07-04-data-structures-and-algorithm/</link>
+      <link>https://blog.wmszhe.com/post/2019-07-04-data-structures-and-algorithm/</link>
       <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.weandri.com/post/2019-07-04-data-structures-and-algorithm/</guid>
+      <guid>https://blog.wmszhe.com/post/2019-07-04-data-structures-and-algorithm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>查找算法</title>
-      <link>https://blog.weandri.com/post/2019-07-04-search-algorithm/</link>
+      <link>https://blog.wmszhe.com/post/2019-07-04-search-algorithm/</link>
       <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.weandri.com/post/2019-07-04-search-algorithm/</guid>
+      <guid>https://blog.wmszhe.com/post/2019-07-04-search-algorithm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>算法复杂度</title>
-      <link>https://blog.weandri.com/post/2020-09-02-algorithm-complexity/</link>
+      <link>https://blog.wmszhe.com/post/2020-09-02-algorithm-complexity/</link>
       <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.weandri.com/post/2020-09-02-algorithm-complexity/</guid>
+      <guid>https://blog.wmszhe.com/post/2020-09-02-algorithm-complexity/</guid>
       <description></description>
     </item>
     
     <item>
       <title>链表LinkedList</title>
-      <link>https://blog.weandri.com/post/2019-07-04-linkedlist/</link>
+      <link>https://blog.wmszhe.com/post/2019-07-04-linkedlist/</link>
       <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.weandri.com/post/2019-07-04-linkedlist/</guid>
+      <guid>https://blog.wmszhe.com/post/2019-07-04-linkedlist/</guid>
       <description></description>
     </item>
     

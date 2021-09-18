@@ -10,8 +10,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="https://blog.weandri.com//img/home-bg.jpg">
-    <meta property="twitter:image" content="https://blog.weandri.com//img/home-bg.jpg" />
+    <meta property="og:image" content="https://blog.wmszhe.com//img/home-bg.jpg">
+    <meta property="twitter:image" content="https://blog.wmszhe.com//img/home-bg.jpg" />
     
 
     
@@ -241,7 +241,7 @@
 <p>算法的执行时间与每行代码的执行次数成正比，用T(n) = O(f(n))表示，其中T(n)表示算法执行总时间，f(n)表示每行代码执行总次数，而n往往表示数据的规模。</p>
 </blockquote>
 <p>比如如下代码，粗略估计执行时间</p>
-<pre><code>int cal(int n) {
+<pre tabindex="0"><code>int cal(int n) {
     int sum = 0;
     int i = 1;
     for (; i &lt;= n; ++i) {
@@ -255,7 +255,7 @@
 <p><strong>所有代码的执行时间 T(n) 与每行代码的执行次数成正比</strong>。</p>
 </blockquote>
 <p>再看下这段代码</p>
-<pre><code>int cal(int n) {
+<pre tabindex="0"><code>int cal(int n) {
     int sum = 0;  // 1
     int i = 1;  // 1
     int j = 1;  // 1
@@ -295,7 +295,7 @@
 <ol start="2">
 <li>加法法则：总复杂度等于量级最大的那段代码的复杂度</li>
 </ol>
-<pre><code>int cal(int n) {
+<pre tabindex="0"><code>int cal(int n) {
     int sum_1 = 0;
     int p = 1;
     for (; p &lt; 100; ++p) {
@@ -333,7 +333,7 @@
 <blockquote>
 <p>如果 T1(n)=O(f(n))，T2(n)=O(g(n))；那么 T(n)=T1(n)*T2(n)=O(f(n))*O(g(n))=O(f(n)*g(n)).</p>
 </blockquote>
-<pre><code>int cal(int n) {
+<pre tabindex="0"><code>int cal(int n) {
     int ret = 0;
     int i = 1;
     for (; i &lt; n; ++i) {
@@ -366,7 +366,7 @@ int f(int n) {
 <li>O(1)</li>
 </ol>
 <p>首先你必须明确一个概念，O(1) 只是常量级时间复杂度的一种表示方法，并不是指只执行了一行代码。比如这段代码，即便有 3 行，它的时间复杂度也是 O(1），而不是 O(3)。</p>
-<pre><code>int i = 8;
+<pre tabindex="0"><code>int i = 8;
 int j = 6;
 int sum = i + j;
 </code></pre><p>稍微总结一下，只要代码的执行时间不随 n 的增大而增长，这样代码的时间复杂度我们都记作 O(1)。或者说，</p>
@@ -379,7 +379,7 @@ int sum = i + j;
 <li>O(logn)、O(nlogn)</li>
 </ol>
 <p>对数阶时间复杂度非常常见，同时也是最难分析的一种时间复杂度</p>
-<pre><code>i = 1;
+<pre tabindex="0"><code>i = 1;
 while (i &lt;= n) {
     i = i * 2;
 }
@@ -388,7 +388,7 @@ while (i &lt;= n) {
 <p>2^0 2^1 2^2 &hellip; (2^x=n)</p>
 </blockquote>
 <p>所以，我们只要知道 x 值是多少，就知道这行代码执行的次数了。通过 2^x=n 求解x=log<!-- raw HTML omitted -->2<!-- raw HTML omitted -->n，所以，这段代码的时间复杂度就是 O(log<!-- raw HTML omitted -->2<!-- raw HTML omitted -->n)</p>
-<pre><code>i = 1;
+<pre tabindex="0"><code>i = 1;
 while (i &lt;= n)  {
     i = i * 3;
 }
@@ -408,7 +408,7 @@ while (i &lt;= n)  {
 <li>O(m+n)、O(m*n)</li>
 </ol>
 <p>不一样的时间复杂度，代码的复杂度<strong>由两个数据的规模</strong>来决定。</p>
-<pre><code>int cal(int m, int n) {
+<pre tabindex="0"><code>int cal(int m, int n) {
     int sum_1 = 0;
     int i = 1;
     for (; i &lt; m; ++i) {
@@ -465,7 +465,7 @@ while (i &lt;= n)  {
 </li>
 </ul>
 <h4 id="最好最坏情况时间复杂度">最好、最坏情况时间复杂度</h4>
-<pre><code>// n 表示数组 array 的长度
+<pre tabindex="0"><code>// n 表示数组 array 的长度
 int find(int[] array, int n, int x) {
   int i = 0;
   int pos = -1;
@@ -494,7 +494,7 @@ int find(int[] array, int n, int x) {
 </p>
 <p>==<strong>即，时间复杂度为O(n)</strong>==</p>
 <h4 id="均摊时间复杂度">均摊时间复杂度</h4>
-<pre><code>// array 表示一个长度为 n 的数组
+<pre tabindex="0"><code>// array 表示一个长度为 n 的数组
 // 代码中的 array.length 就等于 n
 int[] array = new int[n];
 int count = 0;
@@ -529,7 +529,7 @@ void insert(int val) {
 <p>空间复杂度全称就是<strong>渐进空间复杂度（asymptotic space complexity,表示算法的存储空间与数据规模之间的增长关系</strong></p>
 </blockquote>
 <h3 id="空间复杂度分析">空间复杂度分析</h3>
-<pre><code>void print(int n) {
+<pre tabindex="0"><code>void print(int n) {
   int i = 0;
   int[] a = new int[n];
   for (i; i &lt;n; ++i) {
@@ -566,7 +566,7 @@ void insert(int val) {
 
 </p>
 <h2 id="demo">Demo</h2>
-<pre><code>// 全局变量，大小为 10 的数组 array，长度 len，下标 i。
+<pre tabindex="0"><code>// 全局变量，大小为 10 的数组 array，长度 len，下标 i。
 int array[] = new int[10]; 
 int len = 10;
 int i = 0;

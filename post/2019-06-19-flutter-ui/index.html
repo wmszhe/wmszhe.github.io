@@ -10,8 +10,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="https://blog.weandri.com//img/home-bg.jpg">
-    <meta property="twitter:image" content="https://blog.weandri.com//img/home-bg.jpg" />
+    <meta property="og:image" content="https://blog.wmszhe.com//img/home-bg.jpg">
+    <meta property="twitter:image" content="https://blog.wmszhe.com//img/home-bg.jpg" />
     
 
     
@@ -210,9 +210,9 @@
                 <p>获取屏幕尺寸，widget尺寸和位置</p>
 <h3 id="屏幕尺寸通过window相关方法获取">屏幕尺寸通过window相关方法获取</h3>
 <h5 id="屏幕尺寸物理像素-px">屏幕尺寸（物理像素 px）</h5>
-<pre><code>window.physicalSize -&gt; Size(960.0, 720.0)
+<pre tabindex="0"><code>window.physicalSize -&gt; Size(960.0, 720.0)
 </code></pre><h5 id="屏幕密度">屏幕密度</h5>
-<pre><code>window.devicePixelRatio -&gt; 2.0
+<pre tabindex="0"><code>window.devicePixelRatio -&gt; 2.0
 </code></pre><h3 id="屏幕尺寸通过mediaquery相关方法获取">屏幕尺寸通过MediaQuery相关方法获取</h3>
 <blockquote>
 <p>MediaQuery最终还是调用的window方法</p>
@@ -225,9 +225,9 @@
   <img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560934244332.png" alt="">
 
 </p>
-<pre><code>MediaQuery.of(context).size -&gt; Size(480.0, 360.0)
+<pre tabindex="0"><code>MediaQuery.of(context).size -&gt; Size(480.0, 360.0)
 </code></pre><h5 id="屏幕密度-1">屏幕密度</h5>
-<pre><code>MediaQuery.of(context).devicePixelRatio -&gt; 2.0
+<pre tabindex="0"><code>MediaQuery.of(context).devicePixelRatio -&gt; 2.0
 </code></pre><h5 id="横竖屏">横竖屏</h5>
 <blockquote>
 <p>横竖屏是根据宽高判断的</p>
@@ -240,7 +240,7 @@
   <img src="https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/1560934262800.png" alt="">
 
 </p>
-<pre><code>MediaQuery.of(context).orientation -&gt; Orientation.landscape
+<pre tabindex="0"><code>MediaQuery.of(context).orientation -&gt; Orientation.landscape
 </code></pre><h3 id="widget大小和位置">Widget大小和位置</h3>
 <h4 id="可以通过globalkey获取">可以通过GlobalKey获取</h4>
 <blockquote>
@@ -249,9 +249,9 @@
 <blockquote>
 <p>需要对每个widget创建一个GlobalKey</p>
 </blockquote>
-<pre><code>GlobalKey _keyRed = GlobalKey();
-</code></pre><pre><code>key: _keyRed,
-</code></pre><pre><code>RenderBox findRenderObject = _keyRed.currentContext.findRenderObject();
+<pre tabindex="0"><code>GlobalKey _keyRed = GlobalKey();
+</code></pre><pre tabindex="0"><code>key: _keyRed,
+</code></pre><pre tabindex="0"><code>RenderBox findRenderObject = _keyRed.currentContext.findRenderObject();
 var offset = findRenderObject.localToGlobal(Offset.zero);
 print(&quot;---icon offset : $offset&quot;);
 
@@ -259,7 +259,7 @@ var size = _keyRed.currentContext.size;
 print(&quot;---icon size : $size&quot;);
 </code></pre><h4 id="从context对象中获取">从context对象中获取</h4>
 <h5 id="自定义widget时可以从build方法中的context中获取">自定义Widget时，可以从build方法中的context中获取</h5>
-<pre><code>class CustomIcon extends Icon {
+<pre tabindex="0"><code>class CustomIcon extends Icon {
   CustomIcon(IconData icon) : super(icon);
 
   @override
@@ -278,7 +278,7 @@ print(&quot;---icon size : $size&quot;);
   }
 }
 </code></pre><h5 id="直接使用系统widget时使用layoutbuilderlayoutbuilder提供了build方法中含有context对象">直接使用系统widget时，使用LayoutBuilder，LayoutBuilder提供了build方法中含有context对象</h5>
-<pre><code>class HomePage extends StatelessWidget {
+<pre tabindex="0"><code>class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -309,7 +309,7 @@ print(&quot;---icon size : $size&quot;);
 <blockquote>
 <p>在return一个widget之前，context为null，如果想要在build之后，立即获取一些属性，可以使用WidgetsBinding.instance.addPostFrameCallback((_) =&gt; afterBuild(context));</p>
 </blockquote>
-<pre><code>class HomePage extends StatelessWidget {
+<pre tabindex="0"><code>class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -342,14 +342,14 @@ print(&quot;---icon size : $size&quot;);
 <ol>
 <li>通过焦点方式</li>
 </ol>
-<pre><code>// 隐藏
+<pre tabindex="0"><code>// 隐藏
 FocusScope.of(context).requestFocus(FocusNode())
 // 显示
 FocusScope.of(context).autofocus(_focusNode)
 </code></pre><ol start="2">
 <li>通过channel方式</li>
 </ol>
-<pre><code>// 显示
+<pre tabindex="0"><code>// 显示
 SystemChannels.textInput.invokeMethod('TextInput.show');
 // 隐藏
 SystemChannels.textInput.invokeMethod('TextInput.hide');

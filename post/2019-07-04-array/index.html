@@ -10,8 +10,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="https://blog.weandri.com//img/home-bg.jpg">
-    <meta property="twitter:image" content="https://blog.weandri.com//img/home-bg.jpg" />
+    <meta property="og:image" content="https://blog.wmszhe.com//img/home-bg.jpg">
+    <meta property="twitter:image" content="https://blog.wmszhe.com//img/home-bg.jpg" />
     
 
     
@@ -233,12 +233,12 @@
 <blockquote>
 <p>一维数组内存寻址：</p>
 </blockquote>
-<pre><code>a[i]_address = base_address + i * data_type_size
+<pre tabindex="0"><code>a[i]_address = base_address + i * data_type_size
 </code></pre><blockquote>
 <p>二维数组内存寻址：</p>
 </blockquote>
 <p>对于 m * n 的数组，a [i][ j ] (i &lt; m,j &lt; n)的地址为：</p>
-<pre><code>address = base_address + ( i * n + j) * type_size
+<pre tabindex="0"><code>address = base_address + ( i * n + j) * type_size
 </code></pre><p>==<strong>数组是适合查找操作，但是查找的时间复杂度并不为 O(1)。即便是排好序的数组，用二分查找，时间复杂度也是 O(logn)。所以，正确的表述应该是，数组支持随机访问，根据下标随机访问的时间复杂度为 O(1)。</strong>==</p>
 <h4 id="插入删除低效原因">插入删除低效原因</h4>
 <p>假设数组的长度为 n，现在，如果我们需要将一个数据插入到数组中的第 k 个位置。为了把第 k 个位置腾出来，给新来的数据，我们需要将第 k～n 这部分的元素都顺序地往后挪一位。</p>

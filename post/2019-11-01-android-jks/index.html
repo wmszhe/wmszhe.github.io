@@ -10,8 +10,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="https://blog.weandri.com//img/home-bg.jpg">
-    <meta property="twitter:image" content="https://blog.weandri.com//img/home-bg.jpg" />
+    <meta property="og:image" content="https://blog.wmszhe.com//img/home-bg.jpg">
+    <meta property="twitter:image" content="https://blog.wmszhe.com//img/home-bg.jpg" />
     
 
     
@@ -219,11 +219,11 @@
 
 </p>
 <h4 id="解决方案">解决方案：</h4>
-<pre><code>keytool -importkeystore -srckeystore srckey -destkeystore targetkey -deststoretype pkcs12
+<pre tabindex="0"><code>keytool -importkeystore -srckeystore srckey -destkeystore targetkey -deststoretype pkcs12
 </code></pre><p>==注意srckey和targetkey不能相同,否则会报如下错误==</p>
-<pre><code>keytool 错误: java.io.IOException: DerInputStream.getLength(): lengthTag=109, too big.
+<pre tabindex="0"><code>keytool 错误: java.io.IOException: DerInputStream.getLength(): lengthTag=109, too big.
 </code></pre><h4 id="eg">eg:</h4>
-<pre><code>keytool -importkeystore -srckeystore /Users/zhe/Desktop/Test.jks -destkeystore /Users/zhe/Desktop/Test_sign.jks -deststoretype PKCS12
+<pre tabindex="0"><code>keytool -importkeystore -srckeystore /Users/zhe/Desktop/Test.jks -destkeystore /Users/zhe/Desktop/Test_sign.jks -deststoretype PKCS12
 </code></pre>
 
                 

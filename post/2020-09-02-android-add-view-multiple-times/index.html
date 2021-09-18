@@ -10,8 +10,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="https://blog.weandri.com//img/home-bg.jpg">
-    <meta property="twitter:image" content="https://blog.weandri.com//img/home-bg.jpg" />
+    <meta property="og:image" content="https://blog.wmszhe.com//img/home-bg.jpg">
+    <meta property="twitter:image" content="https://blog.wmszhe.com//img/home-bg.jpg" />
     
 
     
@@ -218,7 +218,7 @@
 <p>如果要将view添加到FrameA，FrameB，调用FrameA.addView(view)，再FrameB.addView(view)时，会提示view已经有一个父View了，不能添加成功。</p>
 </blockquote>
 <p>此时，我们可以通过Class.forName，来实现这个功能</p>
-<pre><code>try {
+<pre tabindex="0"><code>try {
     // 根据view加载view的class
     Class&lt;?&gt; clazz = Class.forName(view.getClass().getName());
     // 调用带Context的构造函数
@@ -244,7 +244,7 @@ A a = new A();</p>
 <ol>
 <li>
 <p>加载无参数的类</p>
-<pre><code>try {
+<pre tabindex="0"><code>try {
     Class&lt;?&gt; clazz = Class.forName(&quot;A&quot;);
     A a = (A) clazz.newInstance();
 } catch (Exception e) {
@@ -253,7 +253,7 @@ A a = new A();</p>
 </code></pre></li>
 <li>
 <p>加载有参数的类</p>
-<pre><code>// 带context参数
+<pre tabindex="0"><code>// 带context参数
 try {
     Class&lt;?&gt; clazz = Class.forName(&quot;A&quot;);
     Constructor&lt;?&gt; constructor = clazz.getConstructor(Context.class);

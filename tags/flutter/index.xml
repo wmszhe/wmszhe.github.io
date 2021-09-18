@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Flutter on wmszhe</title>
-    <link>https://blog.weandri.com/tags/flutter/</link>
+    <link>https://blog.wmszhe.com/tags/flutter/</link>
     <description>Recent content in Flutter on wmszhe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 22 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.weandri.com/tags/flutter/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.wmszhe.com/tags/flutter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Flutter遇到的问题</title>
-      <link>https://blog.weandri.com/post/2019-08-22-flutter-qa/</link>
+      <link>https://blog.wmszhe.com/post/2019-08-22-flutter-qa/</link>
       <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.weandri.com/post/2019-08-22-flutter-qa/</guid>
+      <guid>https://blog.wmszhe.com/post/2019-08-22-flutter-qa/</guid>
       <description>&lt;p&gt;Flutter开发过程中遇到的一些问题。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Dart一些特殊的特性</title>
-      <link>https://blog.weandri.com/post/2019-06-21-dart-features/</link>
+      <link>https://blog.wmszhe.com/post/2019-06-21-dart-features/</link>
       <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.weandri.com/post/2019-06-21-dart-features/</guid>
+      <guid>https://blog.wmszhe.com/post/2019-06-21-dart-features/</guid>
       <description>&lt;p&gt;Dart一些特殊的特性，比较容易忘记和混淆的&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>FlutterUI相关</title>
-      <link>https://blog.weandri.com/post/2019-06-19-flutter-ui/</link>
+      <link>https://blog.wmszhe.com/post/2019-06-19-flutter-ui/</link>
       <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.weandri.com/post/2019-06-19-flutter-ui/</guid>
+      <guid>https://blog.wmszhe.com/post/2019-06-19-flutter-ui/</guid>
       <description>&lt;p&gt;获取屏幕尺寸，widget尺寸和位置&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>FLutter编译桌面端app</title>
-      <link>https://blog.weandri.com/post/2019-06-18-flutter-desktop/</link>
+      <link>https://blog.wmszhe.com/post/2019-06-18-flutter-desktop/</link>
       <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.weandri.com/post/2019-06-18-flutter-desktop/</guid>
+      <guid>https://blog.wmszhe.com/post/2019-06-18-flutter-desktop/</guid>
       <description>&lt;p&gt;使用&lt;a href=&#34;https://github.com/google/flutter-desktop-embedding&#34;&gt;flutter-desktop-embedding&lt;/a&gt;编译适用于macos、windows、linux桌面端的app&lt;/p&gt;</description>
     </item>
     
