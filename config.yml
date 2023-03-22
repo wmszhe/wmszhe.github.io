@@ -47,14 +47,11 @@ menu:
     - name: 玩Android
       url: https://www.wanandroid.com
       weight: 25
-    - name: 在线工具
-      url: https://www.wanandroid.com/tools
-      weight: 30
     - name: AndroidDevTools
       url: https://www.androiddevtools.cn/index.html
-      weight: 35
+      weight: 30
 
-
+# 搜索需要的
 outputs:
   home:
     - HTML
