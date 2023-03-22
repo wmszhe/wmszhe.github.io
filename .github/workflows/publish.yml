@@ -1,0 +1,31 @@
+name: publish github pages
+
+on:
+  push:
+    branches:
+      - source
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        use: actions/checkout@v3
+        with: 
+          submodules: true
+          fetch-depth: 0
+      - name: Setup Hugo
+        use: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+      - name: Build
+        run: hugo --minify
+      - name: Deploy
+        use: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          external_repository: wmszhe/wmszhe.github.io
+          publish_dir: ./public
+          publish_branch: main
+          cname: blog.wmszhe.com

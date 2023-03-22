@@ -1,0 +1,6 @@
+baseURL = "https://blog.wmszhe.com/"
+languageCode = "zh-CN"
+title = "wmszhe"
+theme = "PaperMod"
+hasCJKLanguage = true
+paginate = 10
