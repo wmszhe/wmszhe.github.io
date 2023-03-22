@@ -1,8 +1,8 @@
-baseURL = "https://blog.wmszhe.com/"
-languageCode = "zh-CN"
-title = "wmszhe"
-theme = "PaperMod"
-paginate = 10
+baseURL: "https://blog.wmszhe.com/"
+languageCode: "zh-CN"
+title: "wmszhe"
+theme: "PaperMod"
+paginate: 10
 
 # hasCJKLanguage = true
 
