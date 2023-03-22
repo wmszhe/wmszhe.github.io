@@ -1,0 +1,20 @@
+baseURL = "https://blog.wmszhe.com/"
+languageCode = "zh-CN"
+title = "wmszhe"
+theme = "PaperMod"
+paginate = 10
+
+# hasCJKLanguage = true
+
+params:
+  # 主题 ["auto", "light", "dark"]
+  defaultTheme: auto
+  # 主题切换 icon
+  disableThemeToggle: true
+
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: 路在脚下，心向远方
+
+  profileMode:
+    enabled: false
