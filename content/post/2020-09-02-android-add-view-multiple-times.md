@@ -1,5 +1,5 @@
 ---
-title:       'Android添加一个view到多个view中'
+title:       'Android添加一个view到多个view中去'
 date:        '2020-09-02'
 description: ''
 author:      ''
@@ -15,7 +15,7 @@ Java Class.forName
 
 <!--more-->
 
-### Android添加一个view到多个view中
+### Android添加一个view到多个view中去
 
 > 假如有一个view: View view = new View();
 >
