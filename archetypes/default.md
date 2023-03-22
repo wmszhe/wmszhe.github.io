@@ -2,7 +2,7 @@
 title:       '{{ .Name }}'
 date:        '{{ now.Format "2006-01-02" }}'
 description: ''
-author:      ''
+author:      'wmszhe'
 image:       ''
 tags:
     - 

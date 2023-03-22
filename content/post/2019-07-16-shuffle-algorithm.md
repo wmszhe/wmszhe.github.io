@@ -2,7 +2,7 @@
 title:       '洗牌算法'
 date:        '2019-07-16'
 description: ''
-author:      ''
+author:      'wmszhe'
 image:       ''
 tags:
     - 算法

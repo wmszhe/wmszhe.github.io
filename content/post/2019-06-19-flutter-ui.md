@@ -2,8 +2,9 @@
 title:       'FlutterUI相关'
 date:        '2019-06-19'
 description: ''
-author:      ''
-image:       'https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/flutterui-xiang-guan.png'
+author:      'wmszhe'
+cover:
+    image: 'https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/flutterui-xiang-guan.png'
 tags:
     - Flutter
 categories:

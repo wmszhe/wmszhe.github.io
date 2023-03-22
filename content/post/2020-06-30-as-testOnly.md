@@ -2,7 +2,7 @@
 title:       'AS3.0以后，debug包INSTALL_FAILED_TEST_ONLY问题'
 date:        '2020-06-30'
 description: ''
-author:      ''
+author:      'wmszhe'
 image:       ''
 tags:
    - Android

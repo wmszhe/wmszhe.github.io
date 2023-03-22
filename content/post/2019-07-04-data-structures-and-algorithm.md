@@ -2,7 +2,7 @@
 title:       '数据结构和算法'
 date:        '2019-07-04'
 description: ''
-author:      ''
+author:      'wmszhe'
 image:       ''
 tags:
     - 算法

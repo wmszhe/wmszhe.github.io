@@ -2,8 +2,9 @@
 title:       'FLutter编译桌面端app'
 date:        '2019-06-18'
 description: ''
-author:      ''
-image:       'https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/flutter-bian-yi-zhuo-mian-duan-app.png'
+author:      ''
+cover:
+    image: 'https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/flutter-bian-yi-zhuo-mian-duan-app.png'
 tags:
     - Flutter
 categories:

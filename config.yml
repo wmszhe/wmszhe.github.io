@@ -4,17 +4,59 @@ title: "wmszhe"
 theme: "PaperMod"
 paginate: 10
 
-# hasCJKLanguage = true
+hasCJKLanguage: true
 
 params:
   # 主题 ["auto", "light", "dark"]
   defaultTheme: auto
-  # 主题切换 icon
-  disableThemeToggle: true
+  # 隐藏主题切换 icon
+  disableThemeToggle: false
+  ShowReadingTime: true
+  # 文章底部显示分享
+  ShowShareButtons: false
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  TocOpen: true
 
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
+    Title: "Hello EveryOne 😘"
     Content: 路在脚下，心向远方
 
   profileMode:
     enabled: false
+
+  cover:
+    linkFullImages: true
+
+menu:
+  main:
+    - name: 🔍
+      url: search/
+      weight: 5
+    - name: Archive
+      url: archives
+      weight: 10
+    - name: Tags
+      url: tags/
+      weight: 15
+    - name: About
+      url: /about
+      weight: 20
+    - name: 玩Android
+      url: https://www.wanandroid.com
+      weight: 25
+    - name: 在线工具
+      url: https://www.wanandroid.com/tools
+      weight: 30
+    - name: AndroidDevTools
+      url: https://www.androiddevtools.cn/index.html
+      weight: 35
+
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary

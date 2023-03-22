@@ -2,7 +2,7 @@
 title:       'Flutter遇到的问题'
 date:        '2019-08-22'
 description: ''
-author:      ''
+author:      'wmszhe'
 image:       ''
 tags:
     - Android

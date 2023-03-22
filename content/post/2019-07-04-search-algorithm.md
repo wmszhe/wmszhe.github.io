@@ -2,7 +2,7 @@
 title:       '查找算法'
 date:        '2019-07-04'
 description: ''
-author:      ''
+author:      'wmszhe'
 image:       ''
 tags:
     - 算法

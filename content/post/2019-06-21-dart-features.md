@@ -2,7 +2,7 @@
 title:       'Dart一些特殊的特性'
 date:        '2019-06-21'
 description: ''
-author:      ''
+author:      'wmszhe'
 image:       ''
 tags:
     - Flutter

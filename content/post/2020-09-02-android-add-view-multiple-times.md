@@ -2,7 +2,7 @@
 title:       'Android添加一个view到多个view中'
 date:        '2020-09-02'
 description: ''
-author:      ''
+author:      'wmszhe'
 image:       ''
 tags:
     - Android
