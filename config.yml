@@ -29,9 +29,13 @@ params:
 
   cover:
     linkFullImages: true
-  
+
   assets:
-    favicon: assets/avatar.png
+    favicon: avatar.png
+    favicon16x16: avatar.png
+    favicon32x32: avatar.png
+    apple_touch_icon: avatar.png
+    safari_pinned_tab: avatar.png
 
 menu:
   main:
