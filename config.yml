@@ -29,6 +29,9 @@ params:
 
   cover:
     linkFullImages: true
+  
+  assets:
+    favicon: static/avatar.png
 
 menu:
   main:
