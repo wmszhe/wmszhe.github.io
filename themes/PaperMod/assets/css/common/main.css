@@ -40,6 +40,7 @@
 
 code {
     direction: ltr;
+    font-family: jetbrains mono,Menlo,Monaco,Consolas,andale mono,lucida console,courier new,dingtalk jinbuti,monospace
 }
 
 div.highlight,
