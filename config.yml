@@ -31,7 +31,7 @@ params:
     linkFullImages: true
   
   assets:
-    favicon: static/avatar.png
+    favicon: assets/avatar.png
 
 menu:
   main:
