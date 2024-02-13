@@ -21,7 +21,7 @@ Flutter开发过程中遇到的一些问题。
 
 res/drawable/launch_backgroud.xml中，item-bitmap设置splash图片
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@android:color/white" />
@@ -35,11 +35,11 @@ res/drawable/launch_backgroud.xml中，item-bitmap设置splash图片
 
 **图片拉伸解决方法**
 
-==**图片要放在mipmap中，不能放在drawable中**==
+<mark>**图片要放在mipmap中，不能放在drawable中**</mark>
 
-mipmap分多个分辨率的文件夹。==如果只使用一张图片的话==，放在mipmap-mdpi下，图片会偏大，放在mipmap-xxxhdpi文件夹下，图片会偏小。经测试，放在mipmap-xhdpi文件夹下合适。
+mipmap分多个分辨率的文件夹。<mark>如果只使用一张图片的话</mark>，放在mipmap-mdpi下，图片会偏大，放在mipmap-xxxhdpi文件夹下，图片会偏小。经测试，放在mipmap-xhdpi文件夹下合适。
 
-==**原因参考 [Android drawable微技巧，你所不知道的drawable的那些细节](https://blog.csdn.net/guolin_blog/article/details/50727753)**==
+<mark>**原因参考 [Android drawable微技巧，你所不知道的drawable的那些细节](https://blog.csdn.net/guolin_blog/article/details/50727753)**</mark>
 
 ### 2. 多语言支持iOS无效，只显示英文
 

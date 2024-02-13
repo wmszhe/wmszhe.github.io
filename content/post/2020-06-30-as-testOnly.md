@@ -35,13 +35,13 @@ IDE 直接 Run 出来的 APK ，会在 AndroidManifest.xml 文件中，增加 `a
 
 在项目gradle.properties(或者gradle全局配置目录 ~/.gradle/)文件中添加`android.injected.testOnly=false`
 
-==此方法，会造成IDE run apk的时候，app无法直接打开启动页面，直接返回到桌面==
+<mark>此方法，会造成IDE run apk的时候，app无法直接打开启动页面，直接返回到桌面</mark>
 
 ### 不同方式打包，反编译结果
 
 1. IDE直接run出来的apk
 
-   ==带有`android:testOnly="true"`==
+   <mark>带有`android:testOnly="true"`</mark>
 
    ![](https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/mAUnTd.png)
 
@@ -49,7 +49,7 @@ IDE 直接 Run 出来的 APK ，会在 AndroidManifest.xml 文件中，增加 `a
 
 2. gradle-app-build-build编译出的apk
 
-   ==不带`android:testOnly="true"`==
+   <mark>不带`android:testOnly="true"`</mark>
 
    ![](https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/rXpCsw.png)
 
@@ -57,7 +57,7 @@ IDE 直接 Run 出来的 APK ，会在 AndroidManifest.xml 文件中，增加 `a
 
 3. IDE菜单工具栏-Build-Build Bundle(s)/APK(s)编译出的apk
 
-   ==不带`android:testOnly="true"`==
+   <mark>不带`android:testOnly="true"`</mark>
 
    ![](https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/gjFOvf.png)
 

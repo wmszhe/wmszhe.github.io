@@ -290,7 +290,7 @@ n+1 种情况，出现的概率并不是一样的
 
 ![](https://raw.githubusercontent.com/wmszhe/pichub/master/imgs/36c0aabdac69032f8a43368f5e90c67f.jpg)
 
-==**即，时间复杂度为O(n)**==
+<mark>**即，时间复杂度为O(n)**</mark>
 
 #### 均摊时间复杂度
 
