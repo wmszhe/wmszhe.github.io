@@ -6,12 +6,12 @@ paginate: 10
 
 hasCJKLanguage: true
 
-# markup:
-#   highlight:
-#     style: monokai
-#   goldmark:
-#     renderer:
-#       unsafe: true
+markup:
+  highlight:
+    style: monokai
+  goldmark:
+    renderer:
+      unsafe: true
 
 params:
   # 主题 ["auto", "light", "dark"]
