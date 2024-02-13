@@ -33,7 +33,7 @@ keytool -importkeystore -srckeystore /Users/zhe/Desktop/Test.jks -destkeystore /
 keytool -importkeystore -srckeystore srckey -destkeystore targetkey -deststoretype pkcs12
 ```
 
-==注意srckey和targetkey不能相同,否则会报如下错误==
+<mark>注意srckey和targetkey不能相同,否则会报如下错误</mark>
 
 ```shell
 keytool 错误: java.io.IOException: DerInputStream.getLength(): lengthTag=109, too big.
