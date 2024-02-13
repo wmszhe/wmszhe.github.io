@@ -29,18 +29,18 @@ keytool -importkeystore -srckeystore /Users/zhe/Desktop/Test.jks -destkeystore /
 
 #### 解决方案：
 
-```
+```shell
 keytool -importkeystore -srckeystore srckey -destkeystore targetkey -deststoretype pkcs12
 ```
 
 ==注意srckey和targetkey不能相同,否则会报如下错误==
 
-```
+```shell
 keytool 错误: java.io.IOException: DerInputStream.getLength(): lengthTag=109, too big.
 ```
 
 #### eg:
 
-```
+```shell
 keytool -importkeystore -srckeystore /Users/zhe/Desktop/Test.jks -destkeystore /Users/zhe/Desktop/Test_sign.jks -deststoretype PKCS12
 ```
