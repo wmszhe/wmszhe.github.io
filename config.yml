@@ -6,6 +6,10 @@ paginate: 10
 
 hasCJKLanguage: true
 
+markup:
+  highlight:
+    style: monokai
+
 params:
   # 主题 ["auto", "light", "dark"]
   defaultTheme: auto
