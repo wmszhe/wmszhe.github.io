@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with: 
           submodules: true
           fetch-depth: 0
@@ -34,7 +34,7 @@ jobs:
       - name: Build
         run: hugo --minify
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           external_repository: wmszhe/wmszhe.github.io
@@ -42,9 +42,9 @@ jobs:
           publish_branch: main
           cname: blog.110379.xyz
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./public
       - name: deploy github-pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
