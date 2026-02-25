@@ -23,14 +23,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with: 
+        with:
           submodules: true
           fetch-depth: 0
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
-          extended: true
+          hugo-version: '0.155.3'
       - name: Build
         run: hugo --minify
       - name: Deploy
