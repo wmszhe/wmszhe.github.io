@@ -40,7 +40,7 @@ jobs:
           external_repository: wmszhe/wmszhe.github.io
           publish_dir: ./public
           publish_branch: main
-          cname: blog.wmszhe.com
+          cname: blog.110379.xyz
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
