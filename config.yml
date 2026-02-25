@@ -2,9 +2,14 @@ baseURL: "https://blog.110379.xyz/"
 languageCode: "zh-CN"
 title: "wmszhe"
 theme: "PaperMod"
-paginate: 10
+
+pagination:
+  pagerSize: 10
 
 hasCJKLanguage: true
+
+minify:
+  disableXML: true
 
 markup:
   highlight:
@@ -65,9 +70,17 @@ menu:
       url: https://www.androiddevtools.cn/index.html
       weight: 30
 
+outputFormats:
+  llms:
+    mediaType: "text/plain"
+    baseName: "llms"
+    isPlainText: true
+    notAlternative: true
+
 # 搜索需要的
 outputs:
   home:
     - HTML
     - RSS
-    - JSON # is necessary
+    - JSON
+    - llms
