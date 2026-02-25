@@ -1,0 +1,21 @@
+# wmszhe
+- [关于](https://blog.110379.xyz/about/)
+
+## Posts
+- [IDEA相关](https://blog.110379.xyz/post/2020-02-27-idea-tips/)
+- [Android添加一个view到多个view中](https://blog.110379.xyz/post/2020-09-02-android-add-view-multiple-times/)
+- [AS3.0以后，debug包INSTALL_FAILED_TEST_ONLY问题](https://blog.110379.xyz/post/2020-06-30-as-testonly/)
+- [Android生成jks时遇到的](https://blog.110379.xyz/post/2019-11-01-android-jks/)
+- [Flutter遇到的问题](https://blog.110379.xyz/post/2019-08-22-flutter-qa/)
+- [洗牌算法](https://blog.110379.xyz/post/2019-07-16-shuffle-algorithm/)
+- [数据结构和算法](https://blog.110379.xyz/post/2019-07-04-data-structures-and-algorithm/)
+- [数组Array](https://blog.110379.xyz/post/2019-07-04-array/)
+- [查找算法](https://blog.110379.xyz/post/2019-07-04-search-algorithm/)
+- [算法复杂度](https://blog.110379.xyz/post/2020-09-02-algorithm-complexity/)
+- [链表LinkedList](https://blog.110379.xyz/post/2019-07-04-linkedlist/)
+- [Android性能优化](https://blog.110379.xyz/post/2019-06-24-android-optimize/)
+- [Dart一些特殊的特性](https://blog.110379.xyz/post/2019-06-21-dart-features/)
+- [FlutterUI相关](https://blog.110379.xyz/post/2019-06-19-flutter-ui/)
+- [FLutter编译桌面端app](https://blog.110379.xyz/post/2019-06-18-flutter-desktop/)
+- [Git](https://blog.110379.xyz/post/2019-06-15-git/)
+- [Hello EveryOne](https://blog.110379.xyz/post/2019-06-15-hello-everyone/)
