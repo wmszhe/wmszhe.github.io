@@ -7,5 +7,6 @@ git submodule update --init --recursive # needed when you reclone your repo (sub
 
 ### 更新git submodule
 ```sh
+git submodule sync
 git submodule update --remote --merge
 ```
